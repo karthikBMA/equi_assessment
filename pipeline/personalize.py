@@ -137,3 +137,24 @@ def draft(record: dict, variant: str = "A", sender_name: str = "the Equi team",
 def worth_drafting(record: dict) -> bool:
     return record.get("tier") in {"A", "B"} and record.get("contact_fit") != "Find contact" \
         and bool(record.get("contact_email"))
+
+
+def assign_arms(records: list[dict], seed: int = 11) -> dict[str, str]:
+    """Randomize each firm to variant A or B, stratified by tier and persona.
+
+    Within each (tier, persona) group, firms are shuffled with a fixed seed and
+    alternated A, B, A, ... so both arms get a similar mix. Same input, same arms.
+    """
+    import random
+    rng = random.Random(seed)
+    groups: dict[tuple, list[str]] = {}
+    for r in records:
+        groups.setdefault((r.get("tier"), r.get("persona")), []).append(r["firm_name"])
+    arms = {}
+    for key in sorted(groups, key=str):
+        names = sorted(groups[key])
+        rng.shuffle(names)
+        start = rng.choice("AB")
+        for i, n in enumerate(names):
+            arms[n] = start if i % 2 == 0 else ("B" if start == "A" else "A")
+    return arms
