@@ -1,6 +1,7 @@
 """Run the full pipeline and cache results for the app.
 
-    python build.py              # clean, score, stress test
+    python build.py              # clean, score, stress test, enrich (queries SEC IAPD)
+    python build.py --offline    # same, but skip the SEC lookup
     python build.py --drafts     # also pre-write A/B drafts with Claude (needs ANTHROPIC_API_KEY)
 """
 import argparse
@@ -13,6 +14,8 @@ from dotenv import load_dotenv
 from pipeline.clean import clean_leads
 from pipeline.score import score_firms, stability, red_flags, bubble_reason
 from pipeline import personalize
+from pipeline.enrich import enrich, source_summary
+from pipeline.sequences import SEQUENCES, sequence_for
 
 load_dotenv()
 DATA = Path("data")
@@ -27,6 +30,7 @@ def main():
     ap.add_argument("--csv", default="data/sample-leads.csv")
     ap.add_argument("--drafts", action="store_true")
     ap.add_argument("--sender", default="the Equi team")
+    ap.add_argument("--offline", action="store_true", help="skip the SEC IAPD lookup")
     args = ap.parse_args()
 
     firms = clean_leads(args.csv)
@@ -37,8 +41,18 @@ def main():
     for r in records:
         r["red_flags"] = red_flags(r)
         r["bubble"] = bubble_reason(r)
+    enrich(records, offline=args.offline)
+    missing = {r["route"] for r in records} - set(SEQUENCES)
+    if missing:
+        raise SystemExit(f"No sequence defined for routes: {missing}")
+    for r in records:
+        r["sequence"] = sequence_for(r["route"])
     (DATA / "scored.json").write_text(json.dumps(records, indent=2))
     print(f"Scored {len(records)} firms -> data/scored.json")
+    adv = [r["sec_adv"]["status"] for r in records]
+    print(f"Sources tagged: {source_summary(records)}")
+    print(f"SEC IAPD: {adv.count('match')} matched, {adv.count('no_match')} no match, "
+          f"{adv.count('error')} errors, {adv.count('skipped')} skipped")
 
     if args.drafts:
         todo = [(r, v) for r in records if personalize.worth_drafting(r) for v in ("A", "B")]

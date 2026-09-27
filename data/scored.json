@@ -15,7 +15,9 @@
         "name": "Rodrigo Marchetti-Ruiz",
         "title": "Principal",
         "email": "rodrigo@marchettiruiz.com",
-        "phone": "3055550359"
+        "phone": "3055550359",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -96,7 +98,103 @@
     ],
     "tier_a_share": 0.984,
     "red_flags": [],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 4400000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 25000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "private equity, real estate",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "BNY Pershing",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Miami, FL, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Rodrigo Marchetti-Ruiz",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Principal",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "rodrigo@marchettiruiz.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Principal",
+        "source": "derived",
+        "note": "From title 'Principal'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Principal)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Meeting with the founder inside two weeks.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Send the approved draft from the founder or senior Equi person."
+        ],
+        [
+          3,
+          "Email",
+          "Send the firm-branded kit: client letter, talking points."
+        ],
+        [
+          7,
+          "LinkedIn",
+          "Short note referencing the kit. No pitch."
+        ],
+        [
+          12,
+          "Call",
+          "Call the founder. Ask if the client letter is usable as is."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Ellingham Court Partners",
@@ -114,7 +212,9 @@
         "name": "Perpetua Nwachukwu-Eze",
         "title": "Founder & CIO",
         "email": "pnwachukwu@ellinghamcourt.com",
-        "phone": "2035550193"
+        "phone": "2035550193",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -194,7 +294,103 @@
     ],
     "tier_a_share": 0.966,
     "red_flags": [],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 2750000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 21000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "private equity",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Fidelity",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Greenwich, CT, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Perpetua Nwachukwu-Eze",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Founder & CIO",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "pnwachukwu@ellinghamcourt.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Founder-CIO",
+        "source": "derived",
+        "note": "From title 'Founder & CIO'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Founder-CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Meeting with the founder inside two weeks.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Send the approved draft from the founder or senior Equi person."
+        ],
+        [
+          3,
+          "Email",
+          "Send the firm-branded kit: client letter, talking points."
+        ],
+        [
+          7,
+          "LinkedIn",
+          "Short note referencing the kit. No pitch."
+        ],
+        [
+          12,
+          "Call",
+          "Call the founder. Ask if the client letter is usable as is."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Ashcombe Meridian Family Office",
@@ -212,7 +408,9 @@
         "name": "Rasheed Al-Mansoori",
         "title": "Chief Investment Officer",
         "email": "ralmansoori@ashcombemfo.com",
-        "phone": "6505550580"
+        "phone": "6505550580",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -293,7 +491,103 @@
     ],
     "tier_a_share": 0.994,
     "red_flags": [],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 4050000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 24000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "venture, private credit",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Northern Trust",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Palo Alto, CA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Rasheed Al-Mansoori",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "ralmansoori@ashcombemfo.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Peer conversation between the CIO and an Equi investment lead.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Send the approved draft, framed as one investment person to another."
+        ],
+        [
+          4,
+          "Email",
+          "Send the kit plus a one-page note on how the fund fits a liquid-alts sleeve."
+        ],
+        [
+          9,
+          "LinkedIn",
+          "Connect from the Equi investment lead, not the SDR."
+        ],
+        [
+          14,
+          "Call",
+          "Offer 30 minutes with the Equi PM on portfolio construction."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Oakhurst Meridian Advisors",
@@ -311,7 +605,9 @@
         "name": "Consuelo Iturbide-Ram\u00edrez",
         "title": "Founder and CIO",
         "email": "citurbide@oakhurstmeridian.com",
-        "phone": "6195550428"
+        "phone": "6195550428",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -391,7 +687,103 @@
     ],
     "tier_a_share": 0.976,
     "red_flags": [],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 5900000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 7200000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "private credit",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "San Diego, CA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Consuelo Iturbide-Ram\u00edrez",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Founder and CIO",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "citurbide@oakhurstmeridian.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Founder-CIO",
+        "source": "derived",
+        "note": "From title 'Founder and CIO'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the CSV notes ('principal-led')."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Meeting with the founder inside two weeks.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Send the approved draft from the founder or senior Equi person."
+        ],
+        [
+          3,
+          "Email",
+          "Send the firm-branded kit: client letter, talking points."
+        ],
+        [
+          7,
+          "LinkedIn",
+          "Short note referencing the kit. No pitch."
+        ],
+        [
+          12,
+          "Call",
+          "Call the founder. Ask if the client letter is usable as is."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Quillmoor Advisors",
@@ -409,7 +801,9 @@
         "name": "Wilhelmina Oosterhuis",
         "title": "Chief Investment Officer",
         "email": "woosterhuis@quillmooradv.com",
-        "phone": "9195550823"
+        "phone": "9195550823",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -490,7 +884,103 @@
     ],
     "tier_a_share": 0.982,
     "red_flags": [],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 7700000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 10000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "private equity, private credit",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Raleigh, NC, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Wilhelmina Oosterhuis",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "woosterhuis@quillmooradv.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": true,
+        "source": "derived",
+        "note": "RIA with $10M+ average client; verify on ADV and website."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Peer conversation between the CIO and an Equi investment lead.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Send the approved draft, framed as one investment person to another."
+        ],
+        [
+          4,
+          "Email",
+          "Send the kit plus a one-page note on how the fund fits a liquid-alts sleeve."
+        ],
+        [
+          9,
+          "LinkedIn",
+          "Connect from the Equi investment lead, not the SDR."
+        ],
+        [
+          14,
+          "Call",
+          "Offer 30 minutes with the Equi PM on portfolio construction."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Marisol & Hart Private Wealth",
@@ -508,7 +998,9 @@
         "name": "Esperanza Villalobos-Quintero",
         "title": "Chief Investment Officer",
         "email": "evq@marisolhart.com",
-        "phone": "3055550621"
+        "phone": "3055550621",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -591,7 +1083,103 @@
     "red_flags": [
       "Alts experience: Already uses hedge funds (real assets, hedge funds). Fluent, but Equi would be replacing or adding to a current manager."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 3100000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 22000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "real assets, hedge funds",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "BNY Pershing",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Coral Gables, FL, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Esperanza Villalobos-Quintero",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "evq@marisolhart.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Peer conversation between the CIO and an Equi investment lead.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Send the approved draft, framed as one investment person to another."
+        ],
+        [
+          4,
+          "Email",
+          "Send the kit plus a one-page note on how the fund fits a liquid-alts sleeve."
+        ],
+        [
+          9,
+          "LinkedIn",
+          "Connect from the Equi investment lead, not the SDR."
+        ],
+        [
+          14,
+          "Call",
+          "Offer 30 minutes with the Equi PM on portfolio construction."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Harborstone Wealth Partners",
@@ -609,7 +1197,9 @@
         "name": "Margaret Ellison",
         "title": "Chief Investment Officer",
         "email": "m.ellison@harborstonewp.com",
-        "phone": "7045550182"
+        "phone": "7045550182",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [
@@ -693,7 +1283,111 @@
     ],
     "tier_a_share": 0.974,
     "red_flags": [],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 4200000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 6500000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "private equity, real estate",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Charlotte, NC, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Margaret Ellison",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "m.ellison@harborstonewp.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      },
+      "source_rows": {
+        "value": [
+          2,
+          3
+        ],
+        "source": "csv",
+        "note": "Merged 2 rows (2, 3)"
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Peer conversation between the CIO and an Equi investment lead.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Send the approved draft, framed as one investment person to another."
+        ],
+        [
+          4,
+          "Email",
+          "Send the kit plus a one-page note on how the fund fits a liquid-alts sleeve."
+        ],
+        [
+          9,
+          "LinkedIn",
+          "Connect from the Equi investment lead, not the SDR."
+        ],
+        [
+          14,
+          "Call",
+          "Offer 30 minutes with the Equi PM on portfolio construction."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Aldermoor Capital Group",
@@ -711,7 +1405,9 @@
         "name": "Oluwaseun Babatunde-Fashola",
         "title": "Chief Investment Officer",
         "email": "obf@aldermoorcg.com",
-        "phone": "3125550987"
+        "phone": "3125550987",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -794,7 +1490,103 @@
     "red_flags": [
       "Alts experience: Already uses hedge funds (real assets, hedge funds). Fluent, but Equi would be replacing or adding to a current manager."
     ],
-    "bubble": "Tier A under our weights, but only in 75% of alternative weightings."
+    "bubble": "Tier A under our weights, but only in 75% of alternative weightings.",
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 6100000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 19000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "real assets, hedge funds",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Northern Trust",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Chicago, IL, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Oluwaseun Babatunde-Fashola",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "obf@aldermoorcg.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Peer conversation between the CIO and an Equi investment lead.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Send the approved draft, framed as one investment person to another."
+        ],
+        [
+          4,
+          "Email",
+          "Send the kit plus a one-page note on how the fund fits a liquid-alts sleeve."
+        ],
+        [
+          9,
+          "LinkedIn",
+          "Connect from the Equi investment lead, not the SDR."
+        ],
+        [
+          14,
+          "Call",
+          "Offer 30 minutes with the Equi PM on portfolio construction."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Bramblewick Capital Advisers",
@@ -812,7 +1604,9 @@
         "name": "Solveig Andersdottir",
         "title": "Chief Investment Officer",
         "email": "sandersdottir@bramblewickcap.com",
-        "phone": "4045550519"
+        "phone": "4045550519",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [
@@ -898,7 +1692,106 @@
     "red_flags": [
       "Alts experience: Already uses hedge funds (private credit, hedge funds). Fluent, but Equi would be replacing or adding to a current manager."
     ],
-    "bubble": "Lands in Tier A in 49% of alternative weightings. Your priorities decide this one."
+    "bubble": "Lands in Tier A in 49% of alternative weightings. Your priorities decide this one.",
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 9600000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 11000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "private credit, hedge funds",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Atlanta, GA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Solveig Andersdottir",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "sandersdottir@bramblewickcap.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": true,
+        "source": "derived",
+        "note": "RIA with $10M+ average client; verify on ADV and website."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      },
+      "source_rows": {
+        "value": [
+          19,
+          20
+        ],
+        "source": "csv",
+        "note": "Merged 2 rows (19, 20)"
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Haverlock Advisory Group",
@@ -916,7 +1809,9 @@
         "name": "Aoife N\u00ed Bhraon\u00e1in",
         "title": "Director of Research",
         "email": "anibhraonain@haverlockadv.com",
-        "phone": "6175550904"
+        "phone": "6175550904",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [
@@ -1001,7 +1896,106 @@
     "red_flags": [
       "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
     ],
-    "bubble": "Lands in Tier A in 43% of alternative weightings. Your priorities decide this one."
+    "bubble": "Lands in Tier A in 43% of alternative weightings. Your priorities decide this one.",
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 6800000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 8900000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "private credit",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Boston, MA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Aoife N\u00ed Bhraon\u00e1in",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Director of Research",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "anibhraonain@haverlockadv.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Research lead",
+        "source": "derived",
+        "note": "From title 'Director of Research'."
+      },
+      "decision_structure": {
+        "value": "Committee-led",
+        "source": "derived",
+        "note": "From the CSV notes (committee language)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      },
+      "source_rows": {
+        "value": [
+          10,
+          11
+        ],
+        "source": "csv",
+        "note": "Merged 2 rows (10, 11)"
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Solstice Grove Advisors",
@@ -1019,7 +2013,9 @@
         "name": "Xiaoming Zhu-Whitfield",
         "title": "Head of Manager Selection",
         "email": "xzhu@solsticegrove.com",
-        "phone": "2065550817"
+        "phone": "2065550817",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -1103,7 +2099,98 @@
       "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
       "Alts experience: Already uses hedge funds (hedge funds, private credit). Fluent, but Equi would be replacing or adding to a current manager."
     ],
-    "bubble": "Lands in Tier A in 29% of alternative weightings. Your priorities decide this one."
+    "bubble": "Lands in Tier A in 29% of alternative weightings. Your priorities decide this one.",
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 8900000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 12000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "hedge funds, private credit",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Multiple",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Seattle, WA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Xiaoming Zhu-Whitfield",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Head of Manager Selection",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "xzhu@solsticegrove.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Research lead",
+        "source": "derived",
+        "note": "From title 'Head of Manager Selection'."
+      },
+      "decision_structure": {
+        "value": "Committee-led",
+        "source": "derived",
+        "note": "From the contact's title (Research lead)."
+      },
+      "mfo_transition": {
+        "value": true,
+        "source": "derived",
+        "note": "RIA with $10M+ average client; verify on ADV and website."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Thornbury Wealth Advisors",
@@ -1121,13 +2208,17 @@
         "name": "Lakshmi Venkataraghavan",
         "title": "Director of Manager Research",
         "email": "lvenkataraghavan@thornburywa.com",
-        "phone": "2155550294"
+        "phone": "2155550294",
+        "email_source": "csv",
+        "email_note": null
       },
       {
         "name": "Marcus Oyelaran",
         "title": "EA to the CIO",
         "email": "m.oyelaran@thornburywa.com",
-        "phone": "2155550295"
+        "phone": "2155550295",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [
@@ -1212,7 +2303,106 @@
     "red_flags": [
       "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
     ],
-    "bubble": "Lands in Tier A in 24% of alternative weightings. Your priorities decide this one."
+    "bubble": "Lands in Tier A in 24% of alternative weightings. Your priorities decide this one.",
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 3700000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 5400000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "private equity",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Pershing",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Philadelphia, PA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Lakshmi Venkataraghavan",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Director of Manager Research",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "lvenkataraghavan@thornburywa.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Research lead",
+        "source": "derived",
+        "note": "From title 'Director of Manager Research'."
+      },
+      "decision_structure": {
+        "value": "Committee-led",
+        "source": "derived",
+        "note": "From the contact's title (Research lead)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      },
+      "source_rows": {
+        "value": [
+          22,
+          23
+        ],
+        "source": "csv",
+        "note": "Merged 2 rows (22, 23); kept 2 distinct contacts"
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Ridgeline Family Office",
@@ -1230,7 +2420,9 @@
         "name": "Devendra Raghunathan",
         "title": "Founder & CIO",
         "email": "d.raghunathan@ridgelinefo.com",
-        "phone": null
+        "phone": null,
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [
@@ -1320,7 +2512,106 @@
       "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure.",
       "Warmth and reach: Cold, last touch 248 days ago; direct email on file."
     ],
-    "bubble": "Lands in Tier A in 34% of alternative weightings. Your priorities decide this one."
+    "bubble": "Lands in Tier A in 34% of alternative weightings. Your priorities decide this one.",
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 11500000000.0,
+        "source": "csv",
+        "note": "AUM '11500' had no unit; read as $11.5B (millions convention); confirmed by row 5 ('11.5B')"
+      },
+      "avg_client_usd": {
+        "value": 14000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "hedge funds, private credit, venture",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Fidelity",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Denver, CO, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Devendra Raghunathan",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Founder & CIO",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "d.raghunathan@ridgelinefo.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Founder-CIO",
+        "source": "derived",
+        "note": "From title 'Founder & CIO'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Founder-CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      },
+      "source_rows": {
+        "value": [
+          4,
+          5
+        ],
+        "source": "csv",
+        "note": "Merged 2 rows (4, 5)"
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Larkhaven Multi-Family Office",
@@ -1338,7 +2629,9 @@
         "name": "Yekaterina Vorontsova",
         "title": "Chief Investment Officer",
         "email": "yvorontsova@larkhavenmfo.com",
-        "phone": "9495550271"
+        "phone": "9495550271",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -1422,7 +2715,98 @@
     "red_flags": [
       "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
     ],
-    "bubble": "Lands in Tier A in 32% of alternative weightings. Your priorities decide this one."
+    "bubble": "Lands in Tier A in 32% of alternative weightings. Your priorities decide this one.",
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 5400000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 27000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "hedge funds, PE, venture",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Northern Trust",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Newport Beach, CA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Yekaterina Vorontsova",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "yvorontsova@larkhavenmfo.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Tanglewood Reach Advisors",
@@ -1440,7 +2824,9 @@
         "name": "Bronwyn Llewellyn-Price",
         "title": "Director of Research",
         "email": "bllewellyn@tanglewoodreach.com",
-        "phone": "8605550149"
+        "phone": "8605550149",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -1522,7 +2908,98 @@
     "red_flags": [
       "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
     ],
-    "bubble": "Lands in Tier A in 23% of alternative weightings. Your priorities decide this one."
+    "bubble": "Lands in Tier A in 23% of alternative weightings. Your priorities decide this one.",
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 3450000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 5100000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "real estate",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Pershing",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Hartford, CT, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Bronwyn Llewellyn-Price",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Director of Research",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "bllewellyn@tanglewoodreach.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Research lead",
+        "source": "derived",
+        "note": "From title 'Director of Research'."
+      },
+      "decision_structure": {
+        "value": "Committee-led",
+        "source": "derived",
+        "note": "From the contact's title (Research lead)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Kirkaldy & Sons Wealth",
@@ -1540,7 +3017,9 @@
         "name": "Angus Kirkaldy III",
         "title": "Founder",
         "email": "akirkaldy@kirkaldysons.com",
-        "phone": "4125550110"
+        "phone": "4125550110",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -1623,7 +3102,98 @@
       "Client wealth (QP fit): Average client $3.6M, just under the $5M QP line. A meaningful slice of clients qualify, not most.",
       "AUM band: $1.6B AUM, inside the band but under the $5B bullseye."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 1600000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 3600000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "real estate",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Pershing",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Pittsburgh, PA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Angus Kirkaldy III",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Founder",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "akirkaldy@kirkaldysons.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Principal",
+        "source": "derived",
+        "note": "From title 'Founder'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Principal)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Vantage Pointe Wealth",
@@ -1641,7 +3211,9 @@
         "name": "Ravindra Chandrasekaran",
         "title": "Chief Investment Officer",
         "email": "rchandrasekaran@vantagepointewealth.com",
-        "phone": "3035550704"
+        "phone": "3035550704",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -1728,7 +3300,98 @@
     "red_flags": [
       "-10 pts. Recently adopted a competitor platform. Displacement takes quarters, not weeks."
     ],
-    "bubble": "Good fit with a specific blocker."
+    "bubble": "Good fit with a specific blocker.",
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 4850000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 7900000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "private credit",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Denver, CO, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Ravindra Chandrasekaran",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "rchandrasekaran@vantagepointewealth.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Fenwick Larkspur Capital",
@@ -1746,7 +3409,9 @@
         "name": "Nikolaos Papadopoulos",
         "title": "Chief Investment Officer",
         "email": "npapadopoulos@fenwicklarkspur.com",
-        "phone": "4155550755"
+        "phone": "4155550755",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -1830,7 +3495,98 @@
     "red_flags": [
       "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 12300000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 16000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "hedge funds, private credit, PE",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Multiple",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "San Francisco, CA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Nikolaos Papadopoulos",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "npapadopoulos@fenwicklarkspur.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": true,
+        "source": "derived",
+        "note": "RIA with $10M+ average client; verify on ADV and website."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Sunridge Collective",
@@ -1848,7 +3604,9 @@
         "name": "Nayeli Tenorio-Guzm\u00e1n",
         "title": "Chief Investment Officer",
         "email": "ntenorio@sunridgecollective.com",
-        "phone": "6025550956"
+        "phone": "6025550956",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -1931,7 +3689,98 @@
       "Alts experience: Already uses hedge funds (hedge funds). Fluent, but Equi would be replacing or adding to a current manager.",
       "Warmth and reach: Never contacted; direct email on file."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 3050000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 6800000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "hedge funds",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Fidelity",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Phoenix, AZ, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Nayeli Tenorio-Guzm\u00e1n",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "ntenorio@sunridgecollective.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Windermere Trust Advisors",
@@ -1949,7 +3798,9 @@
         "name": "Fatoumata Diallo-Sissoko",
         "title": "Chief Investment Officer",
         "email": "fdiallo@windermeretrust.com",
-        "phone": null
+        "phone": null,
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -2033,7 +3884,98 @@
       "Alts experience: Already uses hedge funds (hedge funds). Fluent, but Equi would be replacing or adding to a current manager.",
       "AUM band: unknown. AUM not disclosed. Pull from Form ADV before outreach."
     ],
-    "bubble": "Could reach Tier A if client wealth and aum band check out. Confirm before outreach."
+    "bubble": "Could reach Tier A if client wealth and aum band check out. Confirm before outreach.",
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.F has it."
+      },
+      "avg_client_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.D (HNW client count and assets) gives it."
+      },
+      "alts_exposure": {
+        "value": "hedge funds",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Northern Trust",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Salt Lake City, UT, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Fatoumata Diallo-Sissoko",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "fdiallo@windermeretrust.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Ferrisdale Wealth Group",
@@ -2051,7 +3993,9 @@
         "name": "Abimbola Adesanya-Cole",
         "title": "Managing Director of Research",
         "email": "aadesanya@ferrisdalewg.com",
-        "phone": "6145550642"
+        "phone": "6145550642",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -2135,7 +4079,98 @@
       "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
       "AUM band: $2.0B AUM, inside the band but under the $5B bullseye."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 2049999999.9999998,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 4700000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "private credit, real estate",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Columbus, OH, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Abimbola Adesanya-Cole",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Managing Director of Research",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "aadesanya@ferrisdalewg.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Research lead",
+        "source": "derived",
+        "note": "From title 'Managing Director of Research'."
+      },
+      "decision_structure": {
+        "value": "Committee-led",
+        "source": "derived",
+        "note": "From the contact's title (Research lead)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Sparrowhawk Investment Advisors",
@@ -2153,7 +4188,9 @@
         "name": "Dmitri Yevtushenko",
         "title": "Director of Due Diligence",
         "email": "dyevtushenko@sparrowhawkia.com",
-        "phone": "8045550691"
+        "phone": "8045550691",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -2236,7 +4273,98 @@
       "Client wealth (QP fit): Average client $4.1M, just under the $5M QP line. A meaningful slice of clients qualify, not most.",
       "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 2900000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 4099999.9999999995,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "private credit",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Richmond, VA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Dmitri Yevtushenko",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Director of Due Diligence",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "dyevtushenko@sparrowhawkia.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Research lead",
+        "source": "derived",
+        "note": "From title 'Director of Due Diligence'."
+      },
+      "decision_structure": {
+        "value": "Committee-led",
+        "source": "derived",
+        "note": "From the CSV notes (committee language)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Eastmarch Trust Company",
@@ -2254,7 +4382,9 @@
         "name": "Hyacinth Featherstone-Marsh",
         "title": "CIO",
         "email": "h.featherstone@eastmarchtrust.com",
-        "phone": "2065550340"
+        "phone": "2065550340",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -2339,7 +4469,98 @@
       "Client wealth (QP fit): Average client $31.0M, above the sweet spot. These clients usually get direct institutional access already.",
       "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 15200000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 31000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "hedge funds, private credit, infra",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Multiple",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Seattle, WA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Hyacinth Featherstone-Marsh",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "CIO",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "h.featherstone@eastmarchtrust.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'CIO'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Sable Ridge Investment Counsel",
@@ -2357,7 +4578,9 @@
         "name": "Yusuf Abdirahman",
         "title": "Founder",
         "email": "yusuf@sableridgeic.com",
-        "phone": "4805550212"
+        "phone": "4805550212",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -2440,7 +4663,98 @@
       "Client wealth (QP fit): Average client $2.8M. Few, if any, qualified purchasers.",
       "AUM band: $1.4B AUM, inside the band but under the $5B bullseye."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 1400000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 2800000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "real estate",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Scottsdale, AZ, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Yusuf Abdirahman",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Founder",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "yusuf@sableridgeic.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Principal",
+        "source": "derived",
+        "note": "From title 'Founder'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Principal)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Glenmara Wealth",
@@ -2458,7 +4772,9 @@
         "name": "Bjorn Haugland",
         "title": "President",
         "email": "bhaugland@glenmarawealth.com",
-        "phone": "6125550977"
+        "phone": "6125550977",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -2540,7 +4856,98 @@
       "Alts experience: unknown. Alts exposure unknown.",
       "AUM band: unknown. AUM not disclosed. Pull from Form ADV before outreach."
     ],
-    "bubble": "Could reach Tier A if client wealth, alts experience and aum band check out. Confirm before outreach."
+    "bubble": "Could reach Tier A if client wealth, alts experience and aum band check out. Confirm before outreach.",
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.F has it."
+      },
+      "avg_client_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.D (HNW client count and assets) gives it."
+      },
+      "alts_exposure": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Ask on the first call."
+      },
+      "custodian": {
+        "value": "Fidelity",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Minneapolis, MN, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Bjorn Haugland",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "President",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "bhaugland@glenmarawealth.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Principal",
+        "source": "derived",
+        "note": "From title 'President'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Principal)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Locheil Partners",
@@ -2558,7 +4965,9 @@
         "name": "Jean-Baptiste Moreau-Lachance",
         "title": "Chief Investment Officer",
         "email": "jb.moreau@locheilpartners.ca",
-        "phone": "4165550663"
+        "phone": "4165550663",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -2651,7 +5060,98 @@
       "-15 pts. Non-US firm. Cross-border eligibility for US fund structures needs compliance review first.",
       "Capped at Tier B. Cross-border; not a Tier A until compliance clears it."
     ],
-    "bubble": "Scores well on fit but held back by a rule. Worth a human look."
+    "bubble": "Scores well on fit but held back by a rule. Worth a human look.",
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 2200000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 18000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "hedge funds",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "RBC",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Toronto, ON, Canada",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Jean-Baptiste Moreau-Lachance",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "jb.moreau@locheilpartners.ca",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Cinderhill Investment Group",
@@ -2669,7 +5169,9 @@
         "name": "Ignatius Oyelowo-Bankole",
         "title": "Chief Investment Officer",
         "email": "iob@cinderhillig.com",
-        "phone": "5025550736"
+        "phone": "5025550736",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -2751,7 +5253,98 @@
       "Alts experience: unknown. Alts exposure unknown.",
       "AUM band: $2.1B AUM, inside the band but under the $5B bullseye."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 2150000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 4300000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Ask on the first call."
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Louisville, KY, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Ignatius Oyelowo-Bankole",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "iob@cinderhillig.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Havenport Global Partners",
@@ -2769,7 +5362,9 @@
         "name": "Anneliese Vandersteen",
         "title": "Head of External Managers",
         "email": "a.vandersteen@havenportgp.com",
-        "phone": "2125550018"
+        "phone": "2125550018",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -2853,7 +5448,98 @@
       "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
       "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 28400000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 47000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "everything",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Multiple",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "New York, NY, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Anneliese Vandersteen",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Head of External Managers",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "a.vandersteen@havenportgp.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Research lead",
+        "source": "derived",
+        "note": "From title 'Head of External Managers'."
+      },
+      "decision_structure": {
+        "value": "Committee-led",
+        "source": "derived",
+        "note": "From the contact's title (Research lead)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Be useful on the days advisors field worried client calls.",
+      "touches": [
+        [
+          null,
+          "Email",
+          "On a market trigger: short client-ready note plus a two-line advisor ping."
+        ],
+        [
+          null,
+          "Email",
+          "If they open or forward a note, offer the full kit."
+        ],
+        [
+          null,
+          "Weekly",
+          "Otherwise a weekly digest. No daily noise."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Cairnwell Private Capital",
@@ -2871,7 +5557,9 @@
         "name": "Ingrid Ravnsborg-Thiel",
         "title": "Managing Director",
         "email": "ingrid@cairnwellpc.com",
-        "phone": "3075550871"
+        "phone": "3075550871",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -2959,7 +5647,93 @@
       "Warmth and reach: Never contacted; direct email on file.",
       "Capped at Tier C. Below the $1B floor; nurture until they grow into the band."
     ],
-    "bubble": "Scores well on fit but held back by a rule. Worth a human look."
+    "bubble": "Scores well on fit but held back by a rule. Worth a human look.",
+    "sources": {
+      "firm_type": {
+        "value": "MFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 850000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 9000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "venture, real estate",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Fidelity",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Jackson, WY, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Ingrid Ravnsborg-Thiel",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Managing Director",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "ingrid@cairnwellpc.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Principal",
+        "source": "derived",
+        "note": "From title 'Managing Director'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Principal)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Stay known until the firm grows into fit.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Monthly explainer on evergreen alternatives. Educational only."
+        ],
+        [
+          90,
+          "Review",
+          "Re-score quarterly. Move to alerts if the tier improves."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Baynard Holdings",
@@ -2977,7 +5751,9 @@
         "name": "Chidinma Okonkwo-Adeyemi",
         "title": "Head of Investments",
         "email": "c.okonkwo@baynardholdings.com",
-        "phone": "6155550128"
+        "phone": "6155550128",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -3067,7 +5843,93 @@
       "AUM band: $1.9B AUM, inside the band but under the $5B bullseye.",
       "Capped at Tier C. Single-family office; capped per Equi's guidance."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "SFO",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 1900000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.D (HNW client count and assets) gives it."
+      },
+      "alts_exposure": {
+        "value": "private equity, venture, art",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Northern Trust",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Nashville, TN, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Chidinma Okonkwo-Adeyemi",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Head of Investments",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "c.okonkwo@baynardholdings.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Head of Investments'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Stay known until the firm grows into fit.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Monthly explainer on evergreen alternatives. Educational only."
+        ],
+        [
+          90,
+          "Review",
+          "Re-score quarterly. Move to alerts if the tier improves."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Tessendale Ridge Capital",
@@ -3085,7 +5947,9 @@
         "name": "\u00c9tienne Beauchamp-Rossi",
         "title": "Chief Investment Officer",
         "email": "ebeauchamp@tessendaleridge.com",
-        "phone": "8025550466"
+        "phone": "8025550466",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -3169,7 +6033,93 @@
       "Alts experience: No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
       "AUM band: unknown. AUM not disclosed. Pull from Form ADV before outreach."
     ],
-    "bubble": "Could reach Tier B if client wealth and aum band check out. Confirm before outreach."
+    "bubble": "Could reach Tier B if client wealth and aum band check out. Confirm before outreach.",
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.F has it."
+      },
+      "avg_client_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.D (HNW client count and assets) gives it."
+      },
+      "alts_exposure": {
+        "value": "none",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Burlington, VT, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "\u00c9tienne Beauchamp-Rossi",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "ebeauchamp@tessendaleridge.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Stay known until the firm grows into fit.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Monthly explainer on evergreen alternatives. Educational only."
+        ],
+        [
+          90,
+          "Review",
+          "Re-score quarterly. Move to alerts if the tier improves."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Ambrose Quaid Advisory",
@@ -3187,7 +6137,9 @@
         "name": "Thaddeus Boudreaux-Ambrose",
         "title": "Principal",
         "email": "tboudreaux@ambrosequaid.com",
-        "phone": "5045550538"
+        "phone": "5045550538",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -3269,7 +6221,93 @@
       "Alts experience: unknown. Alts exposure unknown.",
       "AUM band: $1.2B AUM, inside the band but under the $5B bullseye."
     ],
-    "bubble": "Could reach Tier B if alts experience checks out. Confirm before outreach."
+    "bubble": "Could reach Tier B if alts experience checks out. Confirm before outreach.",
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 1200000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 2900000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Ask on the first call."
+      },
+      "custodian": {
+        "value": "Pershing",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "New Orleans, LA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Thaddeus Boudreaux-Ambrose",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Principal",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "tboudreaux@ambrosequaid.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Principal",
+        "source": "derived",
+        "note": "From title 'Principal'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Principal)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Stay known until the firm grows into fit.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Monthly explainer on evergreen alternatives. Educational only."
+        ],
+        [
+          90,
+          "Review",
+          "Re-score quarterly. Move to alerts if the tier improves."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Pinnacle Crest Capital",
@@ -3371,7 +6409,93 @@
       "Capped at Tier C. LPL-affiliated. Products generally need LPL platform approval before advisors can use them.",
       "No named decision-maker on file. Research the founder or CIO before any outreach."
     ],
-    "bubble": "No named decision-maker yet. Find the right person before judging this one."
+    "bubble": "No named decision-maker yet. Find the right person before judging this one.",
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 2500000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 3200000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "none",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "LPL Financial",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Austin, TX, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "No named decision-maker. Check the firm's team page or ADV Schedule A."
+      },
+      "contact_title": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": null
+      },
+      "contact_email": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "No contact on file."
+      },
+      "persona": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "No title on file."
+      },
+      "decision_structure": {
+        "value": "Unknown",
+        "source": "derived",
+        "note": "No signal in notes or title."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Find the founder or CIO before any outreach.",
+      "touches": [
+        [
+          0,
+          "Research",
+          "Check the firm website team page and Form ADV Schedule A."
+        ],
+        [
+          2,
+          "Review",
+          "Re-score with the contact added; the route updates from there."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Cloverdale Financial Partners",
@@ -3389,7 +6513,9 @@
         "name": "Siobh\u00e1n \u00d3 Ceallaigh",
         "title": "Managing Principal",
         "email": "soceallaigh@cloverdalefp.com",
-        "phone": "6085550244"
+        "phone": "6085550244",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -3477,7 +6603,93 @@
       "AUM band: $0.8B AUM, below the $1B floor.",
       "Capped at Tier C. LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 780000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 1400000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "none",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "LPL Financial",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Madison, WI, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Siobh\u00e1n \u00d3 Ceallaigh",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Managing Principal",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "soceallaigh@cloverdalefp.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Principal",
+        "source": "derived",
+        "note": "From title 'Managing Principal'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Principal)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Stay known until the firm grows into fit.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Monthly explainer on evergreen alternatives. Educational only."
+        ],
+        [
+          90,
+          "Review",
+          "Re-score quarterly. Move to alerts if the tier improves."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Quintrell Wealth Management",
@@ -3495,7 +6707,9 @@
         "name": null,
         "title": "Chief Investment Officer",
         "email": "info@quintrellwm.com",
-        "phone": "8165550472"
+        "phone": "8165550472",
+        "email_source": "needs_lookup",
+        "email_note": "Generic inbox only; no named contact."
       }
     ],
     "cleaning_notes": [],
@@ -3579,7 +6793,93 @@
       "Warmth and reach: Cold, last touch 424 days ago; no direct email.",
       "No named decision-maker on file. Research the founder or CIO before any outreach."
     ],
-    "bubble": "No named decision-maker yet. Find the right person before judging this one."
+    "bubble": "No named decision-maker yet. Find the right person before judging this one.",
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 1050000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 2100000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Ask on the first call."
+      },
+      "custodian": {
+        "value": "Fidelity",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Kansas City, MO, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "No named decision-maker. Check the firm's team page or ADV Schedule A."
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "info@quintrellwm.com",
+        "source": "needs_lookup",
+        "note": "Generic inbox only; no named contact."
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Find the founder or CIO before any outreach.",
+      "touches": [
+        [
+          0,
+          "Research",
+          "Check the firm website team page and Form ADV Schedule A."
+        ],
+        [
+          2,
+          "Review",
+          "Re-score with the contact added; the route updates from there."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Ostrander & Voss Advisors",
@@ -3597,7 +6897,9 @@
         "name": "Tomasz Wierzbicki",
         "title": "Managing Partner",
         "email": "twierzbicki@ostrandervoss.com",
-        "phone": "5035550311"
+        "phone": "5035550311",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [
@@ -3688,7 +6990,93 @@
       "Warmth and reach: Cold, last touch 323 days ago; direct email on file.",
       "Capped at Tier C. Below the $1B floor; nurture until they grow into the band."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 880000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 1100000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "none",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Pershing",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Portland, OR, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Tomasz Wierzbicki",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Managing Partner",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "twierzbicki@ostrandervoss.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Principal",
+        "source": "derived",
+        "note": "From title 'Managing Partner'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Principal)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Stay known until the firm grows into fit.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Monthly explainer on evergreen alternatives. Educational only."
+        ],
+        [
+          90,
+          "Review",
+          "Re-score quarterly. Move to alerts if the tier improves."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Fernwold Advisory",
@@ -3706,7 +7094,9 @@
         "name": "Hannah Weathersby",
         "title": "Owner",
         "email": "hannah@fernwoldadvisory.com",
-        "phone": "2085550603"
+        "phone": "2085550603",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -3795,7 +7185,93 @@
       "Warmth and reach: Cold, last touch 261 days ago; direct email on file.",
       "Capped at Tier C. Below the $1B floor; nurture until they grow into the band."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 240000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 650000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "none",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Schwab",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Boise, ID, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Hannah Weathersby",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Owner",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "hannah@fernwoldadvisory.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Principal",
+        "source": "derived",
+        "note": "From title 'Owner'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Principal)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Stay known until the firm grows into fit.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Monthly explainer on evergreen alternatives. Educational only."
+        ],
+        [
+          90,
+          "Review",
+          "Re-score quarterly. Move to alerts if the tier improves."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Pemberton Vale Wealth",
@@ -3813,7 +7289,9 @@
         "name": "Gertrude Vandenberg",
         "title": "Owner",
         "email": "gvandenberg@pembertonvale.com",
-        "phone": "4025550325"
+        "phone": "4025550325",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -3902,7 +7380,93 @@
       "Warmth and reach: Cold, last touch 300 days ago; direct email on file.",
       "Capped at Tier C. LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 610000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 1050000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "none",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "LPL Financial",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Omaha, NE, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Gertrude Vandenberg",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Owner",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "gvandenberg@pembertonvale.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Principal",
+        "source": "derived",
+        "note": "From title 'Owner'."
+      },
+      "decision_structure": {
+        "value": "Principal-led",
+        "source": "derived",
+        "note": "From the contact's title (Principal)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Stay known until the firm grows into fit.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Monthly explainer on evergreen alternatives. Educational only."
+        ],
+        [
+          90,
+          "Review",
+          "Re-score quarterly. Move to alerts if the tier improves."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Vermillion & Sloane",
@@ -3920,7 +7484,9 @@
         "name": "Guillermo Santacruz",
         "title": "Chief Investment Officer",
         "email": "gsantacruz@vermillionsloane.com",
-        "phone": "4015550788"
+        "phone": "4015550788",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -4009,7 +7575,93 @@
       "Warmth and reach: Cold, last touch 286 days ago; direct email on file.",
       "Capped at Tier C. LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 520000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 900000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "none",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "LPL Financial",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Providence, RI, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Guillermo Santacruz",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "gsantacruz@vermillionsloane.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "decision_structure": {
+        "value": "CIO-led",
+        "source": "derived",
+        "note": "From the contact's title (CIO)."
+      },
+      "mfo_transition": {
+        "value": false,
+        "source": "derived",
+        "note": "Not an RIA with $10M+ average client."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "Stay known until the firm grows into fit.",
+      "touches": [
+        [
+          0,
+          "Email",
+          "Monthly explainer on evergreen alternatives. Educational only."
+        ],
+        [
+          90,
+          "Review",
+          "Re-score quarterly. Move to alerts if the tier improves."
+        ]
+      ]
+    }
   },
   {
     "firm_name": "Wrenfield Bancorp Wealth Management",
@@ -4027,7 +7679,9 @@
         "name": "Priya Balasubramanian",
         "title": "Head of Alternative Investments",
         "email": "priya.balasubramanian@wrenfield.com",
-        "phone": "2125550733"
+        "phone": "2125550733",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -4058,7 +7712,72 @@
     "red_flags": [
       "Wirehouse. Has in-house alts teams and platform rules; Equi's partner model does not fit."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "Wirehouse",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 340000000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.D (HNW client count and assets) gives it."
+      },
+      "alts_exposure": {
+        "value": "everything",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "In-house",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "New York, NY, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Priya Balasubramanian",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Head of Alternative Investments",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "priya.balasubramanian@wrenfield.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Non-buyer seat",
+        "source": "derived",
+        "note": "From title 'Head of Alternative Investments'."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "No outreach.",
+      "touches": []
+    }
   },
   {
     "firm_name": "Otterbein Asset Strategies",
@@ -4076,7 +7795,9 @@
         "name": "Rebecca Lindqvist",
         "title": "Director of Investment Solutions",
         "email": "r.lindqvist@otterbeinas.com",
-        "phone": "3125550166"
+        "phone": "3125550166",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -4107,7 +7828,72 @@
     "red_flags": [
       "TAMP. Sells model portfolios to advisors, which makes it a competitor channel, not a buyer."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "TAMP",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 19000000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.D (HNW client count and assets) gives it."
+      },
+      "alts_exposure": {
+        "value": "model portfolios",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Multiple",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Chicago, IL, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Rebecca Lindqvist",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Director of Investment Solutions",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "r.lindqvist@otterbeinas.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Non-buyer seat",
+        "source": "derived",
+        "note": "From title 'Director of Investment Solutions'."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "No outreach.",
+      "touches": []
+    }
   },
   {
     "firm_name": "Marlowe Point Capital Management",
@@ -4125,7 +7911,9 @@
         "name": "Anders Kjellberg",
         "title": "Portfolio Manager",
         "email": "akjellberg@marlowepointcap.com",
-        "phone": "2035550455"
+        "phone": "2035550455",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -4156,7 +7944,72 @@
     "red_flags": [
       "Investment-side firm. A manager, not a buyer."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "Hedge Fund Manager",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 7400000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.D (HNW client count and assets) gives it."
+      },
+      "alts_exposure": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Ask on the first call."
+      },
+      "custodian": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 9 lists custodians."
+      },
+      "location": {
+        "value": "Greenwich, CT, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Anders Kjellberg",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Portfolio Manager",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "akjellberg@marlowepointcap.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Non-buyer seat",
+        "source": "derived",
+        "note": "From title 'Portfolio Manager'."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "No outreach.",
+      "touches": []
+    }
   },
   {
     "firm_name": "Beaumont Fielding Group",
@@ -4174,7 +8027,9 @@
         "name": "Terrence Achebe",
         "title": "SVP Product",
         "email": "tachebe@beaumontfielding.com",
-        "phone": "2145550136"
+        "phone": "2145550136",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -4205,7 +8060,72 @@
     "red_flags": [
       "Broker-dealer. Product-shelf driven with in-house structuring; out of scope."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "Broker-Dealer",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 44000000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.D (HNW client count and assets) gives it."
+      },
+      "alts_exposure": {
+        "value": "structured notes",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "In-house",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Dallas, TX, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Terrence Achebe",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "SVP Product",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "tachebe@beaumontfielding.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Non-buyer seat",
+        "source": "derived",
+        "note": "From title 'SVP Product'."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "No outreach.",
+      "touches": []
+    }
   },
   {
     "firm_name": "Brackenridge Alternative Partners",
@@ -4223,7 +8143,9 @@
         "name": "Emiliano Costa-Zabala",
         "title": "Managing Partner",
         "email": "ecosta@brackenridgeap.com",
-        "phone": "2035550507"
+        "phone": "2035550507",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -4254,7 +8176,72 @@
     "red_flags": [
       "Investment-side firm. A manager, not a buyer."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "Private Credit Manager",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 3300000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 5.D (HNW client count and assets) gives it."
+      },
+      "alts_exposure": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Ask on the first call."
+      },
+      "custodian": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Not in the CSV. Form ADV Item 9 lists custodians."
+      },
+      "location": {
+        "value": "Stamford, CT, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Emiliano Costa-Zabala",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Managing Partner",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "ecosta@brackenridgeap.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "Principal",
+        "source": "derived",
+        "note": "From title 'Managing Partner'."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "No outreach.",
+      "touches": []
+    }
   },
   {
     "firm_name": "Bellhaven Capital Advisors",
@@ -4272,7 +8259,9 @@
         "name": "Krzysztof Zielinski",
         "title": "Chief Investment Officer",
         "email": "kzielinski@bellhavencap.com",
-        "phone": "6175550389"
+        "phone": "6175550389",
+        "email_source": "csv",
+        "email_note": null
       }
     ],
     "cleaning_notes": [],
@@ -4303,6 +8292,71 @@
     "red_flags": [
       "$33.0B AUM, above the $30B ceiling. Firms this size staff their own manager research and source the same managers Equi does."
     ],
-    "bubble": null
+    "bubble": null,
+    "sources": {
+      "firm_type": {
+        "value": "RIA",
+        "source": "csv",
+        "note": null
+      },
+      "aum_usd": {
+        "value": 33000000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "avg_client_usd": {
+        "value": 38000000.0,
+        "source": "csv",
+        "note": null
+      },
+      "alts_exposure": {
+        "value": "everything",
+        "source": "csv",
+        "note": null
+      },
+      "custodian": {
+        "value": "Multiple",
+        "source": "csv",
+        "note": null
+      },
+      "location": {
+        "value": "Boston, MA, USA",
+        "source": "csv",
+        "note": null
+      },
+      "contact_name": {
+        "value": "Krzysztof Zielinski",
+        "source": "csv",
+        "note": null
+      },
+      "contact_title": {
+        "value": "Chief Investment Officer",
+        "source": "csv",
+        "note": null
+      },
+      "contact_email": {
+        "value": "kzielinski@bellhavencap.com",
+        "source": "csv",
+        "note": null
+      },
+      "persona": {
+        "value": "CIO",
+        "source": "derived",
+        "note": "From title 'Chief Investment Officer'."
+      },
+      "sec_registration": {
+        "value": null,
+        "source": "needs_lookup",
+        "note": "Offline run; IAPD not queried."
+      }
+    },
+    "sec_adv": {
+      "status": "skipped",
+      "detail": "Offline run; IAPD not queried."
+    },
+    "sequence": {
+      "goal": "No outreach.",
+      "touches": []
+    }
   }
 ]
