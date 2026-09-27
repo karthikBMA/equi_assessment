@@ -1,0 +1,4308 @@
+[
+  {
+    "firm_name": "Marchetti Ruiz Family Advisors",
+    "firm_type": "MFO",
+    "aum_usd": 4400000000.0,
+    "avg_client_usd": 25000000.0,
+    "city": "Miami",
+    "state": "FL",
+    "country": "USA",
+    "contact_name": "Rodrigo Marchetti-Ruiz",
+    "contact_title": "Principal",
+    "contact_email": "rodrigo@marchettiruiz.com",
+    "contacts": [
+      {
+        "name": "Rodrigo Marchetti-Ruiz",
+        "title": "Principal",
+        "email": "rodrigo@marchettiruiz.com",
+        "phone": "3055550359"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      32
+    ],
+    "alts_exposure": "private equity, real estate",
+    "custodian": "BNY Pershing",
+    "score": 92.0,
+    "score_lo": 92.0,
+    "score_hi": 92.0,
+    "tier": "A",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $25.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (private equity, real estate) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 8.5,
+        "max": 10.0,
+        "reason": "$4.4B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 8.5,
+        "hi": 8.5
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 221 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Rodrigo Marchetti-Ruiz (Principal) is the buyer Equi wants at a firm like this.",
+    "route": "Pre-built Kit + founder direct",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Principal",
+    "alts_list": [
+      "private equity",
+      "real estate"
+    ],
+    "tier_a_share": 0.984,
+    "red_flags": [],
+    "bubble": null
+  },
+  {
+    "firm_name": "Ellingham Court Partners",
+    "firm_type": "MFO",
+    "aum_usd": 2750000000.0,
+    "avg_client_usd": 21000000.0,
+    "city": "Greenwich",
+    "state": "CT",
+    "country": "USA",
+    "contact_name": "Perpetua Nwachukwu-Eze",
+    "contact_title": "Founder & CIO",
+    "contact_email": "pnwachukwu@ellinghamcourt.com",
+    "contacts": [
+      {
+        "name": "Perpetua Nwachukwu-Eze",
+        "title": "Founder & CIO",
+        "email": "pnwachukwu@ellinghamcourt.com",
+        "phone": "2035550193"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      45
+    ],
+    "alts_exposure": "private equity",
+    "custodian": "Fidelity",
+    "score": 90.5,
+    "score_lo": 90.5,
+    "score_hi": 90.5,
+    "tier": "A",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $21.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (private equity) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 7.0,
+        "max": 10.0,
+        "reason": "$2.8B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 7.0,
+        "hi": 7.0
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 136 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Perpetua Nwachukwu-Eze (Founder & CIO) is the buyer Equi wants at a firm like this.",
+    "route": "Pre-built Kit + founder direct",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Founder-CIO",
+    "alts_list": [
+      "private equity"
+    ],
+    "tier_a_share": 0.966,
+    "red_flags": [],
+    "bubble": null
+  },
+  {
+    "firm_name": "Ashcombe Meridian Family Office",
+    "firm_type": "MFO",
+    "aum_usd": 4050000000.0,
+    "avg_client_usd": 24000000.0,
+    "city": "Palo Alto",
+    "state": "CA",
+    "country": "USA",
+    "contact_name": "Rasheed Al-Mansoori",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "ralmansoori@ashcombemfo.com",
+    "contacts": [
+      {
+        "name": "Rasheed Al-Mansoori",
+        "title": "Chief Investment Officer",
+        "email": "ralmansoori@ashcombemfo.com",
+        "phone": "6505550580"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      49
+    ],
+    "alts_exposure": "venture, private credit",
+    "custodian": "Northern Trust",
+    "score": 90.2,
+    "score_lo": 90.2,
+    "score_hi": 90.2,
+    "tier": "A",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $24.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 12.0,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 12.0,
+        "hi": 12.0
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (venture, private credit) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 8.2,
+        "max": 10.0,
+        "reason": "$4.0B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 8.2,
+        "hi": 8.2
+      },
+      "warmth": {
+        "points": 5.0,
+        "max": 10.0,
+        "reason": "Touched 35 days ago; direct email on file.",
+        "known": true,
+        "lo": 5.0,
+        "hi": 5.0
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Rasheed Al-Mansoori (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Pre-built Kit + CIO peer sequence",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "venture",
+      "private credit"
+    ],
+    "tier_a_share": 0.994,
+    "red_flags": [],
+    "bubble": null
+  },
+  {
+    "firm_name": "Oakhurst Meridian Advisors",
+    "firm_type": "RIA",
+    "aum_usd": 5900000000.0,
+    "avg_client_usd": 7200000.0,
+    "city": "San Diego",
+    "state": "CA",
+    "country": "USA",
+    "contact_name": "Consuelo Iturbide-Ram\u00edrez",
+    "contact_title": "Founder and CIO",
+    "contact_email": "citurbide@oakhurstmeridian.com",
+    "contacts": [
+      {
+        "name": "Consuelo Iturbide-Ram\u00edrez",
+        "title": "Founder and CIO",
+        "email": "citurbide@oakhurstmeridian.com",
+        "phone": "6195550428"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "principal-led; can decide alone",
+    "source_rows": [
+      26
+    ],
+    "alts_exposure": "private credit",
+    "custodian": "Schwab",
+    "score": 88.0,
+    "score_lo": 88.0,
+    "score_hi": 88.0,
+    "tier": "A",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $7.2M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (private credit) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 10.0,
+        "max": 10.0,
+        "reason": "$5.9B AUM, in the $5B+ bullseye.",
+        "known": true,
+        "lo": 10.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 5.0,
+        "max": 10.0,
+        "reason": "Touched 46 days ago; direct email on file.",
+        "known": true,
+        "lo": 5.0,
+        "hi": 5.0
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Consuelo Iturbide-Ram\u00edrez (Founder and CIO) is the buyer Equi wants at a firm like this.",
+    "route": "Pre-built Kit + founder direct",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Founder-CIO",
+    "alts_list": [
+      "private credit"
+    ],
+    "tier_a_share": 0.976,
+    "red_flags": [],
+    "bubble": null
+  },
+  {
+    "firm_name": "Quillmoor Advisors",
+    "firm_type": "RIA",
+    "aum_usd": 7700000000.0,
+    "avg_client_usd": 10000000.0,
+    "city": "Raleigh",
+    "state": "NC",
+    "country": "USA",
+    "contact_name": "Wilhelmina Oosterhuis",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "woosterhuis@quillmooradv.com",
+    "contacts": [
+      {
+        "name": "Wilhelmina Oosterhuis",
+        "title": "Chief Investment Officer",
+        "email": "woosterhuis@quillmooradv.com",
+        "phone": "9195550823"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      37
+    ],
+    "alts_exposure": "private equity, private credit",
+    "custodian": "Schwab",
+    "score": 87.8,
+    "score_lo": 87.8,
+    "score_hi": 87.8,
+    "tier": "A",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 22.0,
+        "max": 25.0,
+        "reason": "Independent RIA serving $10.0M average clients. That profile is rebranding toward multi-family office; treated as a transition signal (inferred, verify on ADV and site).",
+        "known": true,
+        "lo": 22.0,
+        "hi": 22.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $10.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 10.8,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 10.8,
+        "hi": 10.8
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (private equity, private credit) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 10.0,
+        "max": 10.0,
+        "reason": "$7.7B AUM, in the $5B+ bullseye.",
+        "known": true,
+        "lo": 10.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 5.0,
+        "max": 10.0,
+        "reason": "Touched 53 days ago; direct email on file.",
+        "known": true,
+        "lo": 5.0,
+        "hi": 5.0
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Wilhelmina Oosterhuis (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Pre-built Kit + CIO peer sequence",
+    "decision_structure": "CIO-led",
+    "mfo_transition": true,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "private equity",
+      "private credit"
+    ],
+    "tier_a_share": 0.982,
+    "red_flags": [],
+    "bubble": null
+  },
+  {
+    "firm_name": "Marisol & Hart Private Wealth",
+    "firm_type": "MFO",
+    "aum_usd": 3100000000.0,
+    "avg_client_usd": 22000000.0,
+    "city": "Coral Gables",
+    "state": "FL",
+    "country": "USA",
+    "contact_name": "Esperanza Villalobos-Quintero",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "evq@marisolhart.com",
+    "contacts": [
+      {
+        "name": "Esperanza Villalobos-Quintero",
+        "title": "Chief Investment Officer",
+        "email": "evq@marisolhart.com",
+        "phone": "3055550621"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "warm intro via Tory",
+    "source_rows": [
+      12
+    ],
+    "alts_exposure": "real assets, hedge funds",
+    "custodian": "BNY Pershing",
+    "score": 85.8,
+    "score_lo": 85.8,
+    "score_hi": 85.8,
+    "tier": "A",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $22.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 12.0,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 12.0,
+        "hi": 12.0
+      },
+      "alts_gap": {
+        "points": 13.0,
+        "max": 20.0,
+        "reason": "Already uses hedge funds (real assets, hedge funds). Fluent, but Equi would be replacing or adding to a current manager.",
+        "known": true,
+        "lo": 13.0,
+        "hi": 13.0
+      },
+      "aum": {
+        "points": 7.3,
+        "max": 10.0,
+        "reason": "$3.1B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 7.3,
+        "hi": 7.3
+      },
+      "warmth": {
+        "points": 8.5,
+        "max": 10.0,
+        "reason": "Warm intro available; last touch 131 days ago; direct email on file.",
+        "known": true,
+        "lo": 8.5,
+        "hi": 8.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Esperanza Villalobos-Quintero (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Pre-built Kit + CIO peer sequence",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "real assets",
+      "hedge funds"
+    ],
+    "tier_a_share": 0.974,
+    "red_flags": [
+      "Alts experience: Already uses hedge funds (real assets, hedge funds). Fluent, but Equi would be replacing or adding to a current manager."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Harborstone Wealth Partners",
+    "firm_type": "RIA",
+    "aum_usd": 4200000000.0,
+    "avg_client_usd": 6500000.0,
+    "city": "Charlotte",
+    "state": "NC",
+    "country": "USA",
+    "contact_name": "Margaret Ellison",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "m.ellison@harborstonewp.com",
+    "contacts": [
+      {
+        "name": "Margaret Ellison",
+        "title": "Chief Investment Officer",
+        "email": "m.ellison@harborstonewp.com",
+        "phone": "7045550182"
+      }
+    ],
+    "cleaning_notes": [
+      "Merged 2 rows (2, 3)"
+    ],
+    "raw_notes": "met at Future Proof 2025; dupe?",
+    "source_rows": [
+      2,
+      3
+    ],
+    "alts_exposure": "private equity, real estate",
+    "custodian": "Schwab",
+    "score": 84.6,
+    "score_lo": 84.6,
+    "score_hi": 84.6,
+    "tier": "A",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $6.5M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 10.8,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 10.8,
+        "hi": 10.8
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (private equity, real estate) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 8.3,
+        "max": 10.0,
+        "reason": "$4.2B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 8.3,
+        "hi": 8.3
+      },
+      "warmth": {
+        "points": 7.5,
+        "max": 10.0,
+        "reason": "Met in person; last touch 197 days ago; direct email on file.",
+        "known": true,
+        "lo": 7.5,
+        "hi": 7.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Margaret Ellison (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Pre-built Kit + CIO peer sequence",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "private equity",
+      "real estate"
+    ],
+    "tier_a_share": 0.974,
+    "red_flags": [],
+    "bubble": null
+  },
+  {
+    "firm_name": "Aldermoor Capital Group",
+    "firm_type": "MFO",
+    "aum_usd": 6100000000.0,
+    "avg_client_usd": 19000000.0,
+    "city": "Chicago",
+    "state": "IL",
+    "country": "USA",
+    "contact_name": "Oluwaseun Babatunde-Fashola",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "obf@aldermoorcg.com",
+    "contacts": [
+      {
+        "name": "Oluwaseun Babatunde-Fashola",
+        "title": "Chief Investment Officer",
+        "email": "obf@aldermoorcg.com",
+        "phone": "3125550987"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      29
+    ],
+    "alts_exposure": "real assets, hedge funds",
+    "custodian": "Northern Trust",
+    "score": 83.5,
+    "score_lo": 83.5,
+    "score_hi": 83.5,
+    "tier": "A",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $19.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 12.0,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 12.0,
+        "hi": 12.0
+      },
+      "alts_gap": {
+        "points": 13.0,
+        "max": 20.0,
+        "reason": "Already uses hedge funds (real assets, hedge funds). Fluent, but Equi would be replacing or adding to a current manager.",
+        "known": true,
+        "lo": 13.0,
+        "hi": 13.0
+      },
+      "aum": {
+        "points": 10.0,
+        "max": 10.0,
+        "reason": "$6.1B AUM, in the $5B+ bullseye.",
+        "known": true,
+        "lo": 10.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 105 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Oluwaseun Babatunde-Fashola (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Pre-built Kit + CIO peer sequence",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "real assets",
+      "hedge funds"
+    ],
+    "tier_a_share": 0.754,
+    "red_flags": [
+      "Alts experience: Already uses hedge funds (real assets, hedge funds). Fluent, but Equi would be replacing or adding to a current manager."
+    ],
+    "bubble": "Tier A under our weights, but only in 75% of alternative weightings."
+  },
+  {
+    "firm_name": "Bramblewick Capital Advisers",
+    "firm_type": "RIA",
+    "aum_usd": 9600000000.0,
+    "avg_client_usd": 11000000.0,
+    "city": "Atlanta",
+    "state": "GA",
+    "country": "USA",
+    "contact_name": "Solveig Andersdottir",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "sandersdottir@bramblewickcap.com",
+    "contacts": [
+      {
+        "name": "Solveig Andersdottir",
+        "title": "Chief Investment Officer",
+        "email": "sandersdottir@bramblewickcap.com",
+        "phone": "4045550519"
+      }
+    ],
+    "cleaning_notes": [
+      "Merged 2 rows (19, 20)"
+    ],
+    "raw_notes": "",
+    "source_rows": [
+      19,
+      20
+    ],
+    "alts_exposure": "private credit, hedge funds",
+    "custodian": "Schwab",
+    "score": 79.3,
+    "score_lo": 79.3,
+    "score_hi": 79.3,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 22.0,
+        "max": 25.0,
+        "reason": "Independent RIA serving $11.0M average clients. That profile is rebranding toward multi-family office; treated as a transition signal (inferred, verify on ADV and site).",
+        "known": true,
+        "lo": 22.0,
+        "hi": 22.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $11.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 10.8,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 10.8,
+        "hi": 10.8
+      },
+      "alts_gap": {
+        "points": 13.0,
+        "max": 20.0,
+        "reason": "Already uses hedge funds (private credit, hedge funds). Fluent, but Equi would be replacing or adding to a current manager.",
+        "known": true,
+        "lo": 13.0,
+        "hi": 13.0
+      },
+      "aum": {
+        "points": 10.0,
+        "max": 10.0,
+        "reason": "$9.6B AUM, in the $5B+ bullseye.",
+        "known": true,
+        "lo": 10.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 150 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Solveig Andersdottir (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "CIO-led",
+    "mfo_transition": true,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "private credit",
+      "hedge funds"
+    ],
+    "tier_a_share": 0.486,
+    "red_flags": [
+      "Alts experience: Already uses hedge funds (private credit, hedge funds). Fluent, but Equi would be replacing or adding to a current manager."
+    ],
+    "bubble": "Lands in Tier A in 49% of alternative weightings. Your priorities decide this one."
+  },
+  {
+    "firm_name": "Haverlock Advisory Group",
+    "firm_type": "RIA",
+    "aum_usd": 6800000000.0,
+    "avg_client_usd": 8900000.0,
+    "city": "Boston",
+    "state": "MA",
+    "country": "USA",
+    "contact_name": "Aoife N\u00ed Bhraon\u00e1in",
+    "contact_title": "Director of Research",
+    "contact_email": "anibhraonain@haverlockadv.com",
+    "contacts": [
+      {
+        "name": "Aoife N\u00ed Bhraon\u00e1in",
+        "title": "Director of Research",
+        "email": "anibhraonain@haverlockadv.com",
+        "phone": "6175550904"
+      }
+    ],
+    "cleaning_notes": [
+      "Merged 2 rows (10, 11)"
+    ],
+    "raw_notes": "committee-driven; slow",
+    "source_rows": [
+      10,
+      11
+    ],
+    "alts_exposure": "private credit",
+    "custodian": "Schwab",
+    "score": 78.2,
+    "score_lo": 78.2,
+    "score_hi": 78.2,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $8.9M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 6.8,
+        "max": 15.0,
+        "reason": "Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
+        "known": true,
+        "lo": 6.8,
+        "hi": 6.8
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (private credit) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 10.0,
+        "max": 10.0,
+        "reason": "$6.8B AUM, in the $5B+ bullseye.",
+        "known": true,
+        "lo": 10.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 169 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Aoife N\u00ed Bhraon\u00e1in (Director of Research) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "Committee-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Research lead",
+    "alts_list": [
+      "private credit"
+    ],
+    "tier_a_share": 0.434,
+    "red_flags": [
+      "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
+    ],
+    "bubble": "Lands in Tier A in 43% of alternative weightings. Your priorities decide this one."
+  },
+  {
+    "firm_name": "Solstice Grove Advisors",
+    "firm_type": "RIA",
+    "aum_usd": 8900000000.0,
+    "avg_client_usd": 12000000.0,
+    "city": "Seattle",
+    "state": "WA",
+    "country": "USA",
+    "contact_name": "Xiaoming Zhu-Whitfield",
+    "contact_title": "Head of Manager Selection",
+    "contact_email": "xzhu@solsticegrove.com",
+    "contacts": [
+      {
+        "name": "Xiaoming Zhu-Whitfield",
+        "title": "Head of Manager Selection",
+        "email": "xzhu@solsticegrove.com",
+        "phone": "2065550817"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      47
+    ],
+    "alts_exposure": "hedge funds, private credit",
+    "custodian": "Multiple",
+    "score": 76.8,
+    "score_lo": 76.8,
+    "score_hi": 76.8,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 22.0,
+        "max": 25.0,
+        "reason": "Independent RIA serving $12.0M average clients. That profile is rebranding toward multi-family office; treated as a transition signal (inferred, verify on ADV and site).",
+        "known": true,
+        "lo": 22.0,
+        "hi": 22.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $12.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 6.8,
+        "max": 15.0,
+        "reason": "Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
+        "known": true,
+        "lo": 6.8,
+        "hi": 6.8
+      },
+      "alts_gap": {
+        "points": 13.0,
+        "max": 20.0,
+        "reason": "Already uses hedge funds (hedge funds, private credit). Fluent, but Equi would be replacing or adding to a current manager.",
+        "known": true,
+        "lo": 13.0,
+        "hi": 13.0
+      },
+      "aum": {
+        "points": 10.0,
+        "max": 10.0,
+        "reason": "$8.9B AUM, in the $5B+ bullseye.",
+        "known": true,
+        "lo": 10.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 5.0,
+        "max": 10.0,
+        "reason": "Touched 87 days ago; direct email on file.",
+        "known": true,
+        "lo": 5.0,
+        "hi": 5.0
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Xiaoming Zhu-Whitfield (Head of Manager Selection) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "Committee-led",
+    "mfo_transition": true,
+    "mover": null,
+    "persona": "Research lead",
+    "alts_list": [
+      "hedge funds",
+      "private credit"
+    ],
+    "tier_a_share": 0.286,
+    "red_flags": [
+      "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
+      "Alts experience: Already uses hedge funds (hedge funds, private credit). Fluent, but Equi would be replacing or adding to a current manager."
+    ],
+    "bubble": "Lands in Tier A in 29% of alternative weightings. Your priorities decide this one."
+  },
+  {
+    "firm_name": "Thornbury Wealth Advisors",
+    "firm_type": "RIA",
+    "aum_usd": 3700000000.0,
+    "avg_client_usd": 5400000.0,
+    "city": "Philadelphia",
+    "state": "PA",
+    "country": "USA",
+    "contact_name": "Lakshmi Venkataraghavan",
+    "contact_title": "Director of Manager Research",
+    "contact_email": "lvenkataraghavan@thornburywa.com",
+    "contacts": [
+      {
+        "name": "Lakshmi Venkataraghavan",
+        "title": "Director of Manager Research",
+        "email": "lvenkataraghavan@thornburywa.com",
+        "phone": "2155550294"
+      },
+      {
+        "name": "Marcus Oyelaran",
+        "title": "EA to the CIO",
+        "email": "m.oyelaran@thornburywa.com",
+        "phone": "2155550295"
+      }
+    ],
+    "cleaning_notes": [
+      "Merged 2 rows (22, 23); kept 2 distinct contacts"
+    ],
+    "raw_notes": "gatekeeper contact",
+    "source_rows": [
+      22,
+      23
+    ],
+    "alts_exposure": "private equity",
+    "custodian": "Pershing",
+    "score": 76.1,
+    "score_lo": 76.1,
+    "score_hi": 76.1,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $5.4M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 6.8,
+        "max": 15.0,
+        "reason": "Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
+        "known": true,
+        "lo": 6.8,
+        "hi": 6.8
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (private equity) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 7.9,
+        "max": 10.0,
+        "reason": "$3.7B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 7.9,
+        "hi": 7.9
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 148 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Lakshmi Venkataraghavan (Director of Manager Research) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "Committee-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Research lead",
+    "alts_list": [
+      "private equity"
+    ],
+    "tier_a_share": 0.24,
+    "red_flags": [
+      "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
+    ],
+    "bubble": "Lands in Tier A in 24% of alternative weightings. Your priorities decide this one."
+  },
+  {
+    "firm_name": "Ridgeline Family Office",
+    "firm_type": "MFO",
+    "aum_usd": 11500000000.0,
+    "avg_client_usd": 14000000.0,
+    "city": "Denver",
+    "state": "CO",
+    "country": "USA",
+    "contact_name": "Devendra Raghunathan",
+    "contact_title": "Founder & CIO",
+    "contact_email": "d.raghunathan@ridgelinefo.com",
+    "contacts": [
+      {
+        "name": "Devendra Raghunathan",
+        "title": "Founder & CIO",
+        "email": "d.raghunathan@ridgelinefo.com",
+        "phone": null
+      }
+    ],
+    "cleaning_notes": [
+      "Merged 2 rows (4, 5)",
+      "AUM '11500' had no unit; read as $11.5B (millions convention); confirmed by row 5 ('11.5B')",
+      "Filled phone from duplicate row 5"
+    ],
+    "raw_notes": "possible duplicate of row 3",
+    "source_rows": [
+      4,
+      5
+    ],
+    "alts_exposure": "hedge funds, private credit, venture",
+    "custodian": "Fidelity",
+    "score": 76.0,
+    "score_lo": 76.0,
+    "score_hi": 76.0,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $14.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 4.0,
+        "max": 20.0,
+        "reason": "Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure.",
+        "known": true,
+        "lo": 4.0,
+        "hi": 4.0
+      },
+      "aum": {
+        "points": 10.0,
+        "max": 10.0,
+        "reason": "$11.5B AUM, in the $5B+ bullseye.",
+        "known": true,
+        "lo": 10.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 2.0,
+        "max": 10.0,
+        "reason": "Cold, last touch 248 days ago; direct email on file.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Devendra Raghunathan (Founder & CIO) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Founder-CIO",
+    "alts_list": [
+      "hedge funds",
+      "private credit",
+      "venture"
+    ],
+    "tier_a_share": 0.338,
+    "red_flags": [
+      "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure.",
+      "Warmth and reach: Cold, last touch 248 days ago; direct email on file."
+    ],
+    "bubble": "Lands in Tier A in 34% of alternative weightings. Your priorities decide this one."
+  },
+  {
+    "firm_name": "Larkhaven Multi-Family Office",
+    "firm_type": "MFO",
+    "aum_usd": 5400000000.0,
+    "avg_client_usd": 27000000.0,
+    "city": "Newport Beach",
+    "state": "CA",
+    "country": "USA",
+    "contact_name": "Yekaterina Vorontsova",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "yvorontsova@larkhavenmfo.com",
+    "contacts": [
+      {
+        "name": "Yekaterina Vorontsova",
+        "title": "Chief Investment Officer",
+        "email": "yvorontsova@larkhavenmfo.com",
+        "phone": "9495550271"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      42
+    ],
+    "alts_exposure": "hedge funds, PE, venture",
+    "custodian": "Northern Trust",
+    "score": 76.0,
+    "score_lo": 76.0,
+    "score_hi": 76.0,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $27.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 12.0,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 12.0,
+        "hi": 12.0
+      },
+      "alts_gap": {
+        "points": 4.0,
+        "max": 20.0,
+        "reason": "Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure.",
+        "known": true,
+        "lo": 4.0,
+        "hi": 4.0
+      },
+      "aum": {
+        "points": 10.0,
+        "max": 10.0,
+        "reason": "$5.4B AUM, in the $5B+ bullseye.",
+        "known": true,
+        "lo": 10.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 5.0,
+        "max": 10.0,
+        "reason": "Touched 39 days ago; direct email on file.",
+        "known": true,
+        "lo": 5.0,
+        "hi": 5.0
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Yekaterina Vorontsova (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "hedge funds",
+      "pe",
+      "venture"
+    ],
+    "tier_a_share": 0.316,
+    "red_flags": [
+      "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
+    ],
+    "bubble": "Lands in Tier A in 32% of alternative weightings. Your priorities decide this one."
+  },
+  {
+    "firm_name": "Tanglewood Reach Advisors",
+    "firm_type": "RIA",
+    "aum_usd": 3450000000.0,
+    "avg_client_usd": 5100000.0,
+    "city": "Hartford",
+    "state": "CT",
+    "country": "USA",
+    "contact_name": "Bronwyn Llewellyn-Price",
+    "contact_title": "Director of Research",
+    "contact_email": "bllewellyn@tanglewoodreach.com",
+    "contacts": [
+      {
+        "name": "Bronwyn Llewellyn-Price",
+        "title": "Director of Research",
+        "email": "bllewellyn@tanglewoodreach.com",
+        "phone": "8605550149"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      50
+    ],
+    "alts_exposure": "real estate",
+    "custodian": "Pershing",
+    "score": 75.9,
+    "score_lo": 75.9,
+    "score_hi": 75.9,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $5.1M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 6.8,
+        "max": 15.0,
+        "reason": "Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
+        "known": true,
+        "lo": 6.8,
+        "hi": 6.8
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (real estate) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 7.6,
+        "max": 10.0,
+        "reason": "$3.5B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 7.6,
+        "hi": 7.6
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 110 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Bronwyn Llewellyn-Price (Director of Research) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "Committee-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Research lead",
+    "alts_list": [
+      "real estate"
+    ],
+    "tier_a_share": 0.232,
+    "red_flags": [
+      "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
+    ],
+    "bubble": "Lands in Tier A in 23% of alternative weightings. Your priorities decide this one."
+  },
+  {
+    "firm_name": "Kirkaldy & Sons Wealth",
+    "firm_type": "RIA",
+    "aum_usd": 1600000000.0,
+    "avg_client_usd": 3600000.0,
+    "city": "Pittsburgh",
+    "state": "PA",
+    "country": "USA",
+    "contact_name": "Angus Kirkaldy III",
+    "contact_title": "Founder",
+    "contact_email": "akirkaldy@kirkaldysons.com",
+    "contacts": [
+      {
+        "name": "Angus Kirkaldy III",
+        "title": "Founder",
+        "email": "akirkaldy@kirkaldysons.com",
+        "phone": "4125550110"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      38
+    ],
+    "alts_exposure": "real estate",
+    "custodian": "Pershing",
+    "score": 72.9,
+    "score_lo": 72.9,
+    "score_hi": 72.9,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 10.4,
+        "max": 20.0,
+        "reason": "Average client $3.6M, just under the $5M QP line. A meaningful slice of clients qualify, not most.",
+        "known": true,
+        "lo": 10.4,
+        "hi": 10.4
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (real estate) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 6.0,
+        "max": 10.0,
+        "reason": "$1.6B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 6.0,
+        "hi": 6.0
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 91 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Angus Kirkaldy III (Founder) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Principal",
+    "alts_list": [
+      "real estate"
+    ],
+    "tier_a_share": 0.072,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $3.6M, just under the $5M QP line. A meaningful slice of clients qualify, not most.",
+      "AUM band: $1.6B AUM, inside the band but under the $5B bullseye."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Vantage Pointe Wealth",
+    "firm_type": "RIA",
+    "aum_usd": 4850000000.0,
+    "avg_client_usd": 7900000.0,
+    "city": "Denver",
+    "state": "CO",
+    "country": "USA",
+    "contact_name": "Ravindra Chandrasekaran",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "rchandrasekaran@vantagepointewealth.com",
+    "contacts": [
+      {
+        "name": "Ravindra Chandrasekaran",
+        "title": "Chief Investment Officer",
+        "email": "rchandrasekaran@vantagepointewealth.com",
+        "phone": "3035550704"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "recently adopted a competitor platform",
+    "source_rows": [
+      44
+    ],
+    "alts_exposure": "private credit",
+    "custodian": "Schwab",
+    "score": 72.7,
+    "score_lo": 72.7,
+    "score_hi": 72.7,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $7.9M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 10.8,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 10.8,
+        "hi": 10.8
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (private credit) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 8.9,
+        "max": 10.0,
+        "reason": "$4.8B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 8.9,
+        "hi": 8.9
+      },
+      "warmth": {
+        "points": 5.0,
+        "max": 10.0,
+        "reason": "Touched 26 days ago; direct email on file.",
+        "known": true,
+        "lo": 5.0,
+        "hi": 5.0
+      }
+    },
+    "modifiers": [
+      [
+        -10,
+        "Recently adopted a competitor platform. Displacement takes quarters, not weeks."
+      ]
+    ],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Ravindra Chandrasekaran (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "private credit"
+    ],
+    "tier_a_share": 0.016,
+    "red_flags": [
+      "-10 pts. Recently adopted a competitor platform. Displacement takes quarters, not weeks."
+    ],
+    "bubble": "Good fit with a specific blocker."
+  },
+  {
+    "firm_name": "Fenwick Larkspur Capital",
+    "firm_type": "RIA",
+    "aum_usd": 12300000000.0,
+    "avg_client_usd": 16000000.0,
+    "city": "San Francisco",
+    "state": "CA",
+    "country": "USA",
+    "contact_name": "Nikolaos Papadopoulos",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "npapadopoulos@fenwicklarkspur.com",
+    "contacts": [
+      {
+        "name": "Nikolaos Papadopoulos",
+        "title": "Chief Investment Officer",
+        "email": "npapadopoulos@fenwicklarkspur.com",
+        "phone": "4155550755"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      27
+    ],
+    "alts_exposure": "hedge funds, private credit, PE",
+    "custodian": "Multiple",
+    "score": 71.8,
+    "score_lo": 71.8,
+    "score_hi": 71.8,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 22.0,
+        "max": 25.0,
+        "reason": "Independent RIA serving $16.0M average clients. That profile is rebranding toward multi-family office; treated as a transition signal (inferred, verify on ADV and site).",
+        "known": true,
+        "lo": 22.0,
+        "hi": 22.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $16.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 10.8,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 10.8,
+        "hi": 10.8
+      },
+      "alts_gap": {
+        "points": 4.0,
+        "max": 20.0,
+        "reason": "Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure.",
+        "known": true,
+        "lo": 4.0,
+        "hi": 4.0
+      },
+      "aum": {
+        "points": 10.0,
+        "max": 10.0,
+        "reason": "$12.3B AUM, in the $5B+ bullseye.",
+        "known": true,
+        "lo": 10.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 5.0,
+        "max": 10.0,
+        "reason": "Touched 64 days ago; direct email on file.",
+        "known": true,
+        "lo": 5.0,
+        "hi": 5.0
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Nikolaos Papadopoulos (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "CIO-led",
+    "mfo_transition": true,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "hedge funds",
+      "private credit",
+      "pe"
+    ],
+    "tier_a_share": 0.112,
+    "red_flags": [
+      "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Sunridge Collective",
+    "firm_type": "RIA",
+    "aum_usd": 3050000000.0,
+    "avg_client_usd": 6800000.0,
+    "city": "Phoenix",
+    "state": "AZ",
+    "country": "USA",
+    "contact_name": "Nayeli Tenorio-Guzm\u00e1n",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "ntenorio@sunridgecollective.com",
+    "contacts": [
+      {
+        "name": "Nayeli Tenorio-Guzm\u00e1n",
+        "title": "Chief Investment Officer",
+        "email": "ntenorio@sunridgecollective.com",
+        "phone": "6025550956"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "never contacted",
+    "source_rows": [
+      39
+    ],
+    "alts_exposure": "hedge funds",
+    "custodian": "Fidelity",
+    "score": 71.1,
+    "score_lo": 71.1,
+    "score_hi": 71.1,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $6.8M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 10.8,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 10.8,
+        "hi": 10.8
+      },
+      "alts_gap": {
+        "points": 13.0,
+        "max": 20.0,
+        "reason": "Already uses hedge funds (hedge funds). Fluent, but Equi would be replacing or adding to a current manager.",
+        "known": true,
+        "lo": 13.0,
+        "hi": 13.0
+      },
+      "aum": {
+        "points": 7.3,
+        "max": 10.0,
+        "reason": "$3.0B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 7.3,
+        "hi": 7.3
+      },
+      "warmth": {
+        "points": 2.0,
+        "max": 10.0,
+        "reason": "Never contacted; direct email on file.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Nayeli Tenorio-Guzm\u00e1n (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "hedge funds"
+    ],
+    "tier_a_share": 0.026,
+    "red_flags": [
+      "Alts experience: Already uses hedge funds (hedge funds). Fluent, but Equi would be replacing or adding to a current manager.",
+      "Warmth and reach: Never contacted; direct email on file."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Windermere Trust Advisors",
+    "firm_type": "MFO",
+    "aum_usd": null,
+    "avg_client_usd": null,
+    "city": "Salt Lake City",
+    "state": "UT",
+    "country": "USA",
+    "contact_name": "Fatoumata Diallo-Sissoko",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "fdiallo@windermeretrust.com",
+    "contacts": [
+      {
+        "name": "Fatoumata Diallo-Sissoko",
+        "title": "Chief Investment Officer",
+        "email": "fdiallo@windermeretrust.com",
+        "phone": null
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "AUM not disclosed",
+    "source_rows": [
+      35
+    ],
+    "alts_exposure": "hedge funds",
+    "custodian": "Northern Trust",
+    "score": 70.5,
+    "score_lo": 57.5,
+    "score_hi": 83.5,
+    "tier": "B",
+    "gate": null,
+    "confidence": "Medium",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 11.0,
+        "max": 20.0,
+        "reason": "Average client size unknown. This is the biggest open question for eligibility.",
+        "known": false,
+        "lo": 2.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 12.0,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 12.0,
+        "hi": 12.0
+      },
+      "alts_gap": {
+        "points": 13.0,
+        "max": 20.0,
+        "reason": "Already uses hedge funds (hedge funds). Fluent, but Equi would be replacing or adding to a current manager.",
+        "known": true,
+        "lo": 13.0,
+        "hi": 13.0
+      },
+      "aum": {
+        "points": 6.0,
+        "max": 10.0,
+        "reason": "AUM not disclosed. Pull from Form ADV before outreach.",
+        "known": false,
+        "lo": 2.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 181 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Fatoumata Diallo-Sissoko (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": "Could reach Tier A if client wealth and aum band check out. Confirm before outreach.",
+    "persona": "CIO",
+    "alts_list": [
+      "hedge funds"
+    ],
+    "tier_a_share": 0.016,
+    "red_flags": [
+      "Client wealth (QP fit): unknown. Average client size unknown. This is the biggest open question for eligibility.",
+      "Alts experience: Already uses hedge funds (hedge funds). Fluent, but Equi would be replacing or adding to a current manager.",
+      "AUM band: unknown. AUM not disclosed. Pull from Form ADV before outreach."
+    ],
+    "bubble": "Could reach Tier A if client wealth and aum band check out. Confirm before outreach."
+  },
+  {
+    "firm_name": "Ferrisdale Wealth Group",
+    "firm_type": "RIA",
+    "aum_usd": 2049999999.9999998,
+    "avg_client_usd": 4700000.0,
+    "city": "Columbus",
+    "state": "OH",
+    "country": "USA",
+    "contact_name": "Abimbola Adesanya-Cole",
+    "contact_title": "Managing Director of Research",
+    "contact_email": "aadesanya@ferrisdalewg.com",
+    "contacts": [
+      {
+        "name": "Abimbola Adesanya-Cole",
+        "title": "Managing Director of Research",
+        "email": "aadesanya@ferrisdalewg.com",
+        "phone": "6145550642"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      41
+    ],
+    "alts_exposure": "private credit, real estate",
+    "custodian": "Schwab",
+    "score": 69.5,
+    "score_lo": 69.5,
+    "score_hi": 69.5,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 14.8,
+        "max": 20.0,
+        "reason": "Average client $4.7M, just under the $5M QP line. A meaningful slice of clients qualify, not most.",
+        "known": true,
+        "lo": 14.8,
+        "hi": 14.8
+      },
+      "decision_speed": {
+        "points": 6.8,
+        "max": 15.0,
+        "reason": "Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
+        "known": true,
+        "lo": 6.8,
+        "hi": 6.8
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (private credit, real estate) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 6.4,
+        "max": 10.0,
+        "reason": "$2.0B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 6.4,
+        "hi": 6.4
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 158 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Abimbola Adesanya-Cole (Managing Director of Research) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "Committee-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Research lead",
+    "alts_list": [
+      "private credit",
+      "real estate"
+    ],
+    "tier_a_share": 0.004,
+    "red_flags": [
+      "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
+      "AUM band: $2.0B AUM, inside the band but under the $5B bullseye."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Sparrowhawk Investment Advisors",
+    "firm_type": "RIA",
+    "aum_usd": 2900000000.0,
+    "avg_client_usd": 4099999.9999999995,
+    "city": "Richmond",
+    "state": "VA",
+    "country": "USA",
+    "contact_name": "Dmitri Yevtushenko",
+    "contact_title": "Director of Due Diligence",
+    "contact_email": "dyevtushenko@sparrowhawkia.com",
+    "contacts": [
+      {
+        "name": "Dmitri Yevtushenko",
+        "title": "Director of Due Diligence",
+        "email": "dyevtushenko@sparrowhawkia.com",
+        "phone": "8045550691"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "IC-driven",
+    "source_rows": [
+      34
+    ],
+    "alts_exposure": "private credit",
+    "custodian": "Schwab",
+    "score": 67.8,
+    "score_lo": 67.8,
+    "score_hi": 67.8,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 12.4,
+        "max": 20.0,
+        "reason": "Average client $4.1M, just under the $5M QP line. A meaningful slice of clients qualify, not most.",
+        "known": true,
+        "lo": 12.4,
+        "hi": 12.4
+      },
+      "decision_speed": {
+        "points": 6.8,
+        "max": 15.0,
+        "reason": "Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
+        "known": true,
+        "lo": 6.8,
+        "hi": 6.8
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (private credit) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 7.2,
+        "max": 10.0,
+        "reason": "$2.9B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 7.2,
+        "hi": 7.2
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 123 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Dmitri Yevtushenko (Director of Due Diligence) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "Committee-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Research lead",
+    "alts_list": [
+      "private credit"
+    ],
+    "tier_a_share": 0.002,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $4.1M, just under the $5M QP line. A meaningful slice of clients qualify, not most.",
+      "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Eastmarch Trust Company",
+    "firm_type": "MFO",
+    "aum_usd": 15200000000.0,
+    "avg_client_usd": 31000000.0,
+    "city": "Seattle",
+    "state": "WA",
+    "country": "USA",
+    "contact_name": "Hyacinth Featherstone-Marsh",
+    "contact_title": "CIO",
+    "contact_email": "h.featherstone@eastmarchtrust.com",
+    "contacts": [
+      {
+        "name": "Hyacinth Featherstone-Marsh",
+        "title": "CIO",
+        "email": "h.featherstone@eastmarchtrust.com",
+        "phone": "2065550340"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "alts-native",
+    "source_rows": [
+      17
+    ],
+    "alts_exposure": "hedge funds, private credit, infra",
+    "custodian": "Multiple",
+    "score": 66.5,
+    "score_lo": 66.5,
+    "score_hi": 66.5,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 12.0,
+        "max": 20.0,
+        "reason": "Average client $31.0M, above the sweet spot. These clients usually get direct institutional access already.",
+        "known": true,
+        "lo": 12.0,
+        "hi": 12.0
+      },
+      "decision_speed": {
+        "points": 12.0,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 12.0,
+        "hi": 12.0
+      },
+      "alts_gap": {
+        "points": 4.0,
+        "max": 20.0,
+        "reason": "Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure.",
+        "known": true,
+        "lo": 4.0,
+        "hi": 4.0
+      },
+      "aum": {
+        "points": 10.0,
+        "max": 10.0,
+        "reason": "$15.2B AUM, in the $5B+ bullseye.",
+        "known": true,
+        "lo": 10.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 98 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Hyacinth Featherstone-Marsh (CIO) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "hedge funds",
+      "private credit",
+      "infra"
+    ],
+    "tier_a_share": 0.012,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $31.0M, above the sweet spot. These clients usually get direct institutional access already.",
+      "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Sable Ridge Investment Counsel",
+    "firm_type": "RIA",
+    "aum_usd": 1400000000.0,
+    "avg_client_usd": 2800000.0,
+    "city": "Scottsdale",
+    "state": "AZ",
+    "country": "USA",
+    "contact_name": "Yusuf Abdirahman",
+    "contact_title": "Founder",
+    "contact_email": "yusuf@sableridgeic.com",
+    "contacts": [
+      {
+        "name": "Yusuf Abdirahman",
+        "title": "Founder",
+        "email": "yusuf@sableridgeic.com",
+        "phone": "4805550212"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      16
+    ],
+    "alts_exposure": "real estate",
+    "custodian": "Schwab",
+    "score": 65.8,
+    "score_lo": 65.8,
+    "score_hi": 65.8,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 2.0,
+        "max": 20.0,
+        "reason": "Average client $2.8M. Few, if any, qualified purchasers.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (real estate) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 5.9,
+        "max": 10.0,
+        "reason": "$1.4B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 5.9,
+        "hi": 5.9
+      },
+      "warmth": {
+        "points": 5.0,
+        "max": 10.0,
+        "reason": "Touched 81 days ago; direct email on file.",
+        "known": true,
+        "lo": 5.0,
+        "hi": 5.0
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Yusuf Abdirahman (Founder) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Principal",
+    "alts_list": [
+      "real estate"
+    ],
+    "tier_a_share": 0.018,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $2.8M. Few, if any, qualified purchasers.",
+      "AUM band: $1.4B AUM, inside the band but under the $5B bullseye."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Glenmara Wealth",
+    "firm_type": "RIA",
+    "aum_usd": null,
+    "avg_client_usd": null,
+    "city": "Minneapolis",
+    "state": "MN",
+    "country": "USA",
+    "contact_name": "Bjorn Haugland",
+    "contact_title": "President",
+    "contact_email": "bhaugland@glenmarawealth.com",
+    "contacts": [
+      {
+        "name": "Bjorn Haugland",
+        "title": "President",
+        "email": "bhaugland@glenmarawealth.com",
+        "phone": "6125550977"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "AUM unknown",
+    "source_rows": [
+      15
+    ],
+    "alts_exposure": null,
+    "custodian": "Fidelity",
+    "score": 65.5,
+    "score_lo": 44.5,
+    "score_hi": 86.5,
+    "tier": "B",
+    "gate": null,
+    "confidence": "Low",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 11.0,
+        "max": 20.0,
+        "reason": "Average client size unknown. This is the biggest open question for eligibility.",
+        "known": false,
+        "lo": 2.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 12.0,
+        "max": 20.0,
+        "reason": "Alts exposure unknown.",
+        "known": false,
+        "lo": 4.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 6.0,
+        "max": 10.0,
+        "reason": "AUM not disclosed. Pull from Form ADV before outreach.",
+        "known": false,
+        "lo": 2.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 212 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Bjorn Haugland (President) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": "Could reach Tier A if client wealth, alts experience and aum band check out. Confirm before outreach.",
+    "persona": "Principal",
+    "alts_list": [],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Client wealth (QP fit): unknown. Average client size unknown. This is the biggest open question for eligibility.",
+      "Alts experience: unknown. Alts exposure unknown.",
+      "AUM band: unknown. AUM not disclosed. Pull from Form ADV before outreach."
+    ],
+    "bubble": "Could reach Tier A if client wealth, alts experience and aum band check out. Confirm before outreach."
+  },
+  {
+    "firm_name": "Locheil Partners",
+    "firm_type": "MFO",
+    "aum_usd": 2200000000.0,
+    "avg_client_usd": 18000000.0,
+    "city": "Toronto",
+    "state": "ON",
+    "country": "Canada",
+    "contact_name": "Jean-Baptiste Moreau-Lachance",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "jb.moreau@locheilpartners.ca",
+    "contacts": [
+      {
+        "name": "Jean-Baptiste Moreau-Lachance",
+        "title": "Chief Investment Officer",
+        "email": "jb.moreau@locheilpartners.ca",
+        "phone": "4165550663"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "non-US",
+    "source_rows": [
+      21
+    ],
+    "alts_exposure": "hedge funds",
+    "custodian": "RBC",
+    "score": 65.0,
+    "score_lo": 65.0,
+    "score_hi": 65.0,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $18.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 12.0,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 12.0,
+        "hi": 12.0
+      },
+      "alts_gap": {
+        "points": 13.0,
+        "max": 20.0,
+        "reason": "Already uses hedge funds (hedge funds). Fluent, but Equi would be replacing or adding to a current manager.",
+        "known": true,
+        "lo": 13.0,
+        "hi": 13.0
+      },
+      "aum": {
+        "points": 6.6,
+        "max": 10.0,
+        "reason": "$2.2B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 6.6,
+        "hi": 6.6
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 206 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [
+      [
+        -15,
+        "Non-US firm. Cross-border eligibility for US fund structures needs compliance review first."
+      ]
+    ],
+    "cap": [
+      "B",
+      "Cross-border; not a Tier A until compliance clears it."
+    ],
+    "contact_fit": "Right person",
+    "contact_fit_why": "Jean-Baptiste Moreau-Lachance (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "hedge funds"
+    ],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Alts experience: Already uses hedge funds (hedge funds). Fluent, but Equi would be replacing or adding to a current manager.",
+      "AUM band: $2.2B AUM, inside the band but under the $5B bullseye.",
+      "-15 pts. Non-US firm. Cross-border eligibility for US fund structures needs compliance review first.",
+      "Capped at Tier B. Cross-border; not a Tier A until compliance clears it."
+    ],
+    "bubble": "Scores well on fit but held back by a rule. Worth a human look."
+  },
+  {
+    "firm_name": "Cinderhill Investment Group",
+    "firm_type": "RIA",
+    "aum_usd": 2150000000.0,
+    "avg_client_usd": 4300000.0,
+    "city": "Louisville",
+    "state": "KY",
+    "country": "USA",
+    "contact_name": "Ignatius Oyelowo-Bankole",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "iob@cinderhillig.com",
+    "contacts": [
+      {
+        "name": "Ignatius Oyelowo-Bankole",
+        "title": "Chief Investment Officer",
+        "email": "iob@cinderhillig.com",
+        "phone": "5025550736"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      51
+    ],
+    "alts_exposure": null,
+    "custodian": "Schwab",
+    "score": 64.0,
+    "score_lo": 56.0,
+    "score_hi": 72.0,
+    "tier": "B",
+    "gate": null,
+    "confidence": "Medium",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 13.2,
+        "max": 20.0,
+        "reason": "Average client $4.3M, just under the $5M QP line. A meaningful slice of clients qualify, not most.",
+        "known": true,
+        "lo": 13.2,
+        "hi": 13.2
+      },
+      "decision_speed": {
+        "points": 10.8,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 10.8,
+        "hi": 10.8
+      },
+      "alts_gap": {
+        "points": 12.0,
+        "max": 20.0,
+        "reason": "Alts exposure unknown.",
+        "known": false,
+        "lo": 4.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 6.5,
+        "max": 10.0,
+        "reason": "$2.1B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 6.5,
+        "hi": 6.5
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 190 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Ignatius Oyelowo-Bankole (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $4.3M, just under the $5M QP line. A meaningful slice of clients qualify, not most.",
+      "Alts experience: unknown. Alts exposure unknown.",
+      "AUM band: $2.1B AUM, inside the band but under the $5B bullseye."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Havenport Global Partners",
+    "firm_type": "MFO",
+    "aum_usd": 28400000000.0,
+    "avg_client_usd": 47000000.0,
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "contact_name": "Anneliese Vandersteen",
+    "contact_title": "Head of External Managers",
+    "contact_email": "a.vandersteen@havenportgp.com",
+    "contacts": [
+      {
+        "name": "Anneliese Vandersteen",
+        "title": "Head of External Managers",
+        "email": "a.vandersteen@havenportgp.com",
+        "phone": "2125550018"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "near ceiling",
+    "source_rows": [
+      31
+    ],
+    "alts_exposure": "everything",
+    "custodian": "Multiple",
+    "score": 62.8,
+    "score_lo": 62.8,
+    "score_hi": 62.8,
+    "tier": "B",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 12.0,
+        "max": 20.0,
+        "reason": "Average client $47.0M, above the sweet spot. These clients usually get direct institutional access already.",
+        "known": true,
+        "lo": 12.0,
+        "hi": 12.0
+      },
+      "decision_speed": {
+        "points": 6.8,
+        "max": 15.0,
+        "reason": "Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
+        "known": true,
+        "lo": 6.8,
+        "hi": 6.8
+      },
+      "alts_gap": {
+        "points": 4.0,
+        "max": 20.0,
+        "reason": "Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure.",
+        "known": true,
+        "lo": 4.0,
+        "hi": 4.0
+      },
+      "aum": {
+        "points": 10.0,
+        "max": 10.0,
+        "reason": "$28.4B AUM, in the $5B+ bullseye.",
+        "known": true,
+        "lo": 10.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 5.0,
+        "max": 10.0,
+        "reason": "Touched 30 days ago; direct email on file.",
+        "known": true,
+        "lo": 5.0,
+        "hi": 5.0
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Anneliese Vandersteen (Head of External Managers) is the buyer Equi wants at a firm like this.",
+    "route": "Market-signal alerts + Kit on engagement",
+    "decision_structure": "Committee-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Research lead",
+    "alts_list": [
+      "everything"
+    ],
+    "tier_a_share": 0.002,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $47.0M, above the sweet spot. These clients usually get direct institutional access already.",
+      "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them.",
+      "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Cairnwell Private Capital",
+    "firm_type": "MFO",
+    "aum_usd": 850000000.0,
+    "avg_client_usd": 9000000.0,
+    "city": "Jackson",
+    "state": "WY",
+    "country": "USA",
+    "contact_name": "Ingrid Ravnsborg-Thiel",
+    "contact_title": "Managing Director",
+    "contact_email": "ingrid@cairnwellpc.com",
+    "contacts": [
+      {
+        "name": "Ingrid Ravnsborg-Thiel",
+        "title": "Managing Director",
+        "email": "ingrid@cairnwellpc.com",
+        "phone": "3075550871"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      24
+    ],
+    "alts_exposure": "venture, real estate",
+    "custodian": "Fidelity",
+    "score": 83.5,
+    "score_lo": 83.5,
+    "score_hi": 83.5,
+    "tier": "C",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 25.0,
+        "max": 25.0,
+        "reason": "Multi-family office, Equi's core buyer.",
+        "known": true,
+        "lo": 25.0,
+        "hi": 25.0
+      },
+      "client_wealth": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Average client $9.0M, inside the $5M to $30M sweet spot. Most clients are likely qualified purchasers.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (venture, real estate) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 1.5,
+        "max": 10.0,
+        "reason": "$0.8B AUM, below the $1B floor.",
+        "known": true,
+        "lo": 1.5,
+        "hi": 1.5
+      },
+      "warmth": {
+        "points": 2.0,
+        "max": 10.0,
+        "reason": "Never contacted; direct email on file.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      }
+    },
+    "modifiers": [],
+    "cap": [
+      "C",
+      "Below the $1B floor; nurture until they grow into the band."
+    ],
+    "contact_fit": "Right person",
+    "contact_fit_why": "Ingrid Ravnsborg-Thiel (Managing Director) is the buyer Equi wants at a firm like this.",
+    "route": "Education nurture",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": "Scores as Tier A on fit, held at C: Below the $1B floor; nurture until they grow into the band.",
+    "persona": "Principal",
+    "alts_list": [
+      "venture",
+      "real estate"
+    ],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "AUM band: $0.8B AUM, below the $1B floor.",
+      "Warmth and reach: Never contacted; direct email on file.",
+      "Capped at Tier C. Below the $1B floor; nurture until they grow into the band."
+    ],
+    "bubble": "Scores well on fit but held back by a rule. Worth a human look."
+  },
+  {
+    "firm_name": "Baynard Holdings",
+    "firm_type": "SFO",
+    "aum_usd": 1900000000.0,
+    "avg_client_usd": null,
+    "city": "Nashville",
+    "state": "TN",
+    "country": "USA",
+    "contact_name": "Chidinma Okonkwo-Adeyemi",
+    "contact_title": "Head of Investments",
+    "contact_email": "c.okonkwo@baynardholdings.com",
+    "contacts": [
+      {
+        "name": "Chidinma Okonkwo-Adeyemi",
+        "title": "Head of Investments",
+        "email": "c.okonkwo@baynardholdings.com",
+        "phone": "6155550128"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "SFO",
+    "source_rows": [
+      14
+    ],
+    "alts_exposure": "private equity, venture, art",
+    "custodian": "Northern Trust",
+    "score": 59.6,
+    "score_lo": 50.6,
+    "score_hi": 68.6,
+    "tier": "C",
+    "gate": null,
+    "confidence": "Medium",
+    "breakdown": {
+      "firm_type": {
+        "points": 8.0,
+        "max": 25.0,
+        "reason": "Single-family office. One family's money, fewer mandates to build for; weaker fit than an MFO.",
+        "known": true,
+        "lo": 8.0,
+        "hi": 8.0
+      },
+      "client_wealth": {
+        "points": 11.0,
+        "max": 20.0,
+        "reason": "Average client size unknown. This is the biggest open question for eligibility.",
+        "known": false,
+        "lo": 2.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 10.8,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 10.8,
+        "hi": 10.8
+      },
+      "alts_gap": {
+        "points": 20.0,
+        "max": 20.0,
+        "reason": "Has illiquid alts (private equity, venture, art) but no liquid or hedge-fund sleeve. Fluent enough to move fast, with a clear gap an evergreen absolute-return fund fills.",
+        "known": true,
+        "lo": 20.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 6.3,
+        "max": 10.0,
+        "reason": "$1.9B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 6.3,
+        "hi": 6.3
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 116 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": [
+      "C",
+      "Single-family office; capped per Equi's guidance."
+    ],
+    "contact_fit": "Right person",
+    "contact_fit_why": "Chidinma Okonkwo-Adeyemi (Head of Investments) is the buyer Equi wants at a firm like this.",
+    "route": "Education nurture",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "private equity",
+      "venture",
+      "art"
+    ],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Firm type: Single-family office. One family's money, fewer mandates to build for; weaker fit than an MFO.",
+      "Client wealth (QP fit): unknown. Average client size unknown. This is the biggest open question for eligibility.",
+      "AUM band: $1.9B AUM, inside the band but under the $5B bullseye.",
+      "Capped at Tier C. Single-family office; capped per Equi's guidance."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Tessendale Ridge Capital",
+    "firm_type": "RIA",
+    "aum_usd": null,
+    "avg_client_usd": null,
+    "city": "Burlington",
+    "state": "VT",
+    "country": "USA",
+    "contact_name": "\u00c9tienne Beauchamp-Rossi",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "ebeauchamp@tessendaleridge.com",
+    "contacts": [
+      {
+        "name": "\u00c9tienne Beauchamp-Rossi",
+        "title": "Chief Investment Officer",
+        "email": "ebeauchamp@tessendaleridge.com",
+        "phone": "8025550466"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      46
+    ],
+    "alts_exposure": "none",
+    "custodian": "Schwab",
+    "score": 58.3,
+    "score_lo": 45.3,
+    "score_hi": 71.3,
+    "tier": "C",
+    "gate": null,
+    "confidence": "Medium",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 11.0,
+        "max": 20.0,
+        "reason": "Average client size unknown. This is the biggest open question for eligibility.",
+        "known": false,
+        "lo": 2.0,
+        "hi": 20.0
+      },
+      "decision_speed": {
+        "points": 10.8,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 10.8,
+        "hi": 10.8
+      },
+      "alts_gap": {
+        "points": 9.0,
+        "max": 20.0,
+        "reason": "No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+        "known": true,
+        "lo": 9.0,
+        "hi": 9.0
+      },
+      "aum": {
+        "points": 6.0,
+        "max": 10.0,
+        "reason": "AUM not disclosed. Pull from Form ADV before outreach.",
+        "known": false,
+        "lo": 2.0,
+        "hi": 10.0
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 230 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "\u00c9tienne Beauchamp-Rossi (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Education nurture",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": "Could reach Tier B if client wealth and aum band check out. Confirm before outreach.",
+    "persona": "CIO",
+    "alts_list": [
+      "none"
+    ],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Client wealth (QP fit): unknown. Average client size unknown. This is the biggest open question for eligibility.",
+      "Alts experience: No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+      "AUM band: unknown. AUM not disclosed. Pull from Form ADV before outreach."
+    ],
+    "bubble": "Could reach Tier B if client wealth and aum band check out. Confirm before outreach."
+  },
+  {
+    "firm_name": "Ambrose Quaid Advisory",
+    "firm_type": "RIA",
+    "aum_usd": 1200000000.0,
+    "avg_client_usd": 2900000.0,
+    "city": "New Orleans",
+    "state": "LA",
+    "country": "USA",
+    "contact_name": "Thaddeus Boudreaux-Ambrose",
+    "contact_title": "Principal",
+    "contact_email": "tboudreaux@ambrosequaid.com",
+    "contacts": [
+      {
+        "name": "Thaddeus Boudreaux-Ambrose",
+        "title": "Principal",
+        "email": "tboudreaux@ambrosequaid.com",
+        "phone": "5045550538"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      43
+    ],
+    "alts_exposure": null,
+    "custodian": "Pershing",
+    "score": 56.2,
+    "score_lo": 48.2,
+    "score_hi": 64.2,
+    "tier": "C",
+    "gate": null,
+    "confidence": "Medium",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 2.0,
+        "max": 20.0,
+        "reason": "Average client $2.9M. Few, if any, qualified purchasers.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 12.0,
+        "max": 20.0,
+        "reason": "Alts exposure unknown.",
+        "known": false,
+        "lo": 4.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 5.7,
+        "max": 10.0,
+        "reason": "$1.2B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 5.7,
+        "hi": 5.7
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 239 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Right person",
+    "contact_fit_why": "Thaddeus Boudreaux-Ambrose (Principal) is the buyer Equi wants at a firm like this.",
+    "route": "Education nurture",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": "Could reach Tier B if alts experience checks out. Confirm before outreach.",
+    "persona": "Principal",
+    "alts_list": [],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $2.9M. Few, if any, qualified purchasers.",
+      "Alts experience: unknown. Alts exposure unknown.",
+      "AUM band: $1.2B AUM, inside the band but under the $5B bullseye."
+    ],
+    "bubble": "Could reach Tier B if alts experience checks out. Confirm before outreach."
+  },
+  {
+    "firm_name": "Pinnacle Crest Capital",
+    "firm_type": "RIA",
+    "aum_usd": 2500000000.0,
+    "avg_client_usd": 3200000.0,
+    "city": "Austin",
+    "state": "TX",
+    "country": "USA",
+    "contact_name": null,
+    "contact_title": null,
+    "contact_email": null,
+    "contacts": [],
+    "cleaning_notes": [],
+    "raw_notes": "no contact identified; LPL captive",
+    "source_rows": [
+      7
+    ],
+    "alts_exposure": "none",
+    "custodian": "LPL Financial",
+    "score": 53.5,
+    "score_lo": 49.4,
+    "score_hi": 57.6,
+    "tier": "C",
+    "gate": null,
+    "confidence": "Medium",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 8.8,
+        "max": 20.0,
+        "reason": "Average client $3.2M, just under the $5M QP line. A meaningful slice of clients qualify, not most.",
+        "known": true,
+        "lo": 8.8,
+        "hi": 8.8
+      },
+      "decision_speed": {
+        "points": 10.9,
+        "max": 15.0,
+        "reason": "Decision structure unknown.",
+        "known": false,
+        "lo": 6.8,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 9.0,
+        "max": 20.0,
+        "reason": "No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+        "known": true,
+        "lo": 9.0,
+        "hi": 9.0
+      },
+      "aum": {
+        "points": 6.8,
+        "max": 10.0,
+        "reason": "$2.5B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 6.8,
+        "hi": 6.8
+      },
+      "warmth": {
+        "points": 0.0,
+        "max": 10.0,
+        "reason": "Never contacted; no direct email.",
+        "known": true,
+        "lo": 0.0,
+        "hi": 0.0
+      }
+    },
+    "modifiers": [],
+    "cap": [
+      "C",
+      "LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
+    ],
+    "contact_fit": "Find contact",
+    "contact_fit_why": "No named decision-maker on file. Research the founder or CIO before any outreach.",
+    "route": "Research: find decision-maker",
+    "decision_structure": "Unknown",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": null,
+    "alts_list": [
+      "none"
+    ],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $3.2M, just under the $5M QP line. A meaningful slice of clients qualify, not most.",
+      "Decision speed: unknown. Decision structure unknown.",
+      "Alts experience: No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+      "AUM band: $2.5B AUM, inside the band but under the $5B bullseye.",
+      "Warmth and reach: Never contacted; no direct email.",
+      "Capped at Tier C. LPL-affiliated. Products generally need LPL platform approval before advisors can use them.",
+      "No named decision-maker on file. Research the founder or CIO before any outreach."
+    ],
+    "bubble": "No named decision-maker yet. Find the right person before judging this one."
+  },
+  {
+    "firm_name": "Cloverdale Financial Partners",
+    "firm_type": "RIA",
+    "aum_usd": 780000000.0,
+    "avg_client_usd": 1400000.0,
+    "city": "Madison",
+    "state": "WI",
+    "country": "USA",
+    "contact_name": "Siobh\u00e1n \u00d3 Ceallaigh",
+    "contact_title": "Managing Principal",
+    "contact_email": "soceallaigh@cloverdalefp.com",
+    "contacts": [
+      {
+        "name": "Siobh\u00e1n \u00d3 Ceallaigh",
+        "title": "Managing Principal",
+        "email": "soceallaigh@cloverdalefp.com",
+        "phone": "6085550244"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "LPL",
+    "source_rows": [
+      33
+    ],
+    "alts_exposure": "none",
+    "custodian": "LPL Financial",
+    "score": 49.0,
+    "score_lo": 49.0,
+    "score_hi": 49.0,
+    "tier": "C",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 2.0,
+        "max": 20.0,
+        "reason": "Average client $1.4M. Few, if any, qualified purchasers.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 9.0,
+        "max": 20.0,
+        "reason": "No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+        "known": true,
+        "lo": 9.0,
+        "hi": 9.0
+      },
+      "aum": {
+        "points": 1.5,
+        "max": 10.0,
+        "reason": "$0.8B AUM, below the $1B floor.",
+        "known": true,
+        "lo": 1.5,
+        "hi": 1.5
+      },
+      "warmth": {
+        "points": 3.5,
+        "max": 10.0,
+        "reason": "Last touch 176 days ago; direct email on file.",
+        "known": true,
+        "lo": 3.5,
+        "hi": 3.5
+      }
+    },
+    "modifiers": [],
+    "cap": [
+      "C",
+      "LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
+    ],
+    "contact_fit": "Right person",
+    "contact_fit_why": "Siobh\u00e1n \u00d3 Ceallaigh (Managing Principal) is the buyer Equi wants at a firm like this.",
+    "route": "Education nurture",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Principal",
+    "alts_list": [
+      "none"
+    ],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $1.4M. Few, if any, qualified purchasers.",
+      "Alts experience: No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+      "AUM band: $0.8B AUM, below the $1B floor.",
+      "Capped at Tier C. LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Quintrell Wealth Management",
+    "firm_type": "RIA",
+    "aum_usd": 1050000000.0,
+    "avg_client_usd": 2100000.0,
+    "city": "Kansas City",
+    "state": "MO",
+    "country": "USA",
+    "contact_name": null,
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "info@quintrellwm.com",
+    "contacts": [
+      {
+        "name": null,
+        "title": "Chief Investment Officer",
+        "email": "info@quintrellwm.com",
+        "phone": "8165550472"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "generic inbox only",
+    "source_rows": [
+      30
+    ],
+    "alts_exposure": null,
+    "custodian": "Fidelity",
+    "score": 48.3,
+    "score_lo": 40.3,
+    "score_hi": 56.3,
+    "tier": "C",
+    "gate": null,
+    "confidence": "Medium",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 2.0,
+        "max": 20.0,
+        "reason": "Average client $2.1M. Few, if any, qualified purchasers.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      },
+      "decision_speed": {
+        "points": 10.8,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 10.8,
+        "hi": 10.8
+      },
+      "alts_gap": {
+        "points": 12.0,
+        "max": 20.0,
+        "reason": "Alts exposure unknown.",
+        "known": false,
+        "lo": 4.0,
+        "hi": 20.0
+      },
+      "aum": {
+        "points": 5.5,
+        "max": 10.0,
+        "reason": "$1.1B AUM, inside the band but under the $5B bullseye.",
+        "known": true,
+        "lo": 5.5,
+        "hi": 5.5
+      },
+      "warmth": {
+        "points": 0.0,
+        "max": 10.0,
+        "reason": "Cold, last touch 424 days ago; no direct email.",
+        "known": true,
+        "lo": 0.0,
+        "hi": 0.0
+      }
+    },
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": "Find contact",
+    "contact_fit_why": "No named decision-maker on file. Research the founder or CIO before any outreach.",
+    "route": "Research: find decision-maker",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $2.1M. Few, if any, qualified purchasers.",
+      "Alts experience: unknown. Alts exposure unknown.",
+      "AUM band: $1.1B AUM, inside the band but under the $5B bullseye.",
+      "Warmth and reach: Cold, last touch 424 days ago; no direct email.",
+      "No named decision-maker on file. Research the founder or CIO before any outreach."
+    ],
+    "bubble": "No named decision-maker yet. Find the right person before judging this one."
+  },
+  {
+    "firm_name": "Ostrander & Voss Advisors",
+    "firm_type": "RIA",
+    "aum_usd": 880000000.0,
+    "avg_client_usd": 1100000.0,
+    "city": "Portland",
+    "state": "OR",
+    "country": "USA",
+    "contact_name": "Tomasz Wierzbicki",
+    "contact_title": "Managing Partner",
+    "contact_email": "twierzbicki@ostrandervoss.com",
+    "contacts": [
+      {
+        "name": "Tomasz Wierzbicki",
+        "title": "Managing Partner",
+        "email": "twierzbicki@ostrandervoss.com",
+        "phone": "5035550311"
+      }
+    ],
+    "cleaning_notes": [
+      "Fixed stray space in email (twierzbicki@ostrandervoss .com)"
+    ],
+    "raw_notes": "below band?",
+    "source_rows": [
+      6
+    ],
+    "alts_exposure": "none",
+    "custodian": "Pershing",
+    "score": 47.5,
+    "score_lo": 47.5,
+    "score_hi": 47.5,
+    "tier": "C",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 2.0,
+        "max": 20.0,
+        "reason": "Average client $1.1M. Few, if any, qualified purchasers.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 9.0,
+        "max": 20.0,
+        "reason": "No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+        "known": true,
+        "lo": 9.0,
+        "hi": 9.0
+      },
+      "aum": {
+        "points": 1.5,
+        "max": 10.0,
+        "reason": "$0.9B AUM, below the $1B floor.",
+        "known": true,
+        "lo": 1.5,
+        "hi": 1.5
+      },
+      "warmth": {
+        "points": 2.0,
+        "max": 10.0,
+        "reason": "Cold, last touch 323 days ago; direct email on file.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      }
+    },
+    "modifiers": [],
+    "cap": [
+      "C",
+      "Below the $1B floor; nurture until they grow into the band."
+    ],
+    "contact_fit": "Right person",
+    "contact_fit_why": "Tomasz Wierzbicki (Managing Partner) is the buyer Equi wants at a firm like this.",
+    "route": "Education nurture",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Principal",
+    "alts_list": [
+      "none"
+    ],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $1.1M. Few, if any, qualified purchasers.",
+      "Alts experience: No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+      "AUM band: $0.9B AUM, below the $1B floor.",
+      "Warmth and reach: Cold, last touch 323 days ago; direct email on file.",
+      "Capped at Tier C. Below the $1B floor; nurture until they grow into the band."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Fernwold Advisory",
+    "firm_type": "RIA",
+    "aum_usd": 240000000.0,
+    "avg_client_usd": 650000.0,
+    "city": "Boise",
+    "state": "ID",
+    "country": "USA",
+    "contact_name": "Hannah Weathersby",
+    "contact_title": "Owner",
+    "contact_email": "hannah@fernwoldadvisory.com",
+    "contacts": [
+      {
+        "name": "Hannah Weathersby",
+        "title": "Owner",
+        "email": "hannah@fernwoldadvisory.com",
+        "phone": "2085550603"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "too small",
+    "source_rows": [
+      28
+    ],
+    "alts_exposure": "none",
+    "custodian": "Schwab",
+    "score": 47.5,
+    "score_lo": 47.5,
+    "score_hi": 47.5,
+    "tier": "C",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 2.0,
+        "max": 20.0,
+        "reason": "Average client $650K. Few, if any, qualified purchasers.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 9.0,
+        "max": 20.0,
+        "reason": "No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+        "known": true,
+        "lo": 9.0,
+        "hi": 9.0
+      },
+      "aum": {
+        "points": 1.5,
+        "max": 10.0,
+        "reason": "$0.2B AUM, below the $1B floor.",
+        "known": true,
+        "lo": 1.5,
+        "hi": 1.5
+      },
+      "warmth": {
+        "points": 2.0,
+        "max": 10.0,
+        "reason": "Cold, last touch 261 days ago; direct email on file.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      }
+    },
+    "modifiers": [],
+    "cap": [
+      "C",
+      "Below the $1B floor; nurture until they grow into the band."
+    ],
+    "contact_fit": "Right person",
+    "contact_fit_why": "Hannah Weathersby (Owner) is the buyer Equi wants at a firm like this.",
+    "route": "Education nurture",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Principal",
+    "alts_list": [
+      "none"
+    ],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $650K. Few, if any, qualified purchasers.",
+      "Alts experience: No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+      "AUM band: $0.2B AUM, below the $1B floor.",
+      "Warmth and reach: Cold, last touch 261 days ago; direct email on file.",
+      "Capped at Tier C. Below the $1B floor; nurture until they grow into the band."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Pemberton Vale Wealth",
+    "firm_type": "RIA",
+    "aum_usd": 610000000.0,
+    "avg_client_usd": 1050000.0,
+    "city": "Omaha",
+    "state": "NE",
+    "country": "USA",
+    "contact_name": "Gertrude Vandenberg",
+    "contact_title": "Owner",
+    "contact_email": "gvandenberg@pembertonvale.com",
+    "contacts": [
+      {
+        "name": "Gertrude Vandenberg",
+        "title": "Owner",
+        "email": "gvandenberg@pembertonvale.com",
+        "phone": "4025550325"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "LPL; sub-band",
+    "source_rows": [
+      48
+    ],
+    "alts_exposure": "none",
+    "custodian": "LPL Financial",
+    "score": 47.5,
+    "score_lo": 47.5,
+    "score_hi": 47.5,
+    "tier": "C",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 2.0,
+        "max": 20.0,
+        "reason": "Average client $1.1M. Few, if any, qualified purchasers.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      },
+      "decision_speed": {
+        "points": 15.0,
+        "max": 15.0,
+        "reason": "Principal-led. The founder can say yes without a committee.",
+        "known": true,
+        "lo": 15.0,
+        "hi": 15.0
+      },
+      "alts_gap": {
+        "points": 9.0,
+        "max": 20.0,
+        "reason": "No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+        "known": true,
+        "lo": 9.0,
+        "hi": 9.0
+      },
+      "aum": {
+        "points": 1.5,
+        "max": 10.0,
+        "reason": "$0.6B AUM, below the $1B floor.",
+        "known": true,
+        "lo": 1.5,
+        "hi": 1.5
+      },
+      "warmth": {
+        "points": 2.0,
+        "max": 10.0,
+        "reason": "Cold, last touch 300 days ago; direct email on file.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      }
+    },
+    "modifiers": [],
+    "cap": [
+      "C",
+      "LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
+    ],
+    "contact_fit": "Right person",
+    "contact_fit_why": "Gertrude Vandenberg (Owner) is the buyer Equi wants at a firm like this.",
+    "route": "Education nurture",
+    "decision_structure": "Principal-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "Principal",
+    "alts_list": [
+      "none"
+    ],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $1.1M. Few, if any, qualified purchasers.",
+      "Alts experience: No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+      "AUM band: $0.6B AUM, below the $1B floor.",
+      "Warmth and reach: Cold, last touch 300 days ago; direct email on file.",
+      "Capped at Tier C. LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Vermillion & Sloane",
+    "firm_type": "RIA",
+    "aum_usd": 520000000.0,
+    "avg_client_usd": 900000.0,
+    "city": "Providence",
+    "state": "RI",
+    "country": "USA",
+    "contact_name": "Guillermo Santacruz",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "gsantacruz@vermillionsloane.com",
+    "contacts": [
+      {
+        "name": "Guillermo Santacruz",
+        "title": "Chief Investment Officer",
+        "email": "gsantacruz@vermillionsloane.com",
+        "phone": "4015550788"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "LPL; sub-band",
+    "source_rows": [
+      18
+    ],
+    "alts_exposure": "none",
+    "custodian": "LPL Financial",
+    "score": 43.3,
+    "score_lo": 43.3,
+    "score_hi": 43.3,
+    "tier": "C",
+    "gate": null,
+    "confidence": "High",
+    "breakdown": {
+      "firm_type": {
+        "points": 18.0,
+        "max": 25.0,
+        "reason": "Independent RIA. Right model, but not yet showing family-office traits.",
+        "known": true,
+        "lo": 18.0,
+        "hi": 18.0
+      },
+      "client_wealth": {
+        "points": 2.0,
+        "max": 20.0,
+        "reason": "Average client $900K. Few, if any, qualified purchasers.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      },
+      "decision_speed": {
+        "points": 10.8,
+        "max": 15.0,
+        "reason": "CIO-led. One sophisticated decision-maker, likely with a light approval step.",
+        "known": true,
+        "lo": 10.8,
+        "hi": 10.8
+      },
+      "alts_gap": {
+        "points": 9.0,
+        "max": 20.0,
+        "reason": "No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+        "known": true,
+        "lo": 9.0,
+        "hi": 9.0
+      },
+      "aum": {
+        "points": 1.5,
+        "max": 10.0,
+        "reason": "$0.5B AUM, below the $1B floor.",
+        "known": true,
+        "lo": 1.5,
+        "hi": 1.5
+      },
+      "warmth": {
+        "points": 2.0,
+        "max": 10.0,
+        "reason": "Cold, last touch 286 days ago; direct email on file.",
+        "known": true,
+        "lo": 2.0,
+        "hi": 2.0
+      }
+    },
+    "modifiers": [],
+    "cap": [
+      "C",
+      "LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
+    ],
+    "contact_fit": "Right person",
+    "contact_fit_why": "Guillermo Santacruz (Chief Investment Officer) is the buyer Equi wants at a firm like this.",
+    "route": "Education nurture",
+    "decision_structure": "CIO-led",
+    "mfo_transition": false,
+    "mover": null,
+    "persona": "CIO",
+    "alts_list": [
+      "none"
+    ],
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Client wealth (QP fit): Average client $900K. Few, if any, qualified purchasers.",
+      "Alts experience: No alternatives yet. Needs the most help, but it's a long education curve: pipeline, not a quick win.",
+      "AUM band: $0.5B AUM, below the $1B floor.",
+      "Warmth and reach: Cold, last touch 286 days ago; direct email on file.",
+      "Capped at Tier C. LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Wrenfield Bancorp Wealth Management",
+    "firm_type": "Wirehouse",
+    "aum_usd": 340000000000.0,
+    "avg_client_usd": null,
+    "city": "New York",
+    "state": "NY",
+    "country": "USA",
+    "contact_name": "Priya Balasubramanian",
+    "contact_title": "Head of Alternative Investments",
+    "contact_email": "priya.balasubramanian@wrenfield.com",
+    "contacts": [
+      {
+        "name": "Priya Balasubramanian",
+        "title": "Head of Alternative Investments",
+        "email": "priya.balasubramanian@wrenfield.com",
+        "phone": "2125550733"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "inbound from webinar",
+    "source_rows": [
+      8
+    ],
+    "alts_exposure": "everything",
+    "custodian": "In-house",
+    "score": null,
+    "score_lo": null,
+    "score_hi": null,
+    "tier": "DQ",
+    "gate": "Wirehouse. Has in-house alts teams and platform rules; Equi's partner model does not fit.",
+    "confidence": null,
+    "breakdown": {},
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": null,
+    "contact_fit_why": null,
+    "route": "Disqualified",
+    "decision_structure": null,
+    "mfo_transition": false,
+    "mover": null,
+    "persona": null,
+    "alts_list": null,
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Wirehouse. Has in-house alts teams and platform rules; Equi's partner model does not fit."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Otterbein Asset Strategies",
+    "firm_type": "TAMP",
+    "aum_usd": 19000000000.0,
+    "avg_client_usd": null,
+    "city": "Chicago",
+    "state": "IL",
+    "country": "USA",
+    "contact_name": "Rebecca Lindqvist",
+    "contact_title": "Director of Investment Solutions",
+    "contact_email": "r.lindqvist@otterbeinas.com",
+    "contacts": [
+      {
+        "name": "Rebecca Lindqvist",
+        "title": "Director of Investment Solutions",
+        "email": "r.lindqvist@otterbeinas.com",
+        "phone": "3125550166"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "",
+    "source_rows": [
+      9
+    ],
+    "alts_exposure": "model portfolios",
+    "custodian": "Multiple",
+    "score": null,
+    "score_lo": null,
+    "score_hi": null,
+    "tier": "DQ",
+    "gate": "TAMP. Sells model portfolios to advisors, which makes it a competitor channel, not a buyer.",
+    "confidence": null,
+    "breakdown": {},
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": null,
+    "contact_fit_why": null,
+    "route": "Disqualified",
+    "decision_structure": null,
+    "mfo_transition": false,
+    "mover": null,
+    "persona": null,
+    "alts_list": null,
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "TAMP. Sells model portfolios to advisors, which makes it a competitor channel, not a buyer."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Marlowe Point Capital Management",
+    "firm_type": "Hedge Fund Manager",
+    "aum_usd": 7400000000.0,
+    "avg_client_usd": null,
+    "city": "Greenwich",
+    "state": "CT",
+    "country": "USA",
+    "contact_name": "Anders Kjellberg",
+    "contact_title": "Portfolio Manager",
+    "contact_email": "akjellberg@marlowepointcap.com",
+    "contacts": [
+      {
+        "name": "Anders Kjellberg",
+        "title": "Portfolio Manager",
+        "email": "akjellberg@marlowepointcap.com",
+        "phone": "2035550455"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "investment-side; not a buyer",
+    "source_rows": [
+      13
+    ],
+    "alts_exposure": null,
+    "custodian": null,
+    "score": null,
+    "score_lo": null,
+    "score_hi": null,
+    "tier": "DQ",
+    "gate": "Investment-side firm. A manager, not a buyer.",
+    "confidence": null,
+    "breakdown": {},
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": null,
+    "contact_fit_why": null,
+    "route": "Disqualified",
+    "decision_structure": null,
+    "mfo_transition": false,
+    "mover": null,
+    "persona": null,
+    "alts_list": null,
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Investment-side firm. A manager, not a buyer."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Beaumont Fielding Group",
+    "firm_type": "Broker-Dealer",
+    "aum_usd": 44000000000.0,
+    "avg_client_usd": null,
+    "city": "Dallas",
+    "state": "TX",
+    "country": "USA",
+    "contact_name": "Terrence Achebe",
+    "contact_title": "SVP Product",
+    "contact_email": "tachebe@beaumontfielding.com",
+    "contacts": [
+      {
+        "name": "Terrence Achebe",
+        "title": "SVP Product",
+        "email": "tachebe@beaumontfielding.com",
+        "phone": "2145550136"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "BD",
+    "source_rows": [
+      25
+    ],
+    "alts_exposure": "structured notes",
+    "custodian": "In-house",
+    "score": null,
+    "score_lo": null,
+    "score_hi": null,
+    "tier": "DQ",
+    "gate": "Broker-dealer. Product-shelf driven with in-house structuring; out of scope.",
+    "confidence": null,
+    "breakdown": {},
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": null,
+    "contact_fit_why": null,
+    "route": "Disqualified",
+    "decision_structure": null,
+    "mfo_transition": false,
+    "mover": null,
+    "persona": null,
+    "alts_list": null,
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Broker-dealer. Product-shelf driven with in-house structuring; out of scope."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Brackenridge Alternative Partners",
+    "firm_type": "Private Credit Manager",
+    "aum_usd": 3300000000.0,
+    "avg_client_usd": null,
+    "city": "Stamford",
+    "state": "CT",
+    "country": "USA",
+    "contact_name": "Emiliano Costa-Zabala",
+    "contact_title": "Managing Partner",
+    "contact_email": "ecosta@brackenridgeap.com",
+    "contacts": [
+      {
+        "name": "Emiliano Costa-Zabala",
+        "title": "Managing Partner",
+        "email": "ecosta@brackenridgeap.com",
+        "phone": "2035550507"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "investment-side",
+    "source_rows": [
+      36
+    ],
+    "alts_exposure": null,
+    "custodian": null,
+    "score": null,
+    "score_lo": null,
+    "score_hi": null,
+    "tier": "DQ",
+    "gate": "Investment-side firm. A manager, not a buyer.",
+    "confidence": null,
+    "breakdown": {},
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": null,
+    "contact_fit_why": null,
+    "route": "Disqualified",
+    "decision_structure": null,
+    "mfo_transition": false,
+    "mover": null,
+    "persona": null,
+    "alts_list": null,
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "Investment-side firm. A manager, not a buyer."
+    ],
+    "bubble": null
+  },
+  {
+    "firm_name": "Bellhaven Capital Advisors",
+    "firm_type": "RIA",
+    "aum_usd": 33000000000.0,
+    "avg_client_usd": 38000000.0,
+    "city": "Boston",
+    "state": "MA",
+    "country": "USA",
+    "contact_name": "Krzysztof Zielinski",
+    "contact_title": "Chief Investment Officer",
+    "contact_email": "kzielinski@bellhavencap.com",
+    "contacts": [
+      {
+        "name": "Krzysztof Zielinski",
+        "title": "Chief Investment Officer",
+        "email": "kzielinski@bellhavencap.com",
+        "phone": "6175550389"
+      }
+    ],
+    "cleaning_notes": [],
+    "raw_notes": "above ceiling",
+    "source_rows": [
+      40
+    ],
+    "alts_exposure": "everything",
+    "custodian": "Multiple",
+    "score": null,
+    "score_lo": null,
+    "score_hi": null,
+    "tier": "DQ",
+    "gate": "$33.0B AUM, above the $30B ceiling. Firms this size staff their own manager research and source the same managers Equi does.",
+    "confidence": null,
+    "breakdown": {},
+    "modifiers": [],
+    "cap": null,
+    "contact_fit": null,
+    "contact_fit_why": null,
+    "route": "Disqualified",
+    "decision_structure": null,
+    "mfo_transition": false,
+    "mover": null,
+    "persona": null,
+    "alts_list": null,
+    "tier_a_share": 0.0,
+    "red_flags": [
+      "$33.0B AUM, above the $30B ceiling. Firms this size staff their own manager research and source the same managers Equi does."
+    ],
+    "bubble": null
+  }
+]

@@ -1,0 +1,8 @@
+pandas>=2.2
+python-dateutil
+python-dotenv
+anthropic>=0.40
+numpy
+streamlit>=1.38
+plotly
+yfinance
