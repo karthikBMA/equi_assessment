@@ -488,3 +488,18 @@ def bubble_reason(rec: dict) -> str | None:
     if rec.get("contact_fit") == "Find contact" and rec.get("tier") in {"B", "C"}:
         return "No named decision-maker yet. Find the right person before judging this one."
     return None
+
+
+def bubble_type(rec: dict) -> str | None:
+    """Which human a bubble firm needs.
+
+    research: the tier hinges on missing data or a missing contact. Fill it first.
+    decision: the tier hinges on Equi's priorities (Tier A in 20% to 90% of
+              weightings) or on a rule holding back a firm that scores 60+.
+    Research wins a tie, since a decision on missing data gets remade later.
+    """
+    if not rec.get("bubble"):
+        return None
+    if (rec.get("mover") or "").startswith("Could reach") or rec.get("contact_fit") == "Find contact":
+        return "research"
+    return "decision"

@@ -14,6 +14,7 @@ import streamlit as st
 
 from pipeline.clean import clean_leads
 from pipeline.score import (CRITERIA_LABELS, DEFAULT_WEIGHTS, WHY_WEIGHT, bubble_reason,
+                            bubble_type,
                             red_flags, score_firms, stability, tier_for)
 from pipeline.sequences import as_rows, sequence_for, short_route
 
@@ -166,6 +167,7 @@ def rescore(weights: dict) -> list[dict]:
         r["tier_a_share"] = share.get(r["firm_name"], 0.0)
         r["red_flags"] = red_flags(r)
         r["bubble"] = bubble_reason(r)
+        r["bubble_type"] = bubble_type(r)
         e = enriched.get(r["firm_name"], {})
         r["sources"] = e.get("sources", {})
         r["sec_adv"] = e.get("sec_adv")
@@ -284,7 +286,8 @@ def render_detail(r):
         if r.get("mover"):
             st.markdown(f'<div class="muted">{html.escape(r["mover"])}</div>', unsafe_allow_html=True)
         if r.get("bubble"):
-            st.markdown(f'<div class="muted">Needs a human call: {html.escape(r["bubble"])}</div>',
+            label = "Needs research" if r["bubble_type"] == "research" else "Needs a call from your team"
+            st.markdown(f'<div class="muted">{label}: {html.escape(r["bubble"])}</div>',
                         unsafe_allow_html=True)
 
     left, right = st.columns([1.1, 1], gap="large")
@@ -331,12 +334,13 @@ with tab_shortlist:
     n_dq = sum(r["tier"] == "DQ" for r in records)
     n_a = sum(r["tier"] == "A" for r in records)
     n_stable = sum((r["tier_a_share"] or 0) >= 0.9 for r in records if r["tier"] != "DQ")
-    n_bubble = sum(bool(r.get("bubble")) for r in records)
+    n_decide = sum(r.get("bubble_type") == "decision" for r in records)
+    n_research = sum(r.get("bubble_type") == "research" for r in records)
     st.markdown(
         f'<div class="summary">{len(records)} firms scored, {n_dq} disqualified. '
         f'<span style="color:{BRASS};font-weight:600">Call {n_a} now</span>: the Tier A firms.<br>'
         f'{n_stable} hold Tier A in 90%+ of alternative weightings, so they do not depend on our weight choices.<br>'
-        f'{n_bubble} need a call from your team before outreach.</div>',
+        f'{n_decide} need a call from your team. {n_research} need research before anyone decides.</div>',
         unsafe_allow_html=True)
 
     shown = [r for r in records if r["tier"] in tiers and r["route"] in routes]

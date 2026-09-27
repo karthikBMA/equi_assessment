@@ -99,6 +99,7 @@
     "tier_a_share": 0.984,
     "red_flags": [],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -296,6 +297,7 @@
     "tier_a_share": 0.966,
     "red_flags": [],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -494,6 +496,7 @@
     "tier_a_share": 0.994,
     "red_flags": [],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -691,6 +694,7 @@
     "tier_a_share": 0.976,
     "red_flags": [],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -889,6 +893,7 @@
     "tier_a_share": 0.982,
     "red_flags": [],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -1089,6 +1094,7 @@
       "Alts experience: Already uses hedge funds (real assets, hedge funds). Fluent, but Equi would be replacing or adding to a current manager."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -1290,6 +1296,7 @@
     "tier_a_share": 0.974,
     "red_flags": [],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -1498,6 +1505,7 @@
       "Alts experience: Already uses hedge funds (real assets, hedge funds). Fluent, but Equi would be replacing or adding to a current manager."
     ],
     "bubble": "Tier A under our weights, but only in 75% of alternative weightings.",
+    "bubble_type": "decision",
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -1701,6 +1709,7 @@
       "Alts experience: Already uses hedge funds (private credit, hedge funds). Fluent, but Equi would be replacing or adding to a current manager."
     ],
     "bubble": "Lands in Tier A in 49% of alternative weightings. Your priorities decide this one.",
+    "bubble_type": "decision",
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -1906,6 +1915,7 @@
       "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
     ],
     "bubble": "Lands in Tier A in 43% of alternative weightings. Your priorities decide this one.",
+    "bubble_type": "decision",
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -2120,6 +2130,7 @@
       "Alts experience: Already uses hedge funds (hedge funds, private credit). Fluent, but Equi would be replacing or adding to a current manager."
     ],
     "bubble": "Lands in Tier A in 29% of alternative weightings. Your priorities decide this one.",
+    "bubble_type": "decision",
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -2335,6 +2346,7 @@
       "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
     ],
     "bubble": "Lands in Tier A in 24% of alternative weightings. Your priorities decide this one.",
+    "bubble_type": "decision",
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -2555,6 +2567,7 @@
       "Warmth and reach: Cold, last touch 248 days ago; direct email on file."
     ],
     "bubble": "Lands in Tier A in 34% of alternative weightings. Your priorities decide this one.",
+    "bubble_type": "decision",
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -2759,6 +2772,7 @@
       "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
     ],
     "bubble": "Lands in Tier A in 32% of alternative weightings. Your priorities decide this one.",
+    "bubble_type": "decision",
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -2953,6 +2967,7 @@
       "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
     ],
     "bubble": "Lands in Tier A in 23% of alternative weightings. Your priorities decide this one.",
+    "bubble_type": "decision",
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -3158,6 +3173,7 @@
       "AUM band: $1.6B AUM, inside the band but under the $5B bullseye."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -3357,6 +3373,7 @@
       "-10 pts. Recently adopted a competitor platform. Displacement takes quarters, not weeks."
     ],
     "bubble": "Good fit with a specific blocker.",
+    "bubble_type": "decision",
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -3553,6 +3570,7 @@
       "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -3748,6 +3766,7 @@
       "Warmth and reach: Never contacted; direct email on file."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -3944,6 +3963,7 @@
       "AUM band: unknown. AUM not disclosed. Pull from Form ADV before outreach."
     ],
     "bubble": "Could reach Tier A if client wealth and aum band check out. Confirm before outreach.",
+    "bubble_type": "research",
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -4140,6 +4160,7 @@
       "AUM band: $2.0B AUM, inside the band but under the $5B bullseye."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -4345,6 +4366,7 @@
       "Decision speed: Committee-led. Slower; win by equipping the research lead as a champion, not by closing them."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -4552,6 +4574,7 @@
       "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -4747,6 +4770,7 @@
       "AUM band: $1.4B AUM, inside the band but under the $5B bullseye."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -4941,6 +4965,7 @@
       "AUM band: unknown. AUM not disclosed. Pull from Form ADV before outreach."
     ],
     "bubble": "Could reach Tier A if client wealth, alts experience and aum band check out. Confirm before outreach.",
+    "bubble_type": "research",
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -5146,6 +5171,7 @@
       "Capped at Tier B. Cross-border; not a Tier A until compliance clears it."
     ],
     "bubble": "Scores well on fit but held back by a rule. Worth a human look.",
+    "bubble_type": "decision",
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -5340,6 +5366,7 @@
       "AUM band: $2.1B AUM, inside the band but under the $5B bullseye."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -5536,6 +5563,7 @@
       "Alts experience: Deep in alternatives, including hedge funds. Likely has its own manager-research infrastructure."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -5746,6 +5774,7 @@
       "Capped at Tier C. Below the $1B floor; nurture until they grow into the band."
     ],
     "bubble": "Scores well on fit but held back by a rule. Worth a human look.",
+    "bubble_type": "decision",
     "sources": {
       "firm_type": {
         "value": "MFO",
@@ -5943,6 +5972,7 @@
       "Capped at Tier C. Single-family office; capped per Equi's guidance."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "SFO",
@@ -6134,6 +6164,7 @@
       "AUM band: unknown. AUM not disclosed. Pull from Form ADV before outreach."
     ],
     "bubble": "Could reach Tier B if client wealth and aum band check out. Confirm before outreach.",
+    "bubble_type": "research",
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -6323,6 +6354,7 @@
       "AUM band: $1.2B AUM, inside the band but under the $5B bullseye."
     ],
     "bubble": "Could reach Tier B if alts experience checks out. Confirm before outreach.",
+    "bubble_type": "research",
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -6512,6 +6544,7 @@
       "No named decision-maker on file. Research the founder or CIO before any outreach."
     ],
     "bubble": "No named decision-maker yet. Find the right person before judging this one.",
+    "bubble_type": "research",
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -6707,6 +6740,7 @@
       "Capped at Tier C. LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -6898,6 +6932,7 @@
       "No named decision-maker on file. Research the founder or CIO before any outreach."
     ],
     "bubble": "No named decision-maker yet. Find the right person before judging this one.",
+    "bubble_type": "research",
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -7096,6 +7131,7 @@
       "Capped at Tier C. Below the $1B floor; nurture until they grow into the band."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -7292,6 +7328,7 @@
       "Capped at Tier C. Below the $1B floor; nurture until they grow into the band."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -7488,6 +7525,7 @@
       "Capped at Tier C. LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -7684,6 +7722,7 @@
       "Capped at Tier C. LPL-affiliated. Products generally need LPL platform approval before advisors can use them."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",
@@ -7822,6 +7861,7 @@
       "Wirehouse. Has in-house alts teams and platform rules; Equi's partner model does not fit."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "Wirehouse",
@@ -7939,6 +7979,7 @@
       "TAMP. Sells model portfolios to advisors, which makes it a competitor channel, not a buyer."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "TAMP",
@@ -8056,6 +8097,7 @@
       "Investment-side firm. A manager, not a buyer."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "Hedge Fund Manager",
@@ -8173,6 +8215,7 @@
       "Broker-dealer. Product-shelf driven with in-house structuring; out of scope."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "Broker-Dealer",
@@ -8290,6 +8333,7 @@
       "Investment-side firm. A manager, not a buyer."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "Private Credit Manager",
@@ -8407,6 +8451,7 @@
       "$33.0B AUM, above the $30B ceiling. Firms this size staff their own manager research and source the same managers Equi does."
     ],
     "bubble": null,
+    "bubble_type": null,
     "sources": {
       "firm_type": {
         "value": "RIA",

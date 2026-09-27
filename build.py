@@ -12,7 +12,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from pipeline.clean import clean_leads
-from pipeline.score import score_firms, stability, red_flags, bubble_reason
+from pipeline.score import score_firms, stability, red_flags, bubble_reason, bubble_type
 from pipeline import personalize
 from pipeline.enrich import enrich, source_summary
 from pipeline.sequences import SEQUENCES, sequence_for
@@ -41,6 +41,7 @@ def main():
     for r in records:
         r["red_flags"] = red_flags(r)
         r["bubble"] = bubble_reason(r)
+        r["bubble_type"] = bubble_type(r)
     enrich(records, offline=args.offline)
     missing = {r["route"] for r in records} - set(SEQUENCES)
     if missing:
