@@ -171,6 +171,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Kit + founder",
       "goal": "Meeting with the founder inside two weeks.",
       "touches": [
         [
@@ -367,6 +368,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Kit + founder",
       "goal": "Meeting with the founder inside two weeks.",
       "touches": [
         [
@@ -564,6 +566,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Kit + CIO",
       "goal": "Peer conversation between the CIO and an Equi investment lead.",
       "touches": [
         [
@@ -760,6 +763,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Kit + founder",
       "goal": "Meeting with the founder inside two weeks.",
       "touches": [
         [
@@ -957,6 +961,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Kit + CIO",
       "goal": "Peer conversation between the CIO and an Equi investment lead.",
       "touches": [
         [
@@ -1156,6 +1161,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Kit + CIO",
       "goal": "Peer conversation between the CIO and an Equi investment lead.",
       "touches": [
         [
@@ -1364,6 +1370,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Kit + CIO",
       "goal": "Peer conversation between the CIO and an Equi investment lead.",
       "touches": [
         [
@@ -1563,6 +1570,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Kit + CIO",
       "goal": "Peer conversation between the CIO and an Equi investment lead.",
       "touches": [
         [
@@ -1773,6 +1781,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -1884,7 +1893,7 @@
     "cap": null,
     "contact_fit": "Right person",
     "contact_fit_why": "Aoife N\u00ed Bhraon\u00e1in (Director of Research) is the buyer Equi wants at a firm like this.",
-    "route": "Market-signal alerts + Kit on engagement",
+    "route": "Committee Kit to champion, slower cadence",
     "decision_structure": "Committee-led",
     "mfo_transition": false,
     "mover": null,
@@ -1977,22 +1986,33 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
-      "goal": "Be useful on the days advisors field worried client calls.",
+      "short": "Committee kit (slow)",
+      "goal": "Equip the research lead so the fund reaches a committee agenda within two quarters.",
       "touches": [
         [
-          null,
+          0,
           "Email",
-          "On a market trigger: short client-ready note plus a two-line advisor ping."
+          "Email the research lead offering the DDQ and a draft IC memo."
+        ],
+        [
+          10,
+          "Email",
+          "Send the committee pack: DDQ, IC memo outline, client letter."
+        ],
+        [
+          28,
+          "Email",
+          "Check in: what does the committee still need?"
+        ],
+        [
+          28,
+          "Research",
+          "Map the CIO and other committee members."
         ],
         [
           null,
           "Email",
-          "If they open or forward a note, offer the full kit."
-        ],
-        [
-          null,
-          "Weekly",
-          "Otherwise a weekly digest. No daily noise."
+          "Between touches, send the champion market-signal notes they can circulate."
         ]
       ]
     }
@@ -2085,7 +2105,7 @@
     "cap": null,
     "contact_fit": "Right person",
     "contact_fit_why": "Xiaoming Zhu-Whitfield (Head of Manager Selection) is the buyer Equi wants at a firm like this.",
-    "route": "Market-signal alerts + Kit on engagement",
+    "route": "Committee Kit to champion, slower cadence",
     "decision_structure": "Committee-led",
     "mfo_transition": true,
     "mover": null,
@@ -2172,22 +2192,33 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
-      "goal": "Be useful on the days advisors field worried client calls.",
+      "short": "Committee kit (slow)",
+      "goal": "Equip the research lead so the fund reaches a committee agenda within two quarters.",
       "touches": [
         [
-          null,
+          0,
           "Email",
-          "On a market trigger: short client-ready note plus a two-line advisor ping."
+          "Email the research lead offering the DDQ and a draft IC memo."
+        ],
+        [
+          10,
+          "Email",
+          "Send the committee pack: DDQ, IC memo outline, client letter."
+        ],
+        [
+          28,
+          "Email",
+          "Check in: what does the committee still need?"
+        ],
+        [
+          28,
+          "Research",
+          "Map the CIO and other committee members."
         ],
         [
           null,
           "Email",
-          "If they open or forward a note, offer the full kit."
-        ],
-        [
-          null,
-          "Weekly",
-          "Otherwise a weekly digest. No daily noise."
+          "Between touches, send the champion market-signal notes they can circulate."
         ]
       ]
     }
@@ -2291,7 +2322,7 @@
     "cap": null,
     "contact_fit": "Right person",
     "contact_fit_why": "Lakshmi Venkataraghavan (Director of Manager Research) is the buyer Equi wants at a firm like this.",
-    "route": "Market-signal alerts + Kit on engagement",
+    "route": "Committee Kit to champion, slower cadence",
     "decision_structure": "Committee-led",
     "mfo_transition": false,
     "mover": null,
@@ -2384,22 +2415,33 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
-      "goal": "Be useful on the days advisors field worried client calls.",
+      "short": "Committee kit (slow)",
+      "goal": "Equip the research lead so the fund reaches a committee agenda within two quarters.",
       "touches": [
         [
-          null,
+          0,
           "Email",
-          "On a market trigger: short client-ready note plus a two-line advisor ping."
+          "Email the research lead offering the DDQ and a draft IC memo."
+        ],
+        [
+          10,
+          "Email",
+          "Send the committee pack: DDQ, IC memo outline, client letter."
+        ],
+        [
+          28,
+          "Email",
+          "Check in: what does the committee still need?"
+        ],
+        [
+          28,
+          "Research",
+          "Map the CIO and other committee members."
         ],
         [
           null,
           "Email",
-          "If they open or forward a note, offer the full kit."
-        ],
-        [
-          null,
-          "Weekly",
-          "Otherwise a weekly digest. No daily noise."
+          "Between touches, send the champion market-signal notes they can circulate."
         ]
       ]
     }
@@ -2593,6 +2635,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -2788,6 +2831,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -2896,7 +2940,7 @@
     "cap": null,
     "contact_fit": "Right person",
     "contact_fit_why": "Bronwyn Llewellyn-Price (Director of Research) is the buyer Equi wants at a firm like this.",
-    "route": "Market-signal alerts + Kit on engagement",
+    "route": "Committee Kit to champion, slower cadence",
     "decision_structure": "Committee-led",
     "mfo_transition": false,
     "mover": null,
@@ -2981,22 +3025,33 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
-      "goal": "Be useful on the days advisors field worried client calls.",
+      "short": "Committee kit (slow)",
+      "goal": "Equip the research lead so the fund reaches a committee agenda within two quarters.",
       "touches": [
         [
-          null,
+          0,
           "Email",
-          "On a market trigger: short client-ready note plus a two-line advisor ping."
+          "Email the research lead offering the DDQ and a draft IC memo."
+        ],
+        [
+          10,
+          "Email",
+          "Send the committee pack: DDQ, IC memo outline, client letter."
+        ],
+        [
+          28,
+          "Email",
+          "Check in: what does the committee still need?"
+        ],
+        [
+          28,
+          "Research",
+          "Map the CIO and other committee members."
         ],
         [
           null,
           "Email",
-          "If they open or forward a note, offer the full kit."
-        ],
-        [
-          null,
-          "Weekly",
-          "Otherwise a weekly digest. No daily noise."
+          "Between touches, send the champion market-signal notes they can circulate."
         ]
       ]
     }
@@ -3175,6 +3230,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -3373,6 +3429,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -3568,6 +3625,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -3762,6 +3820,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -3957,6 +4016,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -4065,7 +4125,7 @@
     "cap": null,
     "contact_fit": "Right person",
     "contact_fit_why": "Abimbola Adesanya-Cole (Managing Director of Research) is the buyer Equi wants at a firm like this.",
-    "route": "Market-signal alerts + Kit on engagement",
+    "route": "Committee Kit to champion, slower cadence",
     "decision_structure": "Committee-led",
     "mfo_transition": false,
     "mover": null,
@@ -4152,22 +4212,33 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
-      "goal": "Be useful on the days advisors field worried client calls.",
+      "short": "Committee kit (slow)",
+      "goal": "Equip the research lead so the fund reaches a committee agenda within two quarters.",
       "touches": [
         [
-          null,
+          0,
           "Email",
-          "On a market trigger: short client-ready note plus a two-line advisor ping."
+          "Email the research lead offering the DDQ and a draft IC memo."
+        ],
+        [
+          10,
+          "Email",
+          "Send the committee pack: DDQ, IC memo outline, client letter."
+        ],
+        [
+          28,
+          "Email",
+          "Check in: what does the committee still need?"
+        ],
+        [
+          28,
+          "Research",
+          "Map the CIO and other committee members."
         ],
         [
           null,
           "Email",
-          "If they open or forward a note, offer the full kit."
-        ],
-        [
-          null,
-          "Weekly",
-          "Otherwise a weekly digest. No daily noise."
+          "Between touches, send the champion market-signal notes they can circulate."
         ]
       ]
     }
@@ -4260,7 +4331,7 @@
     "cap": null,
     "contact_fit": "Right person",
     "contact_fit_why": "Dmitri Yevtushenko (Director of Due Diligence) is the buyer Equi wants at a firm like this.",
-    "route": "Market-signal alerts + Kit on engagement",
+    "route": "Committee Kit to champion, slower cadence",
     "decision_structure": "Committee-led",
     "mfo_transition": false,
     "mover": null,
@@ -4346,22 +4417,33 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
-      "goal": "Be useful on the days advisors field worried client calls.",
+      "short": "Committee kit (slow)",
+      "goal": "Equip the research lead so the fund reaches a committee agenda within two quarters.",
       "touches": [
         [
-          null,
+          0,
           "Email",
-          "On a market trigger: short client-ready note plus a two-line advisor ping."
+          "Email the research lead offering the DDQ and a draft IC memo."
+        ],
+        [
+          10,
+          "Email",
+          "Send the committee pack: DDQ, IC memo outline, client letter."
+        ],
+        [
+          28,
+          "Email",
+          "Check in: what does the committee still need?"
+        ],
+        [
+          28,
+          "Research",
+          "Map the CIO and other committee members."
         ],
         [
           null,
           "Email",
-          "If they open or forward a note, offer the full kit."
-        ],
-        [
-          null,
-          "Weekly",
-          "Otherwise a weekly digest. No daily noise."
+          "Between touches, send the champion market-signal notes they can circulate."
         ]
       ]
     }
@@ -4542,6 +4624,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -4736,6 +4819,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -4929,6 +5013,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -5133,6 +5218,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -5326,6 +5412,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Signal alerts",
       "goal": "Be useful on the days advisors field worried client calls.",
       "touches": [
         [
@@ -5434,7 +5521,7 @@
     "cap": null,
     "contact_fit": "Right person",
     "contact_fit_why": "Anneliese Vandersteen (Head of External Managers) is the buyer Equi wants at a firm like this.",
-    "route": "Market-signal alerts + Kit on engagement",
+    "route": "Committee Kit to champion, slower cadence",
     "decision_structure": "Committee-led",
     "mfo_transition": false,
     "mover": null,
@@ -5521,22 +5608,33 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
-      "goal": "Be useful on the days advisors field worried client calls.",
+      "short": "Committee kit (slow)",
+      "goal": "Equip the research lead so the fund reaches a committee agenda within two quarters.",
       "touches": [
         [
-          null,
+          0,
           "Email",
-          "On a market trigger: short client-ready note plus a two-line advisor ping."
+          "Email the research lead offering the DDQ and a draft IC memo."
+        ],
+        [
+          10,
+          "Email",
+          "Send the committee pack: DDQ, IC memo outline, client letter."
+        ],
+        [
+          28,
+          "Email",
+          "Check in: what does the committee still need?"
+        ],
+        [
+          28,
+          "Research",
+          "Map the CIO and other committee members."
         ],
         [
           null,
           "Email",
-          "If they open or forward a note, offer the full kit."
-        ],
-        [
-          null,
-          "Weekly",
-          "Otherwise a weekly digest. No daily noise."
+          "Between touches, send the champion market-signal notes they can circulate."
         ]
       ]
     }
@@ -5720,6 +5818,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Nurture",
       "goal": "Stay known until the firm grows into fit.",
       "touches": [
         [
@@ -5916,6 +6015,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Nurture",
       "goal": "Stay known until the firm grows into fit.",
       "touches": [
         [
@@ -6106,6 +6206,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Nurture",
       "goal": "Stay known until the firm grows into fit.",
       "touches": [
         [
@@ -6294,6 +6395,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Nurture",
       "goal": "Stay known until the firm grows into fit.",
       "touches": [
         [
@@ -6482,6 +6584,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Find contact",
       "goal": "Find the founder or CIO before any outreach.",
       "touches": [
         [
@@ -6676,6 +6779,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Nurture",
       "goal": "Stay known until the firm grows into fit.",
       "touches": [
         [
@@ -6866,6 +6970,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Find contact",
       "goal": "Find the founder or CIO before any outreach.",
       "touches": [
         [
@@ -7063,6 +7168,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Nurture",
       "goal": "Stay known until the firm grows into fit.",
       "touches": [
         [
@@ -7258,6 +7364,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Nurture",
       "goal": "Stay known until the firm grows into fit.",
       "touches": [
         [
@@ -7453,6 +7560,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Nurture",
       "goal": "Stay known until the firm grows into fit.",
       "touches": [
         [
@@ -7648,6 +7756,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Nurture",
       "goal": "Stay known until the firm grows into fit.",
       "touches": [
         [
@@ -7775,6 +7884,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Disqualified",
       "goal": "No outreach.",
       "touches": []
     }
@@ -7891,6 +8001,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Disqualified",
       "goal": "No outreach.",
       "touches": []
     }
@@ -8007,6 +8118,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Disqualified",
       "goal": "No outreach.",
       "touches": []
     }
@@ -8123,6 +8235,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Disqualified",
       "goal": "No outreach.",
       "touches": []
     }
@@ -8239,6 +8352,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Disqualified",
       "goal": "No outreach.",
       "touches": []
     }
@@ -8355,6 +8469,7 @@
       "detail": "Offline run; IAPD not queried."
     },
     "sequence": {
+      "short": "Disqualified",
       "goal": "No outreach.",
       "touches": []
     }

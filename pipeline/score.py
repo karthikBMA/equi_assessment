@@ -337,6 +337,8 @@ def route(tier, res: Result, cfit):
             return "Committee Kit to champion"
         return "Pre-built Kit + founder direct" if res.decision_structure == "Principal-led" else "Pre-built Kit + CIO peer sequence"
     if tier == "B":
+        if res.decision_structure == "Committee-led":
+            return "Committee Kit to champion, slower cadence"
         return "Market-signal alerts + Kit on engagement"
     if tier == "C":
         return "Education nurture"

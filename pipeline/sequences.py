@@ -1,12 +1,14 @@
 """What each route actually does, touch by touch.
 
-Keys match the route strings from `score.route()`. A touch is (day, channel, what).
+Keys match the route strings from `score.route()`. `short` is the label the app
+shows in tables. A touch is (day, channel, what).
 `day` is None for touches that fire on an event instead of a schedule.
 """
 from __future__ import annotations
 
 SEQUENCES = {
     "Pre-built Kit + founder direct": {
+        "short": "Kit + founder",
         "goal": "Meeting with the founder inside two weeks.",
         "touches": [
             (0, "Email", "Send the approved draft from the founder or senior Equi person."),
@@ -16,6 +18,7 @@ SEQUENCES = {
         ],
     },
     "Pre-built Kit + CIO peer sequence": {
+        "short": "Kit + CIO",
         "goal": "Peer conversation between the CIO and an Equi investment lead.",
         "touches": [
             (0, "Email", "Send the approved draft, framed as one investment person to another."),
@@ -25,6 +28,7 @@ SEQUENCES = {
         ],
     },
     "Committee Kit to champion": {
+        "short": "Committee kit",
         "goal": "Get the fund onto the next investment committee agenda.",
         "touches": [
             (0, "Email", "Email the research lead offering the DDQ and a draft IC memo."),
@@ -33,7 +37,19 @@ SEQUENCES = {
             (14, "Research", "Map the CIO and other committee members; plan a second thread."),
         ],
     },
+    "Committee Kit to champion, slower cadence": {
+        "short": "Committee kit (slow)",
+        "goal": "Equip the research lead so the fund reaches a committee agenda within two quarters.",
+        "touches": [
+            (0, "Email", "Email the research lead offering the DDQ and a draft IC memo."),
+            (10, "Email", "Send the committee pack: DDQ, IC memo outline, client letter."),
+            (28, "Email", "Check in: what does the committee still need?"),
+            (28, "Research", "Map the CIO and other committee members."),
+            (None, "Email", "Between touches, send the champion market-signal notes they can circulate."),
+        ],
+    },
     "Market-signal alerts + Kit on engagement": {
+        "short": "Signal alerts",
         "goal": "Be useful on the days advisors field worried client calls.",
         "touches": [
             (None, "Email", "On a market trigger: short client-ready note plus a two-line advisor ping."),
@@ -42,6 +58,7 @@ SEQUENCES = {
         ],
     },
     "Education nurture": {
+        "short": "Nurture",
         "goal": "Stay known until the firm grows into fit.",
         "touches": [
             (0, "Email", "Monthly explainer on evergreen alternatives. Educational only."),
@@ -49,6 +66,7 @@ SEQUENCES = {
         ],
     },
     "Research: find decision-maker": {
+        "short": "Find contact",
         "goal": "Find the founder or CIO before any outreach.",
         "touches": [
             (0, "Research", "Check the firm website team page and Form ADV Schedule A."),
@@ -56,10 +74,12 @@ SEQUENCES = {
         ],
     },
     "Park": {
+        "short": "Park",
         "goal": "No outreach.",
         "touches": [(180, "Review", "Re-score in six months.")],
     },
     "Disqualified": {
+        "short": "Disqualified",
         "goal": "No outreach.",
         "touches": [],
     },
@@ -67,7 +87,11 @@ SEQUENCES = {
 
 
 def sequence_for(route: str) -> dict:
-    return SEQUENCES.get(route, {"goal": "No sequence defined for this route.", "touches": []})
+    return SEQUENCES.get(route, {"short": route, "goal": "No sequence defined for this route.", "touches": []})
+
+
+def short_route(route: str) -> str:
+    return sequence_for(route)["short"]
 
 
 def as_rows(route: str) -> list[dict]:
