@@ -1,0 +1,20 @@
+[theme]
+base = "light"
+primaryColor = "#1F2A44"
+backgroundColor = "#FAFAF7"
+secondaryBackgroundColor = "#F1F0EA"
+textColor = "#2E3440"
+linkColor = "#1F2A44"
+borderColor = "#DEDCD3"
+baseRadius = "small"
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+headingFont = "'Source Serif 4':https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&display=swap"
+
+[theme.sidebar]
+backgroundColor = "#F1F0EA"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
