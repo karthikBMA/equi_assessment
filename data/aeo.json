@@ -164,100 +164,6 @@
       }
     ]
   },
-  "pages": [
-    {
-      "target_question": "how do i protect my portfolio from a market crash",
-      "page_title": "Understanding Downturn Risk: What Evergreen and Interval Funds Can and Cannot Do",
-      "why_cited": "Answer engines cite neutral explainers that define drawdown risk and structural fund types without promising outcomes, often pulling from regulator glossaries and media explainers for balanced framing.",
-      "pitch_domains": [
-        "investor.gov",
-        "morningstar.com",
-        "wealthmanagement.com"
-      ],
-      "flags": [],
-      "disclosure": "Educational only, not an offer or a recommendation. Alternative investments involve risk, including loss of principal. Ask your advisor whether they fit your situation."
-    },
-    {
-      "target_question": "is the 60/40 portfolio dead",
-      "page_title": "Beyond 60/40: How Evergreen and Interval Fund Structures Fit Into a Portfolio",
-      "why_cited": "This topic draws heavily on media commentary debating asset allocation shifts, so a plain explainer of structural alternatives (not specific funds) is likely to be cited alongside outlet opinion pieces.",
-      "pitch_domains": [
-        "wealthmanagement.com",
-        "money.usnews.com",
-        "fool.com"
-      ],
-      "flags": [],
-      "disclosure": "Educational only, not an offer or a recommendation. Alternative investments involve risk, including loss of principal. Ask your advisor whether they fit your situation."
-    },
-    {
-      "target_question": "can i get my money out of a private equity fund early",
-      "page_title": "Liquidity Terms in Evergreen and Tender Offer Funds Explained",
-      "why_cited": "AI answers on liquidity mechanics tend to cite regulator definitions and trade press describing redemption mechanics, gates, and tender windows in plain language.",
-      "pitch_domains": [
-        "investor.gov",
-        "wealthmanagement.com"
-      ],
-      "flags": [],
-      "disclosure": "Educational only, not an offer or a recommendation. Alternative investments involve risk, including loss of principal. Ask your advisor whether they fit your situation."
-    },
-    {
-      "target_question": "how long is money locked up in private equity",
-      "page_title": "Lock Up Periods: Evergreen vs Interval vs Traditional Closed End Structures",
-      "why_cited": "Queries about lock-ups pull from glossary style content and financial media comparisons of structure types, favoring clear side by side format.",
-      "pitch_domains": [
-        "investor.gov",
-        "morningstar.com",
-        "etftrends.com"
-      ],
-      "flags": [],
-      "disclosure": "Educational only, not an offer or a recommendation. Alternative investments involve risk, including loss of principal. Ask your advisor whether they fit your situation."
-    },
-    {
-      "target_question": "what happens if a private fund gates redemptions",
-      "page_title": "What a Redemption Gate Means and Why Interval Funds Use Them",
-      "why_cited": "This is a technical mechanics question where regulator and media sources are cited for defining gate provisions and their triggers without endorsing any product.",
-      "pitch_domains": [
-        "investor.gov",
-        "wealthmanagement.com"
-      ],
-      "flags": [],
-      "disclosure": "Educational only, not an offer or a recommendation. Alternative investments involve risk, including loss of principal. Ask your advisor whether they fit your situation."
-    },
-    {
-      "target_question": "how should i invest an inheritance of 5 million",
-      "page_title": "Evergreen and Interval Funds as One Piece of an Inherited Portfolio",
-      "why_cited": "Large sum planning questions often cite media guides on diversification and structure trade-offs alongside general advisor referral language.",
-      "pitch_domains": [
-        "money.usnews.com",
-        "wealthmanagement.com",
-        "fool.com"
-      ],
-      "flags": [],
-      "disclosure": "Educational only, not an offer or a recommendation. Alternative investments involve risk, including loss of principal. Ask your advisor whether they fit your situation."
-    },
-    {
-      "target_question": "what is a qualified purchaser and why does it matter",
-      "page_title": "Qualified Purchaser Status and Access to Evergreen Fund Structures",
-      "why_cited": "Regulatory definition questions are almost always sourced from official investor education sites and cross referenced with trade media explainers.",
-      "pitch_domains": [
-        "investor.gov",
-        "wealthmanagement.com"
-      ],
-      "flags": [],
-      "disclosure": "Educational only, not an offer or a recommendation. Alternative investments involve risk, including loss of principal. Ask your advisor whether they fit your situation."
-    },
-    {
-      "target_question": "how do family offices invest their money",
-      "page_title": "How Family Offices Use Evergreen and Interval Structures for Illiquid Allocations",
-      "why_cited": "Family office allocation topics draw on trade press and research sites explaining structural choices, cited for their neutral third party framing.",
-      "pitch_domains": [
-        "wealthmanagement.com",
-        "morningstar.com"
-      ],
-      "flags": [],
-      "disclosure": "Educational only, not an offer or a recommendation. Alternative investments involve risk, including loss of principal. Ask your advisor whether they fit your situation."
-    }
-  ],
   "pages_error": null,
   "results": [
     {
@@ -1209,5 +1115,134 @@
       "seconds": 26.9,
       "error": null
     }
-  ]
+  ],
+  "action_plan": {
+    "publish": [
+      {
+        "target_question": "Evergreen Fund Index (anchor page)",
+        "action": "Publish and keep current each quarter: a plain-language table comparing evergreen fund fees, redemption terms, gates, and minimums pulled from public SEC filings. Every other page links here as the source of record.",
+        "where": "/insights/evergreen-fund-index",
+        "why_cited": "Gives AI engines and reporters one clear, sourced comparison table to quote instead of guessing, since no fund names or performance claims appear.",
+        "metric": "Index page shows up as a citation source in the weekly AI answer check within 8 weeks"
+      },
+      {
+        "target_question": "how do i protect my portfolio from a market crash",
+        "action": "Write a page explaining how evergreen and interval funds fit into a diversified portfolio during downturns, with clear risk language and no protection promises. Link to the Index. End with ask your advisor.",
+        "where": "/insights/portfolio-protection-market-crash",
+        "why_cited": "This question currently returns 0% mentions of these fund types; a direct, well-sourced answer gives AI something new to pull from.",
+        "metric": "Evergreen/interval fund mention appears in AI answers to this question within 6 weeks"
+      },
+      {
+        "target_question": "what should i invest in besides stocks and bonds",
+        "action": "Write a page defining alternatives broadly (real assets, private equity, credit, evergreen structures) with plain definitions and trade-offs, no recommendations.",
+        "where": "/insights/alternatives-to-stocks-and-bonds",
+        "why_cited": "Alternatives to 60/40 group already cites these funds 17% of the time; a direct answer page can raise that share.",
+        "metric": "Page ranks in top 5 organic results and gets cited in AI answer check within 6 weeks"
+      },
+      {
+        "target_question": "can i get my money out of a private equity fund early",
+        "action": "Write a page on redemption mechanics: gates, quarterly windows, tender offers, using investor.gov definitions as the base. End with ask your advisor.",
+        "where": "/insights/early-redemption-private-equity",
+        "why_cited": "Liquidity and lock-ups already sees some mentions (33%); this fills the specific early-exit gap with clear, neutral language.",
+        "metric": "Cited in AI answer check within 6 weeks; time on page over 90 seconds"
+      },
+      {
+        "target_question": "what happens if a private fund gates redemptions",
+        "action": "Write a page explaining gating mechanics in interval and tender-offer funds, matching SEC and investor.gov terminology exactly.",
+        "where": "/insights/what-is-a-redemption-gate",
+        "why_cited": "This exact question shows 0% mentions of the fund category; gating is a core evergreen-fund feature that AI engines should be able to source directly.",
+        "metric": "Page appears as a cited source in AI answer check within 8 weeks"
+      },
+      {
+        "target_question": "how do wealthy families preserve wealth across generations",
+        "action": "Write a page on how family wealth planning includes a mix of liquid and illiquid vehicles, introducing evergreen and interval funds as one option among many, no promises implied.",
+        "where": "/insights/family-wealth-across-generations",
+        "why_cited": "Preserving family wealth group has 0% mentions of the category across all 5 questions; this is the highest-opportunity gap.",
+        "metric": "Evergreen/interval fund mention appears in AI answers to at least 2 of the 5 family wealth questions within 8 weeks"
+      }
+    ],
+    "featured": [
+      {
+        "target_question": "Evergreen Fund Index data for reporters",
+        "action": "Pitch a reporter covering alternatives with exclusive early access to the quarterly Index data, framed as neutral fee and liquidity comparison, no fund names attached.",
+        "where": "wealthmanagement.com",
+        "why_cited": "Already cited 3 times in AI answers on this topic; a data-driven pitch fits their beat and gives them something concrete to publish.",
+        "metric": "Article or data citation published within 8 weeks"
+      },
+      {
+        "target_question": "what are alternative investments and should i own them",
+        "action": "Offer an expert quote explaining, in plain terms, the basic differences between evergreen, interval, and tender-offer fund structures. Credit it to Equi's research team as category education, not advice on specific funds.",
+        "where": "money.usnews.com",
+        "why_cited": "Cited twice already; consumer-facing outlet with broad reach on personal finance basics questions.",
+        "metric": "Quote published and later shows up as a citation in AI answer check within 8 weeks"
+      },
+      {
+        "target_question": "how long is money locked up in private equity",
+        "action": "Submit a short guest explainer piece on lock-up periods and redemption windows across fund types, no performance claims, ending with a neutral call to consult an advisor.",
+        "where": "morningstar.com",
+        "why_cited": "Cited twice; an education-focused site whose audience already searches these terms.",
+        "metric": "Piece published and cited in AI answer check within 10 weeks"
+      },
+      {
+        "target_question": "what does lock up period mean for hedge funds",
+        "action": "Cite investor.gov's investor bulletin on fund liquidity as the source for gates, lock-up, and redemption definitions. Match its wording exactly when writing about lock-up periods, without adding claims of protection or recommendations.",
+        "where": "investor.gov",
+        "why_cited": "A regulator source; matching its definitions builds trust with AI engines that already cite it twice and improves accuracy of Equi's own pages.",
+        "metric": "Equi page definitions match investor.gov language with no discrepancies found in quarterly review"
+      },
+      {
+        "target_question": "is the 60/40 portfolio dead",
+        "action": "Pitch a short expert commentary or guest column on why some investors are looking beyond the traditional 60/40 mix, framed as education not advice.",
+        "where": "fool.com",
+        "why_cited": "Consumer-facing site that already appears once in citations; good fit for a widely searched, non-technical question.",
+        "metric": "Commentary published and cited in AI answer check within 10 weeks"
+      }
+    ],
+    "youtube": [
+      {
+        "target_question": "can i get my money out of a private equity fund early",
+        "action": "Cut a 3 to 5 minute clip from an existing webinar explaining redemption windows and gates in plain terms. Publish with full transcript.",
+        "where": "Liquidity and Lock-ups playlist",
+        "why_cited": "Directly answers a question with 0% category mentions using existing video content, no new production needed.",
+        "metric": "Clip appears in YouTube or AI video answer results within 6 weeks"
+      },
+      {
+        "target_question": "what happens if a private fund gates redemptions",
+        "action": "Cut a short clip from a past Q&A session on gating mechanics. Publish with full transcript and link to the redemption gate page.",
+        "where": "Liquidity and Lock-ups playlist",
+        "why_cited": "Reinforces the matching written page with a video format AI engines increasingly surface.",
+        "metric": "Cited or surfaced in AI answer check within 8 weeks"
+      },
+      {
+        "target_question": "what should i invest in besides stocks and bonds",
+        "action": "Cut a clip from a webinar segment on portfolio diversification beyond stocks and bonds. Publish with transcript.",
+        "where": "Alternatives to 60/40 playlist",
+        "why_cited": "Supports the written alternatives page and covers a group already at 17% category mention, aiming to raise it.",
+        "metric": "View count over 500 and cited in AI answer check within 8 weeks"
+      },
+      {
+        "target_question": "how do wealthy families preserve wealth across generations",
+        "action": "Cut a clip from a family wealth planning webinar covering the basics of illiquid vehicles in a diversified plan. Publish with transcript.",
+        "where": "Preserving Family Wealth playlist",
+        "why_cited": "This group has 0% category mentions across all questions; video content gives another format for AI to pull from.",
+        "metric": "Evergreen/interval fund mention appears in AI answers to a family wealth question within 8 weeks"
+      },
+      {
+        "target_question": "how do i protect my portfolio from a market crash",
+        "action": "Cut a clip from a downturn planning webinar explaining how different fund structures behave in stress periods, using plain language and clear risk disclosures, without promising protection or smoother swings.",
+        "where": "Downturn Protection playlist",
+        "why_cited": "Matches the written page and gives a second format for the same high-priority gap question.",
+        "metric": "Cited in AI answer check within 8 weeks"
+      }
+    ],
+    "flags": [],
+    "fixed_on_retry": [
+      "featured \"what are alternative investments and should i own them\": a mention of Equi in \"Offer an expert quote from Equi's research lead explaining the basic differences between evergreen, interval, and tender-offer structures, in plain terms..\"",
+      "featured \"what does lock up period mean for hedge funds\": a mention of Equi in \"Cite investor.gov's investor bulletin on fund liquidity and match its definitions of gates, lock-ups, and redemption terms exactly on Equi's own pages..\"",
+      "youtube \"how do i protect my portfolio from a market crash\": a claim that private holdings are shielded from volatility in \"Cut a clip from a downturn planning webinar explaining how different fund structures behave in stress periods, without promising smoother swings.\""
+    ],
+    "generated": "2026-09-27 23:20",
+    "disclosure": "Educational only, not an offer or a recommendation. Alternative investments involve risk, including loss of principal. Ask your advisor whether they fit your situation."
+  },
+  "plan_error": null
 }

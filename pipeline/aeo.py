@@ -154,55 +154,88 @@ def metrics(rows: list[dict]) -> dict:
     }
 
 
-PAGES_SCHEMA = {
+ROW = {
     "type": "object",
-    "properties": {"pages": {"type": "array", "items": {
-        "type": "object",
-        "properties": {"target_question": {"type": "string"}, "page_title": {"type": "string"},
-                       "why_cited": {"type": "string"},
-                       "pitch_domains": {"type": "array", "items": {"type": "string"}}},
-        "required": ["target_question", "page_title", "why_cited", "pitch_domains"],
-        "additionalProperties": False}}},
-    "required": ["pages"], "additionalProperties": False,
+    "properties": {"target_question": {"type": "string"}, "action": {"type": "string"}, "where": {"type": "string"},
+                   "why_cited": {"type": "string"}, "metric": {"type": "string"}},
+    "required": ["target_question", "action", "where", "why_cited", "metric"],
+    "additionalProperties": False,
 }
+PLAN_SCHEMA = {
+    "type": "object",
+    "properties": {"publish": {"type": "array", "items": ROW},
+                   "featured": {"type": "array", "items": ROW},
+                   "youtube": {"type": "array", "items": ROW}},
+    "required": ["publish", "featured", "youtube"],
+    "additionalProperties": False,
+}
+INDEX_NAME = "Evergreen Fund Index"
 
-PAGES_SYSTEM = """You plan educational web content for an alternatives firm that is not allowed to advertise its funds
-to the public. Every page is category education about evergreen and interval-style alternatives: how they work, the
-trade-offs, and the risks, ending with "ask your advisor". No fund names, no performance or return claims, no
-recommendations. Write plainly. No em dashes. No hype words."""
+PLAN_SYSTEM = f"""You write an answer-engine (AEO) action plan for the marketing team at Equi, an alternatives firm that
+is not allowed to advertise its funds to the public. Everything client-facing is category education about evergreen,
+interval, and tender-offer funds: how they work, trade-offs, risks, ending with "ask your advisor". No fund names, no
+performance or return claims, no recommendations, never promise protection or smoother swings.
+
+Write for a non-technical marketer: every action is a concrete thing a person can do this month. Plain words, short.
+No em dashes. No hype words.
+
+Three lanes:
+1. publish: pages on equi.com. The first row is always the {INDEX_NAME}: a quarterly comparison of evergreen fund fees,
+   liquidity terms, and minimums compiled from public SEC filings. It is the anchor asset the other rows link to.
+   Then 5 to 6 question-led pages, each answering one client question directly. "where" is the equi.com URL path.
+2. featured: get Equi quoted or published where AI already looks. One row per cited domain you choose, using only
+   publishers, media, and education or regulator sites from the list given. Never fund managers, asset managers, or
+   advisory firms: they compete with Equi. "action" is the pitch angle: an expert quote, {INDEX_NAME} data for a
+   reporter, or a guest piece. For a regulator site, the action is to cite it and match its definitions, not pitch it.
+3. youtube: 4 to 5 short clips cut from existing Equi webinars and long-form videos, each titled with a client question
+   and published with a full transcript. "where" is the playlist or channel section.
+
+"metric" is how to tell it worked, in plain words (for example, "cited in the weekly AI answer check within 6 weeks")."""
 
 
-def pages_to_create(m: dict) -> list[dict]:
+# Plan actions are instructions to Equi's marketer, not client copy: naming Equi or its research team is expected.
+# The claim rules (protection, returns, predictions) still apply, because the actions become client-facing pages.
+INTERNAL_OK = {"a mention of Equi", "internal process (clients have no committee)"}
+
+
+def lint_plan(plan: dict) -> list[str]:
+    found = [f'{lane} "{r["target_question"]}": {f}' for lane in ("publish", "featured", "youtube")
+             for r in plan[lane] for f in lint_text(r["action"] + ".") if f.split(" in ")[0] not in INTERNAL_OK]
+    first = plan["publish"][0] if plan["publish"] else {"action": "", "target_question": ""}
+    if INDEX_NAME.lower() not in (first["action"] + first["target_question"]).lower():
+        found.append(f"The first publish row must be the {INDEX_NAME}.")
+    return found
+
+
+def action_plan(m: dict) -> dict:
+    """Three-lane AEO plan from the tracker results, in one call."""
     gaps = "\n".join(f'- [{g["group"]}] {g["question"]}' for g in m["gaps"]) or "- none"
+    groups = ", ".join(f"{g} {v:.0%}" for g, v in m["evergreen_by_group"].items())
     doms = ", ".join(f"{d} ({n})" for d, n in m["top_domains"])
-    prompt = (f"Questions wealthy clients ask where an AI answer never mentioned evergreen, interval, or tender-offer "
-              f"funds:\n{gaps}\n\nMost-cited domains across all answers (citation count): {doms}\n\n"
-              "Propose 5 to 8 pages. For each: the target question (from the list, or a close variant), a plain page "
-              "title, one or two sentences on why an answer engine would cite it (what gap it fills, what format "
-              "they cite), and 2 or 3 of the cited domains above to pitch for a feature or a quote. Pitch only "
-              "publishers, media, and education or regulator sites. Never pitch fund managers, asset managers, or "
-              "advisory firms, since they compete with Equi; if no cited domain fits, return an empty list.\n"
-              "Page titles are client-facing: never promise protection, smoother swings, or lower volatility.")
+    prompt = (f"AI answers mentioned evergreen, interval, or tender-offer funds in {m['evergreen_share']:.0%} of "
+              f"{m['answered']} client questions (by group: {groups}), and Equi in {m['equi_share']:.0%}.\n\n"
+              f"Questions where evergreen never came up:\n{gaps}\n\n"
+              f"Most-cited domains (citation count): {doms}\n\nWrite the three-lane plan.")
 
     def ask(p):
-        msg = _client().messages.create(model=MODEL, max_tokens=16000, system=PAGES_SYSTEM,
+        msg = _client().messages.create(model=MODEL, max_tokens=16000, system=PLAN_SYSTEM,
                                         output_config={"effort": "medium",
-                                                       "format": {"type": "json_schema", "schema": PAGES_SCHEMA}},
+                                                       "format": {"type": "json_schema", "schema": PLAN_SCHEMA}},
                                         messages=[{"role": "user", "content": p}])
-        return json.loads(next(b.text for b in msg.content if b.type == "text"))["pages"]
+        return json.loads(next(b.text for b in msg.content if b.type == "text"))
 
-    def issues(pages):
-        return [f'"{pg["page_title"]}": {f}' for pg in pages for f in lint_text(pg["page_title"] + ".")]
+    issues = lint_plan
 
-    pages = ask(prompt)
-    first = issues(pages)
+    plan = ask(prompt)
+    first = issues(plan)
     if first:
-        pages = ask(prompt + "\n\nA first draft broke the client-copy rules. Fix these and keep the rest:\n- "
-                    + "\n- ".join(first) + "\n\nFirst draft:\n" + json.dumps(pages))
-    for pg in pages:
-        pg["flags"] = [f for f in issues([pg])]
-        pg["disclosure"] = DISCLOSURE
-    return pages
+        plan = ask(prompt + "\n\nA first draft broke these rules. Fix them and keep the rest:\n- "
+                   + "\n- ".join(first) + "\n\nFirst draft:\n" + json.dumps(plan))
+    plan["flags"] = issues(plan)
+    plan["fixed_on_retry"] = first
+    plan["generated"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+    plan["disclosure"] = DISCLOSURE
+    return plan
 
 
 def run(n: int = 30, workers: int = 4, progress=print) -> dict:
@@ -215,11 +248,11 @@ def run(n: int = 30, workers: int = 4, progress=print) -> dict:
             progress(f"  [{len(rows)}/{len(todo)}] {row['seconds']:>5}s  {status:12}  {row['question']}")
     m = metrics(rows)
     try:
-        pages, pages_error = pages_to_create(m), None
+        plan, plan_error = action_plan(m), None
     except Exception as e:
-        pages, pages_error = [], f"{type(e).__name__}: {str(e)[:200]}"
+        plan, plan_error = None, f"{type(e).__name__}: {str(e)[:200]}"
     out = {"run_date": datetime.now().strftime("%Y-%m-%d %H:%M"), "model": MODEL, "tool": SEARCH_TOOL,
-           "metrics": m, "pages": pages, "pages_error": pages_error, "results": rows}
+           "metrics": m, "action_plan": plan, "plan_error": plan_error, "results": rows}
     OUT.write_text(json.dumps(out, indent=2))
     return out
 
@@ -234,14 +267,17 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--n", type=int, default=30)
     ap.add_argument("--workers", type=int, default=4)
-    ap.add_argument("--pages-only", action="store_true", help="rebuild Pages to create from the cached answers")
+    ap.add_argument("--plan-only", action="store_true", help="rebuild the AEO action plan from the cached answers")
     args = ap.parse_args()
     t = time.time()
-    if args.pages_only:
+    if args.plan_only:
         out = load()
-        out["pages"], out["pages_error"] = pages_to_create(out["metrics"]), None
+        out["action_plan"], out["plan_error"] = action_plan(out["metrics"]), None
+        out.pop("pages", None)
         OUT.write_text(json.dumps(out, indent=2))
-        print(f"Rebuilt {len(out['pages'])} pages in {time.time()-t:.0f}s")
+        p = out["action_plan"]
+        print(f"Plan in {time.time()-t:.0f}s: {len(p['publish'])} publish, {len(p['featured'])} featured, "
+              f"{len(p['youtube'])} clips. Fixed on retry: {len(p['fixed_on_retry'])}. Flags left: {len(p['flags'])}")
         raise SystemExit
     out = run(args.n, args.workers)
     m = out["metrics"]
