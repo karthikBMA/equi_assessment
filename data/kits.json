@@ -4,132 +4,139 @@
       "title": "Understanding Evergreen Alternative Funds",
       "greeting": "Dear clients,",
       "paragraphs": [
-        "Private markets have long been a part of building durable, diversified portfolios. In recent years, a newer structure has become more widely available: the evergreen alternative fund. This letter explains what these vehicles are, how they work, and how they differ from the closed-end private funds many of you already hold.",
-        "A traditional closed-end private fund raises capital once, invests it over a defined period, and returns capital to investors as holdings are sold, typically over the better part of a decade or more. Once committed, capital is generally locked up until the fund winds down.",
-        "An evergreen fund is structured differently. It does not have a fixed end date. Instead, it offers periodic windows, often monthly or quarterly, during which investors may subscribe additional capital or request redemptions. These are sometimes called continuous or perpetual-life funds.",
-        "It is important to understand what periodic liquidity means in practice. It is not the same as daily liquidity in a public mutual fund. Redemption requests are typically satisfied out of a limited pool set aside for that purpose, and the fund can apply caps, gates, or delays if requests in a given period exceed what it can accommodate. In periods of market stress, these limits are more likely to bind, and an investor wanting to exit may find that only a portion of their request is honored, with the remainder carried to a future period.",
-        "In exchange for this structure, evergreen funds can offer more flexibility than closed-end vehicles, allowing capital to be committed or withdrawn over time rather than locked to a single vintage. They also allow a manager to hold investments longer, without the pressure of a fixed liquidation date, which changes how and when assets are bought and sold.",
-        "The main risks to understand are liquidity risk, since redemptions are never guaranteed in full or on a fixed timeline, valuation risk, since these funds typically hold assets that are priced periodically rather than continuously, and structural risk, since the terms governing subscriptions, redemptions, and fees can vary meaningfully from one fund to another.",
-        "This letter is meant as background, not a recommendation. Whether an evergreen structure fits alongside your existing private equity and real estate holdings depends on your own liquidity needs and time horizon. We would welcome the chance to discuss this with you directly."
+        "You may have come across the term \"evergreen\" alternative fund. This letter explains what that means, how these vehicles work, and how they differ from the closed-end private funds many of you already know from private equity and real estate investing.",
+        "A traditional closed-end private fund raises money once, invests it over a set period, and returns capital as investments are sold, typically over many years. There is no ability to add or withdraw along the way. An evergreen fund is structured differently. It has no fixed end date, and it offers periodic windows, often monthly or quarterly, when investors can subscribe new capital or request redemptions.",
+        "That periodic liquidity is a feature, not a guarantee. Each fund sets its own limits on how much can be redeemed at any given window, often expressed as a portion of the fund's assets. In periods of heavy redemption requests, a fund can prorate or delay withdrawals until the next window. Investors should think of this as liquidity that is more frequent than a closed-end fund, but still constrained and not comparable to a public market where shares trade daily without limit.",
+        "Because evergreen funds hold private, less liquid assets, such as private credit, private equity positions, or real estate, the fund's ability to meet redemption requests depends on cash on hand, new subscriptions coming in, and the manager's ability to sell assets when needed. This structural tension between periodic liquidity and underlying illiquid holdings is the central risk to understand. Valuations are also typically set periodically rather than continuously, which means the price used for a subscription or redemption may not reflect real-time market conditions.",
+        "Evergreen funds can offer a different way to gain exposure to private markets, with more flexibility around entry and exit timing than a traditional closed-end structure. They cannot offer daily liquidity, and they do not eliminate the underlying illiquidity or valuation uncertainty of the assets they hold.",
+        "We are sharing this as background, not as a recommendation. Whether a structure like this fits your broader portfolio depends on your goals, time horizon, and liquidity needs. We would welcome the chance to discuss this with you directly."
       ],
       "closing": "With best regards,"
     },
     "talking_points": [
-      "Evergreen funds do not have a fixed end date, unlike traditional closed-end private funds.",
-      "They offer periodic windows, often monthly or quarterly, for subscriptions and redemptions.",
-      "Periodic liquidity is not the same as daily liquidity. The fund can limit, delay, or gate redemptions.",
-      "Client question: Can I always get my money out when I ask? Answer: No. Redemptions are typically capped and can be delayed if requests exceed what the fund sets aside for that purpose.",
-      "Client question: How is this different from the private equity I already own? Answer: Your existing funds are closed-end with a defined life; evergreen funds are open-ended with recurring, but limited, liquidity windows.",
-      "Client question: Does this mean it's safer or more conservative? Answer: No. It changes the liquidity structure, not the underlying risk of the assets held.",
-      "Valuations in these funds are typically set periodically, not continuously, which is a different pricing risk than public markets.",
-      "This is background information only. Any decision should be discussed one on one based on your own liquidity needs and time horizon."
+      "Evergreen funds have no fixed end date and offer periodic subscription and redemption windows, unlike closed-end funds that lock up capital for a set term.",
+      "Redemptions are typically capped at each window, so a client asking to withdraw is not guaranteed to get the full amount back immediately.",
+      "Client question: \"Can I get my money out whenever I want?\" Answer: No. Redemptions happen only at set intervals and are subject to fund-imposed limits.",
+      "Client question: \"Is this the same as a public mutual fund?\" Answer: No. The underlying holdings are private and less liquid, even though the fund offers more frequent access than a traditional closed-end private fund.",
+      "Valuations in these funds are usually set periodically rather than continuously, so the price at a given window may lag real-time conditions.",
+      "The core risk to explain is the mismatch between periodic liquidity offered to investors and the illiquid nature of the assets the fund actually holds.",
+      "Client question: \"Does this replace our private equity or real estate holdings?\" Answer: This letter is educational only. Whether any structure fits depends on individual circumstances, worth discussing directly.",
+      "Frame the conversation as background information to support a broader discussion about how private market exposure fits into the client's overall plan."
     ],
-    "tailoring": "Given that Marchetti Ruiz Family Advisors' clients already hold private equity and real estate, the letter frames evergreen funds specifically in contrast to the closed-end structures they already know, without recommending any allocation.",
+    "tailoring": "Given this firm's existing allocations to private equity and real estate, the letter frames evergreen structures specifically in contrast to the closed-end funds these clients already know.",
+    "flags": [],
     "firm_name": "Marchetti Ruiz Family Advisors",
     "committee": false,
-    "generated": "2026-09-27",
-    "model": "claude-sonnet-5",
-    "flags": []
+    "generated": "2026-09-28",
+    "model": "claude-sonnet-5"
   },
   "Thornbury Wealth Advisors": {
     "letter": {
       "title": "Understanding Evergreen Alternative Funds",
       "greeting": "Dear clients,",
       "paragraphs": [
-        "You may have heard the term \"evergreen fund\" as more alternative investment strategies adopt this structure. This note explains what that means, in plain terms, so any conversation with your advisor starts from a shared understanding.",
-        "Traditional private funds are closed-end. You commit capital, the manager calls it over time, invests it, and returns it years later when investments are sold. There is no way to add or withdraw money in between. Evergreen funds work differently. They are open-ended, meaning the fund continues indefinitely rather than winding down on a set schedule, and they offer periodic liquidity. In practice, this means the fund accepts new subscriptions and allows redemption requests at set intervals, often monthly or quarterly, rather than only at the end of a fixed term.",
-        "That periodic liquidity comes with limits. Funds can cap the amount redeemed in any given period, and in unusual market conditions they may reduce or pause redemptions altogether. This is a structural feature, not a flaw. It exists because the underlying investments, often private companies or real assets, cannot always be sold quickly or at a fair price on short notice. These limits exist so the fund is not forced into hurried sales of assets that take time to sell in an orderly way.",
-        "Evergreen structures also differ in how capital is put to work. Because the fund is continuously open, your investment can begin working right away rather than waiting for a manager to call committed capital over several years. This can simplify the experience of investing in private markets, though it does not eliminate the illiquidity that comes with holding private assets.",
-        "The main risks are worth stating clearly. Redemption limits mean you may not access all of your capital exactly when you want it. Valuations of private holdings are typically appraised periodically rather than priced daily, which introduces judgment into what a unit is worth at any given time. And the underlying investments carry the same business, market, and execution risks as any private investment.",
-        "None of this is a recommendation to own or avoid any particular structure. Whether an evergreen fund fits your portfolio depends on your liquidity needs, time horizon, and overall allocation. We would welcome a conversation with your advisor to talk through whether this is worth exploring further for you."
+        "You may have heard the term evergreen fund used alongside more familiar private investments. This note explains what that means and how these structures differ from the private funds many of you already hold.",
+        "Traditional closed-end private funds raise money once, invest it over several years, and return capital as investments are sold. Your money is generally locked up for the life of the fund, often a decade or more, with no ability to add or withdraw along the way.",
+        "Evergreen funds work differently. They are designed to stay open indefinitely rather than wind down on a set schedule. Instead of a single closing, they accept new investment at regular intervals, and they offer periodic opportunities for investors to request withdrawals, commonly monthly or quarterly.",
+        "That periodic liquidity is a feature, not a guarantee. Each fund sets its own limits on how much can be redeemed at any one interval, often a modest percentage of the fund's assets. If redemption requests are heavy, the fund can prorate or delay them. These limits exist because the fund's underlying investments are longer-term and less liquid by design, and the fund needs a way to manage withdrawal requests without having to sell those holdings on a set timetable.",
+        "Because of this structure, evergreen funds can invest in the same kinds of assets as traditional private funds, such as private businesses, real assets, or private credit, while offering more flexibility around timing than a fully locked-up structure. They do not offer the same liquidity as public markets, and they are not a substitute for cash reserves or short-term savings.",
+        "The main risks are similar in kind to other private investments: the underlying assets can be difficult to value precisely, liquidity is conditional rather than assured, and fees and structures vary meaningfully from one fund to another. Reading the specific terms of any fund matters more than the general category it falls into.",
+        "We are not recommending a specific allocation through this note. If you would like to talk through whether this type of structure fits your broader plan, your advisor is glad to walk through it with you."
       ],
       "closing": "With best regards,"
     },
     "talking_points": [
-      "Evergreen funds are open-ended vehicles with periodic subscription and redemption windows, unlike closed-end funds with a fixed term.",
-      "Redemptions are not guaranteed on demand. Funds can cap or pause them during periods of stress.",
-      "Client question: \"Can I get my money out whenever I want?\" Answer: No. Redemptions happen at set intervals and can be limited, so plan around that.",
-      "Client question: \"Is this safer than a traditional private fund?\" Answer: It is a different structure, not a safer one. The underlying assets carry the same risks.",
-      "Capital in an evergreen fund can typically begin working sooner, since there is no multi-year capital call period as with traditional closed-end funds.",
-      "Valuations for private holdings are periodic and involve appraisal judgment, not daily market pricing.",
-      "Client question: \"Does this replace my private equity allocation?\" Answer: Not necessarily. It's a different structure worth discussing in the context of your full allocation.",
-      "This is educational background only. Any decision should come from a conversation about your specific goals and liquidity needs."
+      "Evergreen funds stay open on an ongoing basis rather than closing after one fundraising period.",
+      "They offer periodic windows, often monthly or quarterly, where investors can request withdrawals, unlike traditional funds that lock up capital for years.",
+      "Client question: Can I get my money out whenever I want? Answer: No. Withdrawals happen at set intervals and the fund can limit or delay them if requests are heavy.",
+      "Client question: Are these safer than regular private funds? Answer: Not safer, just structured for more flexibility. The underlying investments carry similar risks.",
+      "The periodic liquidity limits exist because the fund's holdings are longer-term and less liquid, so the fund manages withdrawals within that reality rather than promising immediate access.",
+      "Client question: Does this replace the closed-end private equity I already own? Answer: Not necessarily. It is a different structure that can hold similar types of assets, and whether it fits depends on your specific situation.",
+      "Fees, terms, and redemption limits vary by fund, so the details of any specific fund matter more than the general category.",
+      "This is background information only. Your advisor can go over whether this structure has a place in your plan."
     ],
     "ic_memo": [
       {
         "section": "Purpose and Scope",
         "points": [
-          "Summarize why evergreen structures are being reviewed for potential client conversations.",
-          "Clarify this is a structural education initiative, not a manager selection decision at this stage."
+          "State that this memo evaluates an evergreen alternative fund structure for potential client use",
+          "Clarify the decision being asked of committee: approve, decline, or request more information",
+          "Note this is a structural and suitability review, not a performance judgment [Equi to provide]"
         ]
       },
       {
-        "section": "Structural Overview",
+        "section": "Structure Overview",
         "points": [
-          "Define open-ended vs. closed-end fund mechanics for the group.",
-          "Describe subscription and redemption cadence typically offered [Equi to provide].",
-          "Note any gating or redemption limit provisions specific to the fund under review [Equi to provide]."
+          "Describe the fund's legal structure and how it differs from closed-end vehicles [Equi to provide]",
+          "Detail subscription frequency and process [Equi to provide]",
+          "Detail redemption frequency, notice periods, and any gate or proration mechanics [Equi to provide]"
         ]
       },
       {
-        "section": "Liquidity Terms",
+        "section": "Underlying Strategy and Assets",
         "points": [
-          "Detail redemption frequency, notice periods, and caps [Equi to provide].",
-          "Identify circumstances under which redemptions could be suspended [Equi to provide]."
+          "Summarize the asset classes and investment approach the fund pursues [Equi to provide]",
+          "Note concentration, sector, or geographic exposures [Equi to provide]",
+          "Compare to strategies already held by clients in closed-end form"
         ]
       },
       {
-        "section": "Fee Structure",
+        "section": "Liquidity Mechanics",
         "points": [
-          "Outline management and incentive fee terms [Equi to provide].",
-          "Compare fee structure to traditional closed-end private fund norms [Equi to provide]."
+          "Document historical redemption limits and any instances of gating [Equi to provide]",
+          "Explain how the fund manages a liquidity sleeve or cash buffer [Equi to provide]",
+          "Assess what happens to unmet redemption requests"
         ]
       },
       {
-        "section": "Valuation Methodology",
+        "section": "Fees and Terms",
         "points": [
-          "Describe valuation frequency and methodology used by the fund [Equi to provide].",
-          "Note independence of valuation agent or process [Equi to provide]."
+          "Outline management fee, incentive fee, and any other expenses [Equi to provide]",
+          "Note minimum investment size and any early-withdrawal charges [Equi to provide]",
+          "Compare total cost load to comparable closed-end alternatives"
         ]
       },
       {
-        "section": "Track Record and Reporting",
+        "section": "Valuation and Reporting",
         "points": [
-          "Summarize manager tenure and reporting cadence [Equi to provide].",
-          "Request sample client reporting materials [Equi to provide]."
+          "Describe how the fund values illiquid holdings between redemption windows [Equi to provide]",
+          "Identify the independent administrator or valuation agent [Equi to provide]",
+          "Note frequency and content of investor reporting [Equi to provide]"
         ]
       },
       {
-        "section": "Operational and Service Providers",
+        "section": "Risk Assessment",
         "points": [
-          "List administrator, auditor, and custodian [Equi to provide].",
-          "Confirm any parallel structures or side letters in place [Equi to provide]."
+          "Identify key risks: valuation uncertainty, conditional liquidity, concentration",
+          "Assess counterparty and manager-specific operational risk [Equi to provide]",
+          "Consider how this risk profile compares to existing client alternative holdings"
         ]
       },
       {
-        "section": "Risk Considerations",
+        "section": "Client Suitability Considerations",
         "points": [
-          "Document illiquidity risk despite periodic redemption windows.",
-          "Document valuation judgment risk given non-daily pricing.",
-          "Document concentration or sector risk specific to the fund's holdings [Equi to provide]."
+          "Identify which client segments this structure may reasonably suit based on liquidity needs",
+          "Note that no specific allocation is being recommended to clients at this stage",
+          "Outline how advisors should be equipped to discuss the structure if approved"
         ]
       },
       {
-        "section": "Committee Recommendation",
+        "section": "Recommendation and Next Steps",
         "points": [
-          "State whether further due diligence is warranted.",
-          "Identify open items requiring follow-up with the manager [Equi to provide]."
+          "Summarize committee's overall assessment of structural soundness",
+          "List any outstanding items needed before a final decision [Equi to provide]",
+          "Propose a timeline for follow-up or reassessment"
         ]
       }
     ],
-    "tailoring": "Because Thornbury's clients are used to traditional closed-end private equity, the letter leans on that comparison to make the evergreen structure and its liquidity limits easy to grasp without introducing new jargon.",
+    "tailoring": "The letter avoids specifics and centers on comparing evergreen structures to the closed-end private equity these clients already hold, while the IC memo is built for a committee-led decision process led by the research director.",
     "fixed_on_retry": [
-      "Letter: return or performance language in \"The fund's liquidity terms are designed to protect remaining investors from being forced into hurried sales.\""
+      "Letter: return or performance language in \"This protects the fund's ability to hold longer-term, less liquid investments without being forced into untimely sales.\""
     ],
     "flags": [],
     "firm_name": "Thornbury Wealth Advisors",
     "committee": true,
-    "generated": "2026-09-27",
+    "generated": "2026-09-28",
     "model": "claude-sonnet-5"
   }
 }

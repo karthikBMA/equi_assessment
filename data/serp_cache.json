@@ -1,12 +1,12 @@
 {
   "what is an evergreen fund": {
     "query": "what is an evergreen fund",
-    "run_date": "2026-09-27 23:33",
+    "run_date": "2026-09-28 00:03",
     "model": "claude-sonnet-5",
-    "seconds": 90,
+    "seconds": 52,
     "searched": [
       "what is an evergreen fund",
-      "evergreen fund definition meaning"
+      "evergreen fund definition private equity"
     ],
     "results": [
       {
@@ -16,10 +16,10 @@
         "rank": 1,
         "domain": "hamiltonlane.com",
         "source_type": "fund sponsor",
-        "summary": "Hamilton Lane explains evergreen funds as open ended vehicles for private markets with no lock up and lower minimums around $25,000 versus $5 million for closed end funds, with a short video explainer.",
+        "summary": "Hamilton Lane explains that evergreen funds are open-ended private market vehicles with no lock-up, lower minimums around $25,000, and periodic redemption rights, contrasted with traditional closed-end funds.",
         "mentions_evergreen": true,
         "mentions_equi": false,
-        "gets_wrong": "Only covers the evergreen label, never mentions interval or tender offer funds as separate structures, and the page exists to build interest in Hamilton Lane's own products so it is not neutral."
+        "gets_wrong": "Presents evergreen funds mainly as an access and flexibility story without weighing redemption gates or fee layers, and it is written to promote Hamilton Lane's own evergreen products.'"
       },
       {
         "url": "https://www.kkr.com/wealth/alternatives-unlocked/evergreen-fund",
@@ -28,10 +28,10 @@
         "rank": 2,
         "domain": "kkr.com",
         "source_type": "fund sponsor",
-        "summary": "KKR lays out a table contrasting evergreen and drawdown funds on term, capital timing, liquidity, and diversification, and says evergreen funds suit investors comfortable locking up capital long term.",
+        "summary": "KKR frames evergreen funds as an easier way to access private markets than drawdown funds, listing differences in term, capital timing, liquidity, and diversification.",
         "mentions_evergreen": true,
         "mentions_equi": false,
-        "gets_wrong": "No mention of interval funds or tender offer funds by name, and the comparison table is built to support KKR's own evergreen product line rather than serve as neutral education."
+        "gets_wrong": "Calls evergreen liquidity 'an element of liquidity' but glosses over redemption caps and gating risk, and it is a sales page for KKR's own evergreen fund lineup."
       },
       {
         "url": "https://www.seic.com/asset-managers/our-insights/evergreen-funds-next-frontier-private-markets",
@@ -40,10 +40,10 @@
         "rank": 3,
         "domain": "seic.com",
         "source_type": "fund sponsor",
-        "summary": "SEI describes evergreen funds as sharing traits of open end and closed end funds, notes they suit yield strategies like private credit and real estate, and says the manager is always in fundraising mode.",
+        "summary": "SEI describes evergreen funds as hybrids of open and closed end structures, noting they suit yield strategies like private credit and real estate because income can be reinvested.",
         "mentions_evergreen": true,
         "mentions_equi": false,
-        "gets_wrong": "Written for asset managers raising evergreen vehicles, not everyday investors, and does not define interval or tender offer funds even though it touches on liquidity mechanics."
+        "gets_wrong": "Written for asset managers deciding whether to launch an evergreen fund, so it skips investor-side risks like liquidity mismatches during stress periods."
       },
       {
         "url": "https://www.partnersgroup.com/en/news-and-views/perspective/accessing-private-markets-evergreen-funds",
@@ -52,10 +52,10 @@
         "rank": 4,
         "domain": "partnersgroup.com",
         "source_type": "fund sponsor",
-        "summary": "Partners Group frames evergreens as a way to democratize private markets, highlighting compounding returns and vintage diversification, with a comparison table against closed end funds.",
+        "summary": "Partners Group positions evergreens as a way to buy into a reinvesting, commingled private markets portfolio with subscription and redemption features similar to an ETF or mutual fund.",
         "mentions_evergreen": true,
         "mentions_equi": false,
-        "gets_wrong": "Heavily promotional since Partners Group has run evergreen funds for 20 years, and it never distinguishes interval or tender offer fund structures from the evergreen label."
+        "gets_wrong": "The ETF and mutual fund comparison overstates how liquid these funds actually are, and the piece exists to promote Partners Group's own two decades of evergreen products."
       },
       {
         "url": "https://www.adamsstreetpartners.com/academy/cef-vs-evergreen-funds/",
@@ -64,10 +64,10 @@
         "rank": 5,
         "domain": "adamsstreetpartners.com",
         "source_type": "fund sponsor",
-        "summary": "Adams Street's academy page gives a short definition contrasting closed end funds with evergreen, perpetual, and open end funds as interchangeable terms, then links to a glossary.",
+        "summary": "Adams Street contrasts closed-end private equity funds with evergreen funds, noting the latter have ongoing closings and no fixed maturity date, and points readers to its own evergreen strategies.",
         "mentions_evergreen": true,
         "mentions_equi": false,
-        "gets_wrong": "Very thin content that skips interval and tender offer fund mechanics entirely and funnels readers toward Adams Street's own evergreen solutions."
+        "gets_wrong": "Short educational framing that quickly funnels into Adams Street's own advisor solutions page, so it is not neutral."
       },
       {
         "url": "https://www.sec.gov/Archives/edgar/data/0001227073/000093677204000001/edg137288.htm",
@@ -76,34 +76,34 @@
         "rank": 6,
         "domain": "sec.gov",
         "source_type": "government",
-        "summary": "A 2003 SEC filing for a mutual fund literally named Evergreen Managed Income Fund, part of the old Evergreen Investments mutual fund family, describing assets under management and fund lineup at the time.",
+        "summary": "This is a 2003 SEC filing for a mutual fund that happened to be named Evergreen Managed Income Fund, part of the old First Union owned Evergreen Investments mutual fund family.",
         "mentions_evergreen": true,
         "mentions_equi": false,
-        "gets_wrong": "This uses evergreen as a brand name from a defunct mutual fund family, not the modern private markets structure, so it answers a completely different question and confuses the search results."
-      },
-      {
-        "url": "https://www.nb.com/handlers/documents.ashx?id=a5ba815f-74a8-40ad-ad88-0bd45ab1ed60&name=Z0564_0824_Comparing_Evergreen_and_Traditional_Fund_Returns_Posting.pdf",
-        "title": "Comparing Evergreen and Traditional Fund Returns in ...",
-        "page_age": null,
-        "rank": 7,
-        "domain": "nb.com",
-        "source_type": "fund sponsor",
-        "summary": "A Neuberger Berman paper compares how evergreen and traditional funds report returns, noting evergreen funds publish annual returns while traditional funds use IRR, making direct comparison hard.",
-        "mentions_evergreen": true,
-        "mentions_equi": false,
-        "gets_wrong": "Very technical and buried in a PDF, aimed at institutional readers, and never explains interval or tender offer fund structures even though the return reporting issue applies to them too."
+        "gets_wrong": "This result is a naming coincidence. The Evergreen Investments mutual fund brand from the 1990s and 2000s has nothing to do with today's evergreen private market fund structure, so this page is irrelevant to the search intent."
       },
       {
         "url": "https://en.wikipedia.org/wiki/Evergreen_Investments",
         "title": "Evergreen Investments",
         "page_age": null,
-        "rank": 8,
+        "rank": 7,
         "domain": "en.wikipedia.org",
         "source_type": "education site",
-        "summary": "Wikipedia's page on Evergreen Investments covers the history of a 1990s mutual fund family formed by merging Keystone and First Union's Evergreen brand, unrelated to today's private markets evergreen fund structure.",
+        "summary": "Wikipedia entry on the historical Evergreen Investments mutual fund company, tracing its mergers with Keystone Fund Family under First Union starting in 1996.",
         "mentions_evergreen": true,
         "mentions_equi": false,
-        "gets_wrong": "Uses evergreen only as a historical company name, gives no modern context on evergreen, interval, or tender offer fund structures, and can mislead someone researching current investment vehicles."
+        "gets_wrong": "Like result 6, this is about the old Evergreen mutual fund brand name, not the modern evergreen fund structure that searchers are actually asking about."
+      },
+      {
+        "url": "https://www.nb.com/handlers/documents.ashx?id=a5ba815f-74a8-40ad-ad88-0bd45ab1ed60&name=Z0564_0824_Comparing_Evergreen_and_Traditional_Fund_Returns_Posting.pdf",
+        "title": "Comparing Evergreen and Traditional Fund Returns in ...",
+        "page_age": null,
+        "rank": 8,
+        "domain": "nb.com",
+        "source_type": "fund sponsor",
+        "summary": "Neuberger Berman compares how evergreen and traditional private equity funds report returns, noting traditional funds use IRR while evergreen funds publish annual returns, making direct comparison hard.",
+        "mentions_evergreen": true,
+        "mentions_equi": false,
+        "gets_wrong": "Raises a real measurement problem but does not resolve it or give investors a framework for comparing the two fairly, and it is published to support Neuberger Berman's own evergreen offerings."
       },
       {
         "url": "https://www.morganstanley.com/im/en-us/individual-investor/insights/articles/evergreen-private-equity-funds.html",
@@ -112,103 +112,102 @@
         "rank": 9,
         "domain": "morganstanley.com",
         "source_type": "fund sponsor",
-        "summary": "Morgan Stanley explains semi-liquid evergreen private equity funds, noting investors get day one exposure to a fully deployed portfolio and can typically redeem quarterly up to 5 percent of net assets.",
+        "summary": "Morgan Stanley calls evergreen private equity funds 'semi-liquid,' explaining that capital is fully deployed at entry and redemptions are typically capped near 5 percent of net assets per quarter.",
         "mentions_evergreen": true,
         "mentions_equi": false,
-        "gets_wrong": "Written to support Morgan Stanley's own semi-liquid fund lineup, does not name interval or tender offer funds as distinct categories, and offers no independent data source."
+        "gets_wrong": "Uses the phrase 'compelling case' and leans into performance framing, and does not fully unpack what happens to redemption rights when many investors want out at once."
       },
       {
-        "url": "https://www.dictionary.com/browse/evergreen-fund",
-        "title": "EVERGREEN FUND Definition & Meaning | Dictionary.com",
-        "page_age": null,
+        "url": "https://www.allvuesystems.com/resources/evergreen-fund/",
+        "title": "Evergreen Funds: A Guide to Perpetual Investing | Allvue",
+        "page_age": "April 25, 2025",
         "rank": 10,
-        "domain": "dictionary.com",
+        "domain": "allvuesystems.com",
         "source_type": "education site",
-        "summary": "Dictionary.com gives a generic definition of evergreen fund as a fund providing ongoing capital injections to new companies, with unrelated example sentences about vintage cars and a New Jersey state fund.",
+        "summary": "Allvue, a fund administration software company, gives a guide-style overview of evergreen funds covering rolling capital raises, scheduled redemptions, and reinvestment of distributions.",
         "mentions_evergreen": true,
         "mentions_equi": false,
-        "gets_wrong": "The definition matches an older venture funding usage, not the modern private markets structure used by KKR, Hamilton Lane, and others, and never mentions interval or tender offer funds."
+        "gets_wrong": "Written for fund managers and back-office teams thinking about operations, not for individual investors trying to decide if an evergreen fund fits their portfolio."
       }
     ],
     "ai_answer": {
-      "text": "## Evergreen Fund\n\nAn evergreen fund is a type of investment vehicle (mostly used in private markets like private equity, private credit, and real estate) that allows investors to make long-term investments in private companies.\n\n### Key Characteristics\n\n**No fixed end date:** Unlike traditional private funds, which typically have a fixed lifespan of approximately 10 years, evergreen funds do not have a fixed end date. Instead, they continue indefinitely, allowing investors to enter and exit the fund on a periodic basis.\n\n**Open-ended structure:** The structure of an evergreen fund is similar to that of a closed-end or traditional private equity fund in that it pools capital from multiple investors. The key difference is that evergreen funds are open-ended.\n\n**Immediate capital deployment:** Rather than the \"capital call\" model of traditional funds, an evergreen fund pools capital from multiple investors to invest in a diversified portfolio of private companies. Unlike closed-end vehicles, evergreen funds remain open, and investors gain immediate access to a fully deployed portfolio so their money starts working right away.\n\n**Capital recycling:** When a PE manager exits a position through a realization, capital is automatically recycled into new deals, creating a perpetual investment cycle without the need for additional outside capital to be raised.\n\n**Periodic liquidity (\"semi-liquid\"):** Evergreen funds may generate returns as soon as an investor commits to the fund and are structured in such a way to allow for periodic redemptions, typically every three months and up to 5% of the fund's net assets, thus, the term \"semi-liquid.\"\n\n**Lower minimums, broader access:** Access to evergreen funds has become easier through lower investment minimums, which are in the $25,000 range as compared to $5 million for traditional closed end funds. This is part of why they're increasingly used to give individual (not just institutional) investors access to private markets, in recent years, private markets firms have started developing and launching evergreen funds to simplify and expand access to the asset class for eligible individual investors and institutions.\n\n### How It Differs from a Traditional (Closed-End/Drawdown) Fund\n\n| Feature | Evergreen Fund | Traditional Closed-End Fund |\n|---|---|---|\n| Term | Perpetual | 7-12 years |\n| Capital timing | Often fully invested at entry | Staged capital calls |\n| Liquidity | Periodic redemptions with limits | Distributions at exits/fund wind-down |\n| Diversification | Quicker access to multi-vintage exposure | Exposure built over the investment period |\n\n### Important Caveat\n\nDespite offering more flexibility than a traditional closed-end fund, an evergreen fund is still not a fully liquid product, it is therefore suitable only for investors comfortable with keeping their capital locked up for the long term.\n\n### A Note on the Name\n\nSeparately, \"Evergreen\" is also a historical brand name, Evergreen Investments/Evergreen Funds was a large U.S. mutual fund family (formed via a merger with Keystone in the 1990s under First Union), but that's a distinct, unrelated use of the term from the \"evergreen fund\" investment structure described above.",
+      "text": "## What is an Evergreen Fund?\n\nAn evergreen fund is an investment vehicle, most commonly used in private markets (private equity, private credit, real estate), that has **no fixed end date**, unlike traditional closed-end funds. Unlike traditional private funds, which typically have a fixed lifespan of approximately 10 years, evergreen funds do not have a fixed end date. Instead, they continue indefinitely, allowing investors to enter and exit the fund on a periodic basis.\n\n### Key Characteristics\n\n**Open-ended structure:** The structure of an evergreen fund is similar to that of a closed-end or traditional private equity fund in that it pools capital from multiple investors, but the key difference is that evergreen funds are open-ended.\n\n**No capital calls / immediate deployment:** Like a traditional PE fund, an evergreen fund pools capital from multiple investors to invest in a diversified portfolio of private companies. However, unlike closed-end vehicles, evergreen funds remain open, and investors gain immediate access to a fully deployed portfolio of private equity holdings so that client assets are always fully invested.\n\n**Automatic reinvestment/recycling of capital:** When a PE manager exits a position through a realization, capital is automatically recycled into new deals, creating a perpetual investment cycle without the need for additional outside capital to be raised.\n\n**Periodic liquidity (\"semi-liquid\"):** Evergreen funds may generate returns as soon as an investor commits to the fund and are structured in such a way to allow for periodic redemptions, typically every three months and up to 5% of the fund's net assets, thus, the term \"semi-liquid.\"\n\n**Lower minimums, broader access:** Access to evergreen funds has become easier through lower investment minimums, which are in the $25,000 range as compared to $5 million for traditional closed end funds.\n\n### Evergreen vs. Traditional (Closed-End/Drawdown) Funds\n\n| Feature | Evergreen Fund | Closed-End/Drawdown Fund |\n|---|---|---|\n| Term | Perpetual | 7-12 years |\n| Capital deployment | Often fully invested at entry | Staged capital calls |\n| Liquidity | Periodic redemptions with limits | Distributions at exits/fund wind-down |\n| Diversification | Quicker access to multi-vintage exposure | Exposure built over the investment period |\n\n### Why They Exist / Benefits\nIn recent years, private markets firms have started developing and launching evergreen funds to simplify and expand access to the asset class for eligible individual investors and institutions. They're particularly popular for yield-generating strategies: for investors that opt to have any disbursements or principal reinvested, an evergreen fund will have the opportunity for any generated income to be applied to new or existing investments, particularly useful for yield-producing strategies such as private credit or real estate.\n\n### Important Caveat\nDespite the \"semi-liquid\" label, these are still long-term commitments: an evergreen fund is therefore suitable only for investors comfortable with keeping their capital locked up for the long term.\n\n### A Note on Terminology\nEvergreen funds also go by other names, sometimes called hybrid, long-held, or perpetuity funds, and enable investors to buy a share of a re-investing, commingled private markets portfolio, similar in some ways to how an ETF or mutual fund works but for private market assets.",
       "cited_urls": [
         "https://www.hamiltonlane.com/en-us/knowledge-center/evergreen-funds",
         "https://www.morganstanley.com/im/en-us/individual-investor/insights/articles/evergreen-private-equity-funds.html",
-        "https://www.kkr.com/wealth/alternatives-unlocked/evergreen-fund"
+        "https://www.kkr.com/wealth/alternatives-unlocked/evergreen-fund",
+        "https://www.seic.com/asset-managers/our-insights/evergreen-funds-next-frontier-private-markets",
+        "https://www.partnersgroup.com/en/news-and-views/perspective/accessing-private-markets-evergreen-funds"
       ],
       "cited_domains": [
         "hamiltonlane.com",
         "kkr.com",
-        "morganstanley.com"
+        "morganstanley.com",
+        "partnersgroup.com",
+        "seic.com"
       ],
       "mentions_evergreen": true,
       "mentions_equi": false
     },
     "overall": {
-      "owner": "Fund sponsors and asset managers own this search today, including Hamilton Lane, KKR, SEI, Partners Group, Adams Street, and Morgan Stanley, alongside a stray outdated SEC filing and a Wikipedia page about an unrelated old mutual fund brand.",
-      "common": "Almost every top result is a short explainer page from a firm that sells evergreen funds, usually built around one comparison table against closed end funds, none cite independent data, and none define interval funds or tender offer funds even though those are the other two common structures searchers will run into next.",
-      "gap": "There is no neutral page that clearly separates evergreen, interval, and tender offer funds side by side, and no one is publishing independent data on how big this category has become or how the structures actually differ in practice.",
-      "verdict": "Owned by fund sponsors and an outdated SEC filing. Evergreen is explained, interval and tender offer funds are missing, and Equi is absent."
+      "owner": "Fund sponsors such as Hamilton Lane, KKR, SEI, Partners Group, Adams Street, Neuberger Berman, and Morgan Stanley control almost every result. Two unrelated legacy pages about an old mutual fund brand also show up.",
+      "common": "Nearly all top results are short explainer or comparison pages built by the asset managers that sell evergreen funds. They share the same structure: a definition, a table contrasting evergreen versus closed-end funds, and a call to view the firm's own products. None cite independent data or long-term return comparisons across multiple funds.",
+      "gap": "No independent, advisor-neutral source compares real evergreen fund terms, fees, redemption gates, or return reporting across managers. Equi can fill this with plain-language education backed by side-by-side data that names no funds and makes no return claims.",
+      "verdict": "Owned by fund sponsors selling their own evergreen products. Evergreen is explained, Equi is absent."
     },
     "own_it": {
-      "title": "Evergreen, Interval, and Tender Offer Funds Explained in Plain Terms",
-      "angle": "A neutral, jargon free guide that puts all three semi liquid private market structures side by side, positions Equi as an educator rather than a seller, and closes every section by pointing readers to talk with their advisor.",
+      "title": "Evergreen Funds Explained: What They Are and What to Ask Your Advisor",
+      "angle": "A plain-language, sponsor-neutral guide that defines evergreen funds, compares them to interval and tender-offer funds, and ends by directing readers to talk to their advisor rather than pitching any fund.",
       "outline": [
-        "What people mean when they say evergreen fund, and why the term causes confusion",
-        "The three structures explained plainly: evergreen (open end), interval funds, and tender offer funds",
-        "How each one handles getting your money in and getting your money out",
-        "How these differ from traditional closed end private funds",
-        "Questions to bring to your advisor before considering any of these",
-        "A short glossary of terms"
+        "What an evergreen fund is in one paragraph, no jargon",
+        "How it differs from a traditional closed-end private fund",
+        "How it differs from an interval fund and a tender-offer fund",
+        "What redemption gates and liquidity limits actually mean in practice",
+        "Common terms to know: NAV, subscription, redemption window, gating",
+        "Questions to bring to your advisor before considering one"
       ],
-      "data_needed": "Pull from the Evergreen Fund Index to show how many funds exist in each structure type, total assets by structure, and typical redemption terms by structure. This fits naturally in the section comparing the three structures, used only to show category size and mechanics, never as a performance or return claim.",
+      "data_needed": "A neutral comparison table pulling from the Evergreen Fund Index showing typical redemption frequency, redemption caps, minimum investment, and fee ranges across the fund category, with no single fund or manager named.",
       "faq": [
-        "What is the difference between an evergreen fund and an interval fund?",
-        "What is a tender offer fund and how does it differ from an evergreen fund?",
-        "Can I sell my shares in an evergreen fund whenever I want?",
-        "Are evergreen funds only available to institutions?",
-        "How do I know which of these structures fits my situation?"
+        "What is the difference between an evergreen fund and a closed-end fund?",
+        "Can I get my money out of an evergreen fund whenever I want?",
+        "What is a redemption gate and when does it apply?",
+        "Are evergreen funds the same as interval funds?",
+        "How do advisors evaluate an evergreen fund for a client?"
       ]
     },
-    "featured": [
-      {
-        "domain": "dictionary.com",
-        "pitch": "expert quote",
-        "angle": "Offer a current, accurate example sentence and finance context note for the evergreen fund entry, since the existing definition reflects older venture funding usage rather than today's private markets structure."
-      }
-    ],
+    "featured": [],
     "youtube": [
       {
-        "clip_title": "What is the difference between an evergreen fund and a regular private equity fund?",
-        "webinar_topic": "Understanding Semi-Liquid Private Markets Structures"
+        "clip_title": "What Happens If Everyone Tries to Redeem an Evergreen Fund at Once?",
+        "webinar_topic": "Liquidity risk and redemption gates in evergreen and interval funds"
       },
       {
-        "clip_title": "Can you actually get your money out of an evergreen fund?",
-        "webinar_topic": "Liquidity in Private Markets: What Investors Should Know"
+        "clip_title": "Evergreen Fund or Interval Fund: What's Actually Different?",
+        "webinar_topic": "Comparing evergreen, interval, and tender-offer fund structures"
       }
     ],
     "difficulty": {
-      "level": "medium",
-      "why": "Large asset managers already publish clean, well designed explainer pages on evergreen funds, but none of them cover interval or tender offer funds clearly or offer independent data, leaving room for a neutral, broader page to rank."
+      "level": "hard",
+      "why": "The page one results are dominated by well-funded asset managers like KKR, Morgan Stanley, and Hamilton Lane with strong domain authority and matching sales pages, leaving little room without a distinct data asset and consistent publishing."
     },
-    "verdict": "Owned by fund sponsors and an outdated SEC filing. Evergreen is explained, interval and tender offer funds are missing, and Equi is absent. Difficulty: medium.",
+    "verdict": "Owned by fund sponsors selling their own evergreen products. Evergreen is explained, Equi is absent. Difficulty: hard.",
     "flags": [],
     "fixed_on_retry": [],
     "featured_dropped": [
-      "dakota.com",
-      "corporatefinanceinstitute.com",
-      "en.wikipedia.org"
+      "benzinga.com",
+      "eqvista.com",
+      "carta.com",
+      "wespath.org"
     ]
   },
   "how to protect my portfolio in a market crash": {
     "query": "how to protect my portfolio in a market crash",
-    "run_date": "2026-09-27 23:35",
+    "run_date": "2026-09-28 00:04",
     "model": "claude-sonnet-5",
-    "seconds": 102,
+    "seconds": 74,
     "searched": [
       "how to protect my portfolio in a market crash",
-      "best strategies to protect investments before a stock market crash"
+      "best ways to protect investments during a stock market downturn"
     ],
     "results": [
       {
@@ -218,10 +217,10 @@
         "rank": 1,
         "domain": "money.usnews.com",
         "source_type": "financial media",
-        "summary": "A slideshow style list from US News covering seven tactics like reducing permanent losses, timing entries, selling call options for income, and buying less correlated assets such as real estate and commodities.",
+        "summary": "An older US News slideshow lists tactics like diversifying into uncorrelated assets, timing entries, and selling call options for income during a downturn.",
         "mentions_evergreen": false,
         "mentions_equi": false,
-        "gets_wrong": "The content is old (2019 with a 2022 update) and treats private market alternatives as an afterthought under real estate and commodities without ever explaining fund structures people could actually use to access them."
+        "gets_wrong": "The content is from 2019, leans on market timing and options trading which most regular investors cannot execute well, and never mentions alternative fund structures as a diversification option."
       },
       {
         "url": "https://finance.yahoo.com/news/protect-stock-portfolio-stock-market-160138430.html",
@@ -230,10 +229,10 @@
         "rank": 2,
         "domain": "finance.yahoo.com",
         "source_type": "financial media",
-        "summary": "A Yahoo Finance piece quoting an advisor who recommends holding cash for flexibility and averaging back into the market gradually rather than buying all at once.",
+        "summary": "A Yahoo Finance piece quotes an advisor recommending holding cash for flexibility and averaging back into stocks gradually after a drop, using a rule like buying only on days the market falls more than 2 percent.",
         "mentions_evergreen": false,
         "mentions_equi": false,
-        "gets_wrong": "It only addresses public market timing and cash management. There is no mention of diversifying into asset classes that do not move with daily stock prices."
+        "gets_wrong": "It treats cash and market timing as the main defense and does not discuss any non public market assets or fund structures that behave differently in a crash."
       },
       {
         "url": "https://www.quant-investing.com/blog/market-crash-how-to-protect-your-portfolio",
@@ -242,10 +241,10 @@
         "rank": 3,
         "domain": "quant-investing.com",
         "source_type": "education site",
-        "summary": "A blog post from a stock screener company describing the author's personal rules for buying back into the market after a crash, based on percentage drop thresholds and moving averages.",
+        "summary": "A stock screener company's blog describes a personal rule based system for re-entering the market after a crash, such as investing more after a 20 percent or 30 percent drop, plus using a 200 day moving average as a buy filter.",
         "mentions_evergreen": false,
         "mentions_equi": false,
-        "gets_wrong": "This is a personal trading system for public equities. It ignores diversification into other asset types entirely and is really about timing, not protection."
+        "gets_wrong": "This is a public equities trading technique built around price triggers. It never touches diversification into other asset categories or fund structures."
       },
       {
         "url": "https://www.quant-investing.com/blog/stop-loss-tips-for-protecting-your-portfolio-in-crash",
@@ -254,10 +253,10 @@
         "rank": 4,
         "domain": "quant-investing.com",
         "source_type": "education site",
-        "summary": "A companion post from the same site explaining what a stop loss order is and how fixed versus trailing stop losses work to cap downside on individual stocks.",
+        "summary": "A companion piece from the same site explains fixed and trailing stop loss orders as tools to cap losses during a crash.",
         "mentions_evergreen": false,
         "mentions_equi": false,
-        "gets_wrong": "Stop losses are a public equity trading tool. The page does not mention that this mechanism does not exist for illiquid or semi-liquid holdings, which is a meaningful gap for anyone thinking about a full portfolio."
+        "gets_wrong": "Stop losses are a trading mechanic for individual stocks. The page does not address broader portfolio construction or any alternative asset categories."
       },
       {
         "url": "https://www.troweprice.com/financial-intermediary/us/en/insights/articles/2024/q3/how-to-help-protect-your-investment-portfolio-during-stock-market-volatility.html",
@@ -266,10 +265,10 @@
         "rank": 5,
         "domain": "troweprice.com",
         "source_type": "fund sponsor",
-        "summary": "A T. Rowe Price advisor facing page offering general reassurance that a properly allocated portfolio should let investors stay patient through volatility, with a prompt to evaluate lifestyle impact.",
+        "summary": "A T. Rowe Price piece for advisors argues that if your asset allocation already fits your time horizon, patience is often the best response to a downturn, and suggests checking whether a big drop would actually change your lifestyle.",
         "mentions_evergreen": false,
         "mentions_equi": false,
-        "gets_wrong": "Very vague and mostly a lead generation page for advisors. It never gets specific about what asset classes or fund types actually reduce correlation to public stocks."
+        "gets_wrong": "It stays entirely within traditional stock and bond allocation. There is no mention of evergreen, interval, or tender offer funds, or of any less liquid asset category."
       },
       {
         "url": "https://www.youtube.com/watch?v=Z3w8TpH7kYw",
@@ -277,11 +276,11 @@
         "page_age": "July 31, 2026",
         "rank": 6,
         "domain": "youtube.com",
-        "source_type": "financial media",
-        "summary": "A YouTube video promoting a quantitative skills course, framed around protecting a stock portfolio from crashes.",
+        "source_type": "forum",
+        "summary": "A YouTube video titled about protecting a stock portfolio from market crashes, tied to a quant education platform, based only on the title and channel branding.",
         "mentions_evergreen": false,
         "mentions_equi": false,
-        "gets_wrong": "Appears to be a lead-in for a paid course rather than substantive portfolio protection content, and the snippet does not indicate any discussion of alternative fund structures."
+        "gets_wrong": "No transcript content was available, but based on the channel focus it is likely limited to public market hedging and trading tactics rather than portfolio structure."
       },
       {
         "url": "https://www.fool.com/slideshow/15-ways-safeguard-your-portfolio-another-market-crash",
@@ -290,10 +289,10 @@
         "rank": 7,
         "domain": "fool.com",
         "source_type": "financial media",
-        "summary": "A Motley Fool slideshow listing 15 ways to safeguard a portfolio from another crash, published in 2021.",
+        "summary": "A 2021 Motley Fool slideshow promises 15 ways to safeguard a portfolio before another crash, though the visible content is mostly an intro teaser.",
         "mentions_evergreen": false,
         "mentions_equi": false,
-        "gets_wrong": "Content is dated and framed around the post pandemic recovery period. No detail available in the snippet on whether alternatives are covered, but the general Motley Fool style skews toward public stock tactics."
+        "gets_wrong": "The piece is dated (2021) and the visible portion gives no specifics, just a listicle setup with no depth on alternative fund categories."
       },
       {
         "url": "https://www.fool.com/investing/2022/02/13/3-ways-save-your-portfolio-when-the-market-crashes",
@@ -302,10 +301,10 @@
         "rank": 8,
         "domain": "fool.com",
         "source_type": "financial media",
-        "summary": "A Motley Fool article featuring three investors describing tactics like buying more when stocks fall, relying on dividend stocks, and using a bond ladder for cash flow during downturns.",
+        "summary": "A Motley Fool article gathers three investor strategies for a crash: buying more instead of selling, relying on dividend stocks, and using a bond ladder for steady cash flow.",
         "mentions_evergreen": false,
         "mentions_equi": false,
-        "gets_wrong": "Bond ladders and dividend stocks are still public market instruments correlated to the same macro conditions. There is no discussion of assets structurally shielded from daily price swings."
+        "gets_wrong": "All three strategies are built entirely around public stocks and bonds. There is no coverage of alternative or less liquid fund structures as a diversification tool."
       },
       {
         "url": "https://www.marketbeat.com/originals/how-to-protect-yourself-from-market-crash/",
@@ -314,32 +313,32 @@
         "rank": 9,
         "domain": "marketbeat.com",
         "source_type": "financial media",
-        "summary": "A Marketbeat guide emphasizing diversification into real estate, bonds, derivatives, cash, and precious metals as a way to reduce exposure to a stock crash.",
+        "summary": "A MarketBeat guide opens with diversification as the core defense, naming real estate, bonds, derivatives, cash, and precious metals as assets to hold alongside equities.",
         "mentions_evergreen": false,
         "mentions_equi": false,
-        "gets_wrong": "It names real estate and other alternative categories but never explains the fund vehicles, like evergreen or interval funds, that let ordinary investors actually hold these assets, or how those vehicles behave differently in a downturn."
+        "gets_wrong": "It mentions real estate as an asset class but never explains fund structures like evergreen or interval funds that let regular investors access those asset classes, or how their liquidity terms work."
       },
       {
-        "url": "https://smartasset.com/investing/where-to-put-your-money-before-market-crashes",
-        "title": "Where to Put Your Money Before the Market Crashes",
-        "page_age": "July 24, 2026",
+        "url": "https://www.troweprice.com/personal-investing/resources/insights/how-to-help-protect-your-investment-portfolio-during-stock-market-volatility.html",
+        "title": "Watch: How to help protect your investment portfolio during stock market volatility",
+        "page_age": "April 8, 2026",
         "rank": 10,
-        "domain": "smartasset.com",
-        "source_type": "financial media",
-        "summary": "A SmartAsset article listing 11 ways to protect a portfolio, covering diversification, rebalancing, tax loss harvesting, and a prompt to match with a financial advisor.",
+        "domain": "troweprice.com",
+        "source_type": "fund sponsor",
+        "summary": "This is a duplicate or near duplicate of result 5 from T. Rowe Price, again focused on patience and time horizon based asset allocation, plus a note on automating contributions to avoid panic decisions.",
         "mentions_evergreen": false,
         "mentions_equi": false,
-        "gets_wrong": "The advisor matching tool is the real business model here. The content itself does not explain any specific fund structures or how liquidity terms differ from public stocks during a crash."
+        "gets_wrong": "Same gap as result 5. It stays inside traditional stocks and bonds and never introduces evergreen, interval, or tender offer fund structures."
       }
     ],
     "ai_answer": {
-      "text": "Here's a practical, research-backed rundown of ways to protect your portfolio ahead of or during a market crash:\n\n## 1. Diversify across asset classes\nDiversification is one of the fundamental concepts of successful investing, and it can really pay off to have a diversified portfolio during a market crash. Taking positions in assets like real estate, bonds, derivatives, cash, and even precious metals along with equities can help you reduce your exposure to market crashes and protect your nest egg during times of extreme volatility. The general idea is investing in assets that are less correlated with the broader U.S. stock market.\n\n## 2. Keep some cash on hand\nHolding a cash cushion serves two purposes, psychological comfort and opportunity. One financial professional's first priority is to protect capital, and the second is to be in a position to take advantage of a market correction, being in cash means being flexible, having liquidity to seize opportunities when they arise. As one advisor noted, \"Just like in 2020, when the market crashed, those who were ready and had cash available were able to capitalize on the opportunity.\"\n\n## 3. Don't panic-sell, consider buying instead\nAs long as you don't sell a stock, you won't lose anything on paper, and the stock market has always recovered from a crash or correction eventually, it doesn't make sense to sell during a pullback. Instead, prepared investors often do the opposite:\nit can make sense to purchase stocks that have been severely hit, provided you make a list of stocks you'd want to buy in advance, accumulate cash to strike when the moment is right, and aren't afraid to buy when your target stocks are down.\n\n## 4. Re-enter gradually, not all at once\nIf you do move to cash or want to buy the dip, avoid trying to time the exact bottom. When big drops happen in the market, you don't want to just jump in and buy everything all at once, the better approach is to average in, gradually entering positions as the market corrects. One rule of thumb some investors use: only average in on days when the market is down over 2%.\n\nA similar systematic approach: after a 20% market fall, invest 10% in half positions, and if the market falls 30%, buy full positions for another 10% of the portfolio. Having a clear strategy for when and how you'll start investing again, for example, deciding to buy 10% of your portfolio after a 25% market fall, is a methodical approach that can help you avoid paralysis by analysis, where fear prevents you from acting.\n\n## 5. Use stop-loss orders\nA stop-loss strategy involves setting a predetermined price level at which you'll sell a security to prevent further losses, for example, if you buy a stock at $100 and set a stop-loss at $90, your position will be sold if the stock price drops to $90. There are mainly two types, fixed stop-loss and trailing stop-loss, the trailing version adjusts upward as the stock rises, locking in gains while still capping downside.\n\n## 6. Consider options for hedging/income\nFor an income stream and a hedge against market declines, one advisor recommends selling call options, a derivative contract where the seller keeps the premium regardless of the stock's movement, and if exercised, the writer keeps both the premium and the sale proceeds, softening the blow of a declining market. (Note: this caps your upside, so it's more of an income/cushioning tool than pure crash protection.)\n\n## 7. Use bonds strategically\nA bond ladder is another commonly cited defensive tool because bonds mature and get paid out as cash, giving you predictable liquidity you can redeploy during a downturn rather than being forced to sell stocks at a loss.\n\n## 8. Sometimes the best move is to do nothing\nPerhaps the most important point: some people may feel the need to take some kind of action following a stock market downturn, but if you have an asset allocation appropriate for your time horizon, the best action may be to be patient. One way to assess your current allocation is to ask: if my investment portfolio value dropped significantly today, would it impact my current lifestyle? If the answer is no, staying the course is often the wisest strategy.\n\n---\n\n### Bottom line\nThe most durable protection comes *before* the crash: proper diversification across asset classes, an allocation matched to your time horizon and risk tolerance, and a cash reserve for both stability and opportunity. During a crash, avoid emotional panic-selling, consider a pre-planned, gradual re-entry strategy, and use tools like stop-losses or bond ladders if they fit your style, but recognize that the only guaranteed way to protect your money from the next crash is to avoid investing in the market altogether, though historically the average long-term stock market return has made staying invested worthwhile.",
+      "text": "Here's a practical, research-backed rundown of ways to protect your portfolio in a market crash:\n\n**1. Diversify across asset classes**\nDiversification is one of the fundamental concepts of successful investing, and it can really pay off during a market crash. Taking positions in assets like real estate, bonds, derivatives, cash, and precious metals along with equities can help reduce your exposure to market crashes. Assets that move differently than U.S. stocks help cushion the blow when equities fall.\n\n**2. Keep some cash on hand**\nHaving liquidity gives you flexibility. One approach is to prioritize protecting capital first, then be in a position to take advantage of a market correction, being in cash means having flexibility and liquidity to seize opportunities when they arise. As one advisor noted, \"Just like in 2020, when the market crashed, those who were ready and had cash available were able to capitalize on the opportunity.\"\n\n**3. Don't panic-sell, consider buying instead**\nAs long as you don't sell a stock, you technically haven't locked in a loss, the stock market has historically always recovered from crashes or corrections, it just takes time, so panic-selling during a pullback often doesn't make sense. Some investors instead prepare a \"wish list\" of quality stocks to buy on sale. To do this effectively: make a list of stocks you'd want to buy during a correction, accumulate cash in your brokerage account so you can act, and be willing to actually pull the trigger when your target stocks are down.\n\n**4. If you go back in, average in gradually, don't dump it all at once**\nWhen big drops happen in the market, you don't want to just jump in and buy everything all at once, a better approach is to average in, gradually entering positions as the market corrects. A common rule of thumb: only average in on days when the market is down over 2%.\n\n**5. Use stop-loss orders to cap downside**\nA stop-loss strategy involves setting a predetermined price level at which you'll sell a security to prevent further losses, for example, buying at $100 and setting a stop-loss at $90 means your position sells automatically if the price drops to $90, capping your downside. There are two main types: fixed stop-loss and trailing stop-loss.\n\n**6. Have pre-set rules for re-entering the market**\nRather than deciding emotionally in the moment, some investors set clear thresholds in advance. For example, one investor's rule is to invest 10% of the portfolio in half positions after a 20% market fall, and if the market falls 30%, to buy full positions with another 10% of the portfolio. This kind of methodical approach helps avoid \"paralysis by analysis,\" where fear prevents you from acting at all.\n\n**7. Consider options strategies for income/hedging**\nFor an income stream and a hedge against market declines, some advisors recommend selling call options, a derivative contract where the writer collects a premium regardless of the stock's movement, which can soften the blow of a declining market. (Note: this requires understanding options risk and is best done with professional guidance.)\n\n**8. Revisit your asset allocation and time horizon, and just be patient**\nSome people feel the need to take action following a downturn, but if your asset allocation is appropriate for your time horizon, the best action may simply be patience. A useful gut-check: ask yourself if your portfolio dropped significantly today, would it actually impact your current lifestyle? If the answer is no, you may be over-reacting to short-term noise.\n\n**The bottom line:** No strategy can eliminate risk entirely, the only guaranteed way to avoid market crash losses is to avoid investing altogether, but the average long-term stock market return may make the risk worth taking. The best defense is usually a combination of diversification, having some cash reserves, avoiding panic decisions, and having a plan set up *before* the crash happens, not during it.",
       "cited_urls": [
         "https://www.marketbeat.com/originals/how-to-protect-yourself-from-market-crash/",
         "https://finance.yahoo.com/news/protect-stock-portfolio-stock-market-160138430.html",
         "https://www.fool.com/investing/2022/02/13/3-ways-save-your-portfolio-when-the-market-crashes",
-        "https://www.quant-investing.com/blog/market-crash-how-to-protect-your-portfolio",
         "https://www.quant-investing.com/blog/stop-loss-tips-for-protecting-your-portfolio-in-crash",
+        "https://www.quant-investing.com/blog/market-crash-how-to-protect-your-portfolio",
         "https://money.usnews.com/investing/investing-101/slideshows/7-ways-to-protect-your-portfolio-from-a-stock-market-crash",
         "https://www.troweprice.com/financial-intermediary/us/en/insights/articles/2024/q3/how-to-help-protect-your-investment-portfolio-during-stock-market-volatility.html"
       ],
@@ -355,501 +354,73 @@
       "mentions_equi": false
     },
     "overall": {
-      "owner": "Financial media sites (US News, Yahoo Finance, Motley Fool, Marketbeat, SmartAsset) and one asset manager (T. Rowe Price) dominate this search, with a niche quant blog also ranking.",
-      "common": "Nearly every result is a listicle or slideshow format covering the same short list of ideas: diversify, hold cash, do not panic sell, rebalance, maybe use stop losses or options. Most content is dated, several pieces are from 2019 to 2022, and none include original data or tables.",
-      "gap": "Not one result explains evergreen, interval, or tender offer fund structures, how their redemption terms work during a crash, or why an asset that is not priced every day behaves differently than a stock during a downturn. That mechanical explanation is missing across the entire page one.",
-      "verdict": "Owned by financial media listicles repeating the same five tactics. Evergreen and interval funds are never mentioned, and Equi is absent."
+      "owner": "Financial media outlets (US News, Yahoo, Motley Fool, MarketBeat) and fund sponsors (T. Rowe Price) dominate this search, with a niche trading blog also ranking.",
+      "common": "Every top result is a listicle or short advisor quote piece built entirely around public market tools: cash, diversification into a handful of familiar assets, stop losses, dividends, bond ladders, or market timing rules. Several pages are years old (2019 to 2022) and none include original data, tables, or fund level detail.",
+      "gap": "Not one result explains evergreen, interval, or tender offer funds, or how their periodic liquidity and less frequent pricing change an investor's experience during a crash. Equi can fill this gap with plain category education on how these fund structures work and what questions to bring to an advisor, without ever promising smoother returns or a fund pitch.",
+      "verdict": "Owned by financial media and fund sponsors. Public market tactics are covered, evergreen funds are absent."
     },
     "own_it": {
-      "title": "How Evergreen and Interval Funds Behave During a Stock Market Crash",
-      "angle": "Pure category education on liquidity mechanics, not a performance pitch. Explain what happens to redemption requests, gates, and pricing in semi-liquid fund structures when public markets are falling, so readers understand the tradeoffs before they ask an advisor about them.",
+      "title": "How Evergreen and Interval Funds Fit Into a Downturn Conversation",
+      "angle": "Plain category education that walks through why some funds do not reprice daily or allow instant redemption, and why that structural difference is worth understanding before a downturn, not during one. No return claims, no protection promises, ends by pointing readers to talk with their advisor.",
       "outline": [
-        "What an evergreen fund is and how it differs from a mutual fund or ETF in structure",
-        "What an interval fund is and how its periodic redemption windows work",
-        "What a tender offer fund is and how the sponsor controls timing of buybacks",
-        "Why these funds are not priced minute by minute the way stocks are",
-        "What happens to redemption requests when a fund receives more requests than its stated limit, including gating",
-        "How this differs from selling a stock or ETF during a crash",
-        "Questions to bring to a financial advisor before considering one of these structures"
+        "What most crash advice already covers: cash reserves, diversification into stocks and bonds, staying invested",
+        "What evergreen, interval, and tender offer funds actually are, in plain terms",
+        "How their redemption schedules and pricing frequency differ from a stock or ETF",
+        "Why that structural difference matters for behavior during volatile periods, described factually and without promises",
+        "Questions to bring to your financial advisor before considering these fund types",
+        "FAQ section for search and voice queries"
       ],
-      "data_needed": "Pull from the Evergreen Fund Index a table showing redemption request volume by quarter for the broad evergreen fund universe, plus a separate line noting any historical instances of gating across tracked funds, with dates. No individual fund names framed as recommendations, and no return or performance figures.",
+      "data_needed": "A simple comparison table from the Evergreen Fund Index showing redemption frequency, notice periods, and pricing cadence across evergreen, interval, and tender offer fund categories. This sits in the middle section explaining structural differences, using category level figures only, never single fund performance data.",
       "faq": [
-        "Can I sell my shares in an evergreen fund whenever I want?",
-        "What is a redemption gate and when does it get triggered?",
-        "Are interval funds affected by a stock market crash the same way stocks are?",
-        "What is a tender offer fund and how often can I request money back?",
-        "How is a private market fund priced when the stock market is volatile?",
-        "Should I ask my advisor about evergreen funds before or after a market downturn?"
+        "What is an evergreen fund?",
+        "How is an interval fund different from a mutual fund or ETF?",
+        "Can I redeem shares in an interval fund whenever I want?",
+        "Are evergreen funds riskier than publicly traded stocks?",
+        "How does liquidity work for these fund types during a market downturn?",
+        "What should I ask my advisor before adding alternatives to my portfolio?"
       ]
     },
     "featured": [
       {
         "domain": "money.usnews.com",
         "pitch": "guest piece",
-        "angle": "Pitch a follow up article or contributed section specifically on how alternative fund structures like evergreen and interval funds differ from stocks and bonds when a crash hits, filling the gap in their existing seven ways list."
+        "angle": "Their 2019 crash protection slideshow is outdated and never mentions alternative fund structures. Pitch a fresh guest contribution or updated slide on evergreen and interval funds as a category worth understanding, framed strictly as education."
       },
       {
         "domain": "finance.yahoo.com",
         "pitch": "expert quote",
-        "angle": "Offer an Equi spokesperson as a source for a future piece on portfolio protection, specifically to explain redemption mechanics of semi-liquid funds as a category, not to promote any fund."
+        "angle": "Their crash prep piece leans on advisor quotes about cash and timing. Offer an Equi voice to add a quote explaining what evergreen or interval funds are in plain terms, without recommending any specific fund."
       },
       {
-        "domain": "smartasset.com",
-        "pitch": "Evergreen Fund Index data",
-        "angle": "Since SmartAsset already runs listicles on crash protection and advisor matching, offer aggregate index data on how often evergreen funds have imposed redemption gates as a citable data point for a future update to their piece."
+        "domain": "fool.com",
+        "pitch": "guest piece",
+        "angle": "Motley Fool's crash pieces stick to stocks, dividends, and bond ladders. Pitch a beginner focused explainer on evergreen and interval funds as another category retail readers should know exists, written for their audience level."
       },
       {
         "domain": "marketbeat.com",
-        "pitch": "guest piece",
-        "angle": "Their diversification piece already names real estate, derivatives, and precious metals as crash hedges. Pitch a contributed explainer on the fund vehicles, evergreen and interval structures, that let everyday investors access those categories."
-      }
-    ],
-    "youtube": [
-      {
-        "clip_title": "Can you get your money out of a fund during a market crash?",
-        "webinar_topic": "Understanding Redemption Gates and Tender Offers in Private Market Funds"
-      },
-      {
-        "clip_title": "Why doesn't an evergreen fund's price move like a stock during a downturn?",
-        "webinar_topic": "How Evergreen Fund Pricing and Liquidity Actually Work"
-      }
-    ],
-    "difficulty": {
-      "level": "medium",
-      "why": "Page one is crowded with high authority financial media domains repeating generic advice, but none of them own the specific evergreen and interval fund liquidity angle, leaving room for a narrow, well explained piece to rank for related long tail searches."
-    },
-    "verdict": "Owned by financial media listicles repeating the same five tactics. Evergreen and interval funds are never mentioned, and Equi is absent. Difficulty: medium.",
-    "flags": [
-      "return or performance language in \"Since SmartAsset already runs listicles on crash protection and advisor matching, offer aggregate index data on how often evergreen funds have imposed redemption gates as a citable data point for a future update to their piece.\""
-    ],
-    "fixed_on_retry": [
-      "return or performance language in \"Since SmartAsset already runs listicles on crash protection and advisor matching, offer aggregate index data on redemption fulfillment rates across evergreen funds as a citable data point for a future update to their piece.\""
-    ],
-    "featured_dropped": []
-  },
-  "are interval funds a good idea for retirees": {
-    "query": "are interval funds a good idea for retirees",
-    "run_date": "2026-09-27 23:40",
-    "model": "claude-sonnet-5",
-    "seconds": 81,
-    "searched": [
-      "are interval funds a good idea for retirees",
-      "interval funds good investment for retirees pros and cons"
-    ],
-    "results": [
-      {
-        "url": "https://finance.yahoo.com/news/interval-funds-exploding-popularity-come-130000568.html",
-        "title": "Interval funds are exploding in popularity but come with a huge catch: it \u2018does not feel like a mutual fund when you are trying to sell\u2019",
-        "page_age": "July 17, 2024",
-        "rank": 1,
-        "domain": "finance.yahoo.com",
-        "source_type": "financial media",
-        "summary": "Yahoo Finance covers the rapid growth of interval funds and warns that selling shares is much harder than with a normal mutual fund, quoting Morningstar on redemption problems.",
-        "mentions_evergreen": true,
-        "mentions_equi": false,
-        "gets_wrong": "Frames the liquidity catch as a general warning but never gives retirees a framework for how much of a portfolio this risk should apply to, and does not distinguish interval funds from evergreen or tender offer structures."
-      },
-      {
-        "url": "https://www.eisneramper.com/insights/financial-services/interval-funds-ea-0321/",
-        "title": "Interval Funds for Investment Advisors: A Smarter Vehicle for Illiquid Strategies",
-        "page_age": "May 12, 2026",
-        "rank": 2,
-        "domain": "eisneramper.com",
-        "source_type": "advisor or RIA",
-        "summary": "An accounting and advisory firm explains interval fund mechanics and tax rules mainly for fund managers and advisors who want to launch or sell these products, not for retirees deciding whether to buy them.",
-        "mentions_evergreen": true,
-        "mentions_equi": false,
-        "gets_wrong": "Written entirely from the fund manufacturer's point of view, so it skips investor suitability, retirement income needs, and liquidity risk almost completely."
-      },
-      {
-        "url": "https://www.northwesternmutual.com/life-and-money/what-is-an-interval-fund/",
-        "title": "What Is an Interval Fund? Is it a good investment for you? | Northwestern Mutual",
-        "page_age": "January 13, 2025",
-        "rank": 3,
-        "domain": "northwesternmutual.com",
-        "source_type": "fund sponsor",
-        "summary": "Northwestern Mutual explains what an interval fund is, says there is no single ideal investor, and lists higher yield potential against higher fees and limited liquidity as the main trade off.",
-        "mentions_evergreen": true,
-        "mentions_equi": false,
-        "gets_wrong": "Written by the firm's own investment consultant, so it reads like a soft sales pitch and does not give retirees a concrete way to size an allocation or plan around redemption windows."
-      },
-      {
-        "url": "https://www.fool.com/retirement/2025/02/05/interval-funds-6-things-to-know-before-you-invest/",
-        "title": "Interval Funds: 6 Things to Know Before You Invest | The Motley Fool",
-        "page_age": "February 5, 2025",
-        "rank": 4,
-        "domain": "fool.com",
-        "source_type": "financial media",
-        "summary": "Motley Fool gives six general tips before investing in an interval fund, mainly urging readers to check fees, tax complexity, and whether they can commit for the long term.",
-        "mentions_evergreen": true,
-        "mentions_equi": false,
-        "gets_wrong": "Generic checklist with no retiree specific guidance, no numbers, and no comparison to evergreen or tender offer structures."
-      },
-      {
-        "url": "https://fincart.com/blog/how-do-interval-funds-work/",
-        "title": "How Interval Funds Work: A Smart Investment Option",
-        "page_age": "June 17, 2025",
-        "rank": 5,
-        "domain": "fincart.com",
-        "source_type": "advisor or RIA",
-        "summary": "An Indian financial planning firm blog describes how interval funds work, their diversification benefits, and their liquidity risks, then points readers to its own retirement and tax planners.",
-        "mentions_evergreen": true,
-        "mentions_equi": false,
-        "gets_wrong": "Mixes general education with a call to hire the firm's own advisors, and the content is thin on U.S. specific retirement account rules."
-      },
-      {
-        "url": "https://www.morningstar.com/alternative-investments/morningstars-guide-interval-funds",
-        "title": "Interval Funds: Are They Worth What You Give Up? | Morningstar",
-        "page_age": "June 24, 2024",
-        "rank": 6,
-        "domain": "morningstar.com",
-        "source_type": "financial media",
-        "summary": "Morningstar gives the most detailed and skeptical look, showing that redemption requests are often not fully filled and arguing most investors do not need interval funds at all.",
-        "mentions_evergreen": true,
-        "mentions_equi": false,
-        "gets_wrong": "Strong on liquidity risk data but does not name evergreen or tender offer funds separately, and gives no retiree specific allocation guidance or ongoing data source."
-      },
-      {
-        "url": "https://www.focuspartners.com/resources/investing/interval-funds-versus-mutual-funds",
-        "title": "Interval Funds Versus Mutual Funds | Focus Partners Wealth",
-        "page_age": "August 8, 2023",
-        "rank": 7,
-        "domain": "focuspartners.com",
-        "source_type": "advisor or RIA",
-        "summary": "A wealth management firm posts a short podcast style page where its research head briefly explains interval fund liquidity differences versus mutual funds.",
-        "mentions_evergreen": true,
-        "mentions_equi": false,
-        "gets_wrong": "Very thin content built mainly to promote the firm's own advisory relationship, with almost no retiree specific detail."
-      },
-      {
-        "url": "https://www.nasdaq.com/articles/interval-funds-weaknesses-are-their-strength",
-        "title": "Interval Funds Weaknesses are their Strength",
-        "page_age": null,
-        "rank": 8,
-        "domain": "nasdaq.com",
-        "source_type": "financial media",
-        "summary": "A short Nasdaq contributed article says limited liquidity is actually a strength because it lets managers avoid panic selling, and notes big firms like KKR and Capital Group are launching interval funds.",
-        "mentions_evergreen": true,
-        "mentions_equi": false,
-        "gets_wrong": "Surface level piece with no data, no retiree framing, and it treats limited liquidity as purely positive without addressing what happens if a retiree needs cash."
-      },
-      {
-        "url": "https://www.nasdaq.com/articles/interval-funds-6-things-know-you-invest-0",
-        "title": "Interval Funds: 6 Things to Know Before You Invest",
-        "page_age": null,
-        "rank": 9,
-        "domain": "nasdaq.com",
-        "source_type": "financial media",
-        "summary": "Same Motley Fool six tips content syndicated on Nasdaq, ending with an unrelated Social Security ad.",
-        "mentions_evergreen": true,
-        "mentions_equi": false,
-        "gets_wrong": "Duplicate of result four, adds nothing new, and the retirement content is diluted by unrelated promotional material."
-      },
-      {
-        "url": "https://finance.yahoo.com/news/pros-cons-interval-funds-investments-160011148.html",
-        "title": "The Pros And Cons Of Interval Funds: Are These Investments Worth The Wait?",
-        "page_age": "July 23, 2024",
-        "rank": 10,
-        "domain": "finance.yahoo.com",
-        "source_type": "financial media",
-        "summary": "Yahoo Finance runs a pros and cons list covering diversification, SEC oversight, and the redemption window mechanics, noting funds may only fill part of a redemption request.",
-        "mentions_evergreen": true,
-        "mentions_equi": false,
-        "gets_wrong": "Standard pros and cons list with no retiree specific math on how much money to lock up, and no mention of evergreen or tender offer alternatives."
-      }
-    ],
-    "ai_answer": {
-      "text": "## Are Interval Funds a Good Idea for Retirees?\n\n**Short answer: It depends, they can play a useful role for some retirees, but they're not a fit for everyone, and liquidity risk is the big catch.**\n\n### The appeal for retirees\n\nMorningstar credits the growth in interval funds to near- and current retirees looking for a greater return than public markets alone can get them. This makes sense given the potential benefits:\n\n- **Higher return potential**: Interval funds, on average, have the potential to provide higher yields and returns than mutual funds or ETFs, because they can invest in both public and private assets, giving them a wider universe of investment opportunities.\n- **Diversification**: These funds aren't traded on exchanges, and the underlying assets have lower correlations to their publicly traded counterparts, which can help lower overall portfolio risk.\n- **Liquidity premium logic**: This limitation grants interval funds a key strength: the ability to invest in assets with significant long-term return potential but that are too illiquid for mutual funds or ETFs, investors should expect a higher return than is available from publicly traded securities for bearing liquidity risk.\n- Given demographic trends, given the wave of baby boomers entering retirement age, more Americans are set to turn 65 this year than any other time in the nation's history, the demand for assets that meet significant retirement income needs is likely only to grow.\n\n### The major catch: liquidity\n\nThis is the biggest red flag for retirees who may need access to cash:\n\n- With an interval fund, you can buy fund shares anytime, but you can redeem your fund shares only during specified intervals (often quarterly).\n- Redemption requests aren't always fully honored. Morningstar notes a real example: for the April 2022 offer, shareholders requested to redeem 27.36% of shares outstanding; for July 2022, 27.9%; for October 2022, 32.8%; and for January 2023, 38.4%. Most of those requests went unfilled.\n- This mismatch between \"buy anytime, sell rarely\" is exactly the sentiment reflected in the headline warning that interval funds don't \"feel like a mutual fund when you are trying to sell.\"\n\n### Costs matter too\n\nDon't ignore the costs and fees associated with products promising higher yields and novel investment opportunities, as well as potential tax complexities, expenses can ultimately eat into the higher yields you were searching for in the first place. That said, interval fund fees may be competitive if not cheap compared with most private equity or credit funds, which may levy as much as a 2% annual asset-based charge.\n\n### Morningstar's bottom-line verdict\n\nPerhaps the most balanced take comes directly from Morningstar's guide: the decision to own an interval fund is best made for specific reasons, such as their contribution to retirement income or as an uncorrelated asset that improves an investor's total wealth. However, they add an important caveat: most investors, however, can succeed in achieving their financial goals without recourse to this investment vehicle, its attractive features notwithstanding.\n\n### Practical takeaway for retirees\n\nBefore investing, evaluate whether the product is right for you and the level of risk you're willing to accept, and consider whether a long-term commitment is within your financial means or whether you might need access in the short term to the capital you're thinking of investing. As Northwestern Mutual puts it, everyone's financial picture is different, and there's no \"ideal\" investor for an interval fund.\n\n**Bottom line**: Interval funds *can* be a good idea for retirees who (1) have sufficient liquid assets elsewhere to cover living expenses and emergencies, (2) are looking to diversify a portion of their portfolio into less-correlated assets like private credit or real estate, and (3) don't need guaranteed access to that specific pool of money. They're generally a poor idea as a primary income vehicle for retirees who need predictable, on-demand liquidity, a real risk if markets get shaky and everyone tries to redeem at once.",
-      "cited_urls": [
-        "https://finance.yahoo.com/news/interval-funds-exploding-popularity-come-130000568.html",
-        "https://www.northwesternmutual.com/life-and-money/what-is-an-interval-fund/",
-        "https://www.morningstar.com/alternative-investments/morningstars-guide-interval-funds",
-        "https://www.fool.com/retirement/2025/02/05/interval-funds-6-things-to-know-before-you-invest/"
-      ],
-      "cited_domains": [
-        "finance.yahoo.com",
-        "fool.com",
-        "morningstar.com",
-        "northwesternmutual.com"
-      ],
-      "mentions_evergreen": true,
-      "mentions_equi": false
-    },
-    "overall": {
-      "owner": "Big financial media (Yahoo Finance, Motley Fool, Nasdaq) and Morningstar own the top slots, with fund sponsors and RIAs filling the rest by publishing their own explainer content.",
-      "common": "Every result is a short explainer or listicle format, medium depth at best, almost no original data beyond Morningstar's redemption figures, and most are from the past year to two years.",
-      "gap": "Nobody gives retirees a plain framework for how much of a retirement portfolio might use interval, evergreen, or tender offer structures, nobody uses the term evergreen fund at all, and nobody offers an ongoing data source that tracks the category over time.",
-      "verdict": "Owned by financial media and Morningstar. Interval funds are explained, evergreen is missing, and Equi is absent."
-    },
-    "own_it": {
-      "title": "Interval Funds and Retirement: What the Redemption Window Really Means for You",
-      "angle": "Skip the sales pitch and the generic checklist. Walk retirees through exactly how redemption windows work across interval, evergreen, and tender offer funds, then hand them questions to bring to their own advisor.",
-      "outline": [
-        "What interval, evergreen, and tender offer funds actually are, in plain terms, and how each handles redemptions",
-        "Why buying is easy but selling is not, using real redemption window mechanics",
-        "A simple way to think about which portion of a retirement portfolio might tolerate limited liquidity, without naming a target percentage",
-        "What to check in a fund's redemption history before deciding anything",
-        "Questions to bring to your financial advisor before investing"
-      ],
-      "data_needed": "A comparison table pulling from the Evergreen Fund Index showing redemption frequency, notice periods, and how often redemption requests across the category have gone partially unfilled, presented as category context rather than any single fund's numbers.",
-      "faq": [
-        "What is the difference between an interval fund, an evergreen fund, and a tender offer fund?",
-        "What happens if I request a redemption and the fund cannot fill it?",
-        "How do I know how much of my retirement savings should sit in funds with limited liquidity?",
-        "What should I ask my financial advisor before investing in one of these fund structures?"
-      ]
-    },
-    "featured": [
-      {
-        "domain": "morningstar.com",
         "pitch": "Evergreen Fund Index data",
-        "angle": "Pitch Morningstar's alternatives team on adding category-wide redemption fulfillment data from the Evergreen Fund Index as a companion data point to their existing interval fund research, since they already cite redemption statistics but only from single fund examples."
-      },
-      {
-        "domain": "finance.yahoo.com",
-        "pitch": "expert quote",
-        "angle": "Offer an Equi spokesperson for a follow up piece on the liquidity catch, since Yahoo has already run two separate interval fund articles this year and would likely welcome a source who can speak to retiree specific liquidity planning without pitching a fund."
-      },
-      {
-        "domain": "fool.com",
-        "pitch": "guest piece",
-        "angle": "Pitch a guest article giving Motley Fool's retirement section a retiree focused liquidity bucket framework, since their existing six tips piece is generic and lacks any retirement specific structure."
-      },
-      {
-        "domain": "nasdaq.com",
-        "pitch": "expert quote",
-        "angle": "Nasdaq runs short contributed pieces on this topic already, so offer a quote or short op-ed contrasting interval funds with evergreen funds to fill the gap their current articles leave open."
+        "angle": "They already tell readers to diversify into real estate and alternatives but stop short of explaining fund structures. Offer index level data on redemption terms and pricing frequency to round out their diversification section."
       }
     ],
     "youtube": [
       {
-        "clip_title": "Can I actually get my money out of an interval fund when I need it?",
-        "webinar_topic": "How redemption windows and gates work across interval and evergreen funds"
+        "clip_title": "What Actually Happens to a Fund That Does Not Reprice Every Day?",
+        "webinar_topic": "Understanding Liquidity Structures in Evergreen and Interval Funds"
       },
       {
-        "clip_title": "How much of my retirement money should go into funds I can't sell any day I want?",
-        "webinar_topic": "Building a liquidity bucket around illiquid fund structures in retirement"
+        "clip_title": "Is Holding Cash Really the Safest Move in a Downturn?",
+        "webinar_topic": "Building a Portfolio With Public and Private Market Tools"
       }
     ],
     "difficulty": {
-      "level": "medium",
-      "why": "There is a clear content gap around retiree specific guidance and evergreen terminology, but the top slots are held by high authority publishers like Morningstar and Yahoo Finance that would be hard to outrank without sustained original data and backlinks."
+      "level": "easy",
+      "why": "The ranking pages are mostly thin, generic listicles and several are years old, and none cover evergreen or interval fund structures, so a clear, well organized category education page has a real opening to rank without competing head to head with fund sponsor content."
     },
-    "verdict": "Owned by financial media and Morningstar. Interval funds are explained, evergreen is missing, and Equi is absent. Difficulty: medium.",
-    "flags": [],
+    "verdict": "Owned by financial media and fund sponsors. Public market tactics are covered, evergreen funds are absent. Difficulty: easy.",
+    "flags": [
+      "return or performance language in \"Their 2019 crash protection slideshow is outdated and never mentions alternative fund structures.\""
+    ],
     "fixed_on_retry": [],
     "featured_dropped": []
-  },
-  "should i put my inheritance into private equity": {
-    "query": "should i put my inheritance into private equity",
-    "run_date": "2026-09-27 23:49",
-    "model": "claude-sonnet-5",
-    "seconds": 54,
-    "searched": [
-      "should i put my inheritance into private equity",
-      "is private equity a good investment for inherited money"
-    ],
-    "results": [
-      {
-        "url": "https://www.ml.com/articles/dos-and-donts-of-investing-an-inheritance.html",
-        "title": "Do\u2019s and don\u2019ts of investing an inheritance",
-        "page_age": null,
-        "rank": 1,
-        "domain": "ml.com",
-        "source_type": "fund sponsor",
-        "summary": "Merrill Lynch piece says a larger inheritance can qualify you for alternatives like private equity, hedge funds, and real estate, but warns these are high risk, illiquid, and manager selection matters a lot. It frames alternatives as something an advisor should help you pick.",
-        "mentions_evergreen": false,
-        "mentions_equi": false,
-        "gets_wrong": "Never explains what an evergreen or interval fund actually is, so readers still don't know there is a middle ground between locked-up traditional PE and daily-liquid stocks."
-      },
-      {
-        "url": "https://www.privatebank.bankofamerica.com/articles/dos-and-donts-of-investing-an-inheritance.html",
-        "title": "How to Invest an Inheritance: Key Factors to Consider",
-        "page_age": "May 20, 2025",
-        "rank": 2,
-        "domain": "privatebank.bankofamerica.com",
-        "source_type": "fund sponsor",
-        "summary": "Same Bank of America Private Bank article as result 1, republished on a different bank domain. Identical content and identical gaps.",
-        "mentions_evergreen": false,
-        "mentions_equi": false,
-        "gets_wrong": "Duplicate of result 1 so it repeats the same missing structure explanation and adds no new liquidity detail."
-      },
-      {
-        "url": "https://www.pbig.ml.com/articles/dos-and-donts-of-investing-an-inheritance.html",
-        "title": "How to Invest an Inheritance: Key Factors to Consider",
-        "page_age": "July 20, 2026",
-        "rank": 3,
-        "domain": "pbig.ml.com",
-        "source_type": "fund sponsor",
-        "summary": "Another republished version of the same Merrill inheritance article, this time with added stats showing 93 percent of younger heirs plan to increase alternatives allocation versus 28 percent of older heirs, plus a note on step-up in cost basis.",
-        "mentions_evergreen": false,
-        "mentions_equi": false,
-        "gets_wrong": "Shows strong demand from younger heirs for alternatives but never tells them how these funds are actually structured or how money gets in and out."
-      },
-      {
-        "url": "https://myfw.com/articles/best-practices-and-pitfalls-to-avoid-when-investing-an-inheritance/",
-        "title": "Best Practices and Pitfalls to Avoid When Investing an Inheritance",
-        "page_age": "June 5, 2025",
-        "rank": 4,
-        "domain": "myfw.com",
-        "source_type": "advisor or RIA",
-        "summary": "A financial planning firm blog lists private equity as an option alongside real estate and commodities, noting it needs a longer time horizon and carries more risk than traditional investments. Main message is to slow down and not rush inheritance decisions.",
-        "mentions_evergreen": false,
-        "mentions_equi": false,
-        "gets_wrong": "Treats private equity as one generic bucket with no distinction between closed-end funds, interval funds, or evergreen structures, so readers can't tell what they'd actually be buying."
-      },
-      {
-        "url": "https://investor.vanguard.com/investor-resources-education/article/what-to-do-with-your-inheritance",
-        "title": "What to do with an inheritance | Vanguard",
-        "page_age": null,
-        "rank": 5,
-        "domain": "investor.vanguard.com",
-        "source_type": "fund sponsor",
-        "summary": "Vanguard's general inheritance guide covers paying off debt, building an emergency fund, and investing for growth through diversified portfolios. It does not discuss alternatives at all.",
-        "mentions_evergreen": false,
-        "mentions_equi": false,
-        "gets_wrong": "Skips private equity and alternatives entirely, leaving a reader who searched this exact query with no answer on the topic they asked about."
-      },
-      {
-        "url": "https://familyenterpriseusa.com/taxes/inheritance-vs-private-capital/",
-        "title": "Inheritance VS. Private Capital - Family Enterprise USA",
-        "page_age": "April 18, 2023",
-        "rank": 6,
-        "domain": "familyenterpriseusa.com",
-        "source_type": "education site",
-        "summary": "A family enterprise organization frames inherited wealth as private capital that families can deploy across generations, citing rising family office interest in private equity as proof this approach works.",
-        "mentions_evergreen": false,
-        "mentions_equi": false,
-        "gets_wrong": "Speaks in generalities about legacy and multigenerational wealth without ever explaining fund mechanics, fees, or how an individual heir would actually access private equity."
-      },
-      {
-        "url": "https://www.raisin.com/en-us/investing/wealth-from-inheritance/",
-        "title": "What to Do With Wealth From an Inheritance | Raisin",
-        "page_age": "June 25, 2026",
-        "rank": 7,
-        "domain": "raisin.com",
-        "source_type": "advisor or RIA",
-        "summary": "Raisin's guide focuses mostly on cash management basics like keeping liquidity cushions and using CDs, with brief mentions of index funds and REITs for diversification.",
-        "mentions_evergreen": false,
-        "mentions_equi": false,
-        "gets_wrong": "Doesn't mention private equity or alternatives at all despite ranking for this query, so it's a weak match to searcher intent."
-      },
-      {
-        "url": "https://www.thepeakfp.com/blog/what-to-do-with-an-inheritance",
-        "title": "What to Do with Inheritance Money | Peak Financial Planning",
-        "page_age": "May 30, 2024",
-        "rank": 8,
-        "domain": "thepeakfp.com",
-        "source_type": "advisor or RIA",
-        "summary": "A financial planning blog uses a hypothetical inherited rental property to illustrate weighing return on locked-up equity against costs of holding the asset. Focused on real estate, not private equity.",
-        "mentions_evergreen": false,
-        "mentions_equi": false,
-        "gets_wrong": "Doesn't address private equity or fund structures at all, so it only tangentially matches the search."
-      },
-      {
-        "url": "https://www.yahoo.com/news/best-way-invest-inheritance-most-050000112.html",
-        "title": "The best way to invest an inheritance and protect your newfound wealth",
-        "page_age": null,
-        "rank": 9,
-        "domain": "yahoo.com",
-        "source_type": "financial media",
-        "summary": "A UK-focused Telegraph piece via Yahoo covers general inheritance investing basics like building a rainy day fund and choosing index funds for long-term growth. No alternatives discussion.",
-        "mentions_evergreen": false,
-        "mentions_equi": false,
-        "gets_wrong": "Entirely misses private equity or alternative funds, and its UK framing makes it a poor match for US-based searchers."
-      },
-      {
-        "url": "https://www.privatebank.bankofamerica.com/financial-education/analyzing-investment-opportunities.html",
-        "title": "Analyzing investment opportunities after an inheritance",
-        "page_age": "May 4, 2026",
-        "rank": 10,
-        "domain": "privatebank.bankofamerica.com",
-        "source_type": "fund sponsor",
-        "summary": "A separate Bank of America Private Bank article goes deeper than the others, listing private equity, hedge funds, private credit, and direct investments as options for large inheritances, and explicitly warns against chasing high returns or speculative bets like crypto. It also suggests phasing investment over 9 to 12 months rather than all at once.",
-        "mentions_evergreen": false,
-        "mentions_equi": false,
-        "gets_wrong": "Lists private equity by name but never breaks down fund structures like evergreen or interval funds, fees, or redemption terms, so a reader still can't evaluate a specific product."
-      }
-    ],
-    "ai_answer": {
-      "text": "## Short answer: Probably not entirely, and maybe not at all, it depends heavily on your situation\n\nPrivate equity can be part of a diversified plan for some inheritors, but it's rarely a smart place to put *all* or even *most* of an inheritance. Here's why, based on what financial advisors say:\n\n### Reasons to be cautious\n\n**High risk, low liquidity.** Alternative investments come with a very high degree of risk, are only appropriate for certain investors and tend to be less liquid than publicly traded stocks. Private equity funds typically lock up your money for 7-10+ years with no ability to withdraw early.\n\n**Long investment horizon required.** Private equity can provide access to high-growth opportunities, but it often requires a longer investment horizon and carries a higher level of risk compared to traditional investments.\n\n**Manager selection matters enormously.** It's also important to carefully research the investment managers, returns between top-quartile and bottom-quartile PE funds vary wildly, unlike index funds where most managers cluster near the market return.\n\n**Rushing in is a common mistake.** It can be tempting to act quickly, especially if you feel pressure to make the inheritance \"work\" for you right away. However, hasty decisions often lead to poor financial outcomes.\n\n### What to do first, before considering PE\n\n1. **Handle the basics.** Advisors commonly recommend you first pay off high-interest debt like credit cards or personal loans, then build an emergency fund with 3-6 months of living expenses in savings.\n2. **Don't just fold it into your existing portfolio blindly.** Simply folding your parents' or grandparents' investments into your own portfolio could throw your asset allocation out of balance, and if you inherit assets similar to those you already own, you could find yourself overconcentrated in certain sectors of the market.\n3. **Don't let it sit idle either**, cash loses value to inflation over time.\n\n### When private equity *might* make sense\n\n- **You have substantial total assets.** With more total assets, you may qualify for alternative investments such as private equity, hedge funds, real estate investments or direct investments in private businesses. (Many PE funds require \"accredited investor\" status, meaning significant net worth or income.)\n- **You already have your bases covered** (debt paid, emergency fund funded, diversified core portfolio in place) and are looking for a small satellite allocation.\n- **You have a long time horizon** and won't need this money for a decade or more.\n- **You understand the tradeoff**: \"Alternatives offer the potential for enhanced returns that could be hard to find in public markets.\"\n\n### The more common recommendation for most people\n\nMost mainstream guidance points toward simpler, more liquid options first: investing for growth by putting money into diversified investment portfolios for long-term wealth building, typically low-cost index funds, rather than illiquid alternatives. One advisory piece notes that even sophisticated families view private capital as something to deploy thoughtfully over generations, not a quick windfall play: families are encouraged to think of family wealth as private capital, considering not only individual needs but the investment and wealth creation many families perpetuate throughout generations.\n\n### Bottom line\n\nIf someone is asking \"should I put my inheritance into PE\" as a first move, the honest answer is: not yet, and maybe not much even later. Get your financial foundation solid (debt, emergency fund, diversified core investments) first, only consider PE if you meet accredited investor thresholds and can tie up money for a decade, and never put more than a small slice (often suggested as 5-15% of a large portfolio) into any single illiquid alternative asset class. Talking to a fee-only fiduciary financial advisor (not one selling you the PE fund) before committing is well worth the cost.",
-      "cited_urls": [
-        "https://www.ml.com/articles/dos-and-donts-of-investing-an-inheritance.html",
-        "https://myfw.com/articles/best-practices-and-pitfalls-to-avoid-when-investing-an-inheritance/",
-        "https://investor.vanguard.com/investor-resources-education/article/what-to-do-with-your-inheritance",
-        "https://familyenterpriseusa.com/taxes/inheritance-vs-private-capital/"
-      ],
-      "cited_domains": [
-        "familyenterpriseusa.com",
-        "investor.vanguard.com",
-        "ml.com",
-        "myfw.com"
-      ],
-      "mentions_evergreen": false,
-      "mentions_equi": false
-    },
-    "overall": {
-      "owner": "Bank of America and Merrill own three of the top ten spots with near duplicate content, Vanguard and other advisors fill in the rest with generic inheritance checklists.",
-      "common": "Every top result is a general inheritance guide written by a bank, advisor, or financial media outlet. They mention private equity only in passing as one line item in a list of alternatives, none break down fund structures, liquidity terms, fees, or how redemptions actually work.",
-      "gap": "Nobody explains what an evergreen or interval fund is, how it differs from a traditional locked-up private equity fund, or what to actually check before choosing one. Equi can own the explainer that separates fund structures without recommending a specific fund.",
-      "verdict": "Owned by bank private wealth pages repeating the same list. Private equity gets a mention, fund structure gets no explanation, and Equi is absent."
-    },
-    "own_it": {
-      "title": "Private Equity and Your Inheritance: What Evergreen and Interval Funds Actually Are",
-      "angle": "Skip the generic list of alternatives and go one level deeper: explain the three common structures heirs will encounter when an advisor says private equity, so the reader can ask better questions instead of just saying yes.",
-      "outline": [
-        "Why banks mention private equity but rarely explain the structure",
-        "Three structures explained plainly: closed-end funds with hard lockups, interval funds with scheduled redemption windows, evergreen funds with ongoing but limited liquidity",
-        "What to ask before committing: redemption frequency, gates, fees, minimums",
-        "How structure affects flexibility if you need the money sooner than planned",
-        "Questions to bring to your financial advisor before allocating any of an inheritance",
-        "Where the Evergreen Fund Index fits: a plain look at how a basket of evergreen funds has behaved on liquidity and redemption terms over time, no return claims"
-      ],
-      "data_needed": "A simple comparison table across the three structures covering typical lockup length, redemption frequency, and gate provisions, sourced from the Evergreen Fund Index rather than performance numbers.",
-      "faq": [
-        "What is the difference between an evergreen fund and a traditional private equity fund?",
-        "How often can I redeem money from an interval fund?",
-        "Do I need to be an accredited investor to access these fund structures?",
-        "What happens if I need my money back before a redemption window opens?",
-        "Should I ask my financial advisor about fund structure before or after choosing a manager?"
-      ]
-    },
-    "featured": [
-      {
-        "domain": "myfw.com",
-        "pitch": "guest piece",
-        "angle": "Their existing post treats private equity as one generic risk bullet. Pitch a follow up guest piece that walks through evergreen versus interval versus closed end structures for their inheritance readers."
-      },
-      {
-        "domain": "familyenterpriseusa.com",
-        "pitch": "expert quote",
-        "angle": "They already frame inherited wealth as private capital for multigenerational deployment. An Equi expert quote on how fund structure affects a family's ability to redeem across generations fits their existing angle."
-      },
-      {
-        "domain": "yahoo.com",
-        "pitch": "expert quote",
-        "angle": "Their Telegraph inheritance piece is UK focused and skips alternatives entirely. Pitch a US market companion quote explaining fund structures for readers with US inheritances considering private equity."
-      }
-    ],
-    "youtube": [
-      {
-        "clip_title": "What Is an Evergreen Fund and How Is It Different From Private Equity?",
-        "webinar_topic": "Evergreen fund structures explained"
-      },
-      {
-        "clip_title": "Should You Put Inheritance Money Into an Interval Fund?",
-        "webinar_topic": "Liquidity terms in alternative fund structures"
-      }
-    ],
-    "difficulty": {
-      "level": "medium",
-      "why": "The top spots are dominated by big bank brand pages with duplicate content, which is beatable, but ranking requires original structural explainers and data that none of the current pages have bothered to build."
-    },
-    "verdict": "Owned by bank private wealth pages repeating the same list. Private equity gets a mention, fund structure gets no explanation, and Equi is absent. Difficulty: medium.",
-    "flags": [],
-    "fixed_on_retry": [],
-    "featured_dropped": [
-      "wallstreetzen.com"
-    ]
   }
 }

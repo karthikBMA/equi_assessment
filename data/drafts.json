@@ -1,689 +1,762 @@
 {
   "Marchetti Ruiz Family Advisors": {
     "A": {
-      "subject": "client materials on evergreen alternatives, drafted",
-      "body": "Rodrigo,\n\nWe put together a client-facing piece under the Marchetti Ruiz name, walking through how evergreen alternatives work versus the multi-year lock-ups typical in private equity and real estate. It is meant for your clients, not ours.\n\nGiven your book skews toward larger relationships, this is often a conversation clients ask about directly. Happy to send the draft over so you can see how it reads under your brand.\n\nWorth a quick look?\n\nKarthik",
-      "angle": "As a principal-led firm with large, PE/real-estate-heavy client relationships, Rodrigo can act on this alone, and the already-drafted client materials remove the only real friction in introducing a new alternatives category.",
+      "subject": "a client-facing piece, already drafted",
+      "body": "Rodrigo,\n\nWe put together a client-facing explainer on evergreen alternatives, written as if under the Marchetti Ruiz name. It's meant to help a principal-led firm like yours introduce the category without building the materials from scratch.\n\nGiven your clients already hold private equity and real estate, this frames evergreen structures as a natural extension, without the multi-year lock-up. No pitch attached, just the piece.\n\nWant me to send it over?\n\nThe Equi team",
+      "angle": "As a principal who can decide alone, Rodrigo will respond to a concrete, finished asset that saves his firm work rather than a conceptual pitch.",
       "facts_used": [
         "Firm name: Marchetti Ruiz Family Advisors",
-        "Current alternatives: private equity, real estate",
-        "Average client size: $25.0M",
-        "Principal-led decision structure"
+        "Principal-led decision structure",
+        "Current alternatives: private equity, real estate"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "your PE and real estate liquidity gap",
-      "body": "Rodrigo,\n\nYour book leans on private equity and real estate, both multi-year commitments. For $25M+ clients, that often means little room for liquidity without selling something illiquid at the wrong time.\n\nEqui builds liquid alternative funds with managed risk and no long lock-up, and we write the client-facing materials so you can explain them the same day. Some principal-led firms use this as the liquid complement to PE and real estate, not a replacement.\n\nDoes that gap show up in how your clients talk to you about liquidity?\n\nKarthik",
-      "angle": "MFO's concentration in illiquid PE and real estate for large, principal-relationship clients creates a natural liquidity question worth surfacing rather than pitching.",
+      "subject": "the gap next to your PE and real estate",
+      "body": "Rodrigo,\n\nYour alternatives sleeve at MFO is built around private equity and real estate, both illiquid by design. For clients averaging $25M, that likely means most of their alternative exposure is locked up for years at a time.\n\nWe build evergreen liquid alternatives, no multi-year lock-up, and we prepare the client-facing materials so you can explain the strategy in your own words, under your own brand if you prefer.\n\nDoes a liquid sleeve next to your current alts make sense for how your clients are positioned right now?\n\nThe Equi team",
+      "angle": "Rodrigo leads a principal-led family office with concentrated illiquid alt exposure, so naming the liquidity gap directly speaks to a real structural observation rather than a generic pitch.",
       "facts_used": [
-        "private equity",
-        "real estate",
-        "average client size $25.0M",
-        "principal-led decision structure",
-        "evergreen funds with no multi-year lock-up",
-        "Equi builds client-facing materials"
+        "Current alternatives: private equity, real estate",
+        "Average client size: $25.0M",
+        "Decision structure: Principal-led"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Ellingham Court Partners": {
     "A": {
-      "subject": "a client piece already in your name",
-      "body": "Perpetua,\n\nWe put together a short client-facing explainer on evergreen alternatives, written as if it came from Ellingham Court. It covers how the structure differs from a lock-up fund, in plain language your clients could read directly.\n\nGiven your book runs private equity today, this might be a useful complement to have ready, even before any allocation conversation.\n\nHappy to send it over. No need to build anything on your end.\n\nKarthik",
-      "angle": "As founder and CIO who can decide alone, Perpetua doesn't need more research, she needs a finished asset, so leading with a ready-made client piece under her own brand removes the only friction that matters to her.",
+      "subject": "a client piece already drafted for Ellingham Court",
+      "body": "Perpetua,\n\nWe put together a client-facing explainer on evergreen alternatives, written under Ellingham Court's name, for you to send as-is or edit. It's meant to save you the work of translating the structure for your clients yourselves.\n\nGiven your book leans toward private equity, we thought this might be a useful complement to show clients, without you having to draft anything.\n\nWant me to send it over?\n\nThe Equi team",
+      "angle": "As a principal-led founder-CIO, she can act alone on a low-effort offer that hands her finished, ready-to-use client material rather than another idea to vet.",
       "facts_used": [
-        "Current alternatives: private equity",
+        "Firm: Ellingham Court Partners (MFO)",
         "Decision structure: Principal-led",
-        "Recipient title: Founder & CIO"
+        "Current alternatives: private equity"
       ],
+      "flags": [],
       "variant": "A"
     },
     "B": {
-      "subject": "a liquid complement to your PE sleeve",
-      "body": "Perpetua,\n\nYour alternatives exposure runs through private equity, which locks up capital for years by design. For clients averaging $21M, that can limit flexibility if liquidity needs change.\n\nWe build evergreen liquid alternatives with managed risk and downside protection, and provide the client-facing materials so you can explain them yourselves. Worth a 20-minute call to see if it fits alongside what you already run?\n\nKarthik",
-      "angle": "Highlights the structural gap between their PE-only alternatives sleeve and the liquidity needs of large individual clients, framed as a question rather than a directive.",
+      "subject": "a gap between PE and liquidity",
+      "body": "Perpetua,\n\nEllingham Court's alternatives allocation looks concentrated in private equity. That works for long-horizon capital, but it leaves a gap for clients who want alternatives exposure without a multi-year lock-up.\n\nEqui builds evergreen liquid alternatives, either under our brand or yours, and we write the client-facing materials so you're not the one explaining a new strategy from scratch. At $21M average client size, that finished story tends to matter as much as the strategy itself.\n\nWorth a short call to see if there's a fit?\n\nThe Equi team",
+      "angle": "Names the specific illiquid-only alts gap at their firm and ties Equi's liquid, evergreen structure plus ready-made client materials directly to their client profile.",
       "facts_used": [
         "Current alternatives: private equity",
         "Average client size: $21.0M",
-        "Principal-led decision structure (single call to action to Perpetua as Founder & CIO)"
+        "Founder & CIO can decide alone (principal-led)"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Ashcombe Meridian Family Office": {
     "A": {
-      "subject": "a draft for your clients, ready",
-      "body": "Rasheed,\n\nWe put together a client-facing piece explaining evergreen alternatives, written under Ashcombe Meridian's own name. It sits alongside how you already talk about venture and private credit, without the multi-year lock-up conversation.\n\nHappy to send it over so you can see how it reads before anything else.\n\nWorth a quick look?\n\nKarthik",
-      "angle": "A sophisticated CIO doesn't need alternatives explained, so the hook is showing finished, firm-branded client collateral rather than pitching the product itself.",
+      "subject": "a client-facing piece, already drafted",
+      "body": "Rasheed,\n\nWe put together a client-facing explainer on evergreen alternatives, written to sit under a firm's own name rather than ours. Given Ashcombe Meridian's existing book in venture and private credit, it's built to frame evergreen structures as a complement rather than a replacement, with the liquidity and risk management points laid out plainly for CIOs to hand to clients.\n\nHappy to send it over for you to look at. If it's useful, we can talk through how it would read under your brand.\n\nBest,\nThe Equi team",
+      "angle": "A sophisticated CIO doesn't need alternatives explained, but will value a ready-made client communication tool that saves internal drafting time and fits next to existing venture/private credit exposure.",
       "facts_used": [
-        "Firm name: Ashcombe Meridian Family Office",
+        "Firm: Ashcombe Meridian Family Office, Palo Alto, CA",
+        "Recipient: Rasheed Al-Mansoori, Chief Investment Officer",
         "Current alternatives: venture, private credit",
-        "Evergreen structure with no multi-year lock-up"
+        "Decision structure: CIO-led"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "a liquid sleeve next to venture, credit",
-      "body": "Rasheed,\n\nVenture and private credit cover the illiquid end well. Neither gives you a liquid sleeve you can move quickly if a client needs flexibility or you want to rebalance without waiting on a capital call cycle.\n\nWe built Equi for that gap: liquid alternatives with downside protection, evergreen structure, no multi-year lock-up. For a book this concentrated at $24M average client size, that flexibility tends to matter more, not less.\n\nWorth a 20-minute call to see if it fits how you're thinking about the next few years?\n\nKarthik",
-      "angle": "Points out the structural gap between their illiquid venture/private credit book and the absence of a liquid alternatives sleeve, tied to their concentrated client size.",
+      "subject": "venture and credit, but liquidity structure?",
+      "body": "Rasheed,\n\nVenture and private credit cover a lot of ground, but both lock capital up for years. For a firm running $4B with an average client size near $24M, that concentration of illiquid exposure is worth a second look, especially where clients want optionality without exiting the strategies that got them there.\n\nEqui builds evergreen liquid alternatives designed to sit alongside illiquid alts, with risk management built in and no multi-year lock-up. We also build the client-facing materials, so your team can explain the structure without extra lift.\n\nHow is your current allocation balancing illiquidity against client liquidity needs?\n\nThe Equi team",
+      "angle": "Uses the firm's specific alt mix (venture, private credit) and client size to surface a liquidity-structure gap, then asks rather than prescribes.",
       "facts_used": [
+        "AUM: $4.0B",
+        "Average client size: $24.0M",
         "Current alternatives: venture, private credit",
-        "Average client size: $24.0M"
+        "CIO-led decision structure"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Oakhurst Meridian Advisors": {
     "A": {
-      "subject": "a client piece already drafted for Oakhurst",
-      "body": "Hi Consuelo,\n\nWe put together a short client-facing piece explaining evergreen alternatives, written under the Oakhurst Meridian name. It's meant to save you the work of building that explanation yourself, especially alongside the private credit exposure you already run.\n\nHappy to send it over for you to look at. No changes needed on your end unless you want them.\n\nWorth a quick look?\n\nKarthik",
-      "angle": "As a founder-CIO who decides alone, she values a finished client explainer more than another pitch to evaluate, so leading with the completed piece respects her time.",
+      "subject": "a client-facing piece, drafted under your name",
+      "body": "Consuelo,\n\nSince you can decide on this alone, I'll skip the preamble.\n\nWe drafted a short client-facing explainer on evergreen alternatives, written to sit under Oakhurst Meridian's own name. The kind of piece you'd otherwise have to write yourself or task someone with. It's done and sitting here.\n\nGiven your clients are already in private credit, it may be a useful complement to show alongside that. Want me to send it over so you can look at it yourself first?\n\nThe Equi team",
+      "angle": "As a founder-CIO who can decide solo and already covers alternatives via private credit, the fastest path in is showing finished, ready-to-use client material rather than asking for research time.",
       "facts_used": [
-        "Oakhurst Meridian Advisors",
-        "Principal-led, can decide alone",
+        "Founder and CIO, principal-led, can decide alone",
         "Current alternatives: private credit"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "the liquidity gap next to private credit",
-      "body": "Consuelo,\n\nOakhurst's alternatives allocation looks concentrated in private credit. That works for return, but it leaves clients with no liquid sleeve if they need to move quickly, especially at your average account size.\n\nWe build liquid alternative funds with downside protection and no lock-up, and we write the client-facing materials so you can explain the strategy in your own words, under your own brand if you prefer.\n\nIs the illiquidity trade-off something your clients have pushed back on, or has it been a non-issue so far?\n\nKarthik",
-      "angle": "Oakhurst's single-strategy alt exposure (private credit only) creates a natural liquidity gap worth surfacing to a founder-CIO who values a ready-made client story over more manager research.",
+      "subject": "a gap between private credit and liquidity",
+      "body": "Consuelo,\n\nOakhurst Meridian's current alternatives run through private credit, which typically carries a lock-up. Your average client is $7.2M, a size that often values flexibility alongside that kind of commitment.\n\nEqui builds evergreen liquid alternatives, either under our name or yours, with full client-facing materials so you're not starting from scratch explaining the mechanics.\n\nIs a liquid sleeve something you've considered alongside what you're already running?\n\nThe Equi team",
+      "angle": "Names the concrete structural gap between their existing illiquid private credit book and a liquid sleeve, tied to their specific client size, then asks rather than prescribes.",
       "facts_used": [
         "Current alternatives: private credit",
         "Average client size: $7.2M",
-        "Principal-led; can decide alone",
-        "Founder and CIO"
+        "Principal-led, can decide alone"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Quillmoor Advisors": {
     "A": {
-      "subject": "a draft, under your name, ready",
-      "body": "Wilhelmina,\n\nWe put together a client-facing explainer on evergreen alternatives, written under the Quillmoor name, not ours. It walks through structure and liquidity in plain terms, the kind of thing that sits well next to a book built on private equity and private credit.\n\nGiven where Quillmoor sits, serving $10M+ relationships with a lot of the discipline of a family office, this tends to be a useful add rather than a rethink of what you already hold.\n\nWant me to send the draft over so you can see if it fits your voice?\n\nKarthik",
-      "angle": "Leads with a finished deliverable already built in the firm's own voice, letting a sophisticated CIO evaluate fit rather than sit through an explanation of alternatives she already understands.",
+      "subject": "a client-facing piece, already drafted",
+      "body": "Wilhelmina,\n\nWe put together a client-facing explainer on evergreen alternatives, written to sit under Quillmoor's own name. It walks through structure and liquidity in plain terms, the kind of thing a $10M-plus client actually reads.\n\nGiven your book already runs private equity and private credit, this frames evergreen structures as a complement rather than a replacement. No lock-up, and risk management built into the wrapper itself.\n\nWant me to send it over so you can see how it reads?\n\nThe Equi team",
+      "angle": "CIOs at this AUM tier already understand alternatives, so the hook is the finished asset (client materials) rather than an education pitch, saving them time and positioning Equi as execution-ready.",
       "facts_used": [
-        "Firm: Quillmoor Advisors (RIA), Raleigh, NC",
+        "Firm: Quillmoor Advisors (RIA)",
         "Average client size: $10.0M",
         "Current alternatives: private equity, private credit",
-        "Signal: serves $10M+ clients as an RIA, a profile that is often moving toward a family-office model"
+        "CIO-led decision structure"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "the family-office shift and liquidity",
-      "body": "Wilhelmina,\n\nServing $10M+ clients as an RIA often pulls firms toward a family-office model over time. That shift usually means clients expect more from the liquid side of the book, not just PE and private credit commitments that lock up capital for years.\n\nWe build evergreen liquid alternatives with structured downside protection, designed to sit next to existing illiquid allocations rather than compete with them. For firms making that transition, the client-facing explanation matters as much as the structure itself.\n\nHow is Quillmoor thinking about the liquidity mix as that shift plays out?\n\nKarthik",
-      "angle": "Uses the stated signal that $10M+ client RIAs often drift toward a family-office model to raise a structural question about liquidity next to their existing PE and private credit holdings.",
+      "subject": "evergreen structure next to PE and credit",
+      "body": "Wilhelmina,\n\nQuillmoor's book sits at $10M+ average client size, an RIA profile that often edges toward family-office style demands: more customization, more direct answers on liquidity terms across the portfolio.\n\nYou already run private equity and private credit. Equi builds evergreen liquid alternatives, no multi-year lock-up, designed to sit alongside that illiquid sleeve with a different risk and liquidity profile. We also build the client-facing materials, so explaining the structure to your clients isn't extra work for your team.\n\nDoes liquidity structure come up in client conversations at Quillmoor, or is it mostly a portfolio construction question internally?\n\nThe Equi team",
+      "angle": "Uses the $10M+ client profile and existing PE/credit allocations to frame liquidity structure as a live question worth asking about, not telling them what to do.",
       "facts_used": [
-        "$10M+ average client size",
-        "RIA structure",
-        "signal about trending toward family-office model",
-        "current alternatives: private equity, private credit"
+        "Average client size: $10.0M",
+        "Current alternatives: private equity, private credit",
+        "Signal: serves $10M+ clients as an RIA, a profile that is often moving toward a family-office model",
+        "CIO-led decision structure"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Marisol & Hart Private Wealth": {
     "A": {
-      "subject": "a client piece, already drafted",
-      "body": "Esperanza,\n\nTory mentioned we should connect.\n\nWe've drafted a client-facing explainer on evergreen alternatives, built under Marisol & Hart's own branding. It's meant for CIOs who already run real assets and hedge fund books and want a clean way to frame structure and liquidity for clients, not a primer on what alternatives are.\n\nHappy to send it over as is. If useful, we can also walk through how the underlying structure sits next to what you already hold.\n\nWorth a quick reply if you'd like to see it.\n\nKarthik",
-      "angle": "As a sophisticated CIO with an existing alts book, she doesn't need alternatives explained to her, she needs a ready-made way to explain them to her own clients, so leading with the finished branded piece removes friction and signals partnership over pitch.",
+      "subject": "a client-facing piece, already drafted",
+      "body": "Esperanza,\n\nTory mentioned MFO's work with real assets and hedge funds, so we put together a client-facing explainer on evergreen alternatives, structured for a firm like yours to send under your own name. Covers liquidity structure and risk management in plain terms, no explaining alternatives from scratch since your clients don't need that.\n\nIt's already drafted. Happy to send it over for you to look at, no changes needed on your end unless you want them.\n\nWorth a quick look?\n\nThe Equi team",
+      "angle": "CIO-led sophisticated buyer gets a peer-level, done-for-you asset rather than an education pitch, leveraging the warm intro and existing alternatives exposure.",
       "facts_used": [
-        "Firm name (Marisol & Hart Private Wealth)",
-        "Warm intro via Tory",
-        "Current alternatives allocation in real assets and hedge funds",
+        "warm intro via Tory",
+        "current alternatives: real assets, hedge funds",
         "CIO-led decision structure"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "the liquidity gap next to real assets",
-      "body": "Esperanza,\n\nTory mentioned we should connect.\n\nYour real assets and hedge fund exposure likely carries the lock-ups those strategies require. Most CIOs running that mix still want a sleeve that can move without waiting on a redemption window, especially for clients at your average size.\n\nWe built Equi as an evergreen structure, liquid alternatives with the same risk management discipline, designed to sit alongside real assets and hedge funds rather than replace them.\n\nDoes that gap show up in how you're managing liquidity today?\n\nKarthik",
-      "angle": "Names the structural liquidity gap created by their current real assets and hedge fund lock-ups, then asks rather than tells, matching a sophisticated CIO's peer-level expectations.",
+      "subject": "real assets, hedge funds, and liquidity structure",
+      "body": "Esperanza,\n\nTory mentioned connecting us, thanks for making time.\n\nWith real assets and hedge funds already in the book, I'd guess liquidity terms vary widely across those holdings, which can complicate rebalancing when clients around $22M want flexibility. Equi runs evergreen liquid alternatives, structured around risk management, with no multi-year lock-up, meant to sit alongside existing illiquid sleeves rather than replace them.\n\nWe also build the client-facing materials, so your team can explain the structure in your own voice.\n\nDoes liquidity sequencing across your alts book come up often with clients this size?\n\nThe Equi team",
+      "angle": "Uses the firm's existing alts mix and client size to surface a liquidity-structure question a sophisticated CIO would find relevant, without prescribing allocation.",
       "facts_used": [
-        "real assets, hedge funds",
-        "average client size $22.0M",
-        "warm intro via Tory"
+        "Current alternatives: real assets, hedge funds",
+        "Average client size: $22.0M",
+        "CRM notes: warm intro via Tory",
+        "Evergreen structure, no multi-year lock-up",
+        "Equi builds client-facing materials"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Harborstone Wealth Partners": {
     "A": {
-      "subject": "a draft for Harborstone's clients",
-      "body": "Margaret,\n\nGood to meet you at Future Proof.\n\nWe put together a client-facing piece under Harborstone's name that explains evergreen alternatives, how the structure handles liquidity and risk, and where it sits next to private equity and real estate. It's already drafted, just needs your eyes.\n\nWorth 20 minutes to see if it's useful for your clients?\n\nKarthik",
-      "angle": "Leads with a finished, firm-branded asset rather than a pitch, which respects a sophisticated CIO's time and expertise.",
+      "subject": "a client-facing piece, already drafted",
+      "body": "Margaret,\n\nGood seeing you at Future Proof.\n\nWe put together a client-facing explainer on evergreen alternatives, structured to sit next to private equity and real estate allocations rather than compete with them. Written for Harborstone's brand, aimed at the CIO-level questions your clients would actually ask.\n\nIt's done. Want me to send it over so you can look at it directly, no need to build anything from scratch.\n\nBest,\nThe Equi team",
+      "angle": "Since Ellison is a sophisticated CIO already using PE and real estate, the fastest way in is showing finished work that slots evergreen liquid alts next to what she already runs, not explaining the category to her.",
       "facts_used": [
-        "Firm name (Harborstone Wealth Partners)",
-        "Recipient title (CIO)",
-        "Met at Future Proof 2025",
-        "Current alternatives: private equity, real estate"
+        "met at Future Proof 2025",
+        "current alternatives: private equity, real estate",
+        "CIO-led decision structure"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "the liquidity gap next to PE and real estate",
-      "body": "Margaret,\n\nGood to meet you at Future Proof.\n\nYour alternatives sleeve is built entirely on locked-up structures, PE and real estate. That works until a client needs cash or you want to rebalance without unwinding a commitment early. Most CIOs running a book like yours end up holding more in cash or short duration than they'd like just to stay flexible.\n\nWe built Equi to sit next to that kind of book: liquid, risk-managed alternatives with no multi-year lock-up. Worth a 20-minute call to see if it's a fit?\n\nKarthik",
-      "angle": "Harborstone's alts allocation is entirely illiquid (PE, real estate), so the natural wedge is the missing liquid sleeve for a CIO managing large, concentrated client accounts.",
+      "subject": "where liquid alts fit next to PE and real estate",
+      "body": "Margaret,\n\ngood to meet you at Future Proof.\n\nHarborstone's alternatives allocation runs through private equity and real estate, both illiquid by design. For clients averaging $6.5M, that concentrates their alternatives exposure in vehicles with multi-year lock-ups and no way to adjust as circumstances change.\n\nEqui builds evergreen liquid alternatives, designed with risk management as the starting point, meant to sit alongside PE and real estate rather than replace them. We also build the client-facing materials so you can explain the structure directly.\n\nIs liquidity within alternatives something you're evaluating for Harborstone's book, or is the current PE and real estate mix deliberate for now.\n\nThe Equi team",
+      "angle": "Uses the firm's actual alts mix (PE + real estate, both illiquid) and client size to surface a structural liquidity gap a sophisticated CIO would recognize, then asks rather than prescribes.",
       "facts_used": [
-        "Current alternatives: private equity, real estate",
-        "Decision structure: CIO-led",
+        "Firm: Harborstone Wealth Partners (RIA), Charlotte, NC",
+        "Recipient: Margaret Ellison, Chief Investment Officer",
         "Average client size: $6.5M",
-        "met at Future Proof 2025"
+        "Current alternatives: private equity, real estate",
+        "CRM notes: met at Future Proof 2025"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Aldermoor Capital Group": {
     "A": {
-      "subject": "a client piece already drafted for Aldermoor",
-      "body": "Oluwaseun,\n\nWe put together a client-facing explainer on evergreen alternatives, written under the Aldermoor name, not ours. It covers how structures like this sit next to real assets and hedge fund exposure without adding lock-up risk.\n\nGiven your book runs CIO-led, you're likely the one who'd sign off on language like this before it reaches clients. Happy to send it over for a read, no pitch attached.\n\nWorth a quick look?\n\nKarthik",
-      "angle": "Leads with a finished, firm-branded asset rather than a pitch, which respects a sophisticated CIO's time and fits a CIO-led approval structure.",
+      "subject": "a client piece, drafted under your brand",
+      "body": "Oluwaseun,\n\nWe put together a client-facing explainer on evergreen alternatives, written to sit under Aldermoor's own brand rather than ours. It walks through structure and liquidity in plain terms, the kind of thing a CIO can hand straight to a client without editing.\n\nGiven Aldermoor's existing book in real assets and hedge funds, evergreen structures with active risk management tend to raise the liquidity question fast. Worth seeing if the piece fits how you'd frame that internally.\n\nHappy to send it over. Or if easier, a short call to walk through it directly.\n\nThe Equi team",
+      "angle": "CIOs at large MFOs care about how they explain new structures to clients, so leading with a ready-made, brand-matched explainer signals the work is already done and respects their sophistication.",
       "facts_used": [
-        "Firm name: Aldermoor Capital Group",
-        "Decision structure: CIO-led",
-        "Current alternatives: real assets, hedge funds"
+        "Firm: Aldermoor Capital Group (MFO), Chicago, IL",
+        "Recipient: CIO",
+        "Current alternatives: real assets, hedge funds",
+        "Decision structure: CIO-led"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "liquidity across your alts sleeve",
-      "body": "Oluwaseun,\n\nReal assets and hedge funds cover a lot of ground, but both usually mean lock-ups your clients have to plan around. At $19M average account size, that liquidity constraint probably matters more to how you build portfolios than it would for smaller accounts.\n\nWe run evergreen liquid alternatives, same risk-managed exposure, no multi-year lock-up. Curious how you think about the liquidity budget across your alts allocation right now.\n\nWorth 20 minutes?\n\nKarthik",
-      "angle": "Aldermoor's alts mix (real assets, hedge funds) is inherently illiquid, and their large average account size makes that liquidity gap a structural issue worth naming rather than explaining alternatives to a sophisticated CIO.",
+      "subject": "real assets, hedge funds, and liquidity",
+      "body": "Oluwaseun,\n\nReal assets and hedge funds cover a lot of ground, but both typically come with structural lock-ups. For a book averaging $19M per client, that can mean limited flexibility if a client needs liquidity on their own timeline.\n\nEqui runs liquid alternatives as evergreen funds, no multi-year lock-up, with risk management built in. We also build the client-facing materials, so your team can explain the structure without doing that work internally.\n\nWorth a 20-minute call to see how it might sit alongside what you already hold?\n\nThe Equi team",
+      "angle": "Highlights the structural liquidity gap between Aldermoor's existing illiquid alt sleeves and their high-net-worth client base, framed as a peer observation rather than a pitch.",
       "facts_used": [
         "Current alternatives: real assets, hedge funds",
         "Average client size: $19.0M",
-        "Evergreen structure with no multi-year lock-up"
+        "CIO-led decision structure"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   },
   "Bramblewick Capital Advisers": {
     "A": {
-      "subject": "a piece for your clients on evergreen alternatives",
-      "body": "Solveig,\n\nFirms serving $10M+ clients often move toward a family-office model, and the alternatives conversation shifts with it. Clients used to hedge funds and private credit lock-ups start asking about evergreen structures and how liquidity is managed.\n\nWe already drafted a client-facing piece under Bramblewick's name that answers that question directly, covering evergreen liquidity and risk management, ready for your team to use.\n\nWorth a look? Happy to send it over.\n\nKarthik",
-      "angle": "Leads with the fact that the client-facing explainer is already built under Bramblewick's own name, tying it to the firm's visible drift toward a family-office client base, so the CIO sees finished work rather than a pitch.",
+      "subject": "a client-facing piece, already drafted",
+      "body": "Solveig,\n\nWe put together a client-facing explainer on evergreen alternatives, written to sit under an advisor's own brand rather than ours. It's already drafted. Given Bramblewick's book, it seemed worth sending over rather than describing.\n\nYour current mix of private credit and hedge funds already carries the liquidity and risk conversations your clients expect. This piece frames evergreen structures next to that, without asking anyone to rethink what they hold.\n\nWant me to send it over for a look.\n\nThe Equi team",
+      "angle": "For a sophisticated CIO already fluent in alternatives, offering finished, brandable client material removes friction and signals partnership rather than a pitch for new allocation.",
       "facts_used": [
-        "Firm name: Bramblewick Capital Advisers",
-        "Serves $10M+ clients as an RIA moving toward a family-office model",
-        "Current alternatives: private credit, hedge funds"
+        "Firm: Bramblewick Capital Advisers (RIA), Atlanta, GA",
+        "CIO-led decision structure",
+        "Current alternatives: private credit, hedge funds",
+        "White-label client-facing materials built by Equi"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "liquidity next to private credit, hedge funds",
-      "body": "Solveig,\n\nFirms serving $10M+ clients often start operating more like a family office over time. That shift usually raises the bar on liquidity terms, even when the underlying alternatives exposure stays similar.\n\nYou're already running private credit and hedge fund allocations. Curious how you think about the liquidity profile across that sleeve as client expectations evolve.\n\nWorth a short call if useful.\n\nKarthik",
-      "angle": "Bramblewick's $10M+ client base signals a drift toward family-office expectations, which raises the liquidity question next to their existing private credit and hedge fund books.",
+      "subject": "liquidity structure alongside private credit",
+      "body": "Solveig,\n\nBramblewick's client base, averaging around $11M, sits in the range where firms often start operating more like a family office than a traditional RIA. That shift usually changes how much illiquidity a book can carry, even when private credit and hedge funds are performing as intended.\n\nEqui runs evergreen liquid alternatives with structured downside management, built to sit next to existing illiquid sleeves rather than replace them. We also build the client-facing materials, so the structure is easy to explain to a sophisticated client base.\n\nWorth a short call to see if the liquidity profile fits where your book is headed?\n\nThe Equi team",
+      "angle": "Uses the $11M average client size and RIA structure to surface a real liquidity/structure question rather than telling them what to allocate.",
       "facts_used": [
-        "serves $10M+ clients as an RIA, a profile often moving toward a family-office model",
-        "current alternatives: private credit, hedge funds"
+        "Average client size: $11.0M",
+        "Current alternatives: private credit, hedge funds",
+        "Serves $10M+ clients as an RIA, a profile often moving toward a family-office model",
+        "CIO-led decision structure"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   },
   "Haverlock Advisory Group": {
     "A": {
-      "subject": "draft client piece on evergreen alternatives",
-      "body": "Hi Aoife,\n\nHaverlock's committee process usually means the hardest part isn't the idea, it's explaining it to clients afterward. We already drafted a client-facing piece on evergreen alternatives, written so it could carry Haverlock's own branding, that walks through how they differ from lock-up structures like the private credit funds you use today.\n\nHappy to send it over for your team to review, along with the DDQ answers and risk and liquidity terms your committee usually asks for.\n\nWorth a look?\n\nKarthik",
-      "angle": "As a committee-driven firm, Haverlock's research lead needs ready-made materials to carry an idea through internal review, so leading with a finished client-facing piece removes friction rather than adding a pitch to defend.",
+      "subject": "a draft client piece on evergreen alternatives",
+      "body": "Hi Aoife,\n\nSince committees at firms like yours have to defend any new manager internally, we drafted a client-facing explainer on evergreen alternatives, built to carry Haverlock's own branding. It walks through structure and liquidity terms in plain language, the kind of piece that helps a research team pre-empt committee questions before they're asked.\n\nGiven Haverlock's work in private credit, this sits in adjacent territory your committee may already be comfortable evaluating. Want me to send the draft over so you can see if it's useful for your process?\n\nBest,\nThe Equi team",
+      "angle": "Positions Equi as doing the due-diligence lead's internal-advocacy work for her, handing over a ready client-facing asset rather than pitching a product.",
       "facts_used": [
-        "Committee-led decision structure",
-        "Current alternatives: private credit"
+        "Director of Research role",
+        "committee-led decision structure",
+        "current alternatives: private credit",
+        "firm name Haverlock Advisory Group"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "the gap next to your private credit",
-      "body": "Aoife,\n\nMost committee-led shops we see holding private credit have little sitting next to it that's liquid. That gap can be hard to explain to clients who want alternatives exposure without a multi-year lock-up.\n\nFor a firm like Haverlock, with an average client size near $9M, that liquidity question tends to surface in due diligence as much as in performance discussions.\n\nCurious how your committee currently frames that trade-off. Happy to send over the DDQ answers and draft IC memo language we've built for other research leads, if that would help.\n\nKarthik",
-      "angle": "Haverlock's private credit allocation paired with committee-led due diligence suggests a liquidity gap the research lead has likely had to defend before, making it a natural, non-presumptuous opening question.",
+      "subject": "private credit and liquidity terms",
+      "body": "Aoife,\n\nHaverlock's current alternatives allocation sits in private credit, which usually means multi-year lock-ups for clients averaging $8.9M in assets. For a committee that has to defend each pick internally, that liquidity profile is one more thing to explain and justify.\n\nEqui builds evergreen liquid alternatives, with no multi-year lock-up, and we prepare the DDQ answers and risk and liquidity terms your committee would need to evaluate it properly.\n\nWorth a look to see if it fits alongside what you already hold?\n\nThe Equi team",
+      "angle": "Uses the concrete gap between their current private-credit-only alts book and their committee-driven due diligence process to offer materials that make Aoife's internal case easier, without prescribing an allocation.",
       "facts_used": [
+        "Firm: Haverlock Advisory Group (RIA), Boston, MA",
         "Current alternatives: private credit",
-        "Decision structure: committee-led",
-        "Average client size: $8.9M"
+        "Average client size: $8.9M",
+        "Decision structure: Committee-led",
+        "Recipient: Aoife N\u00ed Bhraon\u00e1in, Director of Research"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Solstice Grove Advisors": {
     "A": {
-      "subject": "a client-facing piece, already drafted",
-      "body": "Hi Xiaoming,\n\nSolstice Grove's client base ($12M average, often $10M+) looks like the family-office profile we build for. We already drafted a client-facing explainer on evergreen alternatives, written under your firm's own name, for exactly that kind of client conversation.\n\nGiven your committee process, we can also send the DDQ responses, a draft IC memo, and the risk and liquidity terms alongside it, so the review has everything upfront.\n\nWorth sending over the draft?\n\nKarthik",
-      "angle": "Since Xiaoming has to sell this internally to a committee, leading with a finished, firm-branded client piece plus DDQ/IC materials removes her workload instead of asking her to do more diligence.",
+      "subject": "a draft explainer for your committee",
+      "body": "Xiaoming,\n\nWe put together a client-facing piece on evergreen alternatives, written to sit under a firm's own brand, explaining structure and liquidity terms in plain language. Given Solstice Grove's manager selection process runs through committee, this kind of document is usually where the internal debate starts, not where it ends.\n\nWe can send it over as is, or adapt it to reference your existing hedge fund and private credit allocations for context. Alongside it we can include DDQ answers and risk and liquidity terms your committee would need for review.\n\nWorth a look?\n\nThe Equi team",
+      "angle": "Framing the deliverable as already-built work product for a committee-run research function turns the pitch into a low-risk internal enabler rather than a sales ask.",
       "facts_used": [
-        "Average client size: $12.0M",
-        "Serves $10M+ clients as an RIA, a profile often moving toward a family-office model",
-        "Committee-led decision structure"
+        "Decision structure: Committee-led",
+        "Current alternatives: hedge funds, private credit",
+        "Recipient role: Head of Manager Selection"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "liquidity terms for your $10M+ clients",
-      "body": "Hi Xiaoming,\n\nFirms serving $10M+ clients as an RIA often start looking more like family offices, with allocations that need to move beyond hedge funds and private credit alone. That shift usually raises a specific question for the committee: how much of the book can be explained and defended without a multi-year lock-up.\n\nEqui builds evergreen liquid alternatives with downside protection, and we put together the DDQ answers, risk terms, and draft IC materials your committee would need to evaluate them.\n\nCurious how your committee weighs liquidity terms today. Worth a short call?\n\nKarthik",
-      "angle": "Solstice Grove's $10M+ client base and RIA structure signal a family-office-style shift, which puts pressure on their committee to justify liquidity terms alongside existing hedge fund and private credit exposure.",
+      "subject": "the diligence work behind hedge funds and private credit",
+      "body": "Xiaoming,\n\nServing clients at $12M average, many of Solstice Grove's relationships likely sit close to the profile that pushes RIAs toward a family-office style of service. That shift usually means more scrutiny per position, not less.\n\nWith hedge funds and private credit already on the shelf, I'd guess your committee spends real time on liquidity terms and manager-level risk before anything reaches IC.\n\nWe build out DDQ responses, draft IC memos, and risk/liquidity summaries for research leads doing this kind of work. Worth a short call to see if any of that would save your team time on the next review cycle?\n\nThe Equi team",
+      "angle": "Uses the $12M client size and committee-led structure to name a plausible internal pressure (family-office-level diligence) and offers to lighten the research lead's actual workload rather than pitching a product.",
       "facts_used": [
-        "serves $10M+ clients as an RIA, a profile often moving toward a family-office model",
-        "average client size $12.0M",
-        "current alternatives: hedge funds, private credit",
-        "committee-led decision structure"
+        "RIA serving $10M+ clients, a profile often moving toward family-office model",
+        "Average client size $12.0M",
+        "Current alternatives: hedge funds, private credit",
+        "Committee-led decision structure"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   },
   "Thornbury Wealth Advisors": {
     "A": {
-      "subject": "draft explainer for your committee",
-      "body": "Hi Lakshmi,\n\nWe put together a client-facing piece on evergreen alternatives, written under Thornbury's name, for advisors moving past private equity's lock-up structure. It's ready to send as is.\n\nGiven your committee process, thought it might help to have something concrete to review alongside DDQ answers and liquidity terms, rather than starting from a blank page.\n\nHappy to send the draft over. Worth a look?\n\nKarthik",
-      "angle": "As a research gatekeeper who has to sell the idea internally, she benefits most from a ready-made client explainer and diligence materials rather than a pitch aimed at her personally.",
+      "subject": "a client-facing piece on evergreen alts, drafted",
+      "body": "Lakshmi,\n\nMost of the work in evaluating a new manager is explaining it to your own committee, then to clients. We put together a client-facing piece on evergreen alternatives, written so a firm like Thornbury could hand it directly to clients without editing.\n\nGiven your work in private equity, I thought this might save you some drafting time if evergreen structures ever come up in review. Happy to send it over, no strings attached.\n\nWorth a quick look?\n\nThe Equi team",
+      "angle": "As a gatekeeper who has to defend picks internally, the fastest way in is to hand her already-finished client communication work, not a pitch.",
       "facts_used": [
-        "Thornbury Wealth Advisors name",
-        "current alternatives allocation is private equity",
-        "committee-led decision structure",
-        "recipient is Director of Manager Research"
+        "Director of Manager Research",
+        "Committee-led decision structure",
+        "Current alternatives: private equity",
+        "gatekeeper contact"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "a liquidity gap next to your PE book",
-      "body": "Hi Lakshmi,\n\nThornbury's alternatives allocation is built around private equity, and average account size sits above $5M. That combination usually means clients want a liquid complement to the illiquid sleeve, something a committee can approve without a multi-year lock-up.\n\nWe build the diligence package upfront for research teams: DDQ answers, a draft IC memo, and clear risk and liquidity terms. It's meant to save your team time, not add a pitch to review.\n\nDoes a liquid alternatives sleeve come up in your committee's current search?\n\nKarthik",
-      "angle": "Thornbury's all-PE alternatives book paired with a committee structure and high average account size suggests an unaddressed need for a liquid sleeve, which is the natural entry point for a research-focused gatekeeper.",
+      "subject": "a question on your alts committee process",
+      "body": "Hi Lakshmi,\n\nThornbury's alternatives allocation currently runs through private equity, which for a committee-led process usually means long lock-ups and limited flexibility when clients need liquidity.\n\nWe work with research leads like you on the diligence side directly. We can put together DDQ answers, a draft IC memo, and the risk and liquidity terms upfront, so your committee has what it needs without extra back and forth.\n\nWould it help to see how we structure that documentation before your next committee cycle?\n\nThe Equi team",
+      "angle": "Positions the PE-only alts gap as a committee logistics problem and offers to reduce Lakshmi's internal workload rather than pitching product.",
       "facts_used": [
         "Current alternatives: private equity",
-        "Average client size: $5.4M",
-        "Decision structure: Committee-led"
+        "Decision structure: Committee-led",
+        "Recipient is Director of Manager Research (gatekeeper, not buyer)"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   },
   "Ridgeline Family Office": {
     "A": {
-      "subject": "a client-ready piece, already drafted",
-      "body": "Devendra,\n\nYour clients already sit in hedge funds, private credit, and venture. We drafted a short piece, under Ridgeline's name, that explains evergreen alternatives the way you'd want your clients to hear it.\n\nNo lock-up structure, built for how family offices actually allocate. The draft is done. Happy to send it over for you to look at, no changes needed on your end unless you want them.\n\nWorth a quick look?\n\nKarthik",
-      "angle": "As founder and sole decision-maker, Devendra doesn't need research, he needs a finished client explanation he can use immediately, so leading with the completed piece under his own firm's name removes friction entirely.",
+      "subject": "a client note already drafted for Ridgeline",
+      "body": "Devendra,\n\nWe put together a client-facing explainer on evergreen alternatives, written under your firm's name, for how Ridgeline might frame this for clients already in hedge funds, private credit, and venture.\n\nIt's done. No research needed on your end, just a look to see if it fits how you talk to clients.\n\nWant me to send it over?\n\nThe Equi team",
+      "angle": "As a principal-led CIO who can decide alone, the fastest path in is showing finished work, not asking for a meeting to explain a concept.",
       "facts_used": [
-        "Firm: Ridgeline Family Office",
-        "Current alternatives: hedge funds, private credit, venture"
+        "Founder & CIO, principal-led decision structure",
+        "current alternatives: hedge funds, private credit, venture"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "the liquidity gap in your alts book",
-      "body": "Devendra,\n\nRidgeline's alternatives mix leans hard into hedge funds, private credit, and venture, all multi-year lock-ups. For clients averaging $14M, that can mean a lot of capital tied up with no flexibility if circumstances change.\n\nWe build evergreen liquid alternatives with managed downside, plus the client-facing materials to explain them under your own brand. No new manager search, just a finished story for the liquid sleeve.\n\nIs liquidity something your clients have raised with you, or has it not come up yet?\n\nKarthik",
-      "angle": "Ridgeline's alternatives are entirely illiquid, so naming that gap against their client profile is a plain, observable insight rather than a pitch.",
+      "subject": "hedge funds, private credit, venture, and liquidity",
+      "body": "Devendra,\n\nRidgeline's alternatives mix, hedge funds, private credit, venture, leans illiquid. That's a reasonable posture for a $11.5B book, but it can leave a gap when clients around $14M want a liquid alternatives sleeve without waiting years to move.\n\nWe build evergreen liquid alternatives, either under Equi's name or Ridgeline's own brand, and we prepare the client-facing materials so you can explain the allocation yourself.\n\nDoes a liquid sleeve fit anywhere in how you're thinking about client portfolios right now?\n\nThe Equi team",
+      "angle": "Names the specific gap between Ridgeline's illiquid-heavy alt stack and its mid-sized client base, then asks rather than prescribes.",
       "facts_used": [
-        "Current alternatives: hedge funds, private credit, venture",
+        "Firm: Ridgeline Family Office (MFO), Denver, CO",
+        "AUM: $11.5B",
         "Average client size: $14.0M",
-        "Principal-led decision structure"
+        "Current alternatives: hedge funds, private credit, venture",
+        "Decision structure: Principal-led"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Larkhaven Multi-Family Office": {
     "A": {
-      "subject": "a client piece on evergreen alternatives",
-      "body": "Hi Yekaterina,\n\nWe put together a client-facing explainer on evergreen alternatives, built to sit alongside a book that already includes hedge funds, PE, and venture. It walks through structure, liquidity, and risk management in plain terms, and can carry Larkhaven's own name if useful.\n\nGiven Larkhaven's scale, I'd guess your clients already ask sharp questions about liquidity terms. Worth seeing if this fits how you talk to them.\n\nHappy to send it over, no need for a call unless useful.\n\nKarthik",
-      "angle": "A CIO at a $5.4B MFO running hedge funds, PE, and venture doesn't need alternatives explained, so the offer leads with a finished client deliverable rather than an education pitch.",
+      "subject": "a draft explainer under your name",
+      "body": "Yekaterina,\n\nWe put together a client-facing piece on evergreen alternatives, written for Larkhaven, ready to go out under your name. It covers liquidity structure and risk management in plain terms, positioned next to hedge funds, PE, and venture rather than instead of them.\n\nGiven Larkhaven's book, I thought it might save your team some drafting time. Happy to send it over for a look, no obligation either way.\n\nWorth a quick reply if useful.\n\nThe Equi team",
+      "angle": "A CIO at a $5.4B MFO doesn't need alternatives explained, but a ready-made, on-brand client piece saves real work and shows Equi's white-label capability without pitching the fund itself.",
       "facts_used": [
-        "Larkhaven Multi-Family Office",
-        "current alternatives: hedge funds, PE, venture",
-        "$5.4B AUM (referenced as scale)"
+        "Firm name: Larkhaven Multi-Family Office",
+        "AUM: $5.4B",
+        "Current alternatives: hedge funds, PE, venture",
+        "CIO-led decision structure"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "a liquid sleeve next to PE and venture",
-      "body": "Yekaterina,\n\nLarkhaven's alternatives book leans heavily into hedge funds, PE, and venture, all multi-year lock-up structures. For $27M average relationships, that's often the right fit, but it also means there's no liquid sleeve sitting alongside it.\n\nEqui runs evergreen alternatives with active risk management and no lock-up, built to sit next to existing PE and venture exposure rather than compete with it. We also build the client-facing materials so your team can explain the structure clearly.\n\nIs a liquid sleeve something you're weighing right now, or is the illiquidity intentional at this point in the cycle?\n\nKarthik",
-      "angle": "Larkhaven's alt book is entirely lock-up structures, so naming that gap and asking if it's deliberate respects the CIO's sophistication while opening the door.",
+      "subject": "evergreen structure alongside your PE and venture book",
+      "body": "Yekaterina,\n\nWith $5.4B across hedge funds, PE, and venture, Larkhaven's book is likely carrying real illiquidity load, which matters given a $27M average client if the time horizon isn't uniform across all of them.\n\nEqui builds evergreen liquid alternatives with no multi-year lock-up, designed to sit next to existing PE and venture positions rather than compete with them. We also build the client-facing materials, so your team can explain the structure directly.\n\nDoes a liquid sleeve next to your current alts book solve a real problem for your clients, or is that not a gap you're seeing right now?\n\nThe Equi team",
+      "angle": "Uses the firm's actual alt mix and average client size to raise a structural liquidity question a sophisticated CIO would recognize, without prescribing an allocation.",
       "facts_used": [
+        "AUM $5.4B",
+        "Average client size $27.0M",
         "Current alternatives: hedge funds, PE, venture",
-        "Average client size: $27.0M",
-        "Evergreen funds (no multi-year lock-up)",
-        "Equi builds the advisor's client-facing materials"
+        "CIO-led decision structure",
+        "Recipient name and title"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Tanglewood Reach Advisors": {
     "A": {
-      "subject": "a client-facing piece, under your name",
-      "body": "Hi Bronwyn,\n\nWe put together a short explainer on evergreen alternatives, written as if it came from Tanglewood Reach, for your clients. It walks through liquidity terms and risk controls in plain language, the kind of thing your committee could hand out without edits.\n\nGiven your real estate allocation, I thought it might be useful background as your committee looks at how liquid alternatives sit alongside it.\n\nHappy to send it over, along with our DDQ and a draft IC memo if that helps your process.\n\nKarthik",
-      "angle": "As a research director who must defend picks to a committee, she benefits most from ready-made client materials and diligence documents rather than a sales pitch.",
+      "subject": "a client-facing piece, already drafted",
+      "body": "Bronwyn,\n\nWe put together a client-facing explainer on evergreen alternatives, written to sit under an advisor's own brand, for firms weighing this next to existing real estate allocations. Given Tanglewood's committee process, we thought it might save your team a step in the diligence write-up.\n\nHappy to send it over along with the standard DDQ answers and liquidity terms, so your committee has the full picture in one place.\n\nWorth a quick look?\n\nThe Equi team",
+      "angle": "Framing the deliverable as already built removes effort from a research lead who has to justify the pick internally, not sell it.",
       "facts_used": [
-        "Firm name: Tanglewood Reach Advisors",
-        "Committee-led decision structure",
-        "Current alternatives allocation in real estate",
-        "Recipient title: Director of Research"
+        "Director of Research role",
+        "committee-led decision structure",
+        "current alternatives allocation in real estate"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "your real estate sleeve and liquidity",
-      "body": "Hi Bronwyn,\n\nTanglewood's alternatives exposure runs through real estate, which ties up capital for years. For a committee that has to defend every position, that can be a hard gap to explain when clients ask about liquidity.\n\nEqui builds evergreen liquid alternative funds, with the DDQ, risk terms, and a draft IC memo ready so your committee can evaluate it on your own timeline.\n\nCurious how your committee weighs illiquidity risk against client demand for access. Worth a short call?\n\nKarthik",
-      "angle": "Points out that an all-real-estate alternatives book is illiquid, which is a specific defensibility problem for a research lead who has to answer to a committee.",
+      "subject": "real estate as your only alt sleeve",
+      "body": "Bronwyn,\n\nOne thing stood out: Tanglewood's alternatives exposure is concentrated in real estate. For a committee that has to defend each pick, that's a single liquidity profile to explain and monitor, with no evergreen liquid sleeve to complement it.\n\nEqui builds institutional-grade liquid alternatives with no multi-year lock-up, either under our brand or yours. We also build the DDQ answers and IC-ready materials so your committee can evaluate it on its own terms.\n\nWorth a short call to see if a liquid sleeve fits alongside your real estate book?\n\nThe Equi team",
+      "angle": "Names the concrete gap (real estate-only alts) visible in the facts and reframes it as a committee-defensibility problem, then offers to do the diligence work rather than pitch a product.",
       "facts_used": [
-        "current alternatives: real estate",
-        "committee-led decision structure"
+        "Current alternatives: real estate",
+        "Decision structure: Committee-led",
+        "Director of Research role"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Kirkaldy & Sons Wealth": {
     "A": {
-      "subject": "draft ready under your firm's name",
-      "body": "Angus,\n\nWe already wrote a client-facing piece explaining evergreen alternatives, drafted under the Kirkaldy & Sons name rather than ours. It's built for a firm like yours, where clients are used to real estate and might be ready to hear about a different kind of alternative.\n\nHappy to send it over so you can see exactly how it reads before we talk about anything else.\n\nWorth a quick look?\n\nKarthik",
-      "angle": "As founder, Angus can act on this alone, so the email skips process and leads straight with a finished asset he can evaluate in minutes.",
+      "subject": "a client piece already drafted for Kirkaldy & Sons",
+      "body": "Angus,\n\nWe put together a client-facing explainer on evergreen alternatives, written under your firm's name, ready to send to Kirkaldy & Sons clients as is.\n\nGiven your book leans on real estate for alternatives exposure, this frames liquid alternatives with managed downside in the same plain language your clients are used to from you. No lock-up structure to explain either, which usually simplifies the conversation.\n\nWant me to send the draft over so you can see how it reads under your brand?\n\nThe Equi team",
+      "angle": "As founder, Angus can act on this alone, and leading with a finished client deliverable removes the biggest friction point for a principal-led firm already using real estate as its alternatives sleeve.",
       "facts_used": [
-        "Firm name: Kirkaldy & Sons Wealth",
-        "Recipient: Angus Kirkaldy III, Founder",
-        "Current alternatives: real estate",
-        "Principal-led decision structure"
+        "Firm: Kirkaldy & Sons Wealth (RIA), Pittsburgh, PA",
+        "Principal-led decision structure",
+        "Current alternatives: real estate"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "the gap in your alts lineup",
-      "body": "Angus,\n\nKirkaldy & Sons runs real estate as its alternatives sleeve. That works for patient capital, but it leaves a gap for clients who want alternatives exposure without a multi-year lock-up.\n\nWe build evergreen liquid alternatives funds, and we write the client-facing materials so you can explain them the same way you explain everything else to your clients.\n\nCurious how you think about that gap today. Worth a short call?\n\nKarthik",
-      "angle": "Names the firm's sole reliance on illiquid real estate as its alternatives exposure and asks how they think about the liquidity gap, since as founder Angus can act on it directly.",
+      "subject": "real estate as your only alt sleeve",
+      "body": "Angus,\n\nOne thing stood out: with $1.6B under management and real estate as your only alternatives exposure, your clients likely have significant illiquid concentration and nothing liquid to complement it.\n\nEqui builds evergreen liquid alternative funds, no multi-year lock-up, and we build the client-facing materials so you can explain the strategy in your own voice. For a firm your size, principal-led, that means you can move without a committee.\n\nDoes a liquid sleeve alongside real estate make sense for your client base right now?\n\nThe Equi team",
+      "angle": "Uses the single-asset-class alts gap plus principal-led structure to make the observation concrete and the ask decision-ready for a founder who can act alone.",
       "facts_used": [
-        "Firm name: Kirkaldy & Sons Wealth",
+        "AUM: $1.6B",
         "Current alternatives: real estate",
-        "Principal-led decision structure"
+        "Decision structure: Principal-led"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Vantage Pointe Wealth": {
     "A": {
-      "subject": "a client piece already drafted for Vantage Pointe",
-      "body": "Ravindra,\n\nWe put together a client-facing explainer on evergreen alternatives, written under Vantage Pointe's name, the way you'd want your clients to see it. It covers how an evergreen structure differs from locked-up structures, and where risk management sits in that comparison.\n\nGiven Vantage Pointe's current allocation to private credit, this might be a useful reference point as you think about how liquid alternatives sit next to it.\n\nHappy to send it over. Open to a 20-minute call if useful.\n\nKarthik",
-      "angle": "As a sophisticated CIO already in alternatives, the fastest way in is showing the client communication work is already done under his firm's name, not explaining the asset class to him.",
+      "subject": "a draft explainer, built for Vantage Pointe",
+      "body": "Ravindra,\n\nWe put together a client-facing piece explaining evergreen alternatives, drafted under the Vantage Pointe name rather than ours. It's meant to sit alongside how you already frame private credit for clients, not replace it.\n\nGiven your size and structure, the CIO usually ends up writing this kind of material solo. We did the first draft so you don't have to.\n\nWant me to send it over for you to look at.\n\nThe Equi team",
+      "angle": "A CIO managing $4.8B with a CIO-led decision process has no time to draft investor education, so handing over a finished, firm-branded piece removes the one real friction point without pitching product.",
       "facts_used": [
         "Firm name: Vantage Pointe Wealth",
-        "Current alternatives: private credit"
+        "CIO-led decision structure",
+        "Current alternatives: private credit",
+        "Recipient title: Chief Investment Officer"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "liquidity next to private credit",
-      "body": "Ravindra,\n\nWith $4.8B under management and average relationships near $7.9M, your clients likely feel the illiquidity of private credit more than most. Evergreen structures can sit next to that allocation without adding another multi-year lock-up.\n\nEqui builds liquid alternatives with structured risk management, plus the client-facing materials your team can present under your own brand. How are you currently framing liquidity for clients who already hold private credit?\n\nWorth a 20-minute call?\n\nKarthik",
-      "angle": "Targets a CIO already in illiquid alts by naming the specific liquidity gap their large clients likely feel, then asks rather than prescribes.",
+      "subject": "private credit and liquidity structure",
+      "body": "Ravindra,\n\nPrivate credit tends to lock up capital for years. For a book averaging $7.9M per client, that concentration of illiquid exposure can limit flexibility when clients need it.\n\nWe build evergreen liquid alternatives, structured with risk management as a starting point rather than an afterthought, designed to sit alongside existing private credit rather than compete with it.\n\nHow are you thinking about liquidity structure across the alts sleeve right now?\n\nThe Equi team",
+      "angle": "Uses the firm's private credit allocation and client size to point at a liquidity gap, then asks rather than prescribes.",
       "facts_used": [
-        "AUM: $4.8B",
-        "Average client size: $7.9M",
         "Current alternatives: private credit",
-        "evergreen funds (no multi-year lock-up)",
-        "Equi builds the advisor's client-facing materials"
+        "Average client size: $7.9M"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Fenwick Larkspur Capital": {
     "A": {
-      "subject": "a client piece under your name",
-      "body": "Nikolaos,\n\nWe put together a client-facing explainer on evergreen alternatives, drafted under the Fenwick Larkspur name rather than ours. It covers structure, liquidity, and how the risk management sits alongside hedge funds, private credit, and PE, without wading into the basics your clients already understand.\n\nGiven the size of your typical client relationship, this is often the exact document CIOs want on hand before a conversation about restructuring the alternatives sleeve.\n\nWant me to send it over?\n\nKarthik",
-      "angle": "At $16M average client size, Fenwick Larkspur sits at the family-office threshold, so a ready-made, firm-branded explainer on evergreen alternatives lands as immediately usable material rather than a pitch.",
+      "subject": "a draft client piece, under your name",
+      "body": "Nikolaos,\n\nWe put together a client-facing explainer on evergreen alternatives, structured for a firm like Fenwick Larkspur to send under its own name. It covers how an evergreen structure sits next to existing hedge fund, private credit, and PE exposure, without the multi-year lock-up conversation.\n\nGiven your client base, the liquidity and risk management angle tends to matter more than the pitch itself. Happy to send the draft over for you to look at, no changes needed on your end to see it.\n\nWorth a quick look?\n\nThe Equi team",
+      "angle": "CIOs at RIAs serving $10M+ clients care about how new structures fit their existing book, so leading with a ready-made client explainer (not a product pitch) removes friction and shows the work is already done.",
       "facts_used": [
-        "Firm name and RIA structure",
-        "Average client size $16.0M",
-        "Current alternatives: hedge funds, private credit, PE",
-        "Signal: serves $10M+ clients, often moving toward family-office model"
-      ],
-      "variant": "A"
-    },
-    "B": {
-      "subject": "structure question for your alts sleeve",
-      "body": "Nikolaos,\n\nFirms serving $10M+ clients often start looking more like family offices over time. That shift usually changes what clients expect from the alternatives sleeve: less tolerance for multi-year lock-ups, more need for liquidity paired with real risk management.\n\nEqui runs evergreen liquid alternatives that sit alongside PE, private credit, and hedge fund allocations, with the same institutional-grade risk management and downside focus. We also build the client-facing materials, so your team can explain the structure in your own words.\n\nWorth a 20-minute call to see how that fits next to what you already run?\n\nKarthik",
-      "angle": "Fenwick Larkspur's $10M+ client base is a classic signal of drift toward a family-office model, which raises the bar on liquidity expectations even within an alts allocation they already understand well.",
-      "facts_used": [
-        "RIA serving $10M+ average clients, a profile often moving toward a family-office model",
-        "Current alternatives: hedge funds, private credit, PE",
+        "RIA serving $10M+ clients",
+        "current alternatives include hedge funds, private credit, PE",
+        "evergreen structure with no multi-year lock-up",
         "CIO-led decision structure"
       ],
-      "variant": "B"
+      "variant": "A",
+      "flags": []
+    },
+    "B": {
+      "subject": "the liquidity question in your alts sleeve",
+      "body": "Nikolaos,\n\nFirms serving primarily $10M+ clients often end up moving toward a family-office model over time, with more direct oversight of structure, not just manager selection.\n\nAgainst that backdrop, hedge funds, private credit, and PE all carry multi-year lock-ups by design. Worth asking whether your allocators have a liquid sleeve that behaves like your alts but doesn't tie up capital the same way.\n\nWe run evergreen alternatives, managed risk, no lock-up, built to sit next to what you already hold. Open to a 20-minute call to compare notes on structure?\n\nThe Equi team",
+      "angle": "Uses the RIA-to-family-office transition signal as the hook, then ties it directly to a structural liquidity question a CIO would naturally weigh.",
+      "facts_used": [
+        "RIA serving primarily $10M+ clients",
+        "signal of moving toward family-office model",
+        "current alternatives: hedge funds, private credit, PE",
+        "CIO-led decision structure"
+      ],
+      "variant": "B",
+      "flags": []
     }
   },
   "Sunridge Collective": {
     "A": {
-      "subject": "a client-facing piece, drafted for Sunridge",
-      "body": "Nayeli,\n\nWe put together a short piece explaining evergreen alternatives, written for Sunridge Collective's clients rather than ours. It sits alongside hedge fund exposure without asking you to unwind anything, and covers how liquidity and risk management work without lock-ups.\n\nHappy to send it over so you can see how it reads under your own name. Worth a look?\n\nKarthik",
-      "angle": "As a sophisticated CIO already running hedge fund allocations, the fastest way in is showing the client communication work is already done under her own firm's name, not pitching the strategy itself.",
+      "subject": "a client-facing piece, already drafted",
+      "body": "Nayeli,\n\nWe put together a client-facing explainer on evergreen alternatives, written as if it came from Sunridge Collective. It covers structure, liquidity, and risk management in plain terms, the kind of thing a CIO could hand to clients without editing.\n\nGiven Sunridge's current hedge fund allocations, I'd guess the evergreen structure and downside approach are worth comparing against what you already hold. Happy to send the draft over so you can see it directly.\n\nWorth a quick reply if you want it.\n\nThe Equi team",
+      "angle": "A CIO managing $3B and already using hedge funds doesn't need alternatives explained, so leading with a finished, usable client asset signals partnership rather than pitch.",
       "facts_used": [
-        "Firm name: Sunridge Collective",
-        "Current alternatives: hedge funds",
-        "Recipient title: Chief Investment Officer",
-        "Evergreen structure (no lock-up)"
+        "Firm: Sunridge Collective (RIA)",
+        "CIO title",
+        "Current alternatives: hedge funds"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "liquidity fit for your hedge fund sleeve",
-      "body": "Nayeli,\n\nMost hedge fund structures still carry lock-ups or gates, which can be a hard conversation with clients averaging $6.8M who expect access to their capital.\n\nWe built Equi to sit next to that allocation, not replace it: liquid alternatives with the same risk management discipline, structured as evergreen funds. No multi-year lock-up.\n\nIs liquidity something your clients have pushed back on, or has the hedge fund sleeve held up fine on that front?\n\nKarthik",
-      "angle": "Sunridge's hedge fund allocation paired with a $6.8M average client size raises a natural liquidity question worth surfacing to a CIO.",
+      "subject": "evergreen structure next to your hedge fund book",
+      "body": "Nayeli,\n\nSunridge's alternatives allocation runs through hedge funds, which usually means lock-ups and gated liquidity for clients averaging $6.8M. That's a fine trade-off for some mandates, but it can leave a gap if a client needs to move faster than the fund allows.\n\nEqui runs liquid alternatives with the same risk-managed, downside-aware approach, structured as evergreen funds with no multi-year lock-up. We also build the client-facing materials, so you're not stuck explaining a new structure from scratch.\n\nDoes liquidity ever come up as a constraint with your hedge fund allocations? Happy to compare notes on a short call.\n\nThe Equi team",
+      "angle": "Names the specific structural tension between their hedge-fund-only alt sleeve and their client base's likely liquidity needs, then asks rather than prescribes.",
       "facts_used": [
         "Current alternatives: hedge funds",
         "Average client size: $6.8M",
-        "evergreen funds (no multi-year lock-up)",
-        "managed risk and downside protection"
+        "CIO-led decision structure"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   },
   "Windermere Trust Advisors": {
     "A": {
-      "subject": "a client piece under your name",
-      "body": "Fatoumata,\n\nWe put together a short client-facing explainer on evergreen alternatives, drafted under the Windermere brand, not ours. It walks through how liquidity and risk management work without the lock-up structure your hedge fund allocations carry.\n\nSince your book already runs alternatives, thought this might save you some drafting time next time a client asks how the structure differs.\n\nHappy to send it over. No need for a call unless useful.\n\nKarthik",
-      "angle": "A sophisticated CIO already running hedge funds doesn't need alternatives explained, just a ready-made way to explain the structural difference to her own clients.",
+      "subject": "a client piece on evergreen alternatives, drafted",
+      "body": "Fatoumata,\n\nWe put together a client-facing explainer on evergreen alternatives, structured for a firm running hedge fund allocations already and looking at how liquid alts sit alongside them. It's written to go out under Windermere's name, not ours.\n\nGiven your CIO-led process, thought it might save you the drafting work. Happy to send it over for your review.\n\nWorth a quick reply if useful.\n\nThe Equi team",
+      "angle": "CIOs at MFOs care about control over client narrative, so leading with a ready-made, firm-branded explainer respects their sophistication while removing execution effort.",
       "facts_used": [
-        "Firm: Windermere Trust Advisors (MFO)",
-        "Recipient: Chief Investment Officer",
-        "Current alternatives: hedge funds"
+        "Firm is an MFO (Windermere Trust Advisors)",
+        "Recipient is CIO, CIO-led decision structure",
+        "Current alternatives allocation is hedge funds",
+        "White-label capability (materials built under advisor's own brand)"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "liquidity next to your hedge fund book",
-      "body": "Fatoumata,\n\nMost hedge fund allocations carry lock-ups that limit how quickly a CIO can rebalance when client needs shift. That structure works for return profile, but it can leave a gap on the liquidity side of the book.\n\nEqui runs evergreen liquid alternatives with active risk management, built to sit next to existing hedge fund exposure rather than replace it. We also build the client-facing materials so your team can explain the structure directly.\n\nDoes liquidity around your alts sleeve come up with clients often enough to warrant a short call?\n\nKarthik",
-      "angle": "Positions Equi as a liquidity complement to their existing hedge fund allocations, speaking peer-to-peer to a sophisticated CIO without explaining basics.",
+      "subject": "the liquidity question in hedge fund sleeves",
+      "body": "Fatoumata,\n\nHedge fund allocations typically carry lock-ups that limit how quickly a portfolio can rebalance around them. For a multi-family office, that constraint often shows up most when clients need flexibility, not just returns.\n\nWe run liquid alternatives as evergreen structures, with risk management built in and no multi-year lock-up. We also build the client-facing materials, so the structure is easy for your team to explain internally.\n\nHow does your current alternatives sleeve handle liquidity needs across your client base? Open to a short call if useful.\n\nThe Equi team",
+      "angle": "Names the specific structural tension (hedge fund lock-ups vs. MFO client flexibility needs) implied by their current alternatives holding, then asks rather than prescribes.",
       "facts_used": [
+        "Firm type: MFO",
         "Current alternatives: hedge funds",
-        "Decision structure: CIO-led",
-        "Firm type: MFO"
+        "CIO-led decision structure"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   },
   "Ferrisdale Wealth Group": {
     "A": {
-      "subject": "a client-facing piece, already drafted",
-      "body": "Hi Abimbola,\n\nGiven Ferrisdale's work in private credit and real estate, we put together a client-facing explainer on evergreen alternatives, written under your firm's name, that walks clients through structure, liquidity, and risk controls without the multi-year lock-up language.\n\nIt's ready to send. If useful, I can also include DDQ answers and a draft IC memo so your committee has everything in one place.\n\nWorth a quick look?\n\nKarthik",
-      "angle": "As a research director who has to defend picks to a committee, she'll value a ready-made client explainer and IC-ready materials more than a sales pitch.",
+      "subject": "a client-facing draft, under your brand",
+      "body": "Abimbola,\n\nWe put together a short client-facing explainer on evergreen alternatives, written as if it came from Ferrisdale. It covers how these funds differ from private credit and real estate structures on liquidity and lock-up, in plain language your clients could actually read.\n\nSince research runs point on new due diligence at Ferrisdale, thought it might save you a step. Happy to send it over for a look, along with the DDQ and risk terms behind it.\n\nWorth a quick reply if useful.\n\nThe Equi team",
+      "angle": "Since Abimbola is a research champion inside a committee-led firm, offering a finished, brand-ready client explainer removes her biggest burden: building materials to defend the pick internally.",
       "facts_used": [
-        "Ferrisdale Wealth Group",
-        "private credit",
-        "real estate",
-        "committee-led decision structure"
+        "Firm name: Ferrisdale Wealth Group",
+        "Committee-led decision structure",
+        "Current alternatives: private credit, real estate",
+        "Recipient title: Managing Director of Research"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "a gap between private credit and liquidity",
-      "body": "Abimbola,\n\nFerrisdale's alternatives sleeve is built on private credit and real estate. Both are useful, but both lock capital up for years. For clients averaging $4.7M, that can mean a real gap if they need flexibility alongside those commitments.\n\nWe build liquid alternative strategies with managed risk and no multi-year lock-up, and we prepare the DDQ answers, risk and liquidity terms, and a draft IC memo so your committee has what it needs to evaluate the fit.\n\nDoes a liquid sleeve come up in your committee's discussions, or is illiquid alts the current focus by design?\n\nKarthik",
-      "angle": "Ferrisdale's alternatives are entirely illiquid (private credit, real estate), so naming that gap next to a liquidity-sensitive client base gives Abimbola a concrete research angle to raise internally.",
+      "subject": "a question on your alts sleeve",
+      "body": "Hi Abimbola,\n\nFerrisdale's alternatives allocation looks concentrated in private credit and real estate, both illiquid by design. For a committee that has to defend liquidity terms to $4.7M-average clients, that can be a hard conversation when someone needs to move.\n\nWe build liquid alternatives with managed downside, structured as evergreen funds, so there's no multi-year lock-up to explain. We also prepare the DDQ answers and a draft IC memo so your committee has what it needs to evaluate it properly.\n\nWorth a 20-minute call to see if it fits your process?\n\nThe Equi team",
+      "angle": "Names the specific gap between Ferrisdale's illiquid alts and their client liquidity needs, then offers to reduce the committee's diligence burden rather than pitch the product directly.",
       "facts_used": [
         "Current alternatives: private credit, real estate",
         "Average client size: $4.7M",
-        "Committee-led decision structure"
+        "Decision structure: Committee-led"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   },
   "Sparrowhawk Investment Advisors": {
     "A": {
-      "subject": "a client piece under Sparrowhawk's name",
-      "body": "Dmitri,\n\nWe drafted a client-facing piece on evergreen alternatives under Sparrowhawk's name, the kind of explainer advisors use when clients ask how these strategies work alongside private credit. It's already built, ready to send under your brand.\n\nSince Sparrowhawk runs a committee process, we can also share DDQ answers and a draft IC memo, so the diligence groundwork is already there if it's useful.\n\nWant me to send the piece over?\n\nKarthik",
-      "angle": "Dmitri has to defend picks to an IC, so leading with a finished, branded client explainer plus DDQ and memo support makes his job easier rather than asking him to sell anything internally.",
+      "subject": "a client-facing piece, drafted for your IC",
+      "body": "Dmitri,\n\nSince your committee reviews new strategies closely, we put together a client-facing explainer on evergreen alternatives, drafted under Sparrowhawk's own name. It is meant to sit alongside your private credit materials and give your IC something concrete to react to.\n\nWe can also send DDQ answers and a draft memo covering structure, risk, and liquidity terms, built for a committee process like yours.\n\nWorth sending over the draft this week?\n\nThe Equi team",
+      "angle": "For a committee-driven due diligence lead, showing up with finished, brandable materials reduces their internal workload and makes championing the idea easier.",
       "facts_used": [
-        "Firm name: Sparrowhawk Investment Advisors",
+        "Firm: Sparrowhawk Investment Advisors (RIA), Richmond, VA",
         "Current alternatives: private credit",
-        "Decision structure: Committee-led / IC-driven"
+        "Decision structure: Committee-led",
+        "CRM notes: IC-driven",
+        "Recipient: Dmitri Yevtushenko, Director of Due Diligence"
       ],
+      "flags": [],
       "variant": "A"
     },
     "B": {
-      "subject": "a gap in your alts sleeve",
-      "body": "Dmitri,\n\nSparrowhawk's alternatives sleeve runs through private credit, which ties up capital for years. That works until a client wants flexibility your committee can't offer inside that structure.\n\nEqui runs evergreen liquid alternatives with downside protection built in, no lock-up. We also build the DDQ answers and a draft IC memo, so your team can evaluate us without extra lift.\n\nHave you had to weigh liquidity gaps like this when private credit dominates the alts book?\n\nKarthik",
-      "angle": "Points out that an all-private-credit alternatives book leaves a liquidity gap the IC has to defend, then offers to make Dmitri's due-diligence job easier rather than pitching a sale.",
+      "subject": "the liquidity gap in private credit sleeves",
+      "body": "Dmitri,\n\nSparrowhawk's private credit allocation likely carries multi-year lock-ups, which can be a hard sell to a client base averaging $4.1M when liquidity needs shift.\n\nWe work with committee-driven RIAs to add a liquid alternatives sleeve alongside existing illiquid positions, evergreen structure, no long lock-up. For due diligence, we can provide DDQ answers, risk and liquidity terms, and a draft IC memo so your committee has what it needs to evaluate this on its own timeline.\n\nWorth a 20-minute call to see if the fit makes sense for your IC process?\n\nThe Equi team",
+      "angle": "Dmitri owns due diligence at a committee-led firm, so the hook names the liquidity mismatch in their current alts book and offers IC-ready materials rather than a pitch.",
       "facts_used": [
         "Current alternatives: private credit",
-        "Decision structure: Committee-led / IC-driven",
-        "Recipient role: Director of Due Diligence"
+        "Average client size: $4.1M",
+        "Decision structure: Committee-led",
+        "CRM notes: IC-driven"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   },
   "Eastmarch Trust Company": {
     "A": {
-      "subject": "a client piece on evergreen structure",
-      "body": "Hi Hyacinth,\n\nWe put together a short piece under Eastmarch's name on evergreen alternatives, how the structure handles liquidity and risk versus locked-up vehicles. Given what you already run in hedge funds, private credit, and infra, it's built to sit next to that, not replace it.\n\nHappy to send it over so you can see how it reads before deciding if it's useful for your clients.\n\nWorth a quick look?\n\nKarthik",
-      "angle": "For an alts-native CIO, skip education entirely and lead with a finished, firm-branded asset that lowers the cost of saying yes.",
+      "subject": "a draft client memo, under your brand",
+      "body": "Hyacinth,\n\nWe put together a client-facing piece on evergreen alternatives, written as if it came from Eastmarch. It covers structure and liquidity in plain terms, positioned next to hedge funds, private credit, and infra rather than instead of them.\n\nGiven your book runs larger allocations across sophisticated clients, we thought it might save your team some drafting time. Happy to send it over for a look.\n\nWorth a quick reply if you want it in your inbox this week.\n\nThe Equi team",
+      "angle": "CIO-led, alts-fluent shops respond to finished work, not education, so leading with a ready-made client memo under their own brand treats the meeting as already earned.",
       "facts_used": [
-        "Firm name: Eastmarch Trust Company",
+        "Firm: Eastmarch Trust Company (MFO)",
+        "CIO-led decision structure",
         "Current alternatives: hedge funds, private credit, infra",
-        "CIO-led decision structure"
+        "Average client size: $31.0M implies sophisticated client base"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "the liquidity gap next to private credit",
-      "body": "Hyacinth,\n\nHedge funds, private credit, and infra cover the illiquid end well. What's less clear is what sits next to them for clients who want alternatives exposure without another multi-year lockup.\n\nAt $31M average client size, that gap probably comes up in review meetings more than most books admit. Equi runs evergreen liquid alts with the same risk discipline, structured so you can explain the mechanics to clients directly.\n\nWorth a 20-minute call to see if it fits next to what you already run?\n\nKarthik",
-      "angle": "Names the specific structural gap (illiquid-only alts stack) implied by their current holdings and ties it directly to their client profile.",
+      "subject": "evergreen structure next to your alts sleeve",
+      "body": "Hyacinth,\n\nEastmarch's alts book already spans hedge funds, private credit, and infra. That's a sophisticated sleeve, but most of it likely carries multi-year lock-ups by design.\n\nWe build evergreen liquid alternatives, structured with risk management as the starting point, meant to sit alongside longer-lock structures rather than replace them. For a $31M average client, having a liquid sleeve to complement the illiquid one can change how you manage the overall book.\n\nDoes Eastmarch currently have an evergreen allocation, or is it all locked-up structures right now?\n\nThe Equi team",
+      "angle": "Speaks peer-to-peer to a sophisticated CIO by pointing out a structural gap (illiquid-only alts) rather than educating on what alternatives are.",
       "facts_used": [
         "Current alternatives: hedge funds, private credit, infra",
         "Average client size: $31.0M",
-        "Decision structure: CIO-led"
+        "Decision structure: CIO-led",
+        "CRM notes: alts-native"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Sable Ridge Investment Counsel": {
     "A": {
-      "subject": "client materials, already drafted for Sable Ridge",
-      "body": "Yusuf,\n\nFirms with real estate as their core alternative often need a clear way to introduce evergreen liquid alternatives to clients, one that reads as their own thinking, not a manager's pitch.\n\nWe already drafted that explainer under Sable Ridge's name. It walks through evergreen structures in plain language, ready to send as is.\n\nWant me to send it over?\n\nKarthik",
-      "angle": "Since Sable Ridge's only current alternative exposure is real estate, offering a ready-made, firm-branded explainer on evergreen liquid alternatives removes the main barrier (client communication) for a principal who can act on it immediately.",
+      "subject": "a client piece for Sable Ridge, already drafted",
+      "body": "Yusuf,\n\nWe put together a client-facing explainer on evergreen alternatives, styled under Sable Ridge's own brand. It's meant to help you introduce the category to clients without building the materials yourself.\n\nGiven your book leans on real estate for alternatives exposure, this covers how a liquid, evergreen structure fits alongside that. No lock-up, managed risk profile.\n\nWant me to send the draft over so you can look at it firsthand?\n\nThe Equi team",
+      "angle": "As a principal-led founder who can decide alone, the fastest path in is removing his workload entirely by showing the client education piece is already built under his brand.",
       "facts_used": [
         "Firm name: Sable Ridge Investment Counsel",
-        "Current alternatives: real estate",
-        "Principal-led decision structure"
+        "Recipient: Yusuf Abdirahman, Founder",
+        "Principal-led decision structure",
+        "Current alternatives allocation: real estate"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "a gap in your alts lineup",
-      "body": "Yusuf,\n\nSable Ridge's alternatives allocation looks concentrated in real estate. That's a solid anchor, but it leaves clients without a liquid sleeve they can move into if their needs change.\n\nWe build liquid alternatives with managed risk and downside protection, structured as evergreen funds with no multi-year lock-up. We also build the client-facing materials, so you can explain the strategy to your clients in your own words, under your own brand if you prefer.\n\nWorth a 20-minute call to see if this fills a gap for your clients?\n\nKarthik",
-      "angle": "Uses the specific observation that Sable Ridge's alternatives sit entirely in illiquid real estate to raise the question of a liquid complement, without telling them what to allocate.",
+      "subject": "your real estate sleeve and liquidity",
+      "body": "Yusuf,\n\nReal estate is a natural fit for a $2.8M average client, but it locks up capital for years at a time. That can be a constraint when a client needs flexibility, and there's no evergreen counterpart sitting next to it in the portfolio.\n\nEqui builds liquid alternative funds, evergreen with no multi-year lock-up, and we also build the client-facing materials that explain them. As principal, you could add this sleeve without pulling in a committee.\n\nDoes a liquid complement to your real estate allocation come up with clients often enough to be worth a short call?\n\nThe Equi team",
+      "angle": "Sable Ridge's only current alternative is illiquid real estate, so pointing out the missing liquid counterpart is a specific, verifiable gap tied directly to their book.",
       "facts_used": [
-        "Current alternatives: real estate"
+        "Current alternatives: real estate",
+        "Average client size: $2.8M",
+        "Decision structure: Principal-led"
       ],
+      "flags": [],
       "variant": "B"
     }
   },
   "Glenmara Wealth": {
     "A": {
-      "subject": "a client piece already drafted for Glenmara",
-      "body": "Bjorn,\n\nWe put together a client-facing explainer on evergreen alternatives, written under the Glenmara name. It covers how these funds work and why the structure differs from typical lock-up vehicles, in language built for your clients rather than ours.\n\nAs principal, you can review it without looping in a committee. Want me to send it over so you can see how it reads under your brand.\n\nKarthik",
-      "angle": "As principal-led firm, Bjorn can act alone, so showing finished, brand-ready materials removes friction and speeds a yes.",
+      "subject": "a client-facing piece, already drafted",
+      "body": "Bjorn,\n\nWe put together a client-facing explainer on evergreen alternatives, written so it could carry Glenmara's name rather than ours. It walks clients through the structure and the risk management approach in plain language, without the lock-up complexity that usually makes this conversation hard to have.\n\nSince you're leading Glenmara, you can look at it and decide in a few minutes whether it's worth using. Want me to send it over?\n\nThe Equi team",
+      "angle": "As principal, Bjorn can act on a ready-made asset immediately without committee review, so leading with the finished deliverable and a simple yes/no maximizes response likelihood.",
       "facts_used": [
-        "Glenmara Wealth (RIA)",
-        "Minneapolis, MN",
+        "Firm: Glenmara Wealth (RIA)",
         "Principal-led decision structure",
-        "Bjorn Haugland, President"
+        "Recipient is President"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "who explains alts to your clients",
-      "body": "Bjorn,\n\nAt a principal-led firm, you're often the one fielding client questions directly, without an investment committee to translate strategy into something clients understand.\n\nThat gets harder with liquid alternatives, where the structure itself needs explaining before the strategy does. Equi builds the client-facing materials alongside the fund, so the explanation is ready before the question comes up.\n\nIs that translation work something you're currently handling yourself?\n\nKarthik",
-      "angle": "Uses the principal-led structure as the sole verifiable fact to surface a real operational pressure point unique to founder-led RIAs.",
+      "subject": "a question for principal-led firms",
+      "body": "Bjorn,\n\nAt a principal-led firm, you're often the one explaining any new allocation to clients yourself, without a team of analysts backing you up.\n\nThat's the part we focus on. We build the client-facing materials for the alternatives we offer, so you're not starting from a blank page every time someone asks what it is and why it's in their portfolio.\n\nDoes that match how decisions get made and explained at Glenmara?\n\nThe Equi team",
+      "angle": "Since firm-specific data is unknown, the insight leans on the one confirmed structural fact (principal-led) and ties it directly to Equi's differentiator of ready-made client materials.",
       "facts_used": [
-        "Principal-led decision structure",
-        "President title (Bjorn Haugland)",
-        "RIA (Glenmara Wealth)"
+        "Firm is principal-led",
+        "Recipient is President, can decide without a committee"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   },
   "Locheil Partners": {
     "A": {
-      "subject": "a draft built for Locheil's clients",
-      "body": "Jean-Baptiste,\n\nWe put together a client-facing piece under Locheil's own name, walking through evergreen alternatives: how the structure removes lock-up risk and where it sits next to a hedge fund book. It's ready to send as is or adapt.\n\nGiven your alternatives are largely hedge funds today, I thought the liquidity and risk framing might be useful context as you think through structure, not allocation.\n\nWant me to send the draft over?\n\nKarthik",
-      "angle": "Leads with a finished, brand-ready asset rather than a pitch, respecting a CIO's fluency by focusing on structure and liquidity rather than explaining alternatives.",
-      "facts_used": [
-        "Firm name (Locheil Partners)",
-        "Current alternatives: hedge funds",
-        "CIO-led decision structure"
-      ],
-      "variant": "A"
-    },
-    "B": {
-      "subject": "liquidity next to your hedge fund book",
-      "body": "Jean-Baptiste,\n\nWith $2.2B across roughly $18M relationships, I'd guess your hedge fund sleeve carries the usual lock-ups and gates that come with that structure. For an MFO with large, sophisticated clients, that can mean a real gap when someone needs to move quickly without unwinding a core allocation.\n\nWe build evergreen liquid alternatives with the same risk discipline, designed to sit next to existing hedge fund exposure rather than replace it. Worth a short call to see if there's a fit alongside what you already run?\n\nKarthik",
-      "angle": "Names the structural tension between illiquid hedge fund holdings and the liquidity needs of large single-family-style clients, which is a CIO-level structural concern, not a performance pitch.",
+      "subject": "a client note, drafted under your name",
+      "body": "Jean-Baptiste,\n\nWe put together a client-facing piece on evergreen alternatives, written to sit under Locheil's own name rather than ours. It's built for a CIO-led shop already comfortable with hedge funds, so it focuses on structure: evergreen liquidity, risk controls, and how it complements a hedge fund book rather than replacing it.\n\nGiven your average client size, the framing may be close to how you'd already explain this internally. Worth a look?\n\nHappy to send it over, no obligation attached.\n\nThe Equi team",
+      "angle": "Leads with a finished, firm-branded asset tailored to a sophisticated CIO, making the value tangible before any pitch.",
       "facts_used": [
         "Firm: Locheil Partners (MFO), Toronto, ON",
+        "Decision structure: CIO-led",
+        "Current alternatives: hedge funds",
+        "Average client size: $18.0M"
+      ],
+      "variant": "A",
+      "flags": []
+    },
+    "B": {
+      "subject": "liquidity structure alongside your hedge fund book",
+      "body": "Jean-Baptiste,\n\nWith $2.2B across an average client size of $18M, Locheil's book likely carries meaningful hedge fund exposure already. That typically means lock-ups and gates sit somewhere in the portfolio, by design.\n\nWe built Equi as an evergreen structure, no multi-year lock-up, with risk management built in. For an MFO with clients this size, having a liquid alternatives sleeve to sit next to existing hedge fund positions can change how you manage redemptions and rebalancing.\n\nIs liquidity timing something you actively manage around your current hedge fund allocations, or does it rarely come up with clients at this size.\n\nThe Equi team",
+      "angle": "Uses the known fact that Locheil holds hedge funds (illiquid by nature) to raise a liquidity-structure question relevant to a CIO managing large client accounts, without prescribing an allocation.",
+      "facts_used": [
         "AUM: $2.2B",
         "Average client size: $18.0M",
         "Current alternatives: hedge funds",
         "Decision structure: CIO-led"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   },
   "Cinderhill Investment Group": {
     "A": {
-      "subject": "a client piece under your name",
-      "body": "Ignatius,\n\nWe put together a client-facing explainer on evergreen alternatives, written under Cinderhill's brand rather than ours. It covers structure, liquidity terms, and how the risk management approach sits alongside a typical core portfolio.\n\nGiven your average client size, this is usually the piece CIOs want in hand before a conversation, not after.\n\nHappy to send it over if useful.\n\nKarthik",
-      "angle": "A sophisticated CIO doesn't need alternatives explained, but ready-made, on-brand client materials save real work, so leading with the finished piece itself is the fastest way to earn attention.",
+      "subject": "a client piece on evergreen alternatives, drafted",
+      "body": "Ignatius,\n\nWe put together a client-facing explainer on evergreen alternatives, structured to sit under Cinderhill's own brand. It covers how the evergreen structure avoids multi-year lock-ups and how risk management works inside the vehicle, written at the level your clients expect.\n\nGiven Cinderhill's book, I thought it might save your team some drafting time. Happy to send it over for you to look at, no commitment attached.\n\nWorth a quick reply if you want it in your inbox this week?\n\nThe Equi team",
+      "angle": "CIOs at a $2.1B RIA don't need alternatives explained to them, but they do need polished client communication, so leading with a ready-made, brandable piece framed as done work rather than a pitch respects their sophistication and time.",
       "facts_used": [
-        "Firm: Cinderhill Investment Group (RIA)",
-        "Average client size: $4.3M",
-        "Decision structure: CIO-led"
+        "Firm: Cinderhill Investment Group (RIA), Louisville, KY",
+        "CIO-led decision structure",
+        "AUM: $2.1B"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "the $4.3M liquidity question",
-      "body": "Ignatius,\n\nYour average client size, $4.3M, is often where the mismatch between illiquid alternative allocations and client liquidity expectations gets most visible.\n\nWe build institutional-grade liquid alternatives with managed downside risk, structured as evergreen funds with no multi-year lock-up. We also build the client-facing materials so you can walk your own clients through the structure directly.\n\nWorth 20 minutes to see how that fits next to what you already run?\n\nKarthik",
-      "angle": "Cinderhill's $4.3M average client size sits below endowment-scale, so illiquid alts structures likely create liquidity friction that a CIO would want to address directly.",
+      "subject": "evergreen structure question for Cinderhill",
+      "body": "Ignatius,\n\nAt $2.1B with a $4.3M average client size, your book likely includes a meaningful private client base alongside institutional relationships. That mix often puts pressure on liquidity terms, since fewer clients want multi-year lock-ups regardless of the strategy underneath.\n\nEqui runs liquid alternatives with managed downside as evergreen funds, no lock-up structure. We also build the client-facing materials, so the CIO team isn't stuck explaining a black box to end clients.\n\nHow are you currently balancing liquidity needs against alternatives exposure across that client base?\n\nThe Equi team",
+      "angle": "Uses AUM and average client size to surface a plausible liquidity-versus-alts tension specific to their book, then asks rather than prescribes.",
       "facts_used": [
-        "Average client size: $4.3M",
+        "AUM $2.1B",
+        "Average client size $4.3M",
         "CIO-led decision structure"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   },
   "Havenport Global Partners": {
     "A": {
-      "subject": "a draft piece for your clients",
-      "body": "Hi Anneliese,\n\nWe put together a short client-facing explainer on evergreen alternatives, written under a firm's own brand so a research team can hand it straight to advisors without rewriting it.\n\nGiven Havenport already covers the full alternatives spectrum, your committee is likely weighing structure and liquidity more than access. This piece covers both, along with the DDQ answers and risk terms behind it, so you would not have to build that from scratch.\n\nHappy to send it over if useful. Worth a quick look?\n\nKarthik",
-      "angle": "Since Havenport already holds every alt category and runs decisions through committee, the fastest way in is to hand the research lead a ready-made client explainer and DDQ material she can pass upward without extra work.",
+      "subject": "a client-facing piece, already drafted",
+      "body": "Anneliese,\n\nGiven Havenport's scope across alternatives, your committee is likely fielding more client questions on evergreen structures and liquidity terms. We drafted a client-facing explainer on evergreen alternatives, written to sit under a firm's own name, that walks through structure, risk, and liquidity in plain language.\n\nHappy to send it over so your team can see the format before anything else. If it's useful, we can also prepare DDQ answers and a draft IC memo for internal review.\n\nWorth a quick look?\n\nThe Equi team",
+      "angle": "Positions Equi as doing the advisor's work for them, appealing to a due-diligence lead who needs to defend picks internally without owning the sales process.",
       "facts_used": [
+        "Firm: Havenport Global Partners (MFO)",
+        "Recipient: Head of External Managers",
         "Current alternatives: everything",
-        "Decision structure: Committee-led"
+        "Committee-led decision structure"
       ],
-      "variant": "A"
+      "variant": "A",
+      "flags": []
     },
     "B": {
-      "subject": "when the alts lineup is already full",
-      "body": "Anneliese,\n\nWith alternatives already covering the board at Havenport, any addition has to clear a high bar, especially in a committee-led process. That usually means the bottleneck isn't sourcing, it's diligence bandwidth.\n\nWe build the DDQ answers, risk and liquidity terms, and a draft IC memo upfront, so your committee is reviewing a finished case rather than raw material. For a firm your size, that can be the difference between a strong idea stalling and getting a real hearing.\n\nIs bandwidth the constraint right now, or is it more about finding something genuinely differentiated?\n\nKarthik",
-      "angle": "Positions Karthik as solving her internal committee friction rather than pitching a product, using her title and the firm's full alt coverage as the hook.",
+      "subject": "question on your alts lineup at scale",
+      "body": "Anneliese,\n\nAt $28.4B across a broad alternatives book, committee approval usually gets harder as allocations approach capacity, not easier. If the current sleeve is near its practical ceiling, adding anything new likely means clearing a higher bar on liquidity and risk terms rather than on thesis alone.\n\nWe build the diligence package to make that case: DDQ answers, a draft IC memo, and clear risk and liquidity terms your committee can review without back and forth.\n\nIs liquidity or capacity the bigger constraint for your committee right now?\n\nThe Equi team",
+      "angle": "Names the specific structural pressure (near-ceiling allocations at large scale under committee governance) that a research lead would recognize and need to address before any new manager gets a hearing.",
       "facts_used": [
-        "AUM $28.4B",
+        "AUM: $28.4B",
         "Current alternatives: everything",
-        "Committee-led decision structure",
-        "Recipient title: Head of External Managers"
+        "Decision structure: Committee-led",
+        "CRM notes: near ceiling"
       ],
-      "variant": "B"
+      "variant": "B",
+      "flags": []
     }
   }
 }

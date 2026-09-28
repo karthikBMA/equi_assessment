@@ -1,223 +1,110 @@
 {
   "what-is-an-evergreen-fund": {
     "title": "What Is an Evergreen Fund?",
-    "meta_description": "A plain explanation of evergreen funds, how they differ from interval and tender-offer structures, and what wealthy investors should know before considering one.",
-    "direct_answer": "An evergreen fund is a private investment vehicle with no fixed end date that continuously raises capital and offers periodic, limited opportunities to redeem shares. Unlike a traditional closed-end fund that winds down after a set term, an evergreen fund is built to operate indefinitely, holding illiquid assets like private equity, credit, or real estate.",
+    "meta_description": "An evergreen fund is a permanent-capital investment vehicle with no fixed end date, offering periodic liquidity instead of a one-time exit. Learn how it works, its costs, and how it compares to other fund structures.",
+    "direct_answer": "An evergreen fund is a fund structure with no set termination date, designed to hold investments indefinitely rather than winding down after a fixed term. Instead of returning capital at a predetermined exit, it offers investors periodic liquidity windows, often quarterly, while continuing to raise and deploy capital on an ongoing basis.",
     "sections": [
       {
         "heading": "How It Works",
         "paragraphs": [
-          "An evergreen fund does not have a maturity date. It raises money on an ongoing basis rather than in a single closing, and it reinvests proceeds from the portfolio instead of returning all capital to investors after a fixed holding period.",
-          "This structure lets the fund manager hold long-duration assets without racing against a clock. It also means new investors can typically enter at various points, not just at inception."
+          "Traditional private funds have a life cycle. They raise capital, invest it over several years, then sell assets and return proceeds to investors within a set window, often ten to twelve years.",
+          "An evergreen fund skips that cycle. It accepts new capital on an ongoing basis and reinvests proceeds from matured or sold positions rather than distributing everything back to investors. This lets the fund keep operating and investing indefinitely, without a mandated wind-down."
         ]
       },
       {
         "heading": "Liquidity",
         "paragraphs": [
-          "Evergreen funds offer periodic liquidity, usually through scheduled repurchase offers at set intervals, such as quarterly. These offers are limited, meaning the fund may cap the amount of capital it repurchases in any given period.",
-          "This is different from daily liquidity in public markets. Investors should expect that access to their capital is structured and partial, not immediate or guaranteed."
+          "Evergreen funds typically offer redemption windows, often monthly or quarterly, rather than daily liquidity like a mutual fund or ETF.",
+          "Redemptions are usually capped as a percentage of fund assets during any given period. In periods of high redemption demand, an investor may not receive the full amount requested right away, since the fund is not required to sell assets to meet every request."
         ]
       },
       {
         "heading": "Costs and Minimums",
         "paragraphs": [
-          "Fee structures on evergreen funds generally include a management fee based on assets and a performance-based fee tied to gains above a stated threshold. Minimums tend to be higher than public funds, often requiring a substantial initial commitment.",
-          "Because the fund is continuously offered, fees and terms can vary by share class or vintage of entry, so investors should read the specific terms of the class they are offered."
+          "Fee structures vary, but evergreen funds commonly charge a management fee and, in many cases, a performance-based fee on gains.",
+          "Minimums have come down compared to traditional private funds, which has made this structure accessible to a broader set of investors, though minimums still tend to be higher than public mutual funds or ETFs."
         ]
       },
       {
-        "heading": "Risks",
+        "heading": "Risks to Understand",
         "paragraphs": [
-          "Evergreen funds hold illiquid assets, and the periodic redemption mechanism is not the same as being able to sell on demand. In periods of high redemption requests, the fund may prorate or delay repurchases.",
-          "Valuations of private holdings are typically less frequent than public securities and rely on manager estimates. Investors should understand that this structure carries the same underlying market and asset-specific risks as any private investment."
+          "The underlying assets in an evergreen fund are often illiquid or infrequently priced, which means the fund's stated value may lag what the assets could actually sell for in the market.",
+          "Because redemptions are limited and can be gated, an investor should plan to hold the investment for a meaningful period. This structure is not a substitute for cash reserves or assets an investor may need to access on short notice."
         ]
       }
     ],
     "comparison": {
       "caption": "Evergreen vs. Interval vs. Tender-Offer vs. Traditional Closed-End Funds",
       "columns": [
-        "Fund Type",
+        "Structure",
         "Liquidity",
         "Redemption Frequency",
-        "Typical Minimums",
+        "Typical Minimum",
         "Fee Structure",
         "Who Can Invest"
       ],
       "rows": [
         [
           "Evergreen Fund",
-          "Periodic, limited repurchases",
-          "Often quarterly, subject to caps",
-          "Generally high, varies by share class",
-          "Management fee plus performance fee",
-          "Typically accredited or qualified investors"
+          "Limited, periodic",
+          "Often monthly or quarterly, subject to caps",
+          "Moderate, varies by offering",
+          "Management fee, often plus performance fee",
+          "Often open to accredited investors, some to qualified purchasers"
         ],
         [
           "Interval Fund",
-          "Structured repurchase offers at set intervals",
-          "Commonly quarterly, defined by fund policy",
-          "Often lower than private funds, varies widely",
-          "Management fee, sometimes performance fee",
-          "Often open to a broader investor base, including retail"
+          "Limited, scheduled",
+          "Fixed intervals, commonly quarterly, by regulation",
+          "Often lower, sometimes accessible to retail",
+          "Management fee, may include performance fee",
+          "Frequently open to a broad range of investors, including retail"
         ],
         [
           "Tender-Offer Fund",
-          "Discretionary repurchases initiated by the manager",
-          "Irregular, at the manager's discretion",
-          "Moderate to high, varies by fund",
-          "Management fee, sometimes performance fee",
-          "Typically accredited or qualified investors"
+          "Limited, discretionary",
+          "Periodic, fund decides whether to offer a tender",
+          "Moderate to high, varies widely",
+          "Management fee, often plus performance fee",
+          "Typically accredited investors or qualified purchasers"
         ],
         [
-          "Traditional Closed-End Fund (Private)",
-          "Fixed term, capital generally locked until wind-down",
-          "Rarely, if ever, before term ends",
-          "Generally high, single close",
-          "Management fee plus performance fee",
-          "Typically accredited or qualified investors"
+          "Traditional Closed-End Private Fund",
+          "None until fund term ends",
+          "No regular redemptions, capital locked for fund life",
+          "High, often requiring substantial commitment",
+          "Management fee plus performance fee on gains",
+          "Typically accredited investors or qualified purchasers"
         ]
       ]
     },
     "faq": [
       {
-        "question": "Can I redeem my investment in an evergreen fund whenever I want?",
-        "answer": "No. Redemptions happen only during scheduled repurchase windows, and the fund may limit how much it repurchases in any given period. Your ability to exit depends on the fund's specific terms and current demand for liquidity."
+        "question": "How is an evergreen fund different from a mutual fund?",
+        "answer": "A mutual fund offers daily liquidity because it typically holds publicly traded securities that can be sold quickly. An evergreen fund holds less liquid assets and offers redemptions only periodically, which is a structural tradeoff, not simply a smaller version of a mutual fund."
       },
       {
-        "question": "Is an evergreen fund the same as a mutual fund?",
-        "answer": "No. Mutual funds offer daily liquidity and invest primarily in public securities, while evergreen funds hold illiquid private assets and offer only periodic, limited liquidity. The two are structured for very different purposes."
+        "question": "Can I lose access to my money in an evergreen fund?",
+        "answer": "Redemptions in an evergreen fund can be limited or gated during periods of high demand, meaning you may not get back the full amount you request when you request it. This is a structural feature of the fund, and it is worth understanding before committing capital you may need on short notice."
       },
       {
         "question": "Why would a fund choose an evergreen structure instead of a fixed term?",
-        "answer": "An evergreen structure allows the manager to hold long-duration assets without being forced to sell on a fixed schedule. It also allows the fund to accept new capital continuously rather than only at a single closing."
+        "answer": "An evergreen structure lets a fund continue investing and reinvesting proceeds without being forced to sell assets on a fixed timeline. This can suit strategies built around long holding periods, though it also means investors give up the certainty of a scheduled return of capital."
       },
       {
-        "question": "Are evergreen funds only for institutional investors?",
-        "answer": "Access varies by fund, but many evergreen funds are structured for accredited or qualified investors rather than the general public. Minimums and eligibility requirements differ from fund to fund."
+        "question": "Are evergreen funds regulated the same way as mutual funds?",
+        "answer": "Evergreen funds can be structured under different regulatory frameworks depending on how they are offered and who they are sold to. Some operate under rules similar to interval funds, while others are offered privately with different disclosure and eligibility requirements."
       },
       {
-        "question": "What happens if too many investors want to redeem at once?",
-        "answer": "The fund may prorate the repurchase, meaning each investor receives only a portion of what they requested. This is a structural feature of evergreen funds and something to understand before committing capital."
+        "question": "How do fees in an evergreen fund compare to a traditional closed-end fund?",
+        "answer": "Both structures commonly charge a management fee and often a performance fee on gains. The specific rates and calculation methods vary fund by fund, so comparing fee structures directly requires reading each fund's offering documents."
       }
     ],
-    "closing": "Evergreen funds offer a different liquidity and time horizon than public markets or fixed-term private funds, with tradeoffs that depend on your own goals and cash flow needs, so ask your advisor whether this fits your situation.",
+    "closing": "Evergreen funds offer a different tradeoff between liquidity, structure, and time horizon than traditional private or public funds. Given the complexity involved, ask your advisor whether this fits your situation.",
     "question": "What is an evergreen fund?",
     "flags": [],
     "fixed_on_retry": [],
-    "updated": "2026-09-27",
-    "model": "claude-sonnet-5"
-  },
-  "how-do-i-protect-my-portfolio-from-a-market-crash": {
-    "title": "How Evergreen and Interval Funds Fit Into a Portfolio During a Market Downturn",
-    "meta_description": "No fund structure protects a portfolio from a market crash. Here is how evergreen and interval funds behave in downturns, and what to weigh before adding one.",
-    "direct_answer": "No fund structure, including evergreen or interval funds, can protect your portfolio from a market crash or guarantee a particular outcome in a downturn. What these structures can do is offer a different liquidity and valuation pattern than public markets, which changes how a downturn shows up in your portfolio rather than whether it happens.",
-    "sections": [
-      {
-        "heading": "What Evergreen and Interval Funds Actually Are",
-        "paragraphs": [
-          "Evergreen funds are open-ended vehicles that hold private assets and offer periodic subscriptions and redemptions, often monthly or quarterly, instead of daily trading. Interval funds are a specific regulatory structure that must offer to repurchase a set percentage of shares at set intervals, typically quarterly.",
-          "Both structures exist to let investors hold less liquid assets, like private credit, real estate, or private equity, inside a fund that still has some redemption mechanism. That mechanism is limited by design and is not the same as being able to sell whenever you want."
-        ]
-      },
-      {
-        "heading": "How They Behave During a Downturn",
-        "paragraphs": [
-          "Because the underlying assets are not traded daily, evergreen and interval funds do not get repriced by public markets every minute. Their valuations typically come from periodic appraisals or models, which means reported values can lag what is happening in public markets during a fast selloff.",
-          "This lag is often misread as stability. It is not protection or reduced risk. It simply means the impact of a downturn may show up later, and possibly all at once, rather than in real time. Redemption requests can also increase sharply during stress, and funds are permitted to gate or limit redemptions when that happens, which can leave you holding the position longer than planned."
-        ]
-      },
-      {
-        "heading": "Costs, Minimums, and Access",
-        "paragraphs": [
-          "These funds generally carry higher minimums than public mutual funds or ETFs, often in the tens of thousands of dollars or more, and are typically limited to accredited investors or qualified clients. Fee structures usually include a management fee and sometimes a performance-based component, along with fund-level expenses tied to the private assets held.",
-          "Because of gating provisions and appraisal-based pricing, these are not tools for accessing cash quickly in an emergency. They are long-horizon allocations that should be sized with that illiquidity in mind."
-        ]
-      },
-      {
-        "heading": "Where This Fits in Diversification",
-        "paragraphs": [
-          "Diversification means holding assets that do not all respond to the same triggers in the same way at the same time. Adding private market exposure through an evergreen or interval fund can broaden that set of triggers, but it introduces its own risks: illiquidity, valuation lag, manager concentration, and redemption limits.",
-          "This is a structural tradeoff, not a hedge. Whether it makes sense depends on your time horizon, your need for liquidity, and how much of your portfolio is already tied to public market swings. For a broader look at how these structures compare, see our Index of evergreen, interval, and tender-offer funds."
-        ]
-      }
-    ],
-    "comparison": {
-      "caption": "Evergreen, interval, tender-offer, and traditional closed-end funds compared",
-      "columns": [
-        "Structure",
-        "Liquidity",
-        "Redemption frequency",
-        "Typical minimums",
-        "Fee structure",
-        "Who can invest"
-      ],
-      "rows": [
-        [
-          "Evergreen fund",
-          "Limited, tied to periodic offers",
-          "Often monthly or quarterly, subject to caps",
-          "Tens of thousands to low six figures",
-          "Management fee, often with a performance-based component",
-          "Typically accredited investors or qualified clients"
-        ],
-        [
-          "Interval fund",
-          "Limited, mandated by regulation",
-          "Fixed intervals, usually quarterly, capped percentage of fund",
-          "Can be lower, sometimes accessible to a broader investor base",
-          "Management fee, sometimes with a performance-based component",
-          "Varies, some open to a wider range of investors"
-        ],
-        [
-          "Tender-offer fund",
-          "Limited, at the fund's discretion",
-          "Periodic tender offers, not guaranteed each time",
-          "Often higher, geared toward larger investors",
-          "Management fee, often with a performance-based component",
-          "Typically accredited investors or qualified clients"
-        ],
-        [
-          "Traditional closed-end private fund",
-          "Very limited, no built-in redemption",
-          "Fixed term, exit mainly at fund windup or sale",
-          "Often higher, geared toward institutional or high-net-worth investors",
-          "Management fee plus carried interest common",
-          "Typically accredited or qualified investors, sometimes institutional only"
-        ]
-      ]
-    },
-    "faq": [
-      {
-        "question": "Can any fund guarantee protection from a market crash?",
-        "answer": "No. Every fund structure carries risk, and none can guarantee a particular outcome during a market downturn. Claims of guaranteed protection should be treated as a red flag."
-      },
-      {
-        "question": "Why don't evergreen fund values drop right away when markets fall?",
-        "answer": "Their valuations are typically based on periodic appraisals rather than daily market pricing, so reported values can lag public markets. This is a timing difference in reporting, not evidence that the underlying assets are insulated from the same economic pressures."
-      },
-      {
-        "question": "What happens if I want to redeem during a crash?",
-        "answer": "Evergreen and interval funds can limit or gate redemptions during periods of high demand, meaning you may not get full or immediate access to your capital. This is a structural feature of these funds and should be assumed as a real possibility, not an edge case."
-      },
-      {
-        "question": "Are interval funds safer than evergreen funds?",
-        "answer": "They are different, not safer. Interval funds have a regulatory requirement to offer repurchases at set intervals, which creates a predictable schedule, but the repurchase amount is still capped and not guaranteed to meet demand."
-      },
-      {
-        "question": "How much of my portfolio should go into these structures?",
-        "answer": "There is no universal answer, since it depends on your liquidity needs, time horizon, and existing exposure to public markets. This is a sizing and planning decision that should be made with a full view of your financial picture."
-      }
-    ],
-    "closing": "Evergreen and interval funds change how illiquidity and valuation work in a portfolio, but they do not remove market risk or promise a particular outcome in a downturn. Given the tradeoffs involved, ask your advisor whether this fits your situation.",
-    "question": "how do i protect my portfolio from a market crash",
-    "flags": [
-      "return or performance language in \"Claims of guaranteed protection should be treated as a red flag.\""
-    ],
-    "fixed_on_retry": [
-      "return or performance language in \"Can Evergreen and Interval Funds Protect My Portfolio in a Market Crash?\"",
-      "return or performance language in \"Can any fund guarantee protection from a market crash?\""
-    ],
-    "updated": "2026-09-27",
+    "updated": "2026-09-28",
     "model": "claude-sonnet-5"
   }
 }
