@@ -319,7 +319,138 @@
         }
       },
       "model": "claude-sonnet-5",
-      "generated": "2026-09-27"
+      "generated": "2026-09-27",
+      "ads": {
+        "search_ads": [
+          {
+            "angle": "Understanding liquidity terms during volatility",
+            "headlines": [
+              "Market Swings, Explained",
+              "What Is Evergreen Capital?",
+              "Liquidity Terms 101",
+              "Interval Funds, Simply",
+              "Volatility Isn't New"
+            ],
+            "descriptions": [
+              "Learn how evergreen funds structure liquidity before you make any decisions today.",
+              "Talk to your advisor about how periodic liquidity actually works."
+            ]
+          },
+          {
+            "angle": "Diversification and long-term thinking during selloffs",
+            "headlines": [
+              "When Markets Get Volatile",
+              "Beyond Public Markets",
+              "A Different Kind of Fund",
+              "Ask About Evergreen Funds",
+              "Private Markets, Explained"
+            ],
+            "descriptions": [
+              "Evergreen structures offer periodic access, not daily trading. Know the difference.",
+              "Speak with your advisor about how this fits your broader portfolio."
+            ]
+          },
+          {
+            "angle": "Direct response to today's VIX spike and carry trade unwind",
+            "headlines": [
+              "VIX Spiked. Now What?",
+              "Understand Fund Liquidity",
+              "Selloffs Happen. Plan Ahead",
+              "Know Before You Invest",
+              "Talk To Your Advisor"
+            ],
+            "descriptions": [
+              "Today's volatility is a good reason to understand your fund's liquidity terms.",
+              "No predictions here. Just education on how evergreen funds work."
+            ]
+          }
+        ],
+        "keywords": [
+          "why is the stock market crashing today",
+          "vix spike today meaning",
+          "yen carry trade unwind explained",
+          "should i sell stocks now",
+          "market volatility today",
+          "how to protect portfolio from crash",
+          "is a recession coming 2024",
+          "nikkei crash today",
+          "bank of japan rate hike market impact",
+          "what to do when stock market drops",
+          "alternative investments during volatility",
+          "private markets vs stock market",
+          "evergreen fund liquidity",
+          "interval fund explained",
+          "how do private funds handle market crashes",
+          "diversify beyond stocks and bonds",
+          "market selloff today explained",
+          "what is a tender offer fund",
+          "portfolio diversification alternatives",
+          "talk to financial advisor about market crash"
+        ],
+        "social_ads": [
+          {
+            "platform": "LinkedIn",
+            "audience": "Affluent professionals and executives, ages 45-65, actively managing investment portfolios",
+            "headline": "Understanding Evergreen Funds",
+            "primary_text": "Days like today raise real questions about how your portfolio is built. Evergreen alternatives, open-ended private funds with periodic liquidity, work differently than public markets. They are not shielded from volatility, but their structure is worth understanding before markets get loud. Talk to your advisor about whether evergreen alternatives fit your plan."
+          },
+          {
+            "platform": "Meta (Facebook/Instagram)",
+            "audience": "High-net-worth individuals and business owners, ages 40-65, interested in wealth management",
+            "headline": "What Is an Interval Fund?",
+            "primary_text": "Market swings tend to bring up the same question: what else is out there. Interval and tender-offer funds are two structures worth knowing, each with its own liquidity schedule and trade-offs. Understanding the mechanics matters more on days like this. Ask your advisor how evergreen alternatives work before making any moves."
+          }
+        ],
+        "landing_page": {
+          "title": "Evergreen Alternatives: What They Are, How Liquidity Works",
+          "sections": [
+            {
+              "heading": "What Is an Evergreen Fund?",
+              "points": [
+                "An open-ended private fund structure with no fixed end date.",
+                "Investors can add or withdraw capital on a set schedule, not daily.",
+                "Different from a traditional mutual fund or public stock."
+              ]
+            },
+            {
+              "heading": "How Liquidity Works",
+              "points": [
+                "Interval funds offer repurchase windows, often quarterly.",
+                "Tender-offer funds let the fund decide when to buy back shares.",
+                "Liquidity is periodic, not immediate. That is the trade-off for holding private assets."
+              ]
+            },
+            {
+              "heading": "Why Structure Matters On Days Like This",
+              "points": [
+                "Public markets can swing sharply in hours. Private fund structures are built around longer timelines.",
+                "That does not mean private holdings are immune to volatility. It means the mechanics differ.",
+                "Understanding redemption terms before you invest matters more than reacting after a selloff."
+              ]
+            },
+            {
+              "heading": "Trade-offs to Understand",
+              "points": [
+                "Less frequent liquidity in exchange for access to different asset classes.",
+                "Redemption requests can be limited or prorated during high-demand periods.",
+                "Fees and minimums vary widely by structure."
+              ]
+            },
+            {
+              "heading": "Next Steps",
+              "points": [
+                "Review your current allocation and time horizon.",
+                "Bring questions about liquidity terms to your next conversation.",
+                "Ask your advisor about evergreen alternatives."
+              ]
+            }
+          ]
+        },
+        "flags": [],
+        "disclosure": "Educational only, not an offer or a recommendation. Alternative investments involve risk, including loss of principal. Ask your advisor whether they fit your situation.",
+        "model": "claude-sonnet-5",
+        "generated": "2026-09-27"
+      }
     }
   }
 }
