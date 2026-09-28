@@ -5,8 +5,10 @@ never mentions evergreen or interval funds, the advisor conversation starts from
 zero. This asks Claude (with live web search) the questions clients actually type,
 records what comes back and who gets cited, and turns the gaps into pages worth
 creating. Equi cannot advertise its funds, so the pages are category education.
+A sixth group asks what advisors type when they look for a provider, reported
+separately, since those answers are where Equi itself should appear.
 
-    python -m pipeline.aeo --n 30
+    python -m pipeline.aeo            # all 40 questions
 """
 from __future__ import annotations
 
@@ -71,7 +73,22 @@ QUESTIONS = {
         "what is a qualified purchaser and why does it matter",
         "how to diversify a concentrated stock position after selling a business",
     ],
+    # advisors searching for a provider: this is where Equi can be named, as long as nothing offers a fund
+    "Advisors researching": [
+        "best evergreen alternatives platforms for RIAs",
+        "white label fund of funds for wealth managers",
+        "how RIAs add liquid alternatives for clients",
+        "alternative investment platforms for independent advisors",
+        "how to explain evergreen funds to clients as an advisor",
+        "client materials for advisors on private markets",
+        "interval fund vs evergreen fund for RIA clients",
+        "how multi family offices source alternative managers",
+        "due diligence checklist for evergreen funds for advisors",
+        "turnkey alternatives solution for RIAs",
+    ],
 }
+ADVISOR_GROUPS = {"Advisors researching"}
+AUDIENCES = {"client": [g for g in QUESTIONS if g not in ADVISOR_GROUPS], "advisor": sorted(ADVISOR_GROUPS)}
 
 EVERGREEN = re.compile(r"evergreen|interval fund|tender[- ]offer fund|semi[- ]liquid|perpetual[- ]life", re.I)
 EQUI = re.compile(r"\bEqui\b")          # case-sensitive: "equity" and "Equitable" do not match
@@ -144,7 +161,14 @@ def metrics(rows: list[dict]) -> dict:
     share = lambda rs, k: round(sum(r[k] for r in rs) / len(rs), 3) if rs else None
     by_group = {g: share([r for r in ok if r["group"] == g], "mentions_evergreen") for g in QUESTIONS}
     domains = Counter(d for r in ok for d in r["cited_domains"])
+    by_audience = {}
+    for aud, groups in AUDIENCES.items():
+        rs = [r for r in ok if r["group"] in groups]
+        by_audience[aud] = {"answered": len(rs), "evergreen": sum(r["mentions_evergreen"] for r in rs),
+                            "equi": sum(r["mentions_equi"] for r in rs),
+                            "evergreen_share": share(rs, "mentions_evergreen"), "equi_share": share(rs, "mentions_equi")}
     return {
+        "by_audience": by_audience,
         "asked": len(rows), "answered": len(ok), "failed": len(rows) - len(ok),
         "evergreen_share": share(ok, "mentions_evergreen"),
         "evergreen_by_group": by_group,
@@ -190,6 +214,10 @@ Three lanes:
 3. youtube: 4 to 5 short clips cut from existing Equi webinars and long-form videos, each titled with a client question
    and published with a full transcript. "where" is the playlist or channel section.
 
+Some gaps are advisor questions (an RIA or family office looking for a provider). Pages and pitches for those can
+explain how Equi works with advisors (client materials built for them, Equi-branded or white-label funds), but still
+never offer a fund to the public or cite performance.
+
 "metric" is how to tell it worked, in plain words (for example, "cited in the weekly AI answer check within 6 weeks")."""
 
 
@@ -198,18 +226,24 @@ Three lanes:
 INTERNAL_OK = {"a mention of Equi", "internal process (clients have no committee)"}
 
 
+def is_index_row(row: dict) -> bool:
+    """The Evergreen Fund Index row, named in the text or only in its page path."""
+    text = " ".join(row.get(k, "") for k in ("target_question", "action", "where")).lower().replace("-", " ")
+    return INDEX_NAME.lower() in text
+
+
 def lint_plan(plan: dict) -> list[str]:
     found = [f'{lane} "{r["target_question"]}": {f}' for lane in ("publish", "featured", "youtube")
              for r in plan[lane] for f in lint_text(r["action"] + ".") if f.split(" in ")[0] not in INTERNAL_OK]
-    first = plan["publish"][0] if plan["publish"] else {"action": "", "target_question": ""}
-    if INDEX_NAME.lower() not in (first["action"] + first["target_question"]).lower():
+    if not plan["publish"] or not is_index_row(plan["publish"][0]):
         found.append(f"The first publish row must be the {INDEX_NAME}.")
     return found
 
 
 def action_plan(m: dict) -> dict:
     """Three-lane AEO plan from the tracker results, in one call."""
-    gaps = "\n".join(f'- [{g["group"]}] {g["question"]}' for g in m["gaps"]) or "- none"
+    gaps = "\n".join(f'- [{"advisor" if g["group"] in ADVISOR_GROUPS else "client"}: {g["group"]}] {g["question"]}'
+                     for g in m["gaps"]) or "- none"
     groups = ", ".join(f"{g} {v:.0%}" for g, v in m["evergreen_by_group"].items())
     doms = ", ".join(f"{d} ({n})" for d, n in m["top_domains"])
     prompt = (f"AI answers mentioned evergreen, interval, or tender-offer funds in {m['evergreen_share']:.0%} of "
@@ -265,7 +299,7 @@ if __name__ == "__main__":
     from dotenv import load_dotenv
     load_dotenv(".env")
     ap = argparse.ArgumentParser()
-    ap.add_argument("--n", type=int, default=30)
+    ap.add_argument("--n", type=int, default=sum(len(q) for q in QUESTIONS.values()))
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--plan-only", action="store_true", help="rebuild the AEO action plan from the cached answers")
     args = ap.parse_args()
@@ -282,4 +316,5 @@ if __name__ == "__main__":
     out = run(args.n, args.workers)
     m = out["metrics"]
     print(f"\nDone in {time.time()-t:.0f}s -> {OUT}. Answered {m['answered']}/{m['asked']}.")
-    print(f"Evergreen mentioned in {m['evergreen_share']:.0%} of answers; Equi in {m['equi_share']:.0%}.")
+    for aud, a in m["by_audience"].items():
+        print(f"  {aud}: evergreen in {a['evergreen']} of {a['answered']}, Equi in {a['equi']} of {a['answered']}")
