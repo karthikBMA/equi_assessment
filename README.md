@@ -77,7 +77,7 @@ data/
 
 ## How it works
 
-**Part 1, demand engine.** Equi builds the advisor's client materials, so the materials are the outreach: a kit under the prospect firm's name, a note on market-drop days, and AI answers and ads that reach clients first.
+**Part 1, demand engine.** Clients hear about evergreen alternatives first, through AI answers and ads; advisors get a note on market-drop days; and the outreach is a kit under the prospect firm's name, since Equi builds client materials.
 
 **Part 2, lead pipeline.** Clean and dedupe the list, score every firm with a confidence range, stress-test the weights, tag every field by source, route each firm to a sequence, and write two first-touch drafts.
 
