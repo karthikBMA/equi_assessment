@@ -13,6 +13,9 @@ DISCLOSURE = ("Educational only, not an offer or a recommendation. Alternative i
               "including loss of principal. Ask your advisor whether they fit your situation.")
 
 
+NEGATION_WINDOW = 60   # characters before the claim word
+
+
 def lint_text(text: str) -> list[str]:
     """Sentence-level check with the market-note rules. Negated disclaimers pass, and so do questions:
     an FAQ asking "Can any fund guarantee protection?" is not a claim that one can."""
@@ -21,8 +24,14 @@ def lint_text(text: str) -> list[str]:
     sentences = re.split(r"(?<=[.!?])\s+", text)
     for pattern, label in NOTE_RULES:
         for sent in sentences:
-            excused = label in NEGATABLE and (NEGATION.search(sent) or sent.rstrip().endswith("?"))
-            if re.search(pattern, sent, re.I) and not excused:
+            m = re.search(pattern, sent, re.I)
+            if not m:
+                continue
+            # the negation has to sit in the same clause, just before the claim word: "no lock-up" later
+            # in the sentence, or "no fixed end date," in an earlier clause, does not excuse "downside protection"
+            before = re.split(r"[,;:()]", sent[max(0, m.start() - NEGATION_WINDOW):m.start()])[-1]
+            excused = label in NEGATABLE and (NEGATION.search(before) or sent.rstrip().endswith("?"))
+            if not excused:
                 found.append(f'{label} in "{sent.strip()}"')
                 break
     return found
