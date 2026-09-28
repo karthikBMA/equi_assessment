@@ -1,4 +1,4 @@
-"""Equi lead desk. Run with: streamlit run app.py
+"""Equi demand engine. Run with: streamlit run app.py
 
 Reads data/scored.json (from build.py) for enrichment, and re-scores live from
 the CSV when the sidebar weights change.
