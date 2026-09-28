@@ -5,6 +5,8 @@ the CSV when the sidebar weights change.
 """
 from __future__ import annotations
 
+import base64
+import hashlib
 import html
 import json
 import os
@@ -15,11 +17,11 @@ from urllib.parse import quote
 
 import pandas as pd
 import streamlit as st
-import streamlit.components.v1 as components
 from dotenv import load_dotenv
 
 from pipeline import kit as kits_mod
 from pipeline import personalize
+from pipeline import signals as sig
 from pipeline.clean import clean_leads
 from pipeline.score import (CRITERIA_LABELS, DEFAULT_WEIGHTS, WHY_WEIGHT, bubble_reason,
                             bubble_type,
@@ -30,6 +32,7 @@ CSV = "data/sample-leads.csv"
 SCORED = Path("data/scored.json")
 DRAFTS = Path("data/drafts.json")
 KITS = Path("data/kits.json")
+SIGNALS = Path("data/signals.json")
 
 # Key comes from .env locally or st.secrets on Streamlit Cloud. Never shown.
 load_dotenv()
@@ -262,7 +265,8 @@ st.title("Equi lead desk")
 st.markdown('<div class="muted">Independent RIAs and multi-family offices, scored against Equi\'s ICP.'
             + (" Custom weights in use." if custom else "") + "</div>", unsafe_allow_html=True)
 
-tab_shortlist, tab_call, tab_drafts, tab_kit = st.tabs(["Shortlist", "Your call", "Drafts", "Kit Studio"], key="tab",
+tab_shortlist, tab_call, tab_drafts, tab_kit, tab_signals, tab_queue = st.tabs(
+    ["Shortlist", "Your call", "Drafts", "Kit Studio", "Market signals", "Review queue"], key="tab",
                                               on_change="rerun")
 
 
@@ -742,9 +746,10 @@ def queue() -> list[dict]:
 
 
 def queue_add(kind: str, firm: str, title: str, payload: dict):
-    """Add or replace the pending item of this kind for this firm."""
+    """Add, or replace the pending item of this kind for this firm (and the same market event, for notes)."""
     q = queue()
-    q[:] = [i for i in q if not (i["kind"] == kind and i["firm"] == firm and i["status"] == "pending")]
+    q[:] = [i for i in q if not (i["kind"] == kind and i["firm"] == firm and i["status"] == "pending"
+                                 and i["payload"].get("event") == payload.get("event"))]
     q.append({"kind": kind, "firm": firm, "title": title, "payload": payload, "status": "pending",
               "added": datetime.now().strftime("%Y-%m-%d %H:%M")})
 
@@ -817,5 +822,302 @@ with tab_kit:
                          and i["payload"]["kit"] == k for i in queue())
             b2.button("In review queue" if queued else "Send to review queue", disabled=queued, width="stretch",
                       on_click=queue_add, args=("kit", pick, f"Client kit for {pick}", {"kit": k}))
-            # tall enough to show the letter through its compliance footer without scrolling the frame
-            components.html(page, height=1500, scrolling=True)
+            # tall enough to show the letter through its compliance footer without scrolling the frame.
+            # A data: URL gives the frame its own origin, so kit HTML (model text, escaped) cannot reach the app.
+            st.iframe("data:text/html;base64," + base64.b64encode(page.encode()).decode(), height=1500)
+
+
+# ---------- market signals ----------
+
+@st.cache_data(ttl=900, show_spinner="Checking SPY and VIX...")
+def live_market():
+    """Latest close vs the prior close, cached 15 minutes. Returns (day, error)."""
+    try:
+        return sig.latest(), None
+    except Exception as e:
+        return None, f"{type(e).__name__}"
+
+
+@st.cache_data
+def load_signals() -> dict:
+    return json.loads(SIGNALS.read_text()) if SIGNALS.exists() else {"days": {}, "fired": {}}
+
+
+@st.cache_data(show_spinner="Pulling that day's real closes...")
+def replay_days(key: str) -> list[dict]:
+    """Real closes for a replay event: cached from build.py, else fetched live."""
+    cached = [load_signals()["days"].get(d) for d in sig.EVENTS[key]["days"]]
+    return cached if all(cached) else sig.event_days(key)
+
+
+def alerts() -> list[dict]:
+    return st.session_state.setdefault("alerts", [])
+
+
+def day_line(d: dict) -> str:
+    return (f'{date_label(d["date"])}: S&P 500 (SPY) {d["spy"]:,.2f}, {d["spy_pct"]:+.2f}% &nbsp;·&nbsp; '
+            f'VIX {d["vix"]:.2f}, {d["vix_pct"]:+.1f}% day over day')
+
+
+def date_label(iso: str) -> str:
+    return datetime.fromisoformat(iso).strftime("%a %b %-d, %Y")
+
+
+def fire(key: str, label: str, day: dict, context: str, firms: list[dict]):
+    """Queue a note per Tier A/B firm: pre-written where we have it, written now otherwise."""
+    pre = load_signals()["fired"].get(key, {}).get("notes", {}) if key in sig.EVENTS else {}
+    notes = {f["firm_name"]: pre[f["firm_name"]] for f in firms if f["firm_name"] in pre}
+    todo = [f for f in firms if f["firm_name"] not in notes]
+    if todo and HAS_KEY:
+        try:
+            notes.update(sig.draft_notes(day, context, todo))
+        except Exception as e:
+            st.session_state["sig_msg"] = ("error", f"Writing notes failed: {type(e).__name__}: {str(e)[:200]}")
+            return
+    for firm, n in notes.items():
+        queue_add("signal", firm, f"Market note: {label}", {"note": n, "event": key})
+    alerts().insert(0, {"label": label, "date": day["date"], "triggers": sig.triggers(day), "notes": len(notes),
+                        "missing": len(firms) - len(notes), "fired": datetime.now().strftime("%H:%M"),
+                        "source": "pre-written" if key in load_signals()["fired"] and not todo else "written now"})
+    missing = len(firms) - len(notes)
+    st.session_state["sig_msg"] = ("success", f"{len(notes)} notes are in the review queue."
+                                   + (f" {missing} firms have no note: {NO_KEY_MSG}" if missing else ""))
+    st.session_state["sig_event"] = key
+
+
+def render_status(day: dict, context: str | None = None):
+    fired = sig.triggers(day)
+    st.markdown(f"<div>{day_line(day)}</div>", unsafe_allow_html=True)
+    if fired:
+        st.markdown("".join(f'<div class="flag">Trigger: {html.escape(t)}</div>' for t in fired), unsafe_allow_html=True)
+    else:
+        st.markdown('<div class="muted">No trigger. Firms get the weekly digest, not a daily note.</div>',
+                    unsafe_allow_html=True)
+    if context:
+        st.caption(context)
+    return fired
+
+
+with tab_signals:
+    msg = st.session_state.pop("sig_msg", None)
+    if msg:
+        getattr(st, msg[0])(msg[1])
+    ab = [r for r in records if r["tier"] in {"A", "B"}]
+    st.markdown('<div class="summary">Triggers: S&P 500 down 2% or more in a day, or VIX up 25% or more day over '
+                "day, or VIX above 30. When one fires, every Tier A and B firm gets a short client-ready note under "
+                "its own name plus a two-line ping to the advisor. Educational only. Otherwise, a weekly digest.</div>",
+                unsafe_allow_html=True)
+
+    st.markdown("### Today")
+    live, err = live_market()
+    if live:
+        fired_today = render_status(live)
+        st.caption("Latest close from Yahoo Finance, refreshed every 15 minutes.")
+        if fired_today:
+            st.button(f"Fire today's trigger for {len(ab)} firms", disabled=not HAS_KEY,
+                      help=None if HAS_KEY else NO_KEY_MSG,
+                      on_click=fire, args=(live["date"], f'{date_label(live["date"])} market move', live,
+                                           "Live market day.", ab))
+    else:
+        st.markdown(f'<div class="muted">Live market data is unavailable right now ({err}). You may be offline '
+                    "or Yahoo Finance is not responding. The replays below use real closes cached in the repo.</div>",
+                    unsafe_allow_html=True)
+
+    st.markdown("### Replay a real event")
+    cols = st.columns(len(sig.EVENTS) + 2)
+    for col, (key, ev) in zip(cols, sig.EVENTS.items()):
+        col.button(ev["label"], key=f"replay|{key}", width="stretch",
+                   on_click=lambda k=key: st.session_state.update(sig_event=k))
+    key = st.session_state.get("sig_event")
+    if key in sig.EVENTS:
+        ev = sig.EVENTS[key]
+        try:
+            days = replay_days(key)
+        except Exception as e:
+            days = []
+            st.warning(f"Could not load the closes for this day ({type(e).__name__}).")
+        fire_day = None
+        for d in days:
+            if render_status(d) and fire_day is None:
+                fire_day = d
+        st.caption(ev["context"])
+        if fire_day:
+            # a two-day event fires once, on the last day, with the first day as context
+            last = days[-1]
+            context = ev["context"] + "".join(f' Earlier: {date_label(d["date"])}, SPY {d["spy_pct"]:+.2f}%, '
+                                              f'VIX {d["vix"]:.2f}.' for d in days[:-1])
+            pre = load_signals()["fired"].get(key)
+            have = sum(r["firm_name"] in (pre or {}).get("notes", {}) for r in ab)
+            note = (f"Pre-written notes for {have} of {len(ab)} firms (written {pre['generated']} by {pre['model']})."
+                    if pre else ("Notes will be written now, about 30 seconds." if HAS_KEY else NO_KEY_MSG))
+            st.caption(note)
+            st.button(f"Fire trigger: queue notes for {len(ab)} Tier A and B firms", type="primary",
+                      disabled=not (pre or HAS_KEY), key=f"fire|{key}",
+                      on_click=fire, args=(key, ev["label"], last, context, ab))
+
+    sent_notes = [i for i in queue() if i["kind"] == "signal" and i["payload"]["event"] == key]
+    if sent_notes:
+        st.markdown("### Notes from this event")
+        pick = st.selectbox("Firm", [i["firm"] for i in sent_notes], key="sig_firm")
+        n = next(i for i in sent_notes if i["firm"] == pick)["payload"]["note"]
+        c1, c2 = st.columns([3, 2], gap="large")
+        with c1:
+            st.markdown(f'**{html.escape(n["subject"])}**')
+            st.markdown(f'<div>{html.escape(sig.signed(n)).replace(chr(10), "<br>")}</div>', unsafe_allow_html=True)
+        with c2:
+            st.markdown("**Ping to the advisor**")
+            st.markdown("<br>".join(html.escape(l) for l in n["advisor_ping"]), unsafe_allow_html=True)
+            if n.get("flags"):
+                st.warning("Compliance check flagged:\n\n" + "\n".join(f"- {f}" for f in n["flags"]))
+            else:
+                st.caption("Compliance check: clean.")
+
+    st.markdown("### Alert feed")
+    if alerts():
+        for a in alerts():
+            st.markdown(f'<div><b>{html.escape(a["label"])}</b> &nbsp;·&nbsp; fired {a["fired"]} &nbsp;·&nbsp; '
+                        f'{a["notes"]} notes queued ({a["source"]})'
+                        + (f', {a["missing"]} missing' if a["missing"] else "")
+                        + f'<br><span class="muted">{html.escape("; ".join(a["triggers"]))}</span></div>',
+                        unsafe_allow_html=True)
+    else:
+        st.caption("Nothing fired this session.")
+
+
+# ---------- review queue ----------
+
+def sent_drafts() -> set:
+    return st.session_state.setdefault("sent_drafts", set())
+
+
+def engagement(item_id: str, kind: str) -> tuple[bool, bool | None]:
+    """Simulated opens and forwards, stable per item. Drafts cannot be forwarded to clients."""
+    h = int(hashlib.md5(item_id.encode()).hexdigest()[:8], 16) % 100
+    opened = h < 62
+    forwarded = (h < 28) if kind != "draft" else None
+    return opened, forwarded
+
+
+def queue_rows(by_firm: dict) -> list[dict]:
+    rows = []
+    store, apps = draft_store(), approvals()
+    for key in store:
+        firm, v = key.split("|")
+        if v != "A" or firm not in by_firm:
+            continue
+        chosen = apps.get(firm)
+        status = "sent" if firm in sent_drafts() else "approved" if chosen else "pending"
+        rows.append({"id": f"draft|{firm}", "kind": "draft", "firm": firm, "status": status,
+                     "title": f"First-touch email (variant {chosen or 'A or B'})", "added": "", "flags": []})
+    for i, item in enumerate(queue()):
+        flags = item["payload"].get("note", item["payload"].get("kit", {})).get("flags", [])
+        rows.append({"id": f'{item["kind"]}|{item["firm"]}|{i}', "kind": item["kind"], "firm": item["firm"],
+                     "status": item["status"], "title": item["title"], "added": item["added"], "flags": flags,
+                     "ref": item})
+    for r in rows:
+        tier = by_firm.get(r["firm"], {}).get("tier", "?")
+        r["tier"] = tier
+        opened, fwd = engagement(r["id"], r["kind"]) if r["status"] == "sent" else (None, None)
+        r["opened"], r["forwarded"] = opened, fwd
+        r["priority"] = "Top: forwarded to clients" if fwd else "High" if tier == "A" else "Normal"
+        r["_p"] = (0 if fwd else 1 if tier == "A" else 2, 0 if tier == "A" else 1,
+                   {"pending": 0, "approved": 1, "sent": 2}[r["status"]])
+    return sorted(rows, key=lambda r: r["_p"])
+
+
+def set_status(row: dict, status: str):
+    if row["kind"] == "draft":
+        firm = row["firm"]
+        if status == "pending":
+            approvals().pop(firm, None); sent_drafts().discard(firm)
+        elif status == "approved":
+            approvals().setdefault(firm, "A"); sent_drafts().discard(firm)
+        else:
+            approvals().setdefault(firm, "A"); sent_drafts().add(firm)
+    else:
+        row["ref"]["status"] = status
+
+
+def bulk(kind: str, frm: str, to: str, by_firm: dict):
+    for r in queue_rows(by_firm):
+        if r["kind"] == kind and r["status"] == frm:
+            set_status(r, to)
+
+
+KIND_LABEL = {"draft": "Email draft", "kit": "Client kit", "signal": "Market note"}
+
+with tab_queue:
+    by_firm = {r["firm_name"]: r for r in records}
+    rows = queue_rows(by_firm)
+    counts = {s: sum(r["status"] == s for r in rows) for s in ("pending", "approved", "sent")}
+    n_fwd = sum(bool(r["forwarded"]) for r in rows)
+    st.markdown(f'<div class="summary">{counts["pending"]} pending, {counts["approved"]} approved, {counts["sent"]} sent.'
+                + (f' <span style="color:{BRASS};font-weight:600">{n_fwd} forwarded to clients</span>: call those first.'
+                   if n_fwd else "") + "</div>", unsafe_allow_html=True)
+    st.caption("Opened and forwarded are simulated for this demo, so the priority logic can be shown. In production "
+               "they come from tracked links in each sent email and note.")
+
+    f1, f2, f3 = st.columns([2, 2, 3])
+    kinds = f1.multiselect("Type", list(KIND_LABEL), format_func=KIND_LABEL.get, placeholder="All types") or list(KIND_LABEL)
+    stats = f2.multiselect("Status", ["pending", "approved", "sent"], placeholder="All statuses") or ["pending", "approved", "sent"]
+    with f3:
+        st.markdown("<div style='height:1.7rem'></div>", unsafe_allow_html=True)
+        b1, b2 = st.columns(2)
+        b1.button("Approve all market notes", on_click=bulk, args=("signal", "pending", "approved", by_firm),
+                  disabled=not any(r["kind"] == "signal" and r["status"] == "pending" for r in rows), width="stretch")
+        b2.button("Mark approved notes sent", on_click=bulk, args=("signal", "approved", "sent", by_firm),
+                  disabled=not any(r["kind"] == "signal" and r["status"] == "approved" for r in rows), width="stretch")
+
+    shown = [r for r in rows if r["kind"] in kinds and r["status"] in stats]
+    yn = lambda v: "" if v is None else ("Yes" if v else "No")
+    table = pd.DataFrame([{
+        "Priority": r["priority"], "Firm": r["firm"], "Tier": r["tier"], "Type": KIND_LABEL[r["kind"]],
+        "Item": r["title"], "Status": r["status"], "Check": "Flagged" if r["flags"] else "",
+        "Opened (sim)": yn(r["opened"]), "Forwarded to clients (sim)": yn(r["forwarded"]),
+    } for r in shown])
+    if table.empty:
+        st.caption("Nothing here yet. Approve drafts, send a kit to review, or fire a market signal.")
+    else:
+        styled = table.style.map(lambda v: f"color:{BRASS};font-weight:600" if str(v).startswith("Top") else "",
+                                 subset=["Priority"])
+        ev = st.dataframe(styled, hide_index=True, width="stretch", height=min(38 + 35 * len(table), 560),
+                          on_select="rerun", selection_mode="single-row",
+                          key=f"queue-{hash((tuple(kinds), tuple(stats), len(rows), counts['sent']))}",
+                          column_config={"Priority": st.column_config.TextColumn(width=190),
+                                         "Firm": st.column_config.TextColumn(width=230),
+                                         "Tier": st.column_config.TextColumn(width=40),
+                                         "Item": st.column_config.TextColumn(width="large")})
+        if ev.selection.rows:
+            st.session_state["queue_pick"] = shown[ev.selection.rows[0]]["id"]
+        row = next((r for r in shown if r["id"] == st.session_state.get("queue_pick")), None)
+        if row:
+            st.divider()
+            st.markdown(f'#### {html.escape(row["firm"])}: {html.escape(row["title"])}')
+            if row["kind"] == "draft":
+                v = approvals().get(row["firm"], "A")
+                d = draft_store()[f'{row["firm"]}|{v}']
+                st.markdown(f'**{html.escape(d["subject"])}**')
+                st.markdown(f'<div style="white-space:pre-wrap">{html.escape(d["body"])}</div>', unsafe_allow_html=True)
+                st.caption("Edit or rewrite this in the Drafts tab.")
+            elif row["kind"] == "kit":
+                st.markdown(f'<div style="white-space:pre-wrap">{html.escape(kits_mod.letter_text(row["ref"]["payload"]["kit"]))}</div>',
+                            unsafe_allow_html=True)
+                st.caption("Full kit with talking points is in Kit Studio.")
+            else:
+                n = row["ref"]["payload"]["note"]
+                st.markdown(f'**{html.escape(n["subject"])}**')
+                st.markdown(f'<div>{html.escape(sig.signed(n)).replace(chr(10), "<br>")}</div>', unsafe_allow_html=True)
+                st.markdown("**Ping to the advisor:** " + html.escape(" ".join(n["advisor_ping"])))
+            for f in row["flags"]:
+                st.markdown(f'<div class="flag">Check: {html.escape(f)}</div>', unsafe_allow_html=True)
+            if row["forwarded"]:
+                st.markdown(f'<div style="color:{BRASS};font-weight:600">Forwarded to clients (simulated). '
+                            "Their clients are reading it: this firm moves to the top of today's calls.</div>",
+                            unsafe_allow_html=True)
+            c1, c2, c3, _ = st.columns([1, 1, 1, 3])
+            c1.button("Approve", key=f'qa|{row["id"]}', on_click=set_status, args=(row, "approved"),
+                      disabled=row["status"] != "pending", type="primary", width="stretch")
+            c2.button("Mark sent", key=f'qs|{row["id"]}', on_click=set_status, args=(row, "sent"),
+                      disabled=row["status"] == "sent", width="stretch")
+            c3.button("Back to pending", key=f'qp|{row["id"]}', on_click=set_status, args=(row, "pending"),
+                      disabled=row["status"] == "pending", width="stretch")
