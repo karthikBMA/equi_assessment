@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 
 from pipeline.clean import clean_leads
 from pipeline.score import score_firms, stability, red_flags, bubble_reason, bubble_type
-from pipeline import personalize, signals
+from pipeline import ads, personalize, signals
 from pipeline.enrich import enrich, source_summary
 from pipeline.sequences import SEQUENCES, sequence_for
 
@@ -92,10 +92,14 @@ def build_signals(records):
     notes = signals.draft_notes(day, signals.EVENTS[key]["context"], firms)
     out["fired"][key] = {"day": day, "triggers": signals.triggers(day), "notes": notes,
                          "model": signals.MODEL, "generated": str(date.today())}
+    # the ad set lives in the same file; write it here too so --signals never drops it
+    ad_set = ads.generate(day, signals.EVENTS[key]["context"])
+    ad_set["generated"] = str(date.today())
+    out["fired"][key]["ads"] = ad_set
     (DATA / "signals.json").write_text(json.dumps(out, indent=2))
     flagged = sum(bool(n["flags"]) for n in notes.values())
     print(f"Signals: {len(out['days'])} replay days cached; {len(notes)}/{len(firms)} Aug 5 notes "
-          f"({flagged} flagged) -> data/signals.json")
+          f"({flagged} flagged), ad set ({len(ad_set['flags'])} flagged) -> data/signals.json")
 
 
 if __name__ == "__main__":
