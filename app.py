@@ -31,7 +31,7 @@ from pipeline.compliance import DISCLOSURE
 from pipeline.clean import clean_leads
 from pipeline.score import (CRITERIA_LABELS, DEFAULT_WEIGHTS, WHY_WEIGHT, bubble_reason,
                             bubble_type,
-                            red_flags, route, score_firms, stability, tier_for)
+                            classify_title, red_flags, route, score_firms, stability, tier_for)
 from pipeline.sequences import as_rows, sequence_for, short_route
 
 CSV = "data/sample-leads.csv"
@@ -49,6 +49,27 @@ if not os.getenv("ANTHROPIC_API_KEY"):
         pass
 HAS_KEY = bool(os.getenv("ANTHROPIC_API_KEY"))
 NO_KEY_MSG = "Writing needs an Anthropic key: add ANTHROPIC_API_KEY to .env, or to Streamlit secrets when deployed."
+
+# Cost guard for the shared demo: at most this many Claude calls per browser session, across every button.
+# Each action reserves the most calls it can make (a failed rule check retries once), before it runs.
+CALL_CAP = 25
+AEO_CALLS = 32   # 30 questions plus the action plan: more than one session's cap, so it runs from the CLI
+
+
+def calls_used() -> int:
+    return st.session_state.get("claude_calls", 0)
+
+
+def spend(n: int, channel: str) -> bool:
+    """Reserve n calls, or leave a plain message on the given channel and refuse."""
+    used = calls_used()
+    if used + n > CALL_CAP:
+        st.session_state[channel] = ("warning", f"Session limit reached: this session has used {used} of its {CALL_CAP} "
+                                                f"Claude calls, and this needs up to {n}. The limit keeps a shared demo "
+                                                "from running up costs. Everything cached still works.")
+        return False
+    st.session_state["claude_calls"] = used + n
+    return True
 
 INK, PAPER, BRASS, SLATE, RED = "#1F2A44", "#FAFAF7", "#A8843A", "#2E3440", "#B4553F"
 TIER_COLOR = {"A": BRASS, "B": INK, "C": "#5E6675", "Park": "#8A8F99", "DQ": RED}
@@ -265,6 +286,9 @@ with st.sidebar:
         weights = dict(DEFAULT_WEIGHTS)
 
     records = rescore(weights)
+    if not HAS_KEY:
+        st.info("No Anthropic key set. Everything cached works; buttons that write new text are off.")
+    calls_slot = st.empty()
     st.header("Filters")
     all_tiers = ["A", "B", "C", "Park", "DQ"]
     all_routes = sorted({r["route"] for r in records})
@@ -333,6 +357,17 @@ def render_sources(r):
     st.markdown("".join(rows), unsafe_allow_html=True)
 
 
+ROLE = {"Gatekeeper": "Gatekeeper, route through, do not pitch:", "Non-buyer seat": "Not the decision-maker:",
+        "Research lead": "Champion:"}
+
+
+def contact_role(c: dict, r: dict) -> str:
+    """Who each contact is for outreach: the target, or what to do with them instead."""
+    if c.get("name") and c.get("name") == r.get("contact_name"):
+        return "Target:"
+    return html.escape(ROLE.get(classify_title(c.get("title")), "Other contact:"))
+
+
 def render_detail(r):
     st.divider()
     tier = r["tier"]
@@ -369,7 +404,7 @@ def render_detail(r):
             for c in r.get("contacts") or []:
                 src = c.get("email_source")
                 tagged = f' {pill(SOURCE_LABEL[src], SOURCE_COLOR[src])}' if src else ""
-                st.markdown(f'<div class="muted">{html.escape(str(c.get("name") or "No name"))}, '
+                st.markdown(f'<div class="muted"><b>{contact_role(c, r)}</b> &nbsp;{html.escape(str(c.get("name") or "No name"))}, '
                             f'{html.escape(str(c.get("title") or "no title"))}, '
                             f'{html.escape(str(c.get("email") or "no email"))}{tagged}</div>',
                             unsafe_allow_html=True)
@@ -610,10 +645,12 @@ def rewrite(r, v):
     if not note:
         st.session_state["draft_msg"] = ("warning", "Add a note first, e.g. 'shorter, mention the Future Proof meeting'.")
         return
+    if not spend(2, "draft_msg"):
+        return
     d = draft_store()[f"{firm}|{v}"]
     prev = f'Subject: {d["subject"]}\n\n{d["body"]}'
     try:
-        new = personalize.draft(r, v, sender_name=st.session_state.get("sender", "Karthik"),
+        new = personalize.draft(r, v, sender_name=st.session_state.get("sender", "the Equi team"),
                                 instruction=note, previous=prev)
     except Exception as e:
         st.session_state["draft_msg"] = ("error", f"Rewrite failed: {type(e).__name__}: {str(e)[:200]}")
@@ -627,10 +664,12 @@ def rewrite(r, v):
 
 
 def write_both(r):
+    if not spend(4, "draft_msg"):
+        return
     try:
         for v in ("A", "B"):
             draft_store()[f'{r["firm_name"]}|{v}'] = personalize.draft(
-                r, v, sender_name=st.session_state.get("sender", "Karthik"))
+                r, v, sender_name=st.session_state.get("sender", "the Equi team"))
     except Exception as e:
         st.session_state["draft_msg"] = ("error", f"Drafting failed: {type(e).__name__}: {str(e)[:200]}")
 
@@ -664,6 +703,8 @@ def render_variant(r, v, arm):
     st.session_state.setdefault(f"body|{firm}|{v}", d["body"])
     st.text_input("Subject", key=f"subj|{firm}|{v}", on_change=sync_edit, args=(firm, v))
     st.text_area("Body", key=f"body|{firm}|{v}", height=300, on_change=sync_edit, args=(firm, v))
+    if d.get("flags"):
+        st.warning("Check before approving:\n\n" + "\n".join(f"- {f}" for f in d["flags"]))
     if d.get("angle"):
         st.caption(f'Angle: {d["angle"]}')
     st.markdown('<div class="muted"><b>Facts used</b> (check each against the firm record)</div>'
@@ -710,7 +751,7 @@ with tab_drafts:
         st.caption(NO_KEY_MSG + " Pre-written drafts still load, and editing, approving and export all work.")
 
     top1, top2 = st.columns([3, 1])
-    st.session_state.setdefault("sender", "Karthik")
+    st.session_state.setdefault("sender", "the Equi team")   # matches the pre-written drafts
     top2.text_input("Sign rewrites as", key="sender")
 
     # labels stay fixed: a label that changes on approve makes Streamlit lose the selection
@@ -785,6 +826,8 @@ def kit_store() -> dict:
 
 
 def make_kit(r):
+    if not spend(2, "kit_msg"):
+        return
     try:
         kit_store()[r["firm_name"]] = kits_mod.generate(r)
         st.session_state["kit_msg"] = ("success", "Kit written. Read it before sending it to review.")
@@ -884,6 +927,10 @@ def fire(key: str, label: str, day: dict, context: str, firms: list[dict]):
     pre = load_signals()["fired"].get(key, {}).get("notes", {}) if key in sig.EVENTS else {}
     notes = {f["firm_name"]: pre[f["firm_name"]] for f in firms if f["firm_name"] in pre}
     todo = [f for f in firms if f["firm_name"] not in notes]
+    need_ads = not load_signals()["fired"].get(key, {}).get("ads")
+    need = ((-(-len(todo) // 7) if todo else 0) + (2 if need_ads else 0)) if HAS_KEY else 0
+    if need and not spend(need, "sig_msg"):
+        return
     if todo and HAS_KEY:
         try:
             notes.update(sig.draft_notes(day, context, todo))
@@ -1115,7 +1162,7 @@ with tab_queue:
     st.markdown(f'<div class="summary">{counts["pending"]} pending, {counts["approved"]} approved, {counts["sent"]} sent.'
                 + (f' <span style="color:{BRASS};font-weight:600">{n_fwd} forwarded to clients</span>: call those first.'
                    if n_fwd else "") + "</div>", unsafe_allow_html=True)
-    st.caption("Opened and forwarded are simulated for this demo, so the priority logic can be shown. In production "
+    st.caption("Simulation: opened and forwarded are simulated for this demo, so the priority logic can be shown. In production "
                "they come from tracked links in each sent email and note.")
 
     f1, f2, f3 = st.columns([2, 2, 3])
@@ -1232,6 +1279,8 @@ def run_search(query: str):
             st.session_state["serp_msg"] = ("info", "This question is not cached yet. Searching a new question needs an "
                                                     "Anthropic key; the two examples below work without one.")
             return
+        if not spend(5, "serp_msg"):
+            return
         with st.spinner("Searching the web and reading the top results. About a minute and a half."):
             try:
                 result = serp.analyze_query(query.strip())
@@ -1326,7 +1375,7 @@ def render_serp(r: dict):
     sl = pages_mod.slug(r["query"])
     b1.button("Draft this page", key=f"serpdraft|{key}", disabled=not HAS_KEY or sl in page_store(), width="stretch",
               help=("Already drafted, see below." if sl in page_store() else "About 30 seconds.") if HAS_KEY else NO_KEY_MSG,
-              on_click=draft_page, args=(r["query"], brief_text(r["own_it"])))
+              on_click=draft_page, args=(r["query"], brief_text(r["own_it"]), "serp_msg"))
     added = key in queued_searches()
     b2.button("In review queue" if added else "Add to review queue", key=f"serpadd|{key}", disabled=added,
               width="stretch", on_click=add_search_to_queue, args=(r,))
@@ -1363,7 +1412,9 @@ def page_store() -> dict:
     return store
 
 
-def draft_page(question: str, action: str):
+def draft_page(question: str, action: str, channel: str = "aeo_msg"):
+    if not spend(2, channel):
+        return
     try:
         page = pages_mod.draft(question, f"Page brief from the AEO plan: {action}")
         page_store()[pages_mod.slug(question)] = page
@@ -1373,10 +1424,12 @@ def draft_page(question: str, action: str):
             pass  # read-only disk on some hosts; the session copy is enough
         st.session_state["page_view"] = pages_mod.slug(question)
     except Exception as e:
-        st.session_state["aeo_msg"] = ("error", f"Drafting failed: {type(e).__name__}: {str(e)[:200]}")
+        st.session_state[channel] = ("error", f"Drafting failed: {type(e).__name__}: {str(e)[:200]}")
 
 
 def build_plan():
+    if not spend(2, "aeo_msg"):
+        return
     d = aeo.load()
     try:
         d["action_plan"], d["plan_error"] = aeo.action_plan(d["metrics"]), None
@@ -1442,10 +1495,10 @@ with tab_air:
                     f'Equi came up in {n_eq}.</b></div>', unsafe_allow_html=True)
         c1.caption(f'We asked {m["answered"]} questions clients actually type, with live web search, on '
                    f'{d["run_date"]} ({d["model"]}).')
-        if c2.button("Run the check again", disabled=not HAS_KEY, width="stretch",
-                     help="About 3 minutes." if HAS_KEY else NO_KEY_MSG):
-            run_aeo()
-            d = load_aeo()
+        c2.button("Run the check again", disabled=True, width="stretch",
+                  help=(f"The full check uses about {AEO_CALLS} Claude calls, more than one session's {CALL_CAP}. "
+                        "Run it with: python -m pipeline.aeo --n 30") if HAS_KEY else NO_KEY_MSG)
+        c2.caption(f"Runs weekly from the command line: about {AEO_CALLS} calls, over the {CALL_CAP}-call session limit.")
 
         g1, g2 = st.columns(2, gap="large")
         with g1:
@@ -1712,3 +1765,7 @@ with tab_start:
     jump_row("Drafts", "Two first-touch emails per firm, kit-led and insight-led, randomized for the A/B test.")
     jump_row("Review queue", "Everything waiting for a human before it goes out: drafts, kits, notes, ad sets, and "
                              "search briefs.")
+
+
+# filled last, so the count includes anything that ran further down the page
+calls_slot.caption(f"Claude calls this session: {calls_used()} of {CALL_CAP}.")
