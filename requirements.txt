@@ -1,7 +1,8 @@
-pandas>=2.2
-python-dateutil
-python-dotenv
-anthropic>=1.8
-numpy
-streamlit>=1.64
-yfinance>=1.7
+# Exact versions from the tested .venv (Python 3.14.7). See README, Setup.
+anthropic==1.8.0
+numpy==2.5.3
+pandas==3.0.6
+python-dateutil==2.9.0.post0
+python-dotenv==1.2.3
+streamlit==1.64.0
+yfinance==1.7.0
