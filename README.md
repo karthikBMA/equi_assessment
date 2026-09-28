@@ -3,7 +3,7 @@
 <!-- KARTHIK: your 3-line intro goes here. -->
 _[Placeholder: 3-line intro]_
 
-Part 1 (the demand plan) is in [PLAN.md](PLAN.md). This README covers setup, how the system works, and the calls I made.
+The demand plan (Part 1) is in [PLAN.md](PLAN.md). This README covers setup, how it works, and the calls I made.
 
 ## Setup
 
@@ -17,7 +17,7 @@ python build.py --drafts      # clean, score, stress test, enrich, and write A/B
 streamlit run app.py
 ```
 
-`python build.py --offline` skips the SEC lookup. `--signals` caches the replay market data and rewrites the Aug 5 2024 notes. `python -m pipeline.aeo --n 30` reruns the answer-engine tracker. Everything the app needs is already in `data/`, so it runs without a key; buttons that write new text say so.
+`python build.py --offline` skips the SEC lookup. `--signals` caches the replay market data and rewrites the Aug 5 2024 notes and ad set. `python -m pipeline.kit` rewrites the two demo kits, and `python -m pipeline.aeo --n 30` reruns the answer-engine tracker. Everything the app needs is in `data/`, so it runs without a key; buttons that write new text say so.
 
 **Streamlit Cloud:** deploy `app.py`, then add `ANTHROPIC_API_KEY = "sk-ant-..."` under App settings, Secrets. The app reads `.env` locally and `st.secrets` on Cloud, and never displays the key.
 
@@ -92,4 +92,4 @@ streamlit run app.py
 - Persist state to BigQuery and wire real engagement from tracked links into the queue.
 - Rerun the AEO tracker weekly, pool the citations, and track Equi's pages over time.
 - Move kit generation to structured output, as the notes and ads already are.
-- Calibrate the weights against real meeting outcomes once a quarter of data exists.
+- Calibrate the weights against real meeting outcomes after a quarter.
