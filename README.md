@@ -17,7 +17,7 @@ python build.py --drafts      # clean, score, stress test, enrich, and write A/B
 streamlit run app.py
 ```
 
-`python build.py --offline` skips the SEC lookup. `--signals` caches the replay market data and rewrites the Aug 5 2024 notes and ad set. `python -m pipeline.kit` rewrites the demo kits, `python -m pipeline.aeo --n 30` reruns the tracker and action plan, and `python -m pipeline.pages "question"` drafts a page. The app runs without a key from `data/`; buttons that write new text say so.
+`python build.py --offline` skips the SEC lookup. `--signals` caches the replay market data and rewrites the Aug 5 2024 notes and ad set. `python -m pipeline.kit` rewrites the demo kits, `python -m pipeline.aeo` reruns the tracker and action plan, and `python -m pipeline.pages "question"` drafts a page. The app runs without a key from `data/`; buttons that write new text say so.
 
 **Streamlit Cloud:** deploy `app.py` with Python 3.14 (Advanced settings; tested on 3.14.7, see `.python-version`), then add `ANTHROPIC_API_KEY = "sk-ant-..."` under Secrets. The app reads `.env` locally and `st.secrets` on Cloud.
 
@@ -31,7 +31,7 @@ streamlit run app.py
 - **Start here:** the thesis and live findings.
 - **Kit Studio:** firm-branded letter, talking points, IC memo outline for committee firms.
 - **Market signals:** today's status, real-event replays, the alert feed.
-- **Client demand:** what AI tells clients, a three-lane AEO action plan with page drafts, and the simulated air cover plan.
+- **Client demand:** what AI tells clients and advisors, a three-lane AEO action plan with page drafts, and the simulated air cover plan.
 - **Search lab:** any client question: who owns it, what AI says, Equi's plan.
 - **Shortlist:** ranked firms with score range, stability, route, and a full detail view.
 - **Your call:** firms that need a human decision, with a recommendation and overrides.
@@ -63,7 +63,7 @@ streamlit run app.py
 
 **No Clay on synthetic data.** Enriching made-up firms returns nothing, or someone else's data. In production: SEC Form ADV data files for AUM (Item 5.F) and high-net-worth client counts and assets (Item 5.D, which gives real average client size), and Clay for contacts, emails, and job changes.
 
-**Session state and a cost guard.** Overrides, approvals, and the queue live in the browser session, with CSV exports; production would write them to BigQuery. Each session gets 25 Claude calls across all buttons, so the 32-call weekly AEO check runs from the command line.
+**Session state and a cost guard.** Overrides, approvals, and the queue live in the browser session, with CSV exports; production would write them to BigQuery. Each session gets 25 Claude calls across all buttons, so the 42-call weekly AEO check runs from the command line.
 
 **Client-side work is category education only.** Equi cannot advertise its funds to the public. Letters, notes, ads, and pages explain evergreen alternatives, never name a fund, never cite performance, end in "ask your advisor", and carry a disclosure line.
 
