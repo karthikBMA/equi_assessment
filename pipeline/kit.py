@@ -80,7 +80,8 @@ MEMO_SCHEMA = '"ic_memo": [{"section": "...", "points": ["...", "..."]}],'
 # What compliance would flag in client-facing text (the letter and talking points).
 # The IC memo is exempt from the performance rule: it is meant to ask the manager for track record.
 LINT_RULES = [
-    (r"\breturns? (potential|profile|stream|target|expectation)|\boutperform|\bperformance\b|\byields?\b|\bprotect",
+    (r"\breturns? (potential|profile|stream|target|expectation)|\boutperform"
+     r"|\bperformance\b(?![- ](based[- ])?(fee|component|allocation))|\byields?\b|\bprotect",
      "return or performance language"),
     (r"\d", "a specific figure"),
     (r"committee|research team", "internal process (clients have no committee)"),

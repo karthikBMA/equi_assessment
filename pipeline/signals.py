@@ -125,7 +125,7 @@ def signed(n: dict) -> str:
 
 # "It does not mean these holdings are unaffected" is the disclaimer we want, not a claim.
 NEGATABLE = {"a claim that private holdings are shielded from volatility", "return or performance language"}
-NEGATION = re.compile(r"\b(not|never|no)\b|n't", re.I)
+NEGATION = re.compile(r"\b(not|never|no|without)\b|n't", re.I)
 
 
 def lint_note(n: dict) -> list[str]:

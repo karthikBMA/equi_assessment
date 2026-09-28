@@ -14,13 +14,15 @@ DISCLOSURE = ("Educational only, not an offer or a recommendation. Alternative i
 
 
 def lint_text(text: str) -> list[str]:
-    """Sentence-level check with the market-note rules; negated disclaimers pass."""
+    """Sentence-level check with the market-note rules. Negated disclaimers pass, and so do questions:
+    an FAQ asking "Can any fund guarantee protection?" is not a claim that one can."""
     from pipeline.signals import NEGATABLE, NEGATION, NOTE_RULES
     found = []
     sentences = re.split(r"(?<=[.!?])\s+", text)
     for pattern, label in NOTE_RULES:
         for sent in sentences:
-            if re.search(pattern, sent, re.I) and not (label in NEGATABLE and NEGATION.search(sent)):
+            excused = label in NEGATABLE and (NEGATION.search(sent) or sent.rstrip().endswith("?"))
+            if re.search(pattern, sent, re.I) and not excused:
                 found.append(f'{label} in "{sent.strip()}"')
                 break
     return found
