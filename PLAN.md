@@ -35,14 +35,14 @@ Three experiments. Each has a working slice in the app, a leading indicator you 
 ## 3. Own the client conversation
 
 **What it is.** Two parts, one goal: clients hear about evergreen alternatives before their advisor hears from Equi.
-- **AEO.** Be the source AI answers cite. The tracker asks 30 questions wealthy clients actually type. Today, answers mention evergreen concepts 33% of the time, 0% on preserving family wealth, and never mention Equi. Publish the pages the tracker recommends, anchored by a **quarterly Evergreen Fund Index** built from public SEC filings (for example Form ADV private fund data and Form D, plus N-PORT for registered interval funds): fund counts, assets, and liquidity terms by strategy. Original data is what answer engines and trade press cite. Pitch it to the publishers the tracker shows being cited.
+- **AEO.** Be the source AI answers cite. The tracker asks 30 questions wealthy clients actually type. In the run in this repo, answers mention evergreen concepts 40% of the time (12 of 30), 0% on downturn protection and on preserving family wealth, and never mention Equi. Publish the pages the tracker recommends, anchored by a **quarterly Evergreen Fund Index** built from public SEC filings (for example Form ADV private fund data and Form D, plus N-PORT for registered interval funds): fund counts, assets, and liquidity terms by strategy. Original data is what answer engines and trade press cite. Pitch it to the publishers the tracker shows being cited.
 - **Geo air cover.** For 2 to 3 weeks before a Tier A firm's sequence starts, run category-education ads to affluent households around its city, then measure against a paired holdout.
 
 **Why it works for Equi.** Equi cannot market funds to the public, but it can shape what clients learn about the category. An advisor whose clients already ask "what is an evergreen fund" has an easier first conversation with Equi, and the index gives Equi a reason to be cited that is not a product pitch.
 
 **Leading indicators (2 to 6 weeks)**
 - Equi pages cited in the AEO tracker within 6 weeks.
-- Evergreen share rising on the gap questions (the 20 where it never came up).
+- Evergreen share rising on the gap questions (the 18 where it never came up).
 - Trade press pickup of the first index.
 - For air cover: ad reach in each metro, and outbound reply rate in covered vs control firms.
 
