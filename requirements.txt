@@ -1,8 +1,7 @@
 pandas>=2.2
 python-dateutil
 python-dotenv
-anthropic>=0.40
+anthropic>=1.8
 numpy
-streamlit>=1.38
-plotly
-yfinance
+streamlit>=1.64
+yfinance>=1.7
