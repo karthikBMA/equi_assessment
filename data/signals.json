@@ -1,0 +1,325 @@
+{
+  "days": {
+    "2024-08-05": {
+      "date": "2024-08-05",
+      "spy": 517.38,
+      "spy_pct": -2.91,
+      "vix": 38.57,
+      "vix_pct": 64.9
+    },
+    "2025-04-03": {
+      "date": "2025-04-03",
+      "spy": 536.7,
+      "spy_pct": -4.93,
+      "vix": 30.02,
+      "vix_pct": 39.56
+    },
+    "2025-04-04": {
+      "date": "2025-04-04",
+      "spy": 505.28,
+      "spy_pct": -5.85,
+      "vix": 45.31,
+      "vix_pct": 50.93
+    }
+  },
+  "fired": {
+    "2024-08-05": {
+      "day": {
+        "date": "2024-08-05",
+        "spy": 517.38,
+        "spy_pct": -2.91,
+        "vix": 38.57,
+        "vix_pct": 64.9
+      },
+      "triggers": [
+        "S&P 500 down 2.9% (rule: 2% or more)",
+        "VIX up 65% day over day (rule: 25% or more)",
+        "VIX closed at 38.6 (rule: above 30)"
+      ],
+      "notes": {
+        "Marchetti Ruiz Family Advisors": {
+          "firm": "Marchetti Ruiz Family Advisors",
+          "subject": "A volatile session in global markets",
+          "client_note": "Markets moved sharply today. The S&P 500 closed down 2.91% at 517.38, while the VIX, a measure of expected volatility, jumped 64.9% to 38.57. The move followed a Bank of Japan rate hike that unwound the yen carry trade, a widely used borrowing strategy, sending Japan's Nikkei down about 12%. Days like this happen periodically as positioning unwinds quickly across interconnected markets. It is worth noting that private equity and real estate holdings are typically valued periodically rather than daily. That means their reported values update less often and can lag what is happening in public markets on a day like today. It does not mean the underlying assets are unaffected by broader conditions. Understanding how each part of a portfolio is valued helps put days like this in context.",
+          "advisor_ping": [
+            "Sharp global selloff today, S&P down 2.91%, VIX up 64.9% on the BOJ-driven carry trade unwind.",
+            "Wrote a client note under your name if useful, happy to get on a call if today's move raises questions."
+          ],
+          "flags": []
+        },
+        "Ellingham Court Partners": {
+          "firm": "Ellingham Court Partners",
+          "subject": "Today's market volatility explained",
+          "client_note": "Markets saw a sharp move today. The S&P 500 fell 2.91% to close at 517.38, and the VIX, which reflects expected volatility, surged 64.9% to 38.57. The catalyst was a Bank of Japan rate hike that unwound the yen carry trade, contributing to a roughly 12% drop in Japan's Nikkei. Episodes like this occur when leveraged positioning unwinds quickly across global markets. For private equity holdings, it is worth remembering that valuations are typically reported periodically rather than daily. This means reported values update less frequently and can lag what public markets are experiencing on a given day. It does not mean the underlying companies are insulated from broader economic conditions. Knowing how different holdings are valued can help make sense of days like today.",
+          "advisor_ping": [
+            "Sharp selloff today, S&P down 2.91%, VIX up 64.9% after the BOJ hike unwound the yen carry trade.",
+            "Wrote a note under your name for clients if useful, glad to jump on a call if helpful."
+          ],
+          "flags": []
+        },
+        "Ashcombe Meridian Family Office": {
+          "firm": "Ashcombe Meridian Family Office",
+          "subject": "Understanding today's market swings",
+          "client_note": "Markets experienced a sharp move today. The S&P 500 closed down 2.91% at 517.38, and the VIX, a gauge of expected volatility, jumped 64.9% to 38.57. The trigger was a Bank of Japan rate hike that unwound the yen carry trade, a strategy many investors use to borrow cheaply in yen. Japan's Nikkei fell about 12% as a result. Moves like this happen when leveraged trades unwind rapidly across global markets. Venture and private credit holdings are typically valued periodically rather than daily, meaning reported values update less often and can lag what public markets show in real time. This does not mean these holdings are unaffected by the broader environment. Understanding these valuation mechanics can help make sense of a day like today.",
+          "advisor_ping": [
+            "Sharp global selloff, S&P down 2.91%, VIX up 64.9% on the BOJ rate hike and carry trade unwind.",
+            "Wrote a client note under your name if useful, happy to talk it through if today prompts questions."
+          ],
+          "flags": []
+        },
+        "Oakhurst Meridian Advisors": {
+          "firm": "Oakhurst Meridian Advisors",
+          "subject": "What happened in markets today",
+          "client_note": "Markets moved sharply today. The S&P 500 fell 2.91% to close at 517.38, and the VIX, which measures expected volatility, rose 64.9% to 38.57. The move came after the Bank of Japan raised interest rates, unwinding the widely used yen carry trade and sending Japan's Nikkei down about 12%. Days like this occur when leveraged positions unwind quickly across interconnected global markets. Private credit holdings are typically valued periodically rather than daily. This means reported values update less frequently and can lag what is happening in public markets. It does not mean these holdings are unaffected by broader market conditions. Understanding how different parts of a portfolio are valued can help provide context on volatile days like today.",
+          "advisor_ping": [
+            "Sharp move today, S&P down 2.91%, VIX up 64.9% following the BOJ rate hike and carry trade unwind.",
+            "Have a client note ready under your name if useful, glad to talk through it if helpful."
+          ],
+          "flags": []
+        },
+        "Quillmoor Advisors": {
+          "firm": "Quillmoor Advisors",
+          "subject": "Market volatility today, in context",
+          "client_note": "Markets saw a sharp move today. The S&P 500 closed down 2.91% at 517.38, while the VIX, which reflects expected market volatility, jumped 64.9% to 38.57. The catalyst was a Bank of Japan rate hike, which unwound the yen carry trade and contributed to a roughly 12% drop in Japan's Nikkei. Days like this happen when leveraged positioning unwinds quickly across global markets. It is worth noting that private equity and private credit holdings are typically valued periodically rather than daily. This means their reported values update less frequently and can lag what is occurring in public markets in real time. It does not mean these holdings are unaffected by broader conditions. Understanding these valuation timelines can help make sense of a volatile day like today.",
+          "advisor_ping": [
+            "Sharp selloff today, S&P down 2.91%, VIX up 64.9% on the BOJ-driven carry trade unwind.",
+            "Wrote a client note under your name if useful, happy to hop on a call if today raises questions."
+          ],
+          "flags": []
+        },
+        "Marisol & Hart Private Wealth": {
+          "firm": "Marisol & Hart Private Wealth",
+          "subject": "Today's market moves explained",
+          "client_note": "Markets moved sharply today. The S&P 500 fell 2.91% to close at 517.38, and the VIX, a measure of expected volatility, surged 64.9% to 38.57. The trigger was a Bank of Japan rate hike that unwound the yen carry trade, a widely used borrowing strategy, sending Japan's Nikkei down roughly 12%. These episodes happen when leveraged positioning unwinds quickly across global markets. Real assets and hedge fund holdings can be valued or reported on different schedules than daily public markets, and this can mean reported values lag what is happening in real time. It does not mean these holdings are unaffected by broader market conditions. Understanding how different parts of a portfolio are valued and reported can help provide context on days like today.",
+          "advisor_ping": [
+            "Sharp global selloff, S&P down 2.91%, VIX up 64.9% on the BOJ carry trade unwind.",
+            "Wrote a note under your name for clients if useful, glad to get on a call if today prompts questions."
+          ],
+          "flags": []
+        },
+        "Harborstone Wealth Partners": {
+          "firm": "Harborstone Wealth Partners",
+          "subject": "Understanding today's market volatility",
+          "client_note": "Markets experienced a sharp move today. The S&P 500 closed down 2.91% at 517.38, and the VIX, which measures expected volatility, jumped 64.9% to 38.57. The catalyst was a Bank of Japan rate hike that unwound the yen carry trade, sending Japan's Nikkei down about 12%. Moves like this occur when leveraged positions unwind quickly across interconnected global markets. Private equity and real estate holdings are typically valued periodically rather than daily. This means reported values update less often and can lag what public markets are experiencing on a given day. It does not mean these holdings are unaffected by broader economic conditions. Understanding how different parts of a portfolio are valued can help make sense of a volatile day like today.",
+          "advisor_ping": [
+            "Sharp move today, S&P down 2.91%, VIX up 64.9% after the BOJ hike unwound the carry trade.",
+            "Have a client note ready under your name if useful, happy to talk it through if helpful."
+          ],
+          "flags": []
+        },
+        "Aldermoor Capital Group": {
+          "firm": "Aldermoor Capital Group",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets fell sharply today. The S&P 500 closed down 2.91%, and the VIX, a common gauge of expected volatility, jumped 64.9% to 38.57. The move followed a Bank of Japan rate hike that unwound the yen carry trade, with Japan's Nikkei falling roughly 12%. Days like this happen periodically when positioning unwinds quickly across global markets. Real assets and hedge fund allocations are typically valued on a different schedule than public equities, often monthly or quarterly rather than daily. That means reported values may not immediately reflect today's move. It does not mean the underlying holdings are unaffected by market conditions. Understanding how each part of a portfolio is valued and when, helps put single-day headlines in context.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% after the BOJ hike unwound the yen carry trade.",
+            "Note is ready to send under your name, happy to walk through it if useful."
+          ],
+          "flags": []
+        },
+        "Bramblewick Capital Advisers": {
+          "firm": "Bramblewick Capital Advisers",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 closed down 2.91%, and the VIX rose 64.9% to 38.57, reflecting a sharp jump in expected volatility. The catalyst was a Bank of Japan rate hike that unwound the yen carry trade, with Japan's Nikkei falling about 12%. Sudden global repricing like this occurs from time to time as positioning adjusts. Private credit and hedge fund holdings are generally valued less frequently than public markets, often monthly or quarterly. That means reported values can lag what is happening in daily-priced markets. It does not mean those holdings are unaffected by the same conditions driving today's moves. Knowing how and when each holding is valued is useful context for interpreting days like this.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the yen carry trade unwind.",
+            "Note is ready under your name if useful, happy to jump on a call."
+          ],
+          "flags": []
+        },
+        "Haverlock Advisory Group": {
+          "firm": "Haverlock Advisory Group",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets sold off today. The S&P 500 closed down 2.91%, and the VIX jumped 64.9% to 38.57. The trigger was a Bank of Japan rate hike that unwound the yen carry trade, with Japan's Nikkei falling roughly 12%. Sharp, fast-moving days like this occur periodically as global positioning shifts. Private credit holdings are typically valued on a periodic basis, often monthly or quarterly, rather than daily like public markets. That means the reported value may lag current market conditions rather than update in real time. It does not mean the underlying loans or assets are unaffected by broader market stress. Being aware of these valuation timing differences is helpful when reviewing portfolio statements after a volatile day.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% after the BOJ move triggered a carry trade unwind.",
+            "Note is ready to send under your name, glad to talk it through if helpful."
+          ],
+          "flags": []
+        },
+        "Solstice Grove Advisors": {
+          "firm": "Solstice Grove Advisors",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets fell sharply today. The S&P 500 closed down 2.91%, while the VIX rose 64.9% to 38.57, signaling a sharp rise in expected volatility. The move followed a Bank of Japan rate hike that unwound the yen carry trade, with Japan's Nikkei falling about 12%. Fast global repricing like this happens periodically when leveraged positions unwind. Hedge fund and private credit holdings are often valued less frequently than public markets, on a monthly or quarterly basis. That means their reported values can lag what public markets are showing on a given day. It does not mean these holdings are unaffected by the conditions driving today's move. Understanding valuation timing across a portfolio is useful context on days like this.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% as the BOJ hike unwound the yen carry trade.",
+            "Note is ready under your name, happy to get on a short call if useful."
+          ],
+          "flags": []
+        },
+        "Thornbury Wealth Advisors": {
+          "firm": "Thornbury Wealth Advisors",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply lower today. The S&P 500 closed down 2.91%, and the VIX, which measures expected volatility, rose 64.9% to 38.57. The catalyst was a Bank of Japan rate hike that unwound the yen carry trade, with Japan's Nikkei falling roughly 12%. Sudden, sharp repricing like this occurs periodically as global positioning adjusts. Private equity holdings are generally valued on a periodic basis, often quarterly, rather than daily like public markets. That means reported values may lag what is happening in public markets right now. It does not mean those holdings are unaffected by the same broader conditions. Keeping valuation timing in mind is useful context when reviewing statements after a day like today.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the yen carry trade unwind after the BOJ hike.",
+            "Note is ready to send under your name, happy to talk it through if useful."
+          ],
+          "flags": []
+        },
+        "Ridgeline Family Office": {
+          "firm": "Ridgeline Family Office",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets sold off sharply today. The S&P 500 closed down 2.91%, and the VIX spiked 64.9% to 38.57. The move followed a Bank of Japan rate hike that unwound the yen carry trade, with Japan's Nikkei falling about 12%. Days like this occur periodically as global positioning shifts quickly. Hedge fund, private credit, and venture holdings are typically valued less frequently than public markets, often monthly or quarterly. That means the values reported may lag what public markets show today. It does not mean these holdings are unaffected by the conditions driving the broader selloff. Understanding how and when each part of a portfolio is valued is helpful context for interpreting volatile days like this one.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% after the BOJ hike triggered a carry trade unwind.",
+            "Note is ready under your name, glad to get on a call if it helps."
+          ],
+          "flags": []
+        },
+        "Larkhaven Multi-Family Office": {
+          "firm": "Larkhaven Multi-Family Office",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets fell sharply today. The S&P 500 closed down 2.91%, and the VIX rose 64.9% to 38.57, reflecting a sharp increase in expected volatility. The catalyst was a Bank of Japan rate hike that unwound the yen carry trade, with Japan's Nikkei falling roughly 12%. Sharp global repricing like this happens periodically as leveraged positions unwind. Hedge fund, private equity, and venture holdings are generally valued on a periodic basis, often quarterly, rather than daily like public markets. That means reported values can lag what is happening in daily-priced markets right now. It does not mean these holdings are unaffected by the same broader conditions. Keeping this valuation timing in mind is useful context when reviewing a portfolio after a day like today.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the yen carry trade unwind following the BOJ hike.",
+            "Note is ready to send under your name, happy to walk through it if useful."
+          ],
+          "flags": []
+        },
+        "Tanglewood Reach Advisors": {
+          "firm": "Tanglewood Reach Advisors",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 closed down 2.91% at 517.38, and the VIX, a measure of expected volatility, jumped 64.9% to 38.57. The trigger was a Bank of Japan rate hike that unwound the so-called yen carry trade, a strategy many global investors had relied on, with Japan's Nikkei falling roughly 12%. Days like this happen periodically as positioning unwinds quickly across interconnected markets. Real estate holdings in a portfolio are typically valued on a periodic basis rather than priced continuously like public stocks. That means reported values update less often and can lag what is happening in daily markets. It does not mean the underlying properties are unaffected by broader economic conditions. We are watching developments and are available to discuss any questions about portfolio structure.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the BOJ-driven carry trade unwind.",
+            "Wrote a client note under your name if useful, happy to get on a call if it helps."
+          ],
+          "flags": []
+        },
+        "Kirkaldy & Sons Wealth": {
+          "firm": "Kirkaldy & Sons Wealth",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 closed down 2.91% at 517.38, and the VIX, a measure of expected volatility, rose 64.9% to 38.57. The catalyst was a Bank of Japan rate hike that unwound the yen carry trade, a widely used global strategy, with Japan's Nikkei falling about 12%. Sharp moves like this occur from time to time as leveraged positions get unwound quickly. Real estate holdings within a portfolio are generally valued periodically rather than priced daily like public stocks. This means reported values update less frequently and can lag what is happening in liquid markets. It does not mean the underlying assets are unaffected by broader conditions. We are monitoring the situation and are available to answer any questions.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the BOJ rate hike and carry trade unwind.",
+            "Note is ready under your name, and I can jump on a call this week if useful."
+          ],
+          "flags": []
+        },
+        "Vantage Pointe Wealth": {
+          "firm": "Vantage Pointe Wealth",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 closed down 2.91% at 517.38, while the VIX, which measures expected volatility, jumped 64.9% to 38.57. The move followed a Bank of Japan rate hike that unwound the yen carry trade, a strategy widely used across global markets, with Japan's Nikkei falling roughly 12%. Days like this happen when positioning built up over time unwinds quickly. Private credit holdings are typically valued on a periodic basis rather than priced continuously like public markets. This means reported values update less often and can lag current market conditions. It does not mean the underlying loans or borrowers are unaffected by broader economic shifts. We continue to monitor developments and are available to discuss any questions about how your portfolio is structured.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the yen carry trade unwind after the BOJ hike.",
+            "Wrote a note under your name for clients, and can talk through private credit questions if useful."
+          ],
+          "flags": []
+        },
+        "Fenwick Larkspur Capital": {
+          "firm": "Fenwick Larkspur Capital",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 closed down 2.91% at 517.38, and the VIX, a measure of expected volatility, rose 64.9% to 38.57. The trigger was a Bank of Japan rate hike that unwound the yen carry trade, a strategy relied on across global markets, with Japan's Nikkei falling about 12%. Sharp, fast repricings like this happen as leveraged positioning unwinds. Hedge fund, private credit, and private equity holdings are typically valued on a periodic basis rather than priced daily like public markets. Reported values for these holdings update less frequently and can lag what is happening in liquid markets. This does not mean the underlying assets are unaffected by broader conditions. We are following developments closely and are available for any questions about portfolio structure.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% as the BOJ hike triggered a carry trade unwind.",
+            "Client note is ready under your name across your alts exposure, and happy to talk it through if useful."
+          ],
+          "flags": []
+        },
+        "Sunridge Collective": {
+          "firm": "Sunridge Collective",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 closed down 2.91% at 517.38, and the VIX, a measure of expected volatility, jumped 64.9% to 38.57. The catalyst was a Bank of Japan rate hike that unwound the yen carry trade, a widely used global strategy, with Japan's Nikkei falling roughly 12%. Days like this happen as positioning built over time unwinds quickly across interconnected markets. Hedge fund holdings are typically valued on a periodic basis rather than priced continuously like public stocks. This means reported values update less often and can lag current market conditions. It does not mean the underlying strategies are unaffected by broader market shifts. We are watching developments closely and are available to answer any questions about your portfolio.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the BOJ-driven carry trade unwind.",
+            "Wrote a client note under your name if useful, and can get on a call if it helps."
+          ],
+          "flags": []
+        },
+        "Windermere Trust Advisors": {
+          "firm": "Windermere Trust Advisors",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 closed down 2.91% at 517.38, and the VIX, a measure of expected volatility, rose 64.9% to 38.57. The move followed a Bank of Japan rate hike that unwound the yen carry trade, a strategy widely used across global markets, with Japan's Nikkei falling about 12%. Sharp moves like this happen periodically as leveraged positioning unwinds quickly. Hedge fund holdings are typically valued on a periodic basis rather than priced daily like public markets. Reported values for these holdings update less frequently and can lag what is happening in liquid markets. This does not mean the underlying strategies are unaffected by broader conditions. We continue to monitor developments and are available to discuss any questions.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% as the BOJ hike unwound the yen carry trade.",
+            "Note is ready under your name for clients, happy to set up a call across the family offices if useful."
+          ],
+          "flags": []
+        },
+        "Ferrisdale Wealth Group": {
+          "firm": "Ferrisdale Wealth Group",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 closed down 2.91% at 517.38, while the VIX, which measures expected volatility, jumped 64.9% to 38.57. The trigger was a Bank of Japan rate hike that unwound the yen carry trade, a strategy relied on across global markets, with Japan's Nikkei falling roughly 12%. Days like this happen when positioning built up over time unwinds rapidly. Private credit and real estate holdings are typically valued on a periodic basis rather than priced continuously like public markets. This means reported values update less often and can lag current market conditions. It does not mean the underlying assets are unaffected by broader economic shifts. We are monitoring the situation and are available for any questions about portfolio structure.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the yen carry trade unwind after the BOJ hike.",
+            "Wrote a note under your name covering private credit and real estate, and can talk it through if useful."
+          ],
+          "flags": []
+        },
+        "Sparrowhawk Investment Advisors": {
+          "firm": "Sparrowhawk Investment Advisors",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 fell 2.91%, and the VIX, a measure of expected volatility, jumped 64.9% to 38.57. The catalyst was a Bank of Japan rate hike that unwound the popular yen carry trade, sending Japan's Nikkei down about 12% overnight and pressuring global equities. Days like this happen periodically, driven by shifts in rates, currencies, or positioning rather than any single company or sector. It's worth understanding how the assets you hold are structured. Private credit is typically valued periodically rather than priced daily, so reported values update less frequently than public markets. That doesn't mean the underlying loans are unaffected by broader conditions; it simply means the valuation cadence differs from a daily-traded stock or ETF. Understanding that structural difference helps set expectations for how your statements may look in weeks like this.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the BOJ-driven carry trade unwind.",
+            "Wrote a client note on today's move and how periodic valuation in private credit works, ready under your name if useful, happy to jump on a call."
+          ],
+          "flags": []
+        },
+        "Eastmarch Trust Company": {
+          "firm": "Eastmarch Trust Company",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 fell 2.91%, and the VIX jumped 64.9% to 38.57, its sharpest one-day rise in some time. The trigger was a Bank of Japan rate hike that unwound the yen carry trade, with Japan's Nikkei falling about 12% overnight and volatility spreading globally. Episodes like this occur periodically as rates, currencies, and positioning shift quickly. It's a good moment to revisit how your holdings are structured. Hedge funds, private credit, and infrastructure investments are generally valued on a periodic basis rather than priced continuously, so reported values update less often than daily public markets. This doesn't mean these holdings are unaffected by market conditions; it means the reporting cadence differs. Recognizing that distinction helps explain why statements may not immediately reflect the day's moves the way a public index does.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% after the BOJ hike unwound the yen carry trade.",
+            "Drafted a client note covering today's move and periodic valuation across hedge funds, private credit, and infra, ready under Eastmarch's name if useful, happy to talk it through."
+          ],
+          "flags": []
+        },
+        "Sable Ridge Investment Counsel": {
+          "firm": "Sable Ridge Investment Counsel",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 fell 2.91%, and the VIX rose 64.9% to 38.57. The move followed a Bank of Japan rate hike that unwound the yen carry trade, a common source of leveraged global positioning, sending Japan's Nikkei down about 12% overnight and rattling markets worldwide. Sharp single-day swings like this happen periodically and are usually tied to shifts in rates or positioning rather than a single company or industry. It's a useful moment to think about how your real estate holdings are valued. Real estate is typically appraised on a periodic basis rather than priced daily, so reported values update less frequently than a public stock index. That doesn't mean the underlying property is unaffected by broader economic conditions; it reflects a different valuation cadence, not insulation from market forces.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the BOJ carry-trade unwind.",
+            "Put together a client note on today's move and how periodic valuation works for real estate, ready under your name, happy to hop on a call if helpful."
+          ],
+          "flags": []
+        },
+        "Glenmara Wealth": {
+          "firm": "Glenmara Wealth",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 fell 2.91%, and the VIX jumped 64.9% to 38.57. The catalyst was a Bank of Japan rate hike that unwound the yen carry trade, a widely used source of global leverage, with Japan's Nikkei falling about 12% overnight and volatility spreading to other markets. Days like this occur periodically, often tied to shifts in rates, currencies, or positioning rather than any single event affecting one company. It's a good time to consider how different investments are structured. Some holdings are priced daily on public exchanges, while others, such as private or evergreen funds, are valued on a periodic basis, meaning reported values update less frequently. That difference in cadence doesn't mean those holdings are unaffected by market conditions, only that their valuation timing differs from daily-priced markets.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% after the BOJ move unwound the yen carry trade.",
+            "Wrote a general client note on today's volatility and valuation cadence differences, ready under Glenmara's name if useful, glad to talk it through."
+          ],
+          "flags": []
+        },
+        "Locheil Partners": {
+          "firm": "Locheil Partners",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 fell 2.91%, and the VIX rose 64.9% to 38.57. The move was triggered by a Bank of Japan rate hike that unwound the yen carry trade, a long-standing source of leveraged positioning across global markets, sending Japan's Nikkei down about 12% overnight. Global equities and volatility measures reacted quickly as positioning unwound. Sessions like this occur periodically and are usually tied to shifts in rates, currencies, or leverage rather than a single company or sector issue. It's worth remembering how hedge fund structures differ from daily-priced public markets. Many hedge funds report valuations on a periodic basis rather than continuously, so reported figures update less often. This reflects the reporting cadence, not an absence of exposure to the conditions driving today's volatility.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the BOJ-driven carry trade unwind.",
+            "Drafted a client note on today's move and periodic valuation in hedge funds, ready under Locheil's name if useful, happy to jump on a call."
+          ],
+          "flags": []
+        },
+        "Cinderhill Investment Group": {
+          "firm": "Cinderhill Investment Group",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 fell 2.91%, and the VIX jumped 64.9% to 38.57. The trigger was a Bank of Japan rate hike that unwound the yen carry trade, sending Japan's Nikkei down about 12% overnight and pushing volatility higher across global markets. Sessions like this happen periodically, usually reflecting shifts in rates, currencies, or investor positioning rather than developments specific to one company or sector. It's a useful reminder to think about how different types of investments are structured. Some assets are priced daily on public exchanges, while others, including many private investment structures, are valued periodically, meaning reported values update less frequently. This is a difference in valuation timing, not an indication that those holdings are unaffected by the conditions driving today's market moves.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% after the BOJ hike unwound the yen carry trade.",
+            "Put together a general client note on today's volatility and valuation cadence, ready under Cinderhill's name if useful, happy to talk."
+          ],
+          "flags": []
+        },
+        "Havenport Global Partners": {
+          "firm": "Havenport Global Partners",
+          "subject": "Market volatility, August 5, 2024",
+          "client_note": "Markets moved sharply today. The S&P 500 fell 2.91%, and the VIX rose 64.9% to 38.57, one of the largest single-day jumps in recent years. The move followed a Bank of Japan rate hike that unwound the yen carry trade, a major source of global leverage, with Japan's Nikkei falling about 12% overnight and volatility spreading across asset classes. Days like this occur periodically, tied to shifts in rates, currencies, or positioning rather than one company or sector. Across a diversified portfolio, it's worth remembering that different holdings are valued differently. Public markets reprice continuously, while many private and alternative structures are valued on a periodic basis, so reported figures update less often. This reflects reporting cadence, not an absence of exposure to the forces moving markets today.",
+          "advisor_ping": [
+            "S&P down 2.91%, VIX up 64.9% on the BOJ carry-trade unwind, one of the sharpest volatility spikes in years.",
+            "Wrote a client note on today's move and valuation cadence across your alternatives lineup, ready under Havenport's name if useful, happy to get on a call."
+          ],
+          "flags": []
+        }
+      },
+      "model": "claude-sonnet-5",
+      "generated": "2026-09-27"
+    }
+  }
+}

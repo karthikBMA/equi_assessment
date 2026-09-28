@@ -2,10 +2,12 @@
 
     python build.py              # clean, score, stress test, enrich (queries SEC IAPD)
     python build.py --offline    # same, but skip the SEC lookup
+    python build.py --signals    # cache real SPY/VIX for the replay events, pre-write Aug 5 2024 notes
     python build.py --drafts     # also pre-write A/B drafts with Claude (needs ANTHROPIC_API_KEY)
 """
 import argparse
 import json
+from datetime import date
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -13,7 +15,7 @@ from dotenv import load_dotenv
 
 from pipeline.clean import clean_leads
 from pipeline.score import score_firms, stability, red_flags, bubble_reason, bubble_type
-from pipeline import personalize
+from pipeline import personalize, signals
 from pipeline.enrich import enrich, source_summary
 from pipeline.sequences import SEQUENCES, sequence_for
 
@@ -31,6 +33,7 @@ def main():
     ap.add_argument("--drafts", action="store_true")
     ap.add_argument("--sender", default="the Equi team")
     ap.add_argument("--offline", action="store_true", help="skip the SEC IAPD lookup")
+    ap.add_argument("--signals", action="store_true", help="cache replay market data and pre-write Aug 5 2024 notes")
     args = ap.parse_args()
 
     firms = clean_leads(args.csv)
@@ -49,6 +52,8 @@ def main():
     for r in records:
         r["sequence"] = sequence_for(r["route"])
     (DATA / "scored.json").write_text(json.dumps(records, indent=2))
+    if args.signals:
+        build_signals(records)
     print(f"Scored {len(records)} firms -> data/scored.json")
     adv = [r["sec_adv"]["status"] for r in records]
     print(f"Sources tagged: {source_summary(records)}")
@@ -73,6 +78,24 @@ def main():
         (DATA / "drafts.json").write_text(json.dumps(drafts, indent=2))
         errors = sum("error" in d for v in drafts.values() for d in v.values())
         print(f"Wrote drafts for {len(drafts)} firms -> data/drafts.json ({errors} errors)")
+
+
+def build_signals(records):
+    """Real closes for each replay event, plus pre-written notes for Aug 5 2024 so the demo runs without a key."""
+    out = {"days": {}, "fired": {}}
+    for key in signals.EVENTS:
+        for day in signals.event_days(key):
+            out["days"][day["date"]] = day
+    firms = [r for r in records if r["tier"] in {"A", "B"}]
+    key = "2024-08-05"
+    day = out["days"][key]
+    notes = signals.draft_notes(day, signals.EVENTS[key]["context"], firms)
+    out["fired"][key] = {"day": day, "triggers": signals.triggers(day), "notes": notes,
+                         "model": signals.MODEL, "generated": str(date.today())}
+    (DATA / "signals.json").write_text(json.dumps(out, indent=2))
+    flagged = sum(bool(n["flags"]) for n in notes.values())
+    print(f"Signals: {len(out['days'])} replay days cached; {len(notes)}/{len(firms)} Aug 5 notes "
+          f"({flagged} flagged) -> data/signals.json")
 
 
 if __name__ == "__main__":
