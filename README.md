@@ -23,7 +23,7 @@ streamlit run app.py
 
 ## How it works
 
-**Part 1, demand engine.** Equi's edge is that it builds the advisor's client materials, so the materials are the outreach. Kit Studio writes a client letter under the prospect firm's name. Market signals watches SPY and VIX and, on a real drop, queues a client-ready note for every Tier A and B firm plus a market-day ad set. Client demand tracks what AI assistants tell wealthy clients, turns the gaps into an action plan with publish-ready equi.com pages, and plans category ads near each Tier A firm before outreach.
+**Part 1, demand engine.** Equi's edge is that it builds the advisor's client materials, so the materials are the outreach. Kit Studio writes a client letter under the prospect firm's name. Market signals watches SPY and VIX and, on a real drop, queues a client-ready note for every Tier A and B firm plus an ad set. Client demand tracks what AI tells wealthy clients and plans the pages and ads to change it. Search lab does it per question.
 
 **Part 2, lead pipeline.** `clean.py` normalizes the CSV and dedupes it (50 rows become 45 firms, every change logged). `score.py` applies hard gates, six weighted criteria, caps, and a confidence range, then stress-tests the weights. `enrich.py` tags every field by source. `sequences.py` defines the touches for each route. `personalize.py` writes two first-touch variants per firm.
 
@@ -31,7 +31,8 @@ streamlit run app.py
 - **Start here:** the thesis and live findings.
 - **Kit Studio:** firm-branded letter, talking points, IC memo outline for committee firms.
 - **Market signals:** today's status, real-event replays, the alert feed.
-- **Client demand:** search any client question, see what AI tells clients, a three-lane AEO action plan with page drafts, and the simulated air cover plan.
+- **Client demand:** what AI tells clients, a three-lane AEO action plan with page drafts, and the simulated air cover plan.
+- **Search lab:** any client question: who owns it, what AI says, Equi's plan.
 - **Shortlist:** ranked firms with score range, stability, route, and a full detail view.
 - **Your call:** firms that need a human decision, with a recommendation and overrides.
 - **Drafts:** variants A and B side by side, rewrite with a note, approve, sequencer CSV.

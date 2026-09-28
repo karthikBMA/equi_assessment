@@ -639,5 +639,217 @@
     "flags": [],
     "fixed_on_retry": [],
     "featured_dropped": []
+  },
+  "should i put my inheritance into private equity": {
+    "query": "should i put my inheritance into private equity",
+    "run_date": "2026-09-27 23:49",
+    "model": "claude-sonnet-5",
+    "seconds": 54,
+    "searched": [
+      "should i put my inheritance into private equity",
+      "is private equity a good investment for inherited money"
+    ],
+    "results": [
+      {
+        "url": "https://www.ml.com/articles/dos-and-donts-of-investing-an-inheritance.html",
+        "title": "Do\u2019s and don\u2019ts of investing an inheritance",
+        "page_age": null,
+        "rank": 1,
+        "domain": "ml.com",
+        "source_type": "fund sponsor",
+        "summary": "Merrill Lynch piece says a larger inheritance can qualify you for alternatives like private equity, hedge funds, and real estate, but warns these are high risk, illiquid, and manager selection matters a lot. It frames alternatives as something an advisor should help you pick.",
+        "mentions_evergreen": false,
+        "mentions_equi": false,
+        "gets_wrong": "Never explains what an evergreen or interval fund actually is, so readers still don't know there is a middle ground between locked-up traditional PE and daily-liquid stocks."
+      },
+      {
+        "url": "https://www.privatebank.bankofamerica.com/articles/dos-and-donts-of-investing-an-inheritance.html",
+        "title": "How to Invest an Inheritance: Key Factors to Consider",
+        "page_age": "May 20, 2025",
+        "rank": 2,
+        "domain": "privatebank.bankofamerica.com",
+        "source_type": "fund sponsor",
+        "summary": "Same Bank of America Private Bank article as result 1, republished on a different bank domain. Identical content and identical gaps.",
+        "mentions_evergreen": false,
+        "mentions_equi": false,
+        "gets_wrong": "Duplicate of result 1 so it repeats the same missing structure explanation and adds no new liquidity detail."
+      },
+      {
+        "url": "https://www.pbig.ml.com/articles/dos-and-donts-of-investing-an-inheritance.html",
+        "title": "How to Invest an Inheritance: Key Factors to Consider",
+        "page_age": "July 20, 2026",
+        "rank": 3,
+        "domain": "pbig.ml.com",
+        "source_type": "fund sponsor",
+        "summary": "Another republished version of the same Merrill inheritance article, this time with added stats showing 93 percent of younger heirs plan to increase alternatives allocation versus 28 percent of older heirs, plus a note on step-up in cost basis.",
+        "mentions_evergreen": false,
+        "mentions_equi": false,
+        "gets_wrong": "Shows strong demand from younger heirs for alternatives but never tells them how these funds are actually structured or how money gets in and out."
+      },
+      {
+        "url": "https://myfw.com/articles/best-practices-and-pitfalls-to-avoid-when-investing-an-inheritance/",
+        "title": "Best Practices and Pitfalls to Avoid When Investing an Inheritance",
+        "page_age": "June 5, 2025",
+        "rank": 4,
+        "domain": "myfw.com",
+        "source_type": "advisor or RIA",
+        "summary": "A financial planning firm blog lists private equity as an option alongside real estate and commodities, noting it needs a longer time horizon and carries more risk than traditional investments. Main message is to slow down and not rush inheritance decisions.",
+        "mentions_evergreen": false,
+        "mentions_equi": false,
+        "gets_wrong": "Treats private equity as one generic bucket with no distinction between closed-end funds, interval funds, or evergreen structures, so readers can't tell what they'd actually be buying."
+      },
+      {
+        "url": "https://investor.vanguard.com/investor-resources-education/article/what-to-do-with-your-inheritance",
+        "title": "What to do with an inheritance | Vanguard",
+        "page_age": null,
+        "rank": 5,
+        "domain": "investor.vanguard.com",
+        "source_type": "fund sponsor",
+        "summary": "Vanguard's general inheritance guide covers paying off debt, building an emergency fund, and investing for growth through diversified portfolios. It does not discuss alternatives at all.",
+        "mentions_evergreen": false,
+        "mentions_equi": false,
+        "gets_wrong": "Skips private equity and alternatives entirely, leaving a reader who searched this exact query with no answer on the topic they asked about."
+      },
+      {
+        "url": "https://familyenterpriseusa.com/taxes/inheritance-vs-private-capital/",
+        "title": "Inheritance VS. Private Capital - Family Enterprise USA",
+        "page_age": "April 18, 2023",
+        "rank": 6,
+        "domain": "familyenterpriseusa.com",
+        "source_type": "education site",
+        "summary": "A family enterprise organization frames inherited wealth as private capital that families can deploy across generations, citing rising family office interest in private equity as proof this approach works.",
+        "mentions_evergreen": false,
+        "mentions_equi": false,
+        "gets_wrong": "Speaks in generalities about legacy and multigenerational wealth without ever explaining fund mechanics, fees, or how an individual heir would actually access private equity."
+      },
+      {
+        "url": "https://www.raisin.com/en-us/investing/wealth-from-inheritance/",
+        "title": "What to Do With Wealth From an Inheritance | Raisin",
+        "page_age": "June 25, 2026",
+        "rank": 7,
+        "domain": "raisin.com",
+        "source_type": "advisor or RIA",
+        "summary": "Raisin's guide focuses mostly on cash management basics like keeping liquidity cushions and using CDs, with brief mentions of index funds and REITs for diversification.",
+        "mentions_evergreen": false,
+        "mentions_equi": false,
+        "gets_wrong": "Doesn't mention private equity or alternatives at all despite ranking for this query, so it's a weak match to searcher intent."
+      },
+      {
+        "url": "https://www.thepeakfp.com/blog/what-to-do-with-an-inheritance",
+        "title": "What to Do with Inheritance Money | Peak Financial Planning",
+        "page_age": "May 30, 2024",
+        "rank": 8,
+        "domain": "thepeakfp.com",
+        "source_type": "advisor or RIA",
+        "summary": "A financial planning blog uses a hypothetical inherited rental property to illustrate weighing return on locked-up equity against costs of holding the asset. Focused on real estate, not private equity.",
+        "mentions_evergreen": false,
+        "mentions_equi": false,
+        "gets_wrong": "Doesn't address private equity or fund structures at all, so it only tangentially matches the search."
+      },
+      {
+        "url": "https://www.yahoo.com/news/best-way-invest-inheritance-most-050000112.html",
+        "title": "The best way to invest an inheritance and protect your newfound wealth",
+        "page_age": null,
+        "rank": 9,
+        "domain": "yahoo.com",
+        "source_type": "financial media",
+        "summary": "A UK-focused Telegraph piece via Yahoo covers general inheritance investing basics like building a rainy day fund and choosing index funds for long-term growth. No alternatives discussion.",
+        "mentions_evergreen": false,
+        "mentions_equi": false,
+        "gets_wrong": "Entirely misses private equity or alternative funds, and its UK framing makes it a poor match for US-based searchers."
+      },
+      {
+        "url": "https://www.privatebank.bankofamerica.com/financial-education/analyzing-investment-opportunities.html",
+        "title": "Analyzing investment opportunities after an inheritance",
+        "page_age": "May 4, 2026",
+        "rank": 10,
+        "domain": "privatebank.bankofamerica.com",
+        "source_type": "fund sponsor",
+        "summary": "A separate Bank of America Private Bank article goes deeper than the others, listing private equity, hedge funds, private credit, and direct investments as options for large inheritances, and explicitly warns against chasing high returns or speculative bets like crypto. It also suggests phasing investment over 9 to 12 months rather than all at once.",
+        "mentions_evergreen": false,
+        "mentions_equi": false,
+        "gets_wrong": "Lists private equity by name but never breaks down fund structures like evergreen or interval funds, fees, or redemption terms, so a reader still can't evaluate a specific product."
+      }
+    ],
+    "ai_answer": {
+      "text": "## Short answer: Probably not entirely, and maybe not at all, it depends heavily on your situation\n\nPrivate equity can be part of a diversified plan for some inheritors, but it's rarely a smart place to put *all* or even *most* of an inheritance. Here's why, based on what financial advisors say:\n\n### Reasons to be cautious\n\n**High risk, low liquidity.** Alternative investments come with a very high degree of risk, are only appropriate for certain investors and tend to be less liquid than publicly traded stocks. Private equity funds typically lock up your money for 7-10+ years with no ability to withdraw early.\n\n**Long investment horizon required.** Private equity can provide access to high-growth opportunities, but it often requires a longer investment horizon and carries a higher level of risk compared to traditional investments.\n\n**Manager selection matters enormously.** It's also important to carefully research the investment managers, returns between top-quartile and bottom-quartile PE funds vary wildly, unlike index funds where most managers cluster near the market return.\n\n**Rushing in is a common mistake.** It can be tempting to act quickly, especially if you feel pressure to make the inheritance \"work\" for you right away. However, hasty decisions often lead to poor financial outcomes.\n\n### What to do first, before considering PE\n\n1. **Handle the basics.** Advisors commonly recommend you first pay off high-interest debt like credit cards or personal loans, then build an emergency fund with 3-6 months of living expenses in savings.\n2. **Don't just fold it into your existing portfolio blindly.** Simply folding your parents' or grandparents' investments into your own portfolio could throw your asset allocation out of balance, and if you inherit assets similar to those you already own, you could find yourself overconcentrated in certain sectors of the market.\n3. **Don't let it sit idle either**, cash loses value to inflation over time.\n\n### When private equity *might* make sense\n\n- **You have substantial total assets.** With more total assets, you may qualify for alternative investments such as private equity, hedge funds, real estate investments or direct investments in private businesses. (Many PE funds require \"accredited investor\" status, meaning significant net worth or income.)\n- **You already have your bases covered** (debt paid, emergency fund funded, diversified core portfolio in place) and are looking for a small satellite allocation.\n- **You have a long time horizon** and won't need this money for a decade or more.\n- **You understand the tradeoff**: \"Alternatives offer the potential for enhanced returns that could be hard to find in public markets.\"\n\n### The more common recommendation for most people\n\nMost mainstream guidance points toward simpler, more liquid options first: investing for growth by putting money into diversified investment portfolios for long-term wealth building, typically low-cost index funds, rather than illiquid alternatives. One advisory piece notes that even sophisticated families view private capital as something to deploy thoughtfully over generations, not a quick windfall play: families are encouraged to think of family wealth as private capital, considering not only individual needs but the investment and wealth creation many families perpetuate throughout generations.\n\n### Bottom line\n\nIf someone is asking \"should I put my inheritance into PE\" as a first move, the honest answer is: not yet, and maybe not much even later. Get your financial foundation solid (debt, emergency fund, diversified core investments) first, only consider PE if you meet accredited investor thresholds and can tie up money for a decade, and never put more than a small slice (often suggested as 5-15% of a large portfolio) into any single illiquid alternative asset class. Talking to a fee-only fiduciary financial advisor (not one selling you the PE fund) before committing is well worth the cost.",
+      "cited_urls": [
+        "https://www.ml.com/articles/dos-and-donts-of-investing-an-inheritance.html",
+        "https://myfw.com/articles/best-practices-and-pitfalls-to-avoid-when-investing-an-inheritance/",
+        "https://investor.vanguard.com/investor-resources-education/article/what-to-do-with-your-inheritance",
+        "https://familyenterpriseusa.com/taxes/inheritance-vs-private-capital/"
+      ],
+      "cited_domains": [
+        "familyenterpriseusa.com",
+        "investor.vanguard.com",
+        "ml.com",
+        "myfw.com"
+      ],
+      "mentions_evergreen": false,
+      "mentions_equi": false
+    },
+    "overall": {
+      "owner": "Bank of America and Merrill own three of the top ten spots with near duplicate content, Vanguard and other advisors fill in the rest with generic inheritance checklists.",
+      "common": "Every top result is a general inheritance guide written by a bank, advisor, or financial media outlet. They mention private equity only in passing as one line item in a list of alternatives, none break down fund structures, liquidity terms, fees, or how redemptions actually work.",
+      "gap": "Nobody explains what an evergreen or interval fund is, how it differs from a traditional locked-up private equity fund, or what to actually check before choosing one. Equi can own the explainer that separates fund structures without recommending a specific fund.",
+      "verdict": "Owned by bank private wealth pages repeating the same list. Private equity gets a mention, fund structure gets no explanation, and Equi is absent."
+    },
+    "own_it": {
+      "title": "Private Equity and Your Inheritance: What Evergreen and Interval Funds Actually Are",
+      "angle": "Skip the generic list of alternatives and go one level deeper: explain the three common structures heirs will encounter when an advisor says private equity, so the reader can ask better questions instead of just saying yes.",
+      "outline": [
+        "Why banks mention private equity but rarely explain the structure",
+        "Three structures explained plainly: closed-end funds with hard lockups, interval funds with scheduled redemption windows, evergreen funds with ongoing but limited liquidity",
+        "What to ask before committing: redemption frequency, gates, fees, minimums",
+        "How structure affects flexibility if you need the money sooner than planned",
+        "Questions to bring to your financial advisor before allocating any of an inheritance",
+        "Where the Evergreen Fund Index fits: a plain look at how a basket of evergreen funds has behaved on liquidity and redemption terms over time, no return claims"
+      ],
+      "data_needed": "A simple comparison table across the three structures covering typical lockup length, redemption frequency, and gate provisions, sourced from the Evergreen Fund Index rather than performance numbers.",
+      "faq": [
+        "What is the difference between an evergreen fund and a traditional private equity fund?",
+        "How often can I redeem money from an interval fund?",
+        "Do I need to be an accredited investor to access these fund structures?",
+        "What happens if I need my money back before a redemption window opens?",
+        "Should I ask my financial advisor about fund structure before or after choosing a manager?"
+      ]
+    },
+    "featured": [
+      {
+        "domain": "myfw.com",
+        "pitch": "guest piece",
+        "angle": "Their existing post treats private equity as one generic risk bullet. Pitch a follow up guest piece that walks through evergreen versus interval versus closed end structures for their inheritance readers."
+      },
+      {
+        "domain": "familyenterpriseusa.com",
+        "pitch": "expert quote",
+        "angle": "They already frame inherited wealth as private capital for multigenerational deployment. An Equi expert quote on how fund structure affects a family's ability to redeem across generations fits their existing angle."
+      },
+      {
+        "domain": "yahoo.com",
+        "pitch": "expert quote",
+        "angle": "Their Telegraph inheritance piece is UK focused and skips alternatives entirely. Pitch a US market companion quote explaining fund structures for readers with US inheritances considering private equity."
+      }
+    ],
+    "youtube": [
+      {
+        "clip_title": "What Is an Evergreen Fund and How Is It Different From Private Equity?",
+        "webinar_topic": "Evergreen fund structures explained"
+      },
+      {
+        "clip_title": "Should You Put Inheritance Money Into an Interval Fund?",
+        "webinar_topic": "Liquidity terms in alternative fund structures"
+      }
+    ],
+    "difficulty": {
+      "level": "medium",
+      "why": "The top spots are dominated by big bank brand pages with duplicate content, which is beatable, but ranking requires original structural explainers and data that none of the current pages have bothered to build."
+    },
+    "verdict": "Owned by bank private wealth pages repeating the same list. Private equity gets a mention, fund structure gets no explanation, and Equi is absent. Difficulty: medium.",
+    "flags": [],
+    "fixed_on_retry": [],
+    "featured_dropped": [
+      "wallstreetzen.com"
+    ]
   }
 }

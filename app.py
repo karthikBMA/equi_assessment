@@ -279,8 +279,10 @@ st.title("Equi demand engine")
 st.markdown('<div class="muted">Demand plan and lead pipeline for independent RIAs and multi-family offices.'
             + (" Custom weights in use." if custom else "") + "</div>", unsafe_allow_html=True)
 
-TABS = ["Start here", "Kit Studio", "Market signals", "Client demand", "Shortlist", "Your call", "Drafts", "Review queue"]
-tab_start, tab_kit, tab_signals, tab_air, tab_shortlist, tab_call, tab_drafts, tab_queue = st.tabs(TABS, key="tab",
+TABS = ["Start here", "Kit Studio", "Market signals", "Client demand", "Search lab", "Shortlist", "Your call", "Drafts",
+        "Review queue"]
+tab_start, tab_kit, tab_signals, tab_air, tab_search, tab_shortlist, tab_call, tab_drafts, tab_queue = st.tabs(
+    TABS, key="tab",
                                               on_change="rerun")
 
 
@@ -1251,31 +1253,19 @@ def run_search(query: str):
     st.session_state["serp_current"] = key
 
 
-def plan_extra() -> dict:
-    return st.session_state.setdefault("plan_extra", {"publish": [], "featured": [], "youtube": [], "added": []})
-
-
 def brief_text(own: dict) -> str:
     return (f'Title: {own["title"]}. Angle: {own["angle"]} Outline: {"; ".join(own["outline"])}. '
             f'Data or table: {own["data_needed"]} FAQ to include: {"; ".join(own["faq"])}')
 
 
-def add_to_plan(r: dict):
-    extra = plan_extra()
-    q, own = r["query"], r["own_it"]
-    extra["publish"].append({"target_question": q, "action": f'{own["title"]}. {own["angle"]}',
-                             "where": "/insights/" + pages_mod.slug(q), "why_cited": r["overall"]["gap"],
-                             "metric": "Cited in the weekly AI answer check within 6 weeks"})
-    extra["featured"] += [{"target_question": q, "action": f'{f["pitch"].capitalize()}: {f["angle"]}',
-                           "where": f["domain"], "why_cited": "Already ranks for this search.",
-                           "metric": "Feature or quote published within 8 weeks"} for f in r["featured"]]
-    extra["youtube"] += [{"target_question": q, "action": f'Cut "{y["clip_title"]}" from the {y["webinar_topic"]} '
-                                                          "webinar. Publish with a full transcript.",
-                          "where": "YouTube", "why_cited": "Answers this search in video, with a readable transcript.",
-                          "metric": "Clip surfaces in AI or YouTube answers within 8 weeks"} for y in r["youtube"]]
-    extra["added"].append(serp.normalize(q))
-    queue_add("aeo", "Search brief", f"AEO brief: {q}", {"serp": r})
-    st.session_state["serp_msg"] = ("success", "Added to the AEO action plan below and to the Review queue.")
+def queued_searches() -> set:
+    return st.session_state.setdefault("serp_queued", set())
+
+
+def add_search_to_queue(r: dict):
+    queue_add("aeo", "Search brief", f'AEO brief: {r["query"]}', {"serp": r})
+    queued_searches().add(serp.normalize(r["query"]))
+    st.session_state["serp_msg"] = ("success", "Added to the Review queue.")
 
 
 def render_own_it(own: dict):
@@ -1337,9 +1327,9 @@ def render_serp(r: dict):
     b1.button("Draft this page", key=f"serpdraft|{key}", disabled=not HAS_KEY or sl in page_store(), width="stretch",
               help=("Already drafted, see below." if sl in page_store() else "About 30 seconds.") if HAS_KEY else NO_KEY_MSG,
               on_click=draft_page, args=(r["query"], brief_text(r["own_it"])))
-    added = key in plan_extra()["added"]
-    b2.button("Added to action plan" if added else "Add to action plan", key=f"serpadd|{key}", disabled=added,
-              width="stretch", on_click=add_to_plan, args=(r,))
+    added = key in queued_searches()
+    b2.button("In review queue" if added else "Add to review queue", key=f"serpadd|{key}", disabled=added,
+              width="stretch", on_click=add_search_to_queue, args=(r,))
     if sl in page_store():
         pg = page_store()[sl]
         page_html = pages_mod.render_html(pg)
@@ -1438,34 +1428,6 @@ with tab_air:
     st.markdown('<div class="muted">Compliance: everything client-facing is education that ends in "ask your '
                 'advisor", never a fund offer.</div>', unsafe_allow_html=True)
 
-    # ----- search any question -----
-    st.markdown("### Search any question")
-    store = serp_store()
-    c1, c2 = st.columns([5, 1], vertical_alignment="bottom")
-    q = c1.text_input("Type what a client might ask, e.g. what is an evergreen fund", key="serp_q")
-    if c2.button("Analyze", type="primary", width="stretch"):
-        run_search(q)
-    msg = st.session_state.pop("serp_msg", None)
-    if msg:
-        getattr(st, msg[0])(msg[1])
-    history = st.session_state.setdefault("serp_history", [])
-    examples = [k for k in store if k not in history]
-
-    def pick(widget_key):
-        chosen = st.session_state.get(widget_key)
-        if chosen:
-            st.session_state["serp_current"] = chosen
-            st.session_state[widget_key] = None   # a pill is a link back, not a sticky filter
-
-    for label, keys, wkey in (("This session", history[::-1], "serp_pills_hist"), ("Ready to view", examples, "serp_pills_ex")):
-        if keys:
-            st.pills(label, keys, format_func=lambda k: store[k]["query"], selection_mode="single",
-                     key=wkey, on_change=pick, args=(wkey,))
-    current = st.session_state.get("serp_current")
-    if current in store:
-        render_serp(store[current])
-    st.divider()
-
     # ----- what clients hear today -----
     st.markdown("### What clients hear today")
     d = load_aeo()
@@ -1544,8 +1506,7 @@ with tab_air:
             for h, t in zip(heads, ["Target question", "Action", "Where", "Why AI would cite it", "Metric", ""]):
                 h.markdown(f'<div class="muted" style="font-weight:600">{t}</div>', unsafe_allow_html=True)
             store = page_store()
-            extra = plan_extra()
-            for i, row in enumerate(plan["publish"] + extra["publish"]):
+            for i, row in enumerate(plan["publish"]):
                 c = st.columns([2.2, 3, 1.5, 3, 2, 1.3], gap="small")
                 for col, key in zip(c, ["target_question", "action", "where", "why_cited", "metric"]):
                     col.markdown(f'<div style="font-size:0.88rem">{html.escape(row[key])}</div>', unsafe_allow_html=True)
@@ -1564,10 +1525,12 @@ with tab_air:
 
             if store:
                 st.markdown("**Drafted pages**")
-                keys = list(store)
+                # options are the titles themselves; a format_func over ids lost the selection in testing
+                by_title = {store[k]["title"]: k for k in store}
+                titles = list(by_title)
                 view = st.session_state.get("page_view")
-                idx = keys.index(view) if view in keys else 0
-                pick = st.selectbox("Page", keys, index=idx, format_func=lambda k: store[k]["title"], key="page_pick")
+                idx = titles.index(store[view]["title"]) if view in store else 0
+                pick = by_title[st.selectbox("Page", titles, index=idx, key="page_pick")]
                 pg = store[pick]
                 page_html = pages_mod.render_html(pg)
                 st.caption(f'Answers "{pg["question"]}". Updated {pg["updated"]}. Direct answer, comparison table, '
@@ -1580,11 +1543,11 @@ with tab_air:
             st.markdown("**Lane 2. Get featured where AI already looks**")
             st.caption("The sites AI cited above. Pitch publishers only; fund managers and advisory firms compete "
                        "with Equi.")
-            lane_table(plan["featured"] + extra["featured"])
+            lane_table(plan["featured"])
             st.markdown("**Lane 3. Cut YouTube clips**")
             st.caption("Short clips from existing webinars and long-form videos, titled with the client's question and "
                        "published with a full transcript, so AI can read and quote them.")
-            lane_table(plan["youtube"] + extra["youtube"])
+            lane_table(plan["youtube"])
 
     # ----- air cover -----
     st.divider()
@@ -1634,6 +1597,39 @@ with tab_air:
          "Today": "No data yet (simulation)",
          "What counts as working": "Air cover at least 1.5x control. Below that, stop the ads."},
     ], {"What we track": "32%", "How often": "12%", "Today": "20%", "What counts as working": "36%"})
+
+
+# ---------- search lab ----------
+
+with tab_search:
+    st.markdown('<div class="lede">Type any question a wealthy client might ask. See who owns that answer today, what '
+                "AI tells the client, and exactly how Equi gets into it.</div>", unsafe_allow_html=True)
+    st.markdown('<div class="muted">Compliance: every recommendation is education that ends in "ask your advisor", '
+                "never a fund offer.</div>", unsafe_allow_html=True)
+    store = serp_store()
+    c1, c2 = st.columns([5, 1], vertical_alignment="bottom")
+    q = c1.text_input("Type what a client might ask, e.g. what is an evergreen fund", key="serp_q")
+    if c2.button("Analyze", type="primary", width="stretch"):
+        run_search(q)
+    msg = st.session_state.pop("serp_msg", None)
+    if msg:
+        getattr(st, msg[0])(msg[1])
+    history = st.session_state.setdefault("serp_history", [])
+    examples = [k for k in store if k not in history]
+
+    def pick(widget_key):
+        chosen = st.session_state.get(widget_key)
+        if chosen:
+            st.session_state["serp_current"] = chosen
+            st.session_state[widget_key] = None   # a pill is a link back, not a sticky filter
+
+    for label, keys, wkey in (("This session", history[::-1], "serp_pills_hist"), ("Ready to view", examples, "serp_pills_ex")):
+        if keys:
+            st.pills(label, keys, format_func=lambda k: store[k]["query"], selection_mode="single",
+                     key=wkey, on_change=pick, args=(wkey,))
+    current = st.session_state.get("serp_current")
+    if current in store:
+        render_serp(store[current])
 
 
 # ---------- start here ----------
@@ -1706,10 +1702,13 @@ with tab_start:
                                "advisor ping, and a market-day ad set.")
     jump_row("Client demand", "What AI tells wealthy clients today, the plan to get Equi into those answers, and "
                               "a simulated ad plan tested against matched firms.")
+    jump_row("Search lab", "Type any client question and see who owns the answer today, what AI says, and how Equi "
+                           "gets into it.")
 
     st.markdown("### Part 2: lead pipeline")
     jump_row("Shortlist", f"{len(records)} firms scored against Equi's ICP, each with a score range, a Tier A "
                           "stability check, and a route.")
     jump_row("Your call", "Firms whose tier depends on your priorities, a rule, or data we do not have yet.")
     jump_row("Drafts", "Two first-touch emails per firm, kit-led and insight-led, randomized for the A/B test.")
-    jump_row("Review queue", "Everything waiting for a human before it goes out: drafts, kits, notes, and ad sets.")
+    jump_row("Review queue", "Everything waiting for a human before it goes out: drafts, kits, notes, ad sets, and "
+                             "search briefs.")
