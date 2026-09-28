@@ -10,6 +10,7 @@ import hashlib
 import html
 import json
 import os
+import re
 from datetime import datetime
 from pathlib import Path
 from types import SimpleNamespace
@@ -24,6 +25,7 @@ from pipeline import personalize
 from pipeline import signals as sig
 from pipeline import ads as ads_mod
 from pipeline import aeo, aircover
+from pipeline import pages as pages_mod
 from pipeline.compliance import DISCLOSURE
 from pipeline.clean import clean_leads
 from pipeline.score import (CRITERIA_LABELS, DEFAULT_WEIGHTS, WHY_WEIGHT, bubble_reason,
@@ -78,6 +80,10 @@ st.markdown(f"""
            max-width:900px; margin:0 0 0.7rem 0; }}
   .jump-line {{ font-size:0.98rem; color:{SLATE}; padding-top:0.5rem; line-height:1.45; }}
   .finding {{ font-size:1rem; line-height:1.55; margin:0 0 0.55rem 0; max-width:1000px; }}
+  .tbl {{ width:100%; border-collapse:collapse; font-size:0.88rem; margin:4px 0 10px 0; }}
+  .tbl th {{ text-align:left; color:#6B7280; font-weight:600; padding:6px 10px 6px 0; border-bottom:1px solid #DEDCD3;
+            vertical-align:bottom; }}
+  .tbl td {{ padding:7px 10px 7px 0; border-bottom:1px solid #ECEAE3; vertical-align:top; line-height:1.45; }}
   .src-note {{ grid-column: 2 / 4; color:#6B7280; font-size:0.8rem; margin-top:-3px; }}
 </style>
 """, unsafe_allow_html=True)
@@ -272,7 +278,7 @@ st.title("Equi demand engine")
 st.markdown('<div class="muted">Demand plan and lead pipeline for independent RIAs and multi-family offices.'
             + (" Custom weights in use." if custom else "") + "</div>", unsafe_allow_html=True)
 
-TABS = ["Start here", "Kit Studio", "Market signals", "Air cover", "Shortlist", "Your call", "Drafts", "Review queue"]
+TABS = ["Start here", "Kit Studio", "Market signals", "Client demand", "Shortlist", "Your call", "Drafts", "Review queue"]
 tab_start, tab_kit, tab_signals, tab_air, tab_shortlist, tab_call, tab_drafts, tab_queue = st.tabs(TABS, key="tab",
                                               on_change="rerun")
 
@@ -1199,105 +1205,246 @@ def run_aeo():
             box.update(label=f"Run failed: {type(e).__name__}", state="error")
 
 
+def page_store() -> dict:
+    """Drafted equi.com pages by slug: pre-written ones from data/pages.json plus any drafted this session."""
+    store = st.session_state.setdefault("pages", {})
+    for k, v in pages_mod.load().items():
+        store.setdefault(k, v)
+    return store
+
+
+def draft_page(question: str, action: str):
+    try:
+        page = pages_mod.draft(question, f"Page brief from the AEO plan: {action}")
+        page_store()[pages_mod.slug(question)] = page
+        try:
+            pages_mod.save(page)
+        except OSError:
+            pass  # read-only disk on some hosts; the session copy is enough
+        st.session_state["page_view"] = pages_mod.slug(question)
+    except Exception as e:
+        st.session_state["aeo_msg"] = ("error", f"Drafting failed: {type(e).__name__}: {str(e)[:200]}")
+
+
+def build_plan():
+    d = aeo.load()
+    try:
+        d["action_plan"], d["plan_error"] = aeo.action_plan(d["metrics"]), None
+        aeo.OUT.write_text(json.dumps(d, indent=2))
+        load_aeo.clear()
+    except Exception as e:
+        st.session_state["aeo_msg"] = ("error", f"Plan failed: {type(e).__name__}: {str(e)[:200]}")
+
+
+def excerpt(text: str, n: int = 320) -> str:
+    """First few sentences of an answer, markdown stripped."""
+    t = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", text)
+    t = re.sub(r"[#*_`>|]+", " ", t)
+    t = re.sub(r"\s+", " ", t).strip()
+    t = no_dashes(t)
+    return t if len(t) <= n else t[:n].rsplit(" ", 1)[0] + " ..."
+
+
+def html_table(rows: list[dict], widths: dict | None = None):
+    """A plain table that wraps text, so nothing is cut off mid-sentence."""
+    if not rows:
+        return
+    cols = list(rows[0])
+    widths = widths or {}
+    head = "".join(f'<th style="width:{widths.get(c, "auto")}">{html.escape(c)}</th>' for c in cols)
+    body = "".join("<tr>" + "".join(f"<td>{html.escape(str(r[c]))}</td>" for c in cols) + "</tr>" for r in rows)
+    st.markdown(f'<table class="tbl"><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>',
+                unsafe_allow_html=True)
+
+
+def lane_table(rows: list[dict]):
+    html_table([{"Target question": r["target_question"], "Action": r["action"], "Where": r["where"],
+                 "Why AI would cite it": r["why_cited"], "Metric": r["metric"]} for r in rows],
+               {"Target question": "18%", "Action": "28%", "Where": "13%", "Why AI would cite it": "24%", "Metric": "17%"})
+
+
+def no_dashes(text: str) -> str:
+    """Quoted AI answers use em dashes; our UI does not."""
+    return text.replace(" \u2014 ", ", ").replace("\u2014", ", ").replace("\u2013", "-")
+
+
 with tab_air:
-    st.markdown("### What clients hear from AI")
-    st.caption("Clients ask an assistant before they ask their advisor. We ask the questions they actually type, "
-               "with live web search, and track whether evergreen, interval, or tender-offer funds come up and who "
-               "gets cited.")
+    msg = st.session_state.pop("aeo_msg", None)
+    if msg:
+        getattr(st, msg[0])(msg[1])
+    st.markdown('<div class="lede">Wealthy clients now ask AI engines and Google how to protect their wealth before '
+                "they ask their advisor. AI builds each answer from a few trusted pages. This tab shows what clients "
+                "hear today and exactly how Equi gets into those answers.</div>", unsafe_allow_html=True)
+    st.markdown('<div class="muted">Compliance: everything client-facing is education that ends in "ask your '
+                'advisor", never a fund offer.</div>', unsafe_allow_html=True)
+
+    # ----- what clients hear today -----
+    st.markdown("### What clients hear today")
     d = load_aeo()
-    c1, c2 = st.columns([4, 1])
-    if c2.button("Run now", disabled=not HAS_KEY, width="stretch", help=None if HAS_KEY else NO_KEY_MSG):
-        run_aeo()
-        d = load_aeo()
     if not d:
-        st.caption("No results yet. Run `python -m pipeline.aeo --n 30` or press Run now.")
+        st.caption("No results yet. Run `python -m pipeline.aeo --n 30`.")
     else:
-        m = d["metrics"]
-        c1.markdown(
-            f'<div class="summary">Asked {m["answered"]} client questions on {d["run_date"]} ({d["model"]}, '
-            f'{d["tool"]["type"]}). Evergreen, interval, or tender-offer funds came up in '
-            f'<b>{m["evergreen_share"]:.0%}</b> of answers. Equi came up in <b>{m["equi_share"]:.0%}</b>.'
-            + (f' {m["failed"]} questions failed.' if m["failed"] else "") + "</div>", unsafe_allow_html=True)
+        m, ok = d["metrics"], [r for r in d["results"] if not r.get("error")]
+        n_ev = sum(r["mentions_evergreen"] for r in ok)
+        n_eq = sum(r["mentions_equi"] for r in ok)
+        c1, c2 = st.columns([4, 1])
+        c1.markdown(f'<div class="summary"><b>Evergreen alternatives came up in {n_ev} of {len(ok)} answers. '
+                    f'Equi came up in {n_eq}.</b></div>', unsafe_allow_html=True)
+        c1.caption(f'We asked {m["answered"]} questions clients actually type, with live web search, on '
+                   f'{d["run_date"]} ({d["model"]}).')
+        if c2.button("Run the check again", disabled=not HAS_KEY, width="stretch",
+                     help="About 3 minutes." if HAS_KEY else NO_KEY_MSG):
+            run_aeo()
+            d = load_aeo()
+
         g1, g2 = st.columns(2, gap="large")
         with g1:
-            st.markdown("**By question group**")
-            st.dataframe(pd.DataFrame([{"Group": g, "Evergreen mentioned": v * 100}
+            st.markdown("**By topic**")
+            st.dataframe(pd.DataFrame([{"Topic": g, "Evergreen came up": v * 100}
                                        for g, v in m["evergreen_by_group"].items()]),
                          hide_index=True, width="stretch",
-                         column_config={"Evergreen mentioned": st.column_config.ProgressColumn(
+                         column_config={"Evergreen came up": st.column_config.ProgressColumn(
                              format="%.0f%%", min_value=0, max_value=100)})
             st.caption("Evergreen comes up when the client already knows the word, and almost never when they "
                        "describe the problem it solves.")
         with g2:
-            st.markdown("**Most-cited domains**")
-            st.dataframe(pd.DataFrame(m["top_domains"], columns=["Domain", "Citations"]), hide_index=True,
-                         width="stretch", height=320)
-            st.caption(f"From {sum(len(r.get('cited_urls') or []) for r in d['results'])} citations across "
-                       f"{m['answered']} answers, so the ranking is thin. Rerun weekly and pool.")
+            st.markdown("**Sites AI cited most**")
+            st.dataframe(pd.DataFrame(m["top_domains"], columns=["Site", "Times cited"]), hide_index=True,
+                         width="stretch", height=250)
+            st.caption(f"{sum(len(r.get('cited_urls') or []) for r in ok)} citations across {len(ok)} answers, "
+                       "so the ranking is thin. It firms up as the weekly check runs.")
 
-        with st.expander(f'Gaps: {len(m["gaps"])} questions where evergreen never came up'):
-            for g in m["gaps"]:
-                st.markdown(f'<div class="muted">{html.escape(g["group"])}: {html.escape(g["question"])}</div>',
+        st.markdown("**Three examples**")
+        picks = [next((r for r in ok if r["group"] == g and r["mentions_evergreen"] == want), None)
+                 for g, want in (("Downturn protection", False), ("Preserving family wealth", False),
+                                 ("Evergreen and interval funds", True))]
+        cols = st.columns(3, gap="medium")
+        for col, r in zip(cols, [p for p in picks if p]):
+            with col:
+                tag = "Mentions evergreen" if r["mentions_evergreen"] else "No mention of evergreen"
+                st.markdown(f'<div><b>"{html.escape(r["question"])}"</b><br><span class="muted">{tag}</span></div>'
+                            f'<div style="font-size:0.9rem;margin:6px 0">{html.escape(excerpt(r["answer"]))}</div>'
+                            f'<div class="muted">Cited: {html.escape(", ".join(r["cited_domains"]) or "none")}</div>',
                             unsafe_allow_html=True)
 
-        st.markdown("**Pages to create**")
-        st.caption("Category education only, each ending in \"ask your advisor\". Pitch lists exclude fund managers "
-                   "and advisory firms.")
-        for i, pg in enumerate(d.get("pages") or [], 1):
-            st.markdown(
-                f'<div style="margin:0 0 0.8rem 0"><b>{i}. {html.escape(pg["page_title"])}</b><br>'
-                f'<span class="muted">Answers: {html.escape(pg["target_question"])}</span><br>'
-                f'{html.escape(pg["why_cited"])}<br>'
-                f'<span class="muted">Pitch: {html.escape(", ".join(pg["pitch_domains"]) or "no cited domain fits")}</span>'
-                + "".join(f'<div class="flag">Check: {html.escape(f)}</div>' for f in pg.get("flags", []))
-                + "</div>", unsafe_allow_html=True)
-        st.markdown(f'<div class="muted">Every page carries: {html.escape(DISCLOSURE)}</div>', unsafe_allow_html=True)
-
-        with st.expander("Read the answers"):
-            ok = [r for r in d["results"] if not r.get("error")]
+        with st.expander("Read every answer"):
             q = st.selectbox("Question", [r["question"] for r in ok], key="aeo_q")
             r = next(x for x in ok if x["question"] == q)
-            st.markdown(f'{"Mentions " + ", ".join(r["evergreen_terms"]) if r["mentions_evergreen"] else "No evergreen mention"}'
-                        f' &nbsp;·&nbsp; {len(r["cited_urls"])} citations', unsafe_allow_html=True)
             st.markdown(f'<div style="max-height:360px;overflow:auto;border:1px solid #ECEAE3;padding:10px;font-size:0.9rem">'
-                        f'{html.escape(r["answer"]).replace(chr(10), "<br>")}</div>', unsafe_allow_html=True)
+                        f'{html.escape(no_dashes(r["answer"])).replace(chr(10), "<br>")}</div>', unsafe_allow_html=True)
             st.markdown("<br>".join(f'<span class="muted">{html.escape(u)}</span>' for u in r["cited_urls"]),
                         unsafe_allow_html=True)
 
+        # ----- action plan -----
+        st.markdown("### AEO action plan")
+        plan = d.get("action_plan")
+        if not plan:
+            st.caption("No action plan yet. It is built from the answers above in one step.")
+            st.button("Build the action plan", on_click=build_plan, disabled=not HAS_KEY,
+                      help=None if HAS_KEY else NO_KEY_MSG)
+        else:
+            st.caption(f'Built {plan["generated"]} from the answers above. Three lanes, each a list of things to do '
+                       "this month.")
+            if plan.get("flags"):
+                st.warning("Check before acting:\n\n" + "\n".join(f"- {f}" for f in plan["flags"]))
+
+            st.markdown("**Lane 1. Publish on equi.com**")
+            st.caption(f"Question-led pages that answer one client question each, anchored by the {aeo.INDEX_NAME}: "
+                       "a quarterly comparison of evergreen fund fees, liquidity terms, and minimums from public SEC "
+                       "filings. Original data is what AI and reporters cite.")
+            heads = st.columns([2.2, 3, 1.5, 3, 2, 1.3], gap="small")
+            for h, t in zip(heads, ["Target question", "Action", "Where", "Why AI would cite it", "Metric", ""]):
+                h.markdown(f'<div class="muted" style="font-weight:600">{t}</div>', unsafe_allow_html=True)
+            store = page_store()
+            for i, row in enumerate(plan["publish"]):
+                c = st.columns([2.2, 3, 1.5, 3, 2, 1.3], gap="small")
+                for col, key in zip(c, ["target_question", "action", "where", "why_cited", "metric"]):
+                    col.markdown(f'<div style="font-size:0.88rem">{html.escape(row[key])}</div>', unsafe_allow_html=True)
+                sl = pages_mod.slug(row["target_question"])
+                if i == 0 and aeo.INDEX_NAME.lower() in (row["action"] + row["target_question"]).lower():
+                    c[5].caption("Built from SEC data, not drafted here.")
+                elif sl in store:
+                    c[5].button("View page", key=f"view|{sl}", width="stretch",
+                                on_click=lambda k=sl: st.session_state.update(page_view=k))
+                else:
+                    c[5].button("Draft this page", key=f"draft|{sl}", width="stretch", disabled=not HAS_KEY,
+                                help="About 30 seconds." if HAS_KEY else NO_KEY_MSG,
+                                on_click=draft_page, args=(row["target_question"], row["action"]))
+                st.markdown('<div style="border-bottom:1px solid #ECEAE3;margin:2px 0 6px"></div>',
+                            unsafe_allow_html=True)
+
+            if store:
+                st.markdown("**Drafted pages**")
+                keys = list(store)
+                view = st.session_state.get("page_view")
+                idx = keys.index(view) if view in keys else 0
+                pick = st.selectbox("Page", keys, index=idx, format_func=lambda k: store[k]["title"], key="page_pick")
+                pg = store[pick]
+                page_html = pages_mod.render_html(pg)
+                st.caption(f'Answers "{pg["question"]}". Updated {pg["updated"]}. Direct answer, comparison table, '
+                           f'{len(pg["faq"])} FAQs with FAQPage schema, byline placeholder, and the disclosure line.')
+                if pg.get("flags"):
+                    st.warning("Check before publishing:\n\n" + "\n".join(f"- {f}" for f in pg["flags"]))
+                st.download_button("Download HTML", page_html, f"{pick}.html", "text/html")
+                st.iframe("data:text/html;base64," + base64.b64encode(page_html.encode()).decode(), height=1500)
+
+            st.markdown("**Lane 2. Get featured where AI already looks**")
+            st.caption("The sites AI cited above. Pitch publishers only; fund managers and advisory firms compete "
+                       "with Equi.")
+            lane_table(plan["featured"])
+            st.markdown("**Lane 3. Cut YouTube clips**")
+            st.caption("Short clips from existing webinars and long-form videos, titled with the client's question and "
+                       "published with a full transcript, so AI can read and quote them.")
+            lane_table(plan["youtube"])
+
+    # ----- air cover -----
     st.divider()
-    st.markdown("### Air cover plan")
+    st.markdown("### Air cover")
     st.markdown(f'<div class="flag" style="font-weight:600">{aircover.SIMULATION}</div>', unsafe_allow_html=True)
-    st.caption("Before a Tier A firm's sequence starts, 2 to 3 weeks of category-education ads run to affluent "
-               "households around its city, so its clients have heard of evergreen alternatives before Equi calls. "
-               "Ads never name the firm or any fund. Uses the default-weight tiers so the test arms stay fixed.")
+    st.markdown('<div class="lede">Before we email a Tier A firm, we run 2 to 3 weeks of educational ads to wealthy '
+                "households near it, then send the kit. We compare meeting rates against matched firms that got no "
+                "ads.</div>", unsafe_allow_html=True)
     base = list(load_enrichment().values())
     pairs, unpaired, arms = aircover.holdout(base)
-    plan_rows = aircover.plan(base, arms)
-    st.dataframe(pd.DataFrame([{
-        "Firm": p["firm"], "Metro": p["metro"], "Flight": f'{p["flight_start"]} to {p["flight_end"]}',
-        "Sequence starts": p["sequence_start"], "Status": p["status"], "Audience": p["audience"],
-        "Ad copy": f'{p["headline"]} | {p["description"]}',
-    } for p in plan_rows]), hide_index=True, width="stretch",
-        column_config={"Firm": st.column_config.TextColumn(width=220), "Metro": st.column_config.TextColumn(width=130),
-                       "Flight": st.column_config.TextColumn(width=190), "Status": st.column_config.TextColumn(width=230),
-                       "Audience": st.column_config.TextColumn(width="large"),
-                       "Ad copy": st.column_config.TextColumn(width="large")})
-    issues = aircover.copy_issues()
-    st.caption("Ad copy is within Google's 30 and 90 character limits." if not issues else "Copy over limit: " + "; ".join(issues))
-    st.caption(aircover.PLATFORM_NOTE)
-    st.markdown(f'<div class="muted">Every ad links to a page carrying: {html.escape(DISCLOSURE)}</div>',
-                unsafe_allow_html=True)
-
-    st.markdown("**Holdout test**")
-    st.markdown(f"Tier A and B firms are paired by tier and firm type, closest scores together. A seeded coin flip "
-                f"(seed {aircover.SEED}) puts one of each pair in air cover and the other in control. "
-                f"**Primary metric:** {aircover.PRIMARY_METRIC} **Guardrail:** {aircover.GUARDRAIL}")
-    st.dataframe(pd.DataFrame([{"Pair": p["pair"], "Tier": p["tier"], "Type": p["type"], "Air cover": p["air_cover"],
-                                "Control": p["control"], "Score gap": p["score_gap"]} for p in pairs]),
-                 hide_index=True, width="stretch")
-    if unpaired:
-        st.caption(f'Unpaired (odd one out in its group, not in the test, gets air cover): {", ".join(unpaired)}.')
+    group = {"air cover": "Air cover", "control": "Control (no ads)", "unpaired": "Air cover (not in the test)"}
+    fmt = lambda iso: datetime.fromisoformat(iso).strftime("%b %-d")
+    html_table([{
+        "Firm": p["firm"], "Area": p["metro"], "Who sees the ads": p["audience"],
+        "When": (f'No ads. Kit goes out {fmt(p["sequence_start"])}.' if p["arm"] == "control" else
+                 f'Ads {fmt(p["flight_start"])} to {fmt(p["flight_end"])}. Kit goes out {fmt(p["sequence_start"])}.'),
+        "What the ad says": "No ads" if p["arm"] == "control" else f'{p["headline"]}. {p["description"]}',
+        "Test group": group[p["arm"]],
+    } for p in aircover.plan(base, arms)],
+        {"Firm": "15%", "Area": "10%", "Who sees the ads": "28%", "When": "15%", "What the ad says": "20%",
+         "Test group": "12%"})
+    st.caption("Every ad links to a page that carries the disclosure line. " + aircover.PLATFORM_NOTE)
+    with st.expander(f"How firms are matched ({len(pairs)} pairs)"):
+        st.markdown("Tier A and B firms are paired by tier and firm type, closest scores together. A coin flip with a "
+                    f"fixed seed ({aircover.SEED}) decides which firm in each pair gets ads.")
+        st.dataframe(pd.DataFrame([{"Pair": p["pair"], "Tier": p["tier"], "Type": p["type"], "Gets ads": p["air_cover"],
+                                    "No ads": p["control"], "Score gap": p["score_gap"]} for p in pairs]),
+                     hide_index=True, width="stretch")
+        if unpaired:
+            st.caption(f'No match in their group, so outside the test (they still get ads): {", ".join(unpaired)}.')
     st.markdown(f'<div class="flag">{html.escape(aircover.power_note(len(pairs)))}</div>', unsafe_allow_html=True)
+
+    # ----- how we know it's working -----
+    st.markdown("### How we know it's working")
+    if d:
+        ok = [r for r in d["results"] if not r.get("error")]
+        ev_today = f'{sum(r["mentions_evergreen"] for r in ok)} of {len(ok)} answers ({d["metrics"]["evergreen_share"]:.0%})'
+        eq_today = f'{sum(r["mentions_equi"] for r in ok)} of {len(ok)} answers'
+    else:
+        ev_today = eq_today = "Not measured yet"
+    html_table([
+        {"What we track": "Share of AI answers that mention evergreen alternatives", "How often": "Weekly",
+         "Today": ev_today, "What counts as working": "Rising, especially on the questions where it never came up"},
+        {"What we track": "AI answers that cite Equi", "How often": "Weekly", "Today": eq_today,
+         "What counts as working": "An Equi page cited within 6 weeks of publishing"},
+        {"What we track": "Meeting rate: air cover firms vs control firms", "How often": "Each cycle",
+         "Today": "No data yet (simulation)",
+         "What counts as working": "Air cover at least 1.5x control. Below that, stop the ads."},
+    ], {"What we track": "32%", "How often": "12%", "Today": "20%", "What counts as working": "36%"})
 
 
 # ---------- start here ----------
@@ -1368,8 +1515,8 @@ with tab_start:
                            "all under the prospect firm's own name.")
     jump_row("Market signals", "A big down day fires a client-ready note for every Tier A and B firm, a two-line "
                                "advisor ping, and a market-day ad set.")
-    jump_row("Air cover", "What AI tells clients today, the pages that would change it, and a simulated ad plan "
-                          "tested against a holdout.")
+    jump_row("Client demand", "What AI tells wealthy clients today, the plan to get Equi into those answers, and "
+                              "a simulated ad plan tested against matched firms.")
 
     st.markdown("### Part 2: lead pipeline")
     jump_row("Shortlist", f"{len(records)} firms scored against Equi's ICP, each with a score range, a Tier A "

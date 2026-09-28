@@ -17,13 +17,13 @@ python build.py --drafts      # clean, score, stress test, enrich, and write A/B
 streamlit run app.py
 ```
 
-`python build.py --offline` skips the SEC lookup. `--signals` caches the replay market data and rewrites the Aug 5 2024 notes and ad set. `python -m pipeline.kit` rewrites the two demo kits, and `python -m pipeline.aeo --n 30` reruns the answer-engine tracker. Everything the app needs is in `data/`, so it runs without a key; buttons that write new text say so.
+`python build.py --offline` skips the SEC lookup. `--signals` caches the replay market data and rewrites the Aug 5 2024 notes and ad set. `python -m pipeline.kit` rewrites the demo kits, `python -m pipeline.aeo --n 30` reruns the tracker and action plan, and `python -m pipeline.pages "question"` drafts a page. The app runs without a key from `data/`; buttons that write new text say so.
 
-**Streamlit Cloud:** deploy `app.py`, then add `ANTHROPIC_API_KEY = "sk-ant-..."` under App settings, Secrets. The app reads `.env` locally and `st.secrets` on Cloud, and never displays the key.
+**Streamlit Cloud:** deploy `app.py`, then add `ANTHROPIC_API_KEY = "sk-ant-..."` under App settings, Secrets. The app reads `.env` locally and `st.secrets` on Cloud.
 
 ## How it works
 
-**Part 1, demand engine.** Equi's edge is that it builds the advisor's client materials, so the materials are the outreach. Kit Studio writes a client letter under the prospect firm's name. Market signals watches SPY and VIX and, on a real drop, queues a client-ready note for every Tier A and B firm plus a market-day ad set. Air cover tracks what AI assistants tell wealthy clients and plans category ads around each Tier A firm's city before outreach starts.
+**Part 1, demand engine.** Equi's edge is that it builds the advisor's client materials, so the materials are the outreach. Kit Studio writes a client letter under the prospect firm's name. Market signals watches SPY and VIX and, on a real drop, queues a client-ready note for every Tier A and B firm plus a market-day ad set. Client demand tracks what AI assistants tell wealthy clients, turns the gaps into an action plan with publish-ready equi.com pages, and plans category ads near each Tier A firm before outreach.
 
 **Part 2, lead pipeline.** `clean.py` normalizes the CSV and dedupes it (50 rows become 45 firms, every change logged). `score.py` applies hard gates, six weighted criteria, caps, and a confidence range, then stress-tests the weights. `enrich.py` tags every field by source. `sequences.py` defines the touches for each route. `personalize.py` writes two first-touch variants per firm.
 
@@ -31,7 +31,7 @@ streamlit run app.py
 - **Start here:** the thesis and live findings.
 - **Kit Studio:** firm-branded letter, talking points, IC memo outline for committee firms.
 - **Market signals:** today's status, real-event replays, the alert feed.
-- **Air cover:** AEO tracker results, Pages to create, simulated ad plan and holdout.
+- **Client demand:** what AI tells clients, a three-lane AEO action plan with page drafts, and the simulated air cover plan.
 - **Shortlist:** ranked firms with score range, stability, route, and a full detail view.
 - **Your call:** firms that need a human decision, with a recommendation and overrides.
 - **Drafts:** variants A and B side by side, rewrite with a note, approve, sequencer CSV.
@@ -62,7 +62,7 @@ streamlit run app.py
 
 **No Clay on synthetic data.** Enriching made-up firms would return nothing or, worse, someone else's data. In production: SEC Form ADV data files for AUM (Item 5.F) and high-net-worth client counts and assets (Item 5.D, which gives real average client size), and Clay for contacts, emails, and job changes.
 
-**Session-only state.** Overrides, approvals, and the queue live in the browser session, with CSV exports. Production would write decisions and approvals to BigQuery, which also gives the override-rate metric below.
+**Session-only state.** Overrides, approvals, and the queue live in the browser session, with CSV exports. Production would write them to BigQuery, which also feeds the override-rate metric.
 
 **Client-side work is category education only.** Equi cannot advertise its funds to the public. Letters, notes, ads, and pages explain evergreen alternatives, never name a fund, never cite performance, end in "ask your advisor", and carry a disclosure line.
 
@@ -82,14 +82,14 @@ streamlit run app.py
 ## Other ideas to land meetings
 
 - **Co-host a prospect firm's client evening** on evergreen alternatives, then cut the recording into firm-branded clips.
-- **Answer the DDQ before it is asked.** Send research leads a completed due-diligence questionnaire with the first email.
+- **Answer the DDQ first.** Send research leads a completed due-diligence questionnaire with the first email.
 - **Custodian-conference follow-up within 48 hours,** with the kit already built for every firm met.
-- **Referral loop:** when a client of a live firm forwards a note, ask that advisor which peers should see it.
+- **Referral loop:** when a firm forwards a note to clients, ask which peers should see it.
 
 ## What I would do with more time
 
 - Run the real enrichment path (Form ADV files, Clay) and re-score on real data.
 - Persist state to BigQuery and wire real engagement from tracked links into the queue.
 - Rerun the AEO tracker weekly, pool the citations, and track Equi's pages over time.
-- Move kit generation to structured output, as the notes and ads already are.
+- Move kit generation to structured output, like everything else.
 - Calibrate the weights against real meeting outcomes after a quarter.
