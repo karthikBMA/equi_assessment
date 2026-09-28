@@ -1,6 +1,6 @@
 # Equi demand engine
 
-Live app: https://YOUR-APP.streamlit.app
+Live app: https://equiassessment-bqwmtkyccgewnfq9fno3ia.streamlit.app/
 
 Part 1 plan: see [PLAN.md](PLAN.md)
 
