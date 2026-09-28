@@ -65,6 +65,8 @@ Hard rules:
 - Two or three short paragraphs separated by blank lines. Greeting on its own line.
 - Never tell the advisor what their clients should own or what their "next allocation" is. Observe, then ask.
 - Refer to past meetings or intros only as stated in the notes, without embellishing.
+- No unverifiable generalizations: never claim what other firms do ("some firms use this"), what clients
+  commonly ask, or what is "often" true. Say what is true about this firm, or ask.
 - Sign off as {{sender_name}}.
 - Return only JSON, no prose, no markdown fences."""
 
@@ -103,9 +105,19 @@ def firm_facts(r: dict) -> str:
     return "\n".join(lines)
 
 
+DRAFT_SCHEMA = {
+    "type": "object",
+    "properties": {"subject": {"type": "string"}, "body": {"type": "string"}, "angle": {"type": "string"},
+                   "facts_used": {"type": "array", "items": {"type": "string"}}},
+    "required": ["subject", "body", "angle", "facts_used"],
+    "additionalProperties": False,
+}
+
+
 def _client():
     import anthropic
-    return anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
+    # bounded: the SDK default is 10 minutes, and a hung call once blocked a whole build
+    return anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"), timeout=90, max_retries=2)
 
 
 def _parse(text: str) -> dict:
@@ -122,14 +134,18 @@ def draft(record: dict, variant: str = "A", sender_name: str = "the Equi team",
     extra = ""
     if previous and instruction:
         extra = f"Rewrite this previous draft following the rep's note.\nRep's note: {instruction}\nPrevious draft:\n{previous}\n"
+    # thinking counts toward max_tokens, so leave room; structured output guarantees parseable JSON
     msg = _client().messages.create(
         model=MODEL,
-        max_tokens=3000,
+        max_tokens=16000,
+        output_config={"effort": "medium", "format": {"type": "json_schema", "schema": DRAFT_SCHEMA}},
         system=SYSTEM.replace("{sender_name}", sender_name),
         messages=[{"role": "user", "content": USER_TMPL.format(
             facts=firm_facts(record), persona=persona, variant=VARIANTS[variant], extra=extra)}],
     )
-    out = _parse("".join(b.text for b in msg.content if getattr(b, "type", "") == "text"))
+    if msg.stop_reason == "max_tokens":
+        raise RuntimeError("Draft was cut off at the token limit.")
+    out = _parse(next(b.text for b in msg.content if getattr(b, "type", "") == "text"))
     out["variant"] = variant
     return out
 

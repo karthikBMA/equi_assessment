@@ -151,7 +151,7 @@ def generate(record: dict) -> dict:
 def _scrub(x):
     """No em or en dashes anywhere in what we render."""
     if isinstance(x, str):
-        return x.replace(" — ", ", ").replace("—", ", ").replace("–", "-")
+        return x.replace(" \u2014 ", ", ").replace("\u2014", ", ").replace("\u2013", "-")
     if isinstance(x, list):
         return [_scrub(i) for i in x]
     if isinstance(x, dict):
@@ -257,3 +257,21 @@ def letter_text(kit: dict) -> str:
     L = kit["letter"]
     return "\n\n".join([L["title"], L.get("greeting") or "Dear clients,", *L["paragraphs"],
                         closing(kit), "[Advisor name]"])
+
+
+if __name__ == "__main__":
+    # python -m pipeline.kit   writes the two demo kits (principal-led and committee-led) to data/kits.json
+    import argparse
+    from pathlib import Path
+    from dotenv import load_dotenv
+    load_dotenv(".env")
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--firms", nargs="+", default=["Marchetti Ruiz Family Advisors", "Thornbury Wealth Advisors"])
+    args = ap.parse_args()
+    recs = {r["firm_name"]: r for r in json.loads(Path("data/scored.json").read_text())}
+    out = {}
+    for name in args.firms:
+        k = generate(recs[name])
+        out[name] = k
+        print(f"{name}: {'retried, ' if k.get('fixed_on_retry') else ''}{len(k['flags'])} flags left")
+    Path("data/kits.json").write_text(json.dumps(out, indent=2))
