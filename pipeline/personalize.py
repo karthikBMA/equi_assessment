@@ -26,8 +26,8 @@ STYLE_GUIDE = """How Equi writes (taken from the team's own emails):
 - No em dashes. No exclamation points. No "I hope this finds you well".
 - Sounds like one busy professional writing to another."""
 
-WHAT_EQUI_SELLS = """Equi: SEC-registered adviser offering institutional-grade liquid alternatives with managed risk and
-downside protection, built as evergreen funds (no multi-year lock-up). Two shapes: Equi-branded funds, or a
+WHAT_EQUI_SELLS = """Equi: SEC-registered adviser offering institutional-grade liquid alternatives built with a focus on
+managing risk, as evergreen funds (no multi-year lock-up). Two shapes: Equi-branded funds, or a
 white-label fund-of-funds built under the advisor's own brand. The key differentiator: Equi builds the
 advisor's client-facing materials so the advisor can explain it to their own clients."""
 
@@ -59,7 +59,9 @@ SYSTEM = f"""You write first-touch outreach emails for Equi's sales team.
 
 Hard rules:
 - Use only the facts given about the firm. Never invent names, events, numbers, holdings, or relationships.
-- Never state or imply fund performance, returns, yields, or guarantees.
+- Never state or imply fund performance, returns, yields, or guarantees. Never claim protection, safety, or
+  "downside protection": describe what the funds are built to do, not outcomes.
+- Greet the recipient by their first name exactly as given in the facts. No nicknames or short forms.
 - Under 110 words in the body. Subject under 8 words, lowercase is fine, no clickbait.
 - One call to action, low effort (reply, or a 20-minute call).
 - Two or three short paragraphs separated by blank lines. Greeting on its own line.
@@ -127,25 +129,55 @@ def _parse(text: str) -> dict:
     return data
 
 
+MAX_WORDS = 110
+GREETING = re.compile(r"^(?:hi|hello|dear)?\s*([A-Za-z][\w'-]*),?\s*$", re.I)
+
+
+def check_draft(d: dict, record: dict, sender: str | None = None) -> list[str]:
+    """Rules a draft must meet, checked in code: length, the right first name, the sign-off, and no claims."""
+    from pipeline.aeo import INTERNAL_OK
+    from pipeline.compliance import lint_text
+    issues = []
+    lines = [l for l in d["body"].strip().split("\n") if l.strip()]
+    core = " ".join(lines[1:-1]) if len(lines) > 2 else d["body"]
+    if len(core.split()) > MAX_WORDS:
+        issues.append(f"Body is {len(core.split())} words; the limit is {MAX_WORDS}.")
+    first = (record.get("contact_name") or "").split()[0] if record.get("contact_name") else None
+    m = GREETING.match(lines[0]) if lines else None
+    if first and (not m or m.group(1).lower() != first.lower()):
+        issues.append(f'Greeting "{lines[0] if lines else ""}" does not use the first name {first}.')
+    if sender and (not lines or lines[-1].strip().lower() != sender.lower()):
+        issues.append(f'The draft must end with the sign-off "{sender}".')
+    issues += [f for f in lint_text(d["subject"] + ". " + d["body"]) if f.split(" in ")[0] not in INTERNAL_OK]
+    return issues
+
+
 def draft(record: dict, variant: str = "A", sender_name: str = "the Equi team",
           instruction: str | None = None, previous: str | None = None) -> dict:
-    """Write one draft. `instruction` + `previous` let a rep ask for a rewrite."""
+    """Write one draft, check it in code, and fix once if it breaks a rule.
+    `instruction` + `previous` let a rep ask for a rewrite."""
     persona = PERSONA_PLAYBOOK.get(record.get("persona") or "", PERSONA_PLAYBOOK["CIO"])
     extra = ""
     if previous and instruction:
         extra = f"Rewrite this previous draft following the rep's note.\nRep's note: {instruction}\nPrevious draft:\n{previous}\n"
-    # thinking counts toward max_tokens, so leave room; structured output guarantees parseable JSON
-    msg = _client().messages.create(
-        model=MODEL,
-        max_tokens=16000,
-        output_config={"effort": "medium", "format": {"type": "json_schema", "schema": DRAFT_SCHEMA}},
-        system=SYSTEM.replace("{sender_name}", sender_name),
-        messages=[{"role": "user", "content": USER_TMPL.format(
-            facts=firm_facts(record), persona=persona, variant=VARIANTS[variant], extra=extra)}],
-    )
-    if msg.stop_reason == "max_tokens":
-        raise RuntimeError("Draft was cut off at the token limit.")
-    out = _parse(next(b.text for b in msg.content if getattr(b, "type", "") == "text"))
+    prompt = USER_TMPL.format(facts=firm_facts(record), persona=persona, variant=VARIANTS[variant], extra=extra)
+
+    def ask(p):
+        # thinking counts toward max_tokens, so leave room; structured output guarantees parseable JSON
+        msg = _client().messages.create(
+            model=MODEL, max_tokens=16000,
+            output_config={"effort": "medium", "format": {"type": "json_schema", "schema": DRAFT_SCHEMA}},
+            system=SYSTEM.replace("{sender_name}", sender_name), messages=[{"role": "user", "content": p}])
+        if msg.stop_reason == "max_tokens":
+            raise RuntimeError("Draft was cut off at the token limit.")
+        return _parse(next(b.text for b in msg.content if getattr(b, "type", "") == "text"))
+
+    out = ask(prompt)
+    first = check_draft(out, record, sender_name)
+    if first:
+        out = ask(prompt + "\nA first draft broke these rules. Fix every one and keep the rest:\n- "
+                  + "\n- ".join(first) + "\nFirst draft:\n" + json.dumps(out))
+    out["flags"] = check_draft(out, record, sender_name)
     out["variant"] = variant
     return out
 
