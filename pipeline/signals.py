@@ -19,6 +19,7 @@ import re
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, timedelta
 
+from pipeline.compliance import DISCLOSURE, lint_text
 from pipeline.kit import LINT_RULES, TIMEOUT_S, RETRIES
 from pipeline.personalize import MODEL, STYLE_GUIDE
 
@@ -111,14 +112,15 @@ Return JSON: {{"notes": [{{"firm": "exact firm name", "subject": "...", "client_
   "advisor_ping": ["line one", "line two"]}}]}}"""
 
 PREDICTION = (r"will (recover|rebound|bounce)|buying opportunity|buy the dip|\bbottom(ed)? out", "a market prediction")
-SHIELDED = (r"insulat|\bsmooth|shield|cushion|immune|unaffected|less risky|\bsteadier|\bbuffer",
+SHIELDED = (r"insulat|\bsmooth|shield|cushion|immune|unaffected|less risky|\bsteadier|\bbuffer"
+            r"|less (price )?sensitiv|less volatil|lower volatil|dampen",
             "a claim that private holdings are shielded from volatility")
 NOTE_RULES = [r for r in LINT_RULES if r[1] != "a specific figure"] + [PREDICTION, SHIELDED]
 
 
 def signed(n: dict) -> str:
-    """The note as the client sees it: body plus the firm's signature, added by us."""
-    return f'{n["client_note"]}\n\n[Advisor name]\n{n["firm"]}'
+    """The note as the client sees it: body, the firm's signature, and the disclosure, all added by us."""
+    return f'{n["client_note"]}\n\n[Advisor name]\n{n["firm"]}\n\n{DISCLOSURE}'
 
 
 # "It does not mean these holdings are unaffected" is the disclaimer we want, not a claim.
@@ -127,14 +129,7 @@ NEGATION = re.compile(r"\b(not|never|no)\b|n't", re.I)
 
 
 def lint_note(n: dict) -> list[str]:
-    found = []
-    sentences = re.split(r"(?<=[.!?])\s+", n["client_note"])
-    for pattern, label in NOTE_RULES:
-        for sent in sentences:
-            if re.search(pattern, sent, re.I) and not (label in NEGATABLE and NEGATION.search(sent)):
-                found.append(f'{label} in "{sent.strip()}"')
-                break
-    return found
+    return lint_text(n["client_note"])
 
 
 def _firm_line(r: dict) -> str:
