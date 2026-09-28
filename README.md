@@ -4,8 +4,6 @@ Live app: https://equiassessment-bqwmtkyccgewnfq9fno3ia.streamlit.app/
 
 Part 1 plan: see [PLAN.md](PLAN.md)
 
-<!-- KARTHIK: your 3-line intro goes here. -->
-_[Placeholder: 3-line intro]_
 
 ## Setup
 
