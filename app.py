@@ -22,6 +22,9 @@ from dotenv import load_dotenv
 from pipeline import kit as kits_mod
 from pipeline import personalize
 from pipeline import signals as sig
+from pipeline import ads as ads_mod
+from pipeline import aeo, aircover
+from pipeline.compliance import DISCLOSURE
 from pipeline.clean import clean_leads
 from pipeline.score import (CRITERIA_LABELS, DEFAULT_WEIGHTS, WHY_WEIGHT, bubble_reason,
                             bubble_type,
@@ -265,8 +268,8 @@ st.title("Equi lead desk")
 st.markdown('<div class="muted">Independent RIAs and multi-family offices, scored against Equi\'s ICP.'
             + (" Custom weights in use." if custom else "") + "</div>", unsafe_allow_html=True)
 
-tab_shortlist, tab_call, tab_drafts, tab_kit, tab_signals, tab_queue = st.tabs(
-    ["Shortlist", "Your call", "Drafts", "Kit Studio", "Market signals", "Review queue"], key="tab",
+tab_shortlist, tab_call, tab_drafts, tab_kit, tab_signals, tab_queue, tab_air = st.tabs(
+    ["Shortlist", "Your call", "Drafts", "Kit Studio", "Market signals", "Review queue", "Air cover"], key="tab",
                                               on_change="rerun")
 
 
@@ -876,13 +879,51 @@ def fire(key: str, label: str, day: dict, context: str, firms: list[dict]):
             return
     for firm, n in notes.items():
         queue_add("signal", firm, f"Market note: {label}", {"note": n, "event": key})
+    ad_set = load_signals()["fired"].get(key, {}).get("ads")
+    if not ad_set and HAS_KEY:
+        try:
+            ad_set = ads_mod.generate(day, context)
+        except Exception as e:
+            st.session_state["sig_msg"] = ("error", f"Ad set failed: {type(e).__name__}: {str(e)[:200]}")
+    if ad_set:
+        queue_add("ads", "Market-wide", f"Ad set: {label}", {"ads": ad_set, "event": key})
     alerts().insert(0, {"label": label, "date": day["date"], "triggers": sig.triggers(day), "notes": len(notes),
                         "missing": len(firms) - len(notes), "fired": datetime.now().strftime("%H:%M"),
                         "source": "pre-written" if key in load_signals()["fired"] and not todo else "written now"})
     missing = len(firms) - len(notes)
-    st.session_state["sig_msg"] = ("success", f"{len(notes)} notes are in the review queue."
+    st.session_state["sig_msg"] = ("success", f"{len(notes)} notes" + (" and the ad set" if ad_set else "")
+                                   + " are in the review queue."
                                    + (f" {missing} firms have no note: {NO_KEY_MSG}" if missing else ""))
     st.session_state["sig_event"] = key
+
+
+def render_ads(a: dict):
+    """Ad set with character counts against the Google limits."""
+    for i, ad in enumerate(a["search_ads"], 1):
+        st.markdown(f'**Search ad {i}**: <span class="muted">{html.escape(ad["angle"])}</span>', unsafe_allow_html=True)
+        lines = [f'{html.escape(h)} <span class="muted">({len(h)}/{ads_mod.HEADLINE_MAX})</span>' for h in ad["headlines"]]
+        lines += [f'<i>{html.escape(d)}</i> <span class="muted">({len(d)}/{ads_mod.DESCRIPTION_MAX})</span>'
+                  for d in ad["descriptions"]]
+        st.markdown("<br>".join(lines), unsafe_allow_html=True)
+    st.caption(aircover.PLATFORM_NOTE)
+    st.markdown("**Keywords (panic-day queries)**")
+    st.markdown(f'<div class="muted">{html.escape("; ".join(a["keywords"]))}</div>', unsafe_allow_html=True)
+    for sa in a["social_ads"]:
+        st.markdown(f'**{html.escape(sa["platform"])}** <span class="muted">for {html.escape(sa["audience"])}</span>',
+                    unsafe_allow_html=True)
+        st.markdown(f'{html.escape(sa["headline"])}<br>{html.escape(sa["primary_text"])}<br>'
+                    f'<span class="muted">{html.escape(DISCLOSURE)}</span>', unsafe_allow_html=True)
+    lp = a["landing_page"]
+    st.markdown(f'**Landing page: {html.escape(lp["title"])}**')
+    for sec in lp["sections"]:
+        st.markdown(f'<div><b>{html.escape(sec["heading"])}</b><br>'
+                    + "<br>".join(f"· {html.escape(p)}" for p in sec["points"]) + "</div>", unsafe_allow_html=True)
+    st.markdown(f'<div class="muted">{html.escape(DISCLOSURE)}</div>', unsafe_allow_html=True)
+    if a.get("flags"):
+        st.warning("Check flagged:\n\n" + "\n".join(f"- {f}" for f in a["flags"]))
+    else:
+        st.caption("Character limits and copy rules: clean." + (f' Fixed on a second pass: {len(a["fixed_on_retry"])}.'
+                                                                if a.get("fixed_on_retry") else ""))
 
 
 def render_status(day: dict, context: str | None = None):
@@ -972,6 +1013,11 @@ with tab_signals:
             else:
                 st.caption("Compliance check: clean.")
 
+    ad_item = next((i for i in queue() if i["kind"] == "ads" and i["payload"]["event"] == key), None)
+    if ad_item:
+        with st.expander("Ad set for this event (search, social, landing page)"):
+            render_ads(ad_item["payload"]["ads"])
+
     st.markdown("### Alert feed")
     if alerts():
         for a in alerts():
@@ -994,7 +1040,7 @@ def engagement(item_id: str, kind: str) -> tuple[bool, bool | None]:
     """Simulated opens and forwards, stable per item. Drafts cannot be forwarded to clients."""
     h = int(hashlib.md5(item_id.encode()).hexdigest()[:8], 16) % 100
     opened = h < 62
-    forwarded = (h < 28) if kind != "draft" else None
+    forwarded = (h < 28) if kind not in {"draft", "ads"} else None
     return opened, forwarded
 
 
@@ -1010,12 +1056,13 @@ def queue_rows(by_firm: dict) -> list[dict]:
         rows.append({"id": f"draft|{firm}", "kind": "draft", "firm": firm, "status": status,
                      "title": f"First-touch email (variant {chosen or 'A or B'})", "added": "", "flags": []})
     for i, item in enumerate(queue()):
-        flags = item["payload"].get("note", item["payload"].get("kit", {})).get("flags", [])
+        pl = item["payload"]
+        flags = (pl.get("note") or pl.get("kit") or pl.get("ads") or {}).get("flags", [])
         rows.append({"id": f'{item["kind"]}|{item["firm"]}|{i}', "kind": item["kind"], "firm": item["firm"],
                      "status": item["status"], "title": item["title"], "added": item["added"], "flags": flags,
                      "ref": item})
     for r in rows:
-        tier = by_firm.get(r["firm"], {}).get("tier", "?")
+        tier = by_firm.get(r["firm"], {}).get("tier", "-")
         r["tier"] = tier
         opened, fwd = engagement(r["id"], r["kind"]) if r["status"] == "sent" else (None, None)
         r["opened"], r["forwarded"] = opened, fwd
@@ -1044,7 +1091,7 @@ def bulk(kind: str, frm: str, to: str, by_firm: dict):
             set_status(r, to)
 
 
-KIND_LABEL = {"draft": "Email draft", "kit": "Client kit", "signal": "Market note"}
+KIND_LABEL = {"draft": "Email draft", "kit": "Client kit", "signal": "Market note", "ads": "Ad set"}
 
 with tab_queue:
     by_firm = {r["firm_name"]: r for r in records}
@@ -1103,12 +1150,14 @@ with tab_queue:
                 st.markdown(f'<div style="white-space:pre-wrap">{html.escape(kits_mod.letter_text(row["ref"]["payload"]["kit"]))}</div>',
                             unsafe_allow_html=True)
                 st.caption("Full kit with talking points is in Kit Studio.")
+            elif row["kind"] == "ads":
+                render_ads(row["ref"]["payload"]["ads"])
             else:
                 n = row["ref"]["payload"]["note"]
                 st.markdown(f'**{html.escape(n["subject"])}**')
                 st.markdown(f'<div>{html.escape(sig.signed(n)).replace(chr(10), "<br>")}</div>', unsafe_allow_html=True)
                 st.markdown("**Ping to the advisor:** " + html.escape(" ".join(n["advisor_ping"])))
-            for f in row["flags"]:
+            for f in (row["flags"] if row["kind"] != "ads" else []):
                 st.markdown(f'<div class="flag">Check: {html.escape(f)}</div>', unsafe_allow_html=True)
             if row["forwarded"]:
                 st.markdown(f'<div style="color:{BRASS};font-weight:600">Forwarded to clients (simulated). '
@@ -1121,3 +1170,127 @@ with tab_queue:
                       disabled=row["status"] == "sent", width="stretch")
             c3.button("Back to pending", key=f'qp|{row["id"]}', on_click=set_status, args=(row, "pending"),
                       disabled=row["status"] == "pending", width="stretch")
+
+
+# ---------- air cover ----------
+
+@st.cache_data
+def load_aeo():
+    return aeo.load()
+
+
+def run_aeo():
+    with st.status("Asking 30 client questions with live web search. About 3 minutes.", expanded=True) as box:
+        log = st.empty()
+        lines = []
+
+        def progress(line):
+            lines.append(line)
+            log.code("\n".join(lines[-8:]), language=None)
+        try:
+            aeo.run(30, progress=progress)
+            load_aeo.clear()
+            box.update(label="Done. Results saved to data/aeo.json.", state="complete")
+        except Exception as e:
+            box.update(label=f"Run failed: {type(e).__name__}", state="error")
+
+
+with tab_air:
+    st.markdown("### What clients hear from AI")
+    st.caption("Clients ask an assistant before they ask their advisor. We ask the questions they actually type, "
+               "with live web search, and track whether evergreen, interval, or tender-offer funds come up and who "
+               "gets cited.")
+    d = load_aeo()
+    c1, c2 = st.columns([4, 1])
+    if c2.button("Run now", disabled=not HAS_KEY, width="stretch", help=None if HAS_KEY else NO_KEY_MSG):
+        run_aeo()
+        d = load_aeo()
+    if not d:
+        st.caption("No results yet. Run `python -m pipeline.aeo --n 30` or press Run now.")
+    else:
+        m = d["metrics"]
+        c1.markdown(
+            f'<div class="summary">Asked {m["answered"]} client questions on {d["run_date"]} ({d["model"]}, '
+            f'{d["tool"]["type"]}). Evergreen, interval, or tender-offer funds came up in '
+            f'<b>{m["evergreen_share"]:.0%}</b> of answers. Equi came up in <b>{m["equi_share"]:.0%}</b>.'
+            + (f' {m["failed"]} questions failed.' if m["failed"] else "") + "</div>", unsafe_allow_html=True)
+        g1, g2 = st.columns(2, gap="large")
+        with g1:
+            st.markdown("**By question group**")
+            st.dataframe(pd.DataFrame([{"Group": g, "Evergreen mentioned": v * 100}
+                                       for g, v in m["evergreen_by_group"].items()]),
+                         hide_index=True, width="stretch",
+                         column_config={"Evergreen mentioned": st.column_config.ProgressColumn(
+                             format="%.0f%%", min_value=0, max_value=100)})
+            st.caption("Evergreen comes up when the client already knows the word, and almost never when they "
+                       "describe the problem it solves.")
+        with g2:
+            st.markdown("**Most-cited domains**")
+            st.dataframe(pd.DataFrame(m["top_domains"], columns=["Domain", "Citations"]), hide_index=True,
+                         width="stretch", height=320)
+            st.caption(f"From {sum(len(r.get('cited_urls') or []) for r in d['results'])} citations across "
+                       f"{m['answered']} answers, so the ranking is thin. Rerun weekly and pool.")
+
+        with st.expander(f'Gaps: {len(m["gaps"])} questions where evergreen never came up'):
+            for g in m["gaps"]:
+                st.markdown(f'<div class="muted">{html.escape(g["group"])}: {html.escape(g["question"])}</div>',
+                            unsafe_allow_html=True)
+
+        st.markdown("**Pages to create**")
+        st.caption("Category education only, each ending in \"ask your advisor\". Pitch lists exclude fund managers "
+                   "and advisory firms.")
+        for i, pg in enumerate(d.get("pages") or [], 1):
+            st.markdown(
+                f'<div style="margin:0 0 0.8rem 0"><b>{i}. {html.escape(pg["page_title"])}</b><br>'
+                f'<span class="muted">Answers: {html.escape(pg["target_question"])}</span><br>'
+                f'{html.escape(pg["why_cited"])}<br>'
+                f'<span class="muted">Pitch: {html.escape(", ".join(pg["pitch_domains"]) or "no cited domain fits")}</span>'
+                + "".join(f'<div class="flag">Check: {html.escape(f)}</div>' for f in pg.get("flags", []))
+                + "</div>", unsafe_allow_html=True)
+        st.markdown(f'<div class="muted">Every page carries: {html.escape(DISCLOSURE)}</div>', unsafe_allow_html=True)
+
+        with st.expander("Read the answers"):
+            ok = [r for r in d["results"] if not r.get("error")]
+            q = st.selectbox("Question", [r["question"] for r in ok], key="aeo_q")
+            r = next(x for x in ok if x["question"] == q)
+            st.markdown(f'{"Mentions " + ", ".join(r["evergreen_terms"]) if r["mentions_evergreen"] else "No evergreen mention"}'
+                        f' &nbsp;·&nbsp; {len(r["cited_urls"])} citations', unsafe_allow_html=True)
+            st.markdown(f'<div style="max-height:360px;overflow:auto;border:1px solid #ECEAE3;padding:10px;font-size:0.9rem">'
+                        f'{html.escape(r["answer"]).replace(chr(10), "<br>")}</div>', unsafe_allow_html=True)
+            st.markdown("<br>".join(f'<span class="muted">{html.escape(u)}</span>' for u in r["cited_urls"]),
+                        unsafe_allow_html=True)
+
+    st.divider()
+    st.markdown("### Air cover plan")
+    st.markdown(f'<div class="flag" style="font-weight:600">{aircover.SIMULATION}</div>', unsafe_allow_html=True)
+    st.caption("Before a Tier A firm's sequence starts, 2 to 3 weeks of category-education ads run to affluent "
+               "households around its city, so its clients have heard of evergreen alternatives before Equi calls. "
+               "Ads never name the firm or any fund. Uses the default-weight tiers so the test arms stay fixed.")
+    base = list(load_enrichment().values())
+    pairs, unpaired, arms = aircover.holdout(base)
+    plan_rows = aircover.plan(base, arms)
+    st.dataframe(pd.DataFrame([{
+        "Firm": p["firm"], "Metro": p["metro"], "Flight": f'{p["flight_start"]} to {p["flight_end"]}',
+        "Sequence starts": p["sequence_start"], "Status": p["status"], "Audience": p["audience"],
+        "Ad copy": f'{p["headline"]} | {p["description"]}',
+    } for p in plan_rows]), hide_index=True, width="stretch",
+        column_config={"Firm": st.column_config.TextColumn(width=220), "Metro": st.column_config.TextColumn(width=130),
+                       "Flight": st.column_config.TextColumn(width=190), "Status": st.column_config.TextColumn(width=230),
+                       "Audience": st.column_config.TextColumn(width="large"),
+                       "Ad copy": st.column_config.TextColumn(width="large")})
+    issues = aircover.copy_issues()
+    st.caption("Ad copy is within Google's 30 and 90 character limits." if not issues else "Copy over limit: " + "; ".join(issues))
+    st.caption(aircover.PLATFORM_NOTE)
+    st.markdown(f'<div class="muted">Every ad links to a page carrying: {html.escape(DISCLOSURE)}</div>',
+                unsafe_allow_html=True)
+
+    st.markdown("**Holdout test**")
+    st.markdown(f"Tier A and B firms are paired by tier and firm type, closest scores together. A seeded coin flip "
+                f"(seed {aircover.SEED}) puts one of each pair in air cover and the other in control. "
+                f"**Primary metric:** {aircover.PRIMARY_METRIC} **Guardrail:** {aircover.GUARDRAIL}")
+    st.dataframe(pd.DataFrame([{"Pair": p["pair"], "Tier": p["tier"], "Type": p["type"], "Air cover": p["air_cover"],
+                                "Control": p["control"], "Score gap": p["score_gap"]} for p in pairs]),
+                 hide_index=True, width="stretch")
+    if unpaired:
+        st.caption(f'Unpaired (odd one out in its group, not in the test, gets air cover): {", ".join(unpaired)}.')
+    st.markdown(f'<div class="flag">{html.escape(aircover.power_note(len(pairs)))}</div>', unsafe_allow_html=True)
