@@ -15,8 +15,10 @@ from urllib.parse import quote
 
 import pandas as pd
 import streamlit as st
+import streamlit.components.v1 as components
 from dotenv import load_dotenv
 
+from pipeline import kit as kits_mod
 from pipeline import personalize
 from pipeline.clean import clean_leads
 from pipeline.score import (CRITERIA_LABELS, DEFAULT_WEIGHTS, WHY_WEIGHT, bubble_reason,
@@ -27,6 +29,7 @@ from pipeline.sequences import as_rows, sequence_for, short_route
 CSV = "data/sample-leads.csv"
 SCORED = Path("data/scored.json")
 DRAFTS = Path("data/drafts.json")
+KITS = Path("data/kits.json")
 
 # Key comes from .env locally or st.secrets on Streamlit Cloud. Never shown.
 load_dotenv()
@@ -259,7 +262,7 @@ st.title("Equi lead desk")
 st.markdown('<div class="muted">Independent RIAs and multi-family offices, scored against Equi\'s ICP.'
             + (" Custom weights in use." if custom else "") + "</div>", unsafe_allow_html=True)
 
-tab_shortlist, tab_call, tab_drafts = st.tabs(["Shortlist", "Your call", "Drafts"], key="tab",
+tab_shortlist, tab_call, tab_drafts, tab_kit = st.tabs(["Shortlist", "Your call", "Drafts", "Kit Studio"], key="tab",
                                               on_change="rerun")
 
 
@@ -730,3 +733,89 @@ with tab_drafts:
         st.download_button(f"Export {len(rows)} approved as CSV", pd.DataFrame(rows).to_csv(index=False),
                            "equi_approved_drafts.csv", "text/csv",
                            help="Columns: email, first_name, firm, subject, body, variant, route. Ready for a sequencer.")
+
+
+# ---------- review queue (shared by every tab that produces something to approve) ----------
+
+def queue() -> list[dict]:
+    return st.session_state.setdefault("queue", [])
+
+
+def queue_add(kind: str, firm: str, title: str, payload: dict):
+    """Add or replace the pending item of this kind for this firm."""
+    q = queue()
+    q[:] = [i for i in q if not (i["kind"] == kind and i["firm"] == firm and i["status"] == "pending")]
+    q.append({"kind": kind, "firm": firm, "title": title, "payload": payload, "status": "pending",
+              "added": datetime.now().strftime("%Y-%m-%d %H:%M")})
+
+
+# ---------- kit studio ----------
+
+@st.cache_data
+def load_kits() -> dict:
+    return json.loads(KITS.read_text()) if KITS.exists() else {}
+
+
+def kit_store() -> dict:
+    store = st.session_state.setdefault("kits", {})
+    for firm, k in load_kits().items():
+        store.setdefault(firm, k)
+    return store
+
+
+def make_kit(r):
+    try:
+        kit_store()[r["firm_name"]] = kits_mod.generate(r)
+        st.session_state["kit_msg"] = ("success", "Kit written. Read it before sending it to review.")
+    except Exception as e:
+        st.session_state["kit_msg"] = ("error", f"Kit failed: {type(e).__name__}: {str(e)[:200]}")
+
+
+with tab_kit:
+    msg = st.session_state.pop("kit_msg", None)
+    if msg:
+        getattr(st, msg[0])(msg[1])
+    st.markdown('<div class="summary">A client letter under the firm\'s own name, talking points for the advisor, '
+                "and for committee-led firms an IC memo outline. Educational only, with a fixed compliance footer. "
+                "Branding is a palette derived from the firm name; production would pull the logo and colors "
+                "from the firm's website.</div>", unsafe_allow_html=True)
+    eligible = [r for r in records if r["tier"] in {"A", "B"}]
+    by_name = {r["firm_name"]: r for r in eligible}
+    ks = kit_store()
+    c1, c2 = st.columns([3, 1])
+    pick = c1.selectbox("Firm (Tier A and B)", list(by_name), key="kit_firm")
+    if pick:
+        r = by_name[pick]
+        committee = kits_mod.is_committee(r)
+        pal = kits_mod.palette(pick)
+        sw = "".join(f'<span style="display:inline-block;width:14px;height:14px;background:{v};'
+                     f'border:1px solid #DDD;margin-right:4px;vertical-align:middle"></span>' for v in pal.values())
+        st.markdown(f'<div class="muted">Tier {r["tier"]} &nbsp;·&nbsp; {r["decision_structure"]} &nbsp;·&nbsp; '
+                    f'{"letter, talking points and IC memo outline" if committee else "letter and talking points"}'
+                    f' &nbsp;·&nbsp; palette {sw}</div>', unsafe_allow_html=True)
+        k = ks.get(pick)
+        c2.button("Rewrite kit" if k else "Write kit", on_click=make_kit, args=(r,), disabled=not HAS_KEY,
+                  width="stretch", help=None if HAS_KEY else NO_KEY_MSG)
+        if not HAS_KEY and not k:
+            st.caption(NO_KEY_MSG)
+        if k:
+            page = kits_mod.render_html(k, r)
+            st.caption(f'Written {k.get("generated")} by {k.get("model")}. {k.get("tailoring", "")}')
+            flags = k.get("flags", kits_mod.lint(k))
+            if flags:
+                st.warning("Check before sending. Our compliance check flagged:\n\n"
+                           + "\n".join(f"- {f}" for f in flags))
+            else:
+                fixed = k.get("fixed_on_retry")
+                st.caption("Compliance check: clean (no return language, figures, internal process, or claims "
+                           "about clients)." + (f" Fixed on a second pass: {len(fixed)} issue(s)." if fixed else ""))
+            b1, b2, _ = st.columns([1, 1, 3])
+            b1.download_button("Download HTML", page, f'{pick.lower().replace(" ", "_").replace("&", "and")}_kit.html',
+                               "text/html", width="stretch")
+            # a rewritten kit can be re-sent; the pending older version is replaced
+            queued = any(i["kind"] == "kit" and i["firm"] == pick and i["status"] == "pending"
+                         and i["payload"]["kit"] == k for i in queue())
+            b2.button("In review queue" if queued else "Send to review queue", disabled=queued, width="stretch",
+                      on_click=queue_add, args=("kit", pick, f"Client kit for {pick}", {"kit": k}))
+            # tall enough to show the letter through its compliance footer without scrolling the frame
+            components.html(page, height=1500, scrolling=True)
