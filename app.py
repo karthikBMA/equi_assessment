@@ -53,7 +53,7 @@ NO_KEY_MSG = "Writing needs an Anthropic key: add ANTHROPIC_API_KEY to .env, or 
 # Cost guard for the shared demo: at most this many Claude calls per browser session, across every button.
 # Each action reserves the most calls it can make (a failed rule check retries once), before it runs.
 CALL_CAP = 25
-AEO_CALLS = 32   # 30 questions plus the action plan: more than one session's cap, so it runs from the CLI
+AEO_CALLS = 42   # 40 questions plus the action plan: more than one session's cap, so it runs from the CLI
 
 
 def calls_used() -> int:
@@ -1245,7 +1245,7 @@ def load_aeo():
 
 
 def run_aeo():
-    with st.status("Asking 30 client questions with live web search. About 3 minutes.", expanded=True) as box:
+    with st.status("Asking 40 client and advisor questions with live web search. About 4 minutes.", expanded=True) as box:
         log = st.empty()
         lines = []
 
@@ -1253,7 +1253,7 @@ def run_aeo():
             lines.append(line)
             log.code("\n".join(lines[-8:]), language=None)
         try:
-            aeo.run(30, progress=progress)
+            aeo.run(sum(len(q) for q in aeo.QUESTIONS.values()), progress=progress)
             load_aeo.clear()
             box.update(label="Done. Results saved to data/aeo.json.", state="complete")
         except Exception as e:
@@ -1404,6 +1404,47 @@ def render_serp(r: dict):
                {"Clip title": "55%", "Cut from": "45%"})
 
 
+def audience_split(d: dict) -> dict:
+    """Client vs advisor counts; recomputed from results if the file predates the split."""
+    if d["metrics"].get("by_audience"):
+        return d["metrics"]["by_audience"]
+    ok = [r for r in d["results"] if not r.get("error")]
+    out = {}
+    for aud, groups in aeo.AUDIENCES.items():
+        rs = [r for r in ok if r["group"] in groups]
+        out[aud] = {"answered": len(rs), "evergreen": sum(r["mentions_evergreen"] for r in rs),
+                    "equi": sum(r["mentions_equi"] for r in rs),
+                    "evergreen_share": (sum(r["mentions_evergreen"] for r in rs) / len(rs)) if rs else None}
+    return out
+
+
+def topic_caption(m: dict) -> str:
+    """Computed from the data, so it stays true when the weekly check reruns."""
+    client = {g: v for g, v in m["evergreen_by_group"].items() if g not in aeo.ADVISOR_GROUPS and v is not None}
+    if not client:
+        return ""
+    hi = max(client, key=client.get)
+    zero = [g.lower() for g, v in client.items() if v == 0]
+    tail = (f' It never came up on {" or ".join(zero)}.' if zero else
+            f" Lowest: {min(client, key=client.get).lower()} ({min(client.values()):.0%}).")
+    return f"Among client questions, evergreen comes up most on {hi.lower()} ({client[hi]:.0%}).{tail}"
+
+
+def example_answers(ok: list[dict]) -> list[dict]:
+    """Two client gaps, one client hit, and one advisor answer, whichever of these exist."""
+    client = [r for r in ok if r["group"] not in aeo.ADVISOR_GROUPS]
+    advisor = [r for r in ok if r["group"] in aeo.ADVISOR_GROUPS]
+    misses = [r for r in client if not r["mentions_evergreen"]]
+    seen, picks = set(), []
+    for r in misses:                      # gaps from two different topics
+        if r["group"] not in seen and len(picks) < 2:
+            picks.append(r); seen.add(r["group"])
+    hit = next((r for r in client if r["mentions_evergreen"]), None)
+    picks += [hit] if hit else []
+    adv = next((r for r in advisor if not r["mentions_equi"]), advisor[0] if advisor else None)
+    return picks + ([adv] if adv else [])
+
+
 def page_store() -> dict:
     """Drafted equi.com pages by slug: pre-written ones from data/pages.json plus any drafted this session."""
     store = st.session_state.setdefault("pages", {})
@@ -1481,23 +1522,27 @@ with tab_air:
     st.markdown('<div class="muted">Compliance: everything client-facing is education that ends in "ask your '
                 'advisor", never a fund offer.</div>', unsafe_allow_html=True)
 
-    # ----- what clients hear today -----
-    st.markdown("### What clients hear today")
+    # ----- what clients and advisors hear today -----
+    st.markdown("### What clients and advisors hear today")
     d = load_aeo()
     if not d:
-        st.caption("No results yet. Run `python -m pipeline.aeo --n 30`.")
+        st.caption("No results yet. Run `python -m pipeline.aeo`.")
     else:
         m, ok = d["metrics"], [r for r in d["results"] if not r.get("error")]
-        n_ev = sum(r["mentions_evergreen"] for r in ok)
-        n_eq = sum(r["mentions_equi"] for r in ok)
+        aud = audience_split(d)
         c1, c2 = st.columns([4, 1])
-        c1.markdown(f'<div class="summary"><b>Evergreen alternatives came up in {n_ev} of {len(ok)} answers. '
-                    f'Equi came up in {n_eq}.</b></div>', unsafe_allow_html=True)
-        c1.caption(f'We asked {m["answered"]} questions clients actually type, with live web search, on '
-                   f'{d["run_date"]} ({d["model"]}).')
+        cl, ad = aud["client"], aud["advisor"]
+        lines = [f'Client questions: evergreen alternatives came up in {cl["evergreen"]} of {cl["answered"]} answers. '
+                 f'Equi came up in {cl["equi"]}.']
+        if ad["answered"]:
+            lines.append(f'Advisor questions: evergreen came up in {ad["evergreen"]} of {ad["answered"]}. '
+                         f'Equi came up in {ad["equi"]}.')
+        c1.markdown('<div class="summary"><b>' + "<br>".join(lines) + "</b></div>", unsafe_allow_html=True)
+        c1.caption(f'We asked {cl["answered"]} questions wealthy clients type and {ad["answered"]} that advisors type '
+                   f'when they look for a provider, with live web search, on {d["run_date"]} ({d["model"]}).')
         c2.button("Run the check again", disabled=True, width="stretch",
                   help=(f"The full check uses about {AEO_CALLS} Claude calls, more than one session's {CALL_CAP}. "
-                        "Run it with: python -m pipeline.aeo --n 30") if HAS_KEY else NO_KEY_MSG)
+                        "Run it with: python -m pipeline.aeo") if HAS_KEY else NO_KEY_MSG)
         c2.caption(f"Runs weekly from the command line: about {AEO_CALLS} calls, over the {CALL_CAP}-call session limit.")
 
         g1, g2 = st.columns(2, gap="large")
@@ -1508,8 +1553,7 @@ with tab_air:
                          hide_index=True, width="stretch",
                          column_config={"Evergreen came up": st.column_config.ProgressColumn(
                              format="%.0f%%", min_value=0, max_value=100)})
-            st.caption("Evergreen comes up when the client already knows the word, and almost never when they "
-                       "describe the problem it solves.")
+            st.caption(topic_caption(m))
         with g2:
             st.markdown("**Sites AI cited most**")
             st.dataframe(pd.DataFrame(m["top_domains"], columns=["Site", "Times cited"]), hide_index=True,
@@ -1517,14 +1561,14 @@ with tab_air:
             st.caption(f"{sum(len(r.get('cited_urls') or []) for r in ok)} citations across {len(ok)} answers, "
                        "so the ranking is thin. It firms up as the weekly check runs.")
 
-        st.markdown("**Three examples**")
-        picks = [next((r for r in ok if r["group"] == g and r["mentions_evergreen"] == want), None)
-                 for g, want in (("Downturn protection", False), ("Preserving family wealth", False),
-                                 ("Evergreen and interval funds", True))]
-        cols = st.columns(3, gap="medium")
-        for col, r in zip(cols, [p for p in picks if p]):
+        st.markdown("**Examples: three client questions and one advisor question**")
+        picks = example_answers(ok)
+        cols = st.columns(len(picks) or 1, gap="medium")
+        for col, r in zip(cols, picks):
             with col:
-                tag = "Mentions evergreen" if r["mentions_evergreen"] else "No mention of evergreen"
+                who = "Advisor question" if r["group"] in aeo.ADVISOR_GROUPS else "Client question"
+                tag = f'{who} · {"mentions evergreen" if r["mentions_evergreen"] else "no mention of evergreen"}'
+                tag += " · mentions Equi" if r["mentions_equi"] else ""
                 st.markdown(f'<div><b>"{html.escape(r["question"])}"</b><br><span class="muted">{tag}</span></div>'
                             f'<div style="font-size:0.9rem;margin:6px 0">{html.escape(excerpt(r["answer"]))}</div>'
                             f'<div class="muted">Cited: {html.escape(", ".join(r["cited_domains"]) or "none")}</div>',
@@ -1564,7 +1608,7 @@ with tab_air:
                 for col, key in zip(c, ["target_question", "action", "where", "why_cited", "metric"]):
                     col.markdown(f'<div style="font-size:0.88rem">{html.escape(row[key])}</div>', unsafe_allow_html=True)
                 sl = pages_mod.slug(row["target_question"])
-                if i == 0 and aeo.INDEX_NAME.lower() in (row["action"] + row["target_question"]).lower():
+                if i == 0 and aeo.is_index_row(row):
                     c[5].caption("Built from SEC data, not drafted here.")
                 elif sl in store:
                     c[5].button("View page", key=f"view|{sl}", width="stretch",
@@ -1636,14 +1680,18 @@ with tab_air:
     # ----- how we know it's working -----
     st.markdown("### How we know it's working")
     if d:
-        ok = [r for r in d["results"] if not r.get("error")]
-        ev_today = f'{sum(r["mentions_evergreen"] for r in ok)} of {len(ok)} answers ({d["metrics"]["evergreen_share"]:.0%})'
-        eq_today = f'{sum(r["mentions_equi"] for r in ok)} of {len(ok)} answers'
+        a_ = audience_split(d)
+        cl, ad = a_["client"], a_["advisor"]
+        ev_today = f'{cl["evergreen"]} of {cl["answered"]} client answers'
+        adv_today = f'{ad["evergreen"]} of {ad["answered"]} advisor answers' if ad["answered"] else "Not measured yet"
+        eq_today = f'{cl["equi"] + ad["equi"]} of {cl["answered"] + ad["answered"]} answers'
     else:
-        ev_today = eq_today = "Not measured yet"
+        ev_today = adv_today = eq_today = "Not measured yet"
     html_table([
-        {"What we track": "Share of AI answers that mention evergreen alternatives", "How often": "Weekly",
+        {"What we track": "Client questions: share of AI answers that mention evergreen alternatives", "How often": "Weekly",
          "Today": ev_today, "What counts as working": "Rising, especially on the questions where it never came up"},
+        {"What we track": "Advisor questions: share of AI answers that mention evergreen alternatives",
+         "How often": "Weekly", "Today": adv_today, "What counts as working": "Rising, and Equi named among providers"},
         {"What we track": "AI answers that cite Equi", "How often": "Weekly", "Today": eq_today,
          "What counts as working": "An Equi page cited within 6 weeks of publishing"},
         {"What we track": "Meeting rate: air cover firms vs control firms", "How often": "Each cycle",
@@ -1710,10 +1758,15 @@ def findings() -> list[str]:
     d = load_aeo()
     if d:
         m = d["metrics"]
-        low_g, low_v = min(m["evergreen_by_group"].items(), key=lambda kv: kv[1])
-        out.append(f"<b>AI answers mention evergreen alternatives in {m['evergreen_share']:.0%} of answers to "
-                   f"{m['answered']} client questions</b>, and {low_v:.0%} of the time when the question is about "
-                   f"{low_g.lower()}. Equi came up in {m['equi_share']:.0%}.")
+        a_ = audience_split(d)
+        cl, ad = a_["client"], a_["advisor"]
+        client_groups = {g: v for g, v in m["evergreen_by_group"].items() if g not in aeo.ADVISOR_GROUPS}
+        low_g, low_v = min(client_groups.items(), key=lambda kv: kv[1])
+        adv = (f" For {ad['answered']} advisor questions, evergreen came up in {ad['evergreen']} and Equi in "
+               f"{ad['equi']}." if ad["answered"] else "")
+        out.append(f"<b>AI answers mention evergreen alternatives in {cl['evergreen']} of {cl['answered']} client "
+                   f"questions</b>, and {low_v:.0%} of the time when the question is about {low_g.lower()}. "
+                   f"Equi came up in {cl['equi']}.{adv}")
     fired = load_signals()["fired"].get("2024-08-05")
     if fired:
         day = fired["day"]
