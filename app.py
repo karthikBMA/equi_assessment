@@ -54,7 +54,7 @@ FIELD_LABEL = {"aum_usd": "AUM", "avg_client_usd": "Avg client", "mfo_transition
                "sec_registration": "SEC registration"}
 SOURCE_LABEL = {"csv": "CSV", "derived": "Derived", "sec_adv": "SEC ADV", "needs_lookup": "Needs lookup"}
 
-st.set_page_config(page_title="Equi lead desk", layout="wide")
+st.set_page_config(page_title="Equi demand engine", layout="wide")
 
 st.markdown(f"""
 <style>
@@ -74,6 +74,10 @@ st.markdown(f"""
              padding:5px 0; border-bottom:1px solid #ECEAE3; }}
   .seq-row {{ display:grid; grid-template-columns: 80px 80px 1fr; gap:8px; font-size:0.88rem;
              padding:6px 0; border-bottom:1px solid #ECEAE3; }}
+  .lede {{ font-family:'Source Serif 4',serif; font-size:1.18rem; line-height:1.6; color:{SLATE};
+           max-width:900px; margin:0 0 0.7rem 0; }}
+  .jump-line {{ font-size:0.98rem; color:{SLATE}; padding-top:0.5rem; line-height:1.45; }}
+  .finding {{ font-size:1rem; line-height:1.55; margin:0 0 0.55rem 0; max-width:1000px; }}
   .src-note {{ grid-column: 2 / 4; color:#6B7280; font-size:0.8rem; margin-top:-3px; }}
 </style>
 """, unsafe_allow_html=True)
@@ -264,12 +268,12 @@ with st.sidebar:
 if not load_enrichment():
     st.info("No enrichment found. Run `python build.py --offline` to add source tags and sequences.")
 
-st.title("Equi lead desk")
-st.markdown('<div class="muted">Independent RIAs and multi-family offices, scored against Equi\'s ICP.'
+st.title("Equi demand engine")
+st.markdown('<div class="muted">Demand plan and lead pipeline for independent RIAs and multi-family offices.'
             + (" Custom weights in use." if custom else "") + "</div>", unsafe_allow_html=True)
 
-tab_shortlist, tab_call, tab_drafts, tab_kit, tab_signals, tab_queue, tab_air = st.tabs(
-    ["Shortlist", "Your call", "Drafts", "Kit Studio", "Market signals", "Review queue", "Air cover"], key="tab",
+TABS = ["Start here", "Kit Studio", "Market signals", "Air cover", "Shortlist", "Your call", "Drafts", "Review queue"]
+tab_start, tab_kit, tab_signals, tab_air, tab_shortlist, tab_call, tab_drafts, tab_queue = st.tabs(TABS, key="tab",
                                               on_change="rerun")
 
 
@@ -1294,3 +1298,82 @@ with tab_air:
     if unpaired:
         st.caption(f'Unpaired (odd one out in its group, not in the test, gets air cover): {", ".join(unpaired)}.')
     st.markdown(f'<div class="flag">{html.escape(aircover.power_note(len(pairs)))}</div>', unsafe_allow_html=True)
+
+
+# ---------- start here ----------
+
+def jump(tab: str):
+    st.session_state["tab"] = tab
+
+
+def jump_row(tab: str, line: str):
+    # top-aligned with a small offset: centering is thrown off by the markdown block's own margin
+    b, t = st.columns([1.1, 5], gap="medium", vertical_alignment="top")
+    b.button(tab, key=f"jump|{tab}", on_click=jump, args=(tab,), width="stretch")
+    t.markdown(f'<div class="jump-line">{line}</div>', unsafe_allow_html=True)
+
+
+def findings() -> list[str]:
+    """Plain-sentence findings, computed from the current data and weights."""
+    out = []
+    stable = [r for r in records if r["tier"] != "DQ" and (r["tier_a_share"] or 0) >= 0.9]
+    if stable:
+        floor = int(min(r["tier_a_share"] for r in stable) * 100)
+        draws = 500 if not custom else 200
+        out.append(f"<b>{len(stable)} firms hold Tier A in {floor}%+ of {draws} alternative weightings</b>, so the top "
+                   "of the list comes from the firms, not from our choice of weights.")
+    d = load_aeo()
+    if d:
+        m = d["metrics"]
+        low_g, low_v = min(m["evergreen_by_group"].items(), key=lambda kv: kv[1])
+        out.append(f"<b>AI answers mention evergreen alternatives in {m['evergreen_share']:.0%} of answers to "
+                   f"{m['answered']} client questions</b>, and {low_v:.0%} of the time when the question is about "
+                   f"{low_g.lower()}. Equi came up in {m['equi_share']:.0%}.")
+    fired = load_signals()["fired"].get("2024-08-05")
+    if fired:
+        day = fired["day"]
+        n_trig = {1: "one", 2: "two", 3: "three"}.get(len(fired["triggers"]), len(fired["triggers"]))
+        out.append(f"<b>On Aug 5 2024, all {n_trig} market triggers would have fired</b> (S&P 500 "
+                   f"{day['spy_pct']:+.1f}%, VIX {day['vix']:.1f}, up {day['vix_pct']:.0f}%), with "
+                   f"{len(fired['notes'])} firm-branded client notes ready for review that afternoon.")
+    raw_rows = len(pd.read_csv(CSV))
+    n_dq = sum(r["tier"] == "DQ" for r in records)
+    n_a = sum(r["tier"] == "A" for r in records)
+    n_decide = sum(r.get("bubble_type") == "decision" and not r["decision"] for r in records)
+    out.append(f"<b>{raw_rows} CSV rows became {len(records)} firms</b>: {n_dq} disqualified by hard gates, "
+               f"{n_a} Tier A to call now, and {n_decide} that need a call from your team before outreach.")
+    return out
+
+
+with tab_start:
+    st.markdown("### The idea")
+    for line in [
+        "Equi's differentiator is that it builds the advisor's client materials. So the materials become the outreach: "
+        "the first touch is a finished client letter under the prospect firm's own name.",
+        "Outreach is timed to market drops, when downside protection matters most to clients and advisors field the "
+        "hardest calls.",
+        "Clients hear about evergreen alternatives first, through AI answers and market-day ads, so advisors walk "
+        "into an easier conversation.",
+        "The pipeline decides who gets all of it.",
+    ]:
+        st.markdown(f'<div class="lede">{line}</div>', unsafe_allow_html=True)
+
+    st.markdown("### What the data says")
+    for f in findings():
+        st.markdown(f'<div class="finding">{f}</div>', unsafe_allow_html=True)
+    st.caption("Computed from the current data and weights. Move a sidebar weight and these update.")
+
+    st.markdown("### Part 1: demand engine")
+    jump_row("Kit Studio", "A client letter, advisor talking points, and for committee firms an IC memo outline, "
+                           "all under the prospect firm's own name.")
+    jump_row("Market signals", "A big down day fires a client-ready note for every Tier A and B firm, a two-line "
+                               "advisor ping, and a market-day ad set.")
+    jump_row("Air cover", "What AI tells clients today, the pages that would change it, and a simulated ad plan "
+                          "tested against a holdout.")
+
+    st.markdown("### Part 2: lead pipeline")
+    jump_row("Shortlist", f"{len(records)} firms scored against Equi's ICP, each with a score range, a Tier A "
+                          "stability check, and a route.")
+    jump_row("Your call", "Firms whose tier depends on your priorities, a rule, or data we do not have yet.")
+    jump_row("Drafts", "Two first-touch emails per firm, kit-led and insight-led, randomized for the A/B test.")
+    jump_row("Review queue", "Everything waiting for a human before it goes out: drafts, kits, notes, and ad sets.")
