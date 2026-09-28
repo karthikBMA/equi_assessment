@@ -41,7 +41,9 @@ EVENTS = {
 def fetch(start: str, end: str) -> list[dict]:
     """Daily closes for SPY and ^VIX with day-over-day change. Raises on no data."""
     import yfinance as yf
-    df = yf.download(["SPY", "^VIX"], start=start, end=end, progress=False, auto_adjust=False)["Close"].dropna()
+    # a blocked or slow Yahoo connection must not stall the page; the app falls back to cached closes
+    df = yf.download(["SPY", "^VIX"], start=start, end=end, progress=False, auto_adjust=False,
+                     timeout=10)["Close"].dropna()
     if df.empty:
         raise RuntimeError("No market data returned.")
     rows = []
