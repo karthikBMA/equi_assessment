@@ -164,12 +164,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Marchetti Ruiz Family Advisors'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Marchetti Ruiz Family Advisors'."
     },
     "sequence": {
       "short": "Kit + founder",
@@ -362,12 +362,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Ellingham Court Partners'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Ellingham Court Partners'."
     },
     "sequence": {
       "short": "Kit + founder",
@@ -561,12 +561,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Ashcombe Meridian Family Office'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Ashcombe Meridian Family Office'."
     },
     "sequence": {
       "short": "Kit + CIO",
@@ -759,12 +759,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Oakhurst Meridian Advisors'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Oakhurst Meridian Advisors'."
     },
     "sequence": {
       "short": "Kit + founder",
@@ -958,12 +958,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Quillmoor Advisors'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Quillmoor Advisors'."
     },
     "sequence": {
       "short": "Kit + CIO",
@@ -1159,12 +1159,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Marisol & Hart Private Wealth'. Closest result was 'PRESILIUM PRIVATE WEALTH, LLC', rejected."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Marisol & Hart Private Wealth'. Closest result was 'PRESILIUM PRIVATE WEALTH, LLC', rejected."
     },
     "sequence": {
       "short": "Kit + CIO",
@@ -1361,7 +1361,7 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Harborstone Wealth Partners'."
       },
       "source_rows": {
         "value": [
@@ -1373,8 +1373,8 @@
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Harborstone Wealth Partners'."
     },
     "sequence": {
       "short": "Kit + CIO",
@@ -1570,12 +1570,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Aldermoor Capital Group'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Aldermoor Capital Group'."
     },
     "sequence": {
       "short": "Kit + CIO",
@@ -1774,7 +1774,7 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Bramblewick Capital Advisers'."
       },
       "source_rows": {
         "value": [
@@ -1786,8 +1786,8 @@
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Bramblewick Capital Advisers'."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -1980,7 +1980,7 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Haverlock Advisory Group'."
       },
       "source_rows": {
         "value": [
@@ -1992,8 +1992,8 @@
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Haverlock Advisory Group'."
     },
     "sequence": {
       "short": "Committee kit (slow)",
@@ -2195,12 +2195,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Solstice Grove Advisors'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Solstice Grove Advisors'."
     },
     "sequence": {
       "short": "Committee kit (slow)",
@@ -2411,7 +2411,7 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Thornbury Wealth Advisors'."
       },
       "source_rows": {
         "value": [
@@ -2423,8 +2423,8 @@
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Thornbury Wealth Advisors'."
     },
     "sequence": {
       "short": "Committee kit (slow)",
@@ -2632,7 +2632,7 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Ridgeline Family Office'."
       },
       "source_rows": {
         "value": [
@@ -2644,8 +2644,8 @@
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Ridgeline Family Office'."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -2837,12 +2837,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Larkhaven Multi-Family Office'. Closest result was 'ALCALA MULTI FAMILY OFFICE', rejected."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Larkhaven Multi-Family Office'. Closest result was 'ALCALA MULTI FAMILY OFFICE', rejected."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -3032,12 +3032,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Tanglewood Reach Advisors'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Tanglewood Reach Advisors'."
     },
     "sequence": {
       "short": "Committee kit (slow)",
@@ -3238,12 +3238,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Kirkaldy & Sons Wealth'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Kirkaldy & Sons Wealth'."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -3438,12 +3438,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Vantage Pointe Wealth'. Closest result was 'THURSTON SPRINGER ADVISORS', rejected."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Vantage Pointe Wealth'. Closest result was 'THURSTON SPRINGER ADVISORS', rejected."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -3635,12 +3635,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Fenwick Larkspur Capital'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Fenwick Larkspur Capital'."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -3831,12 +3831,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Sunridge Collective'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Sunridge Collective'."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -4028,12 +4028,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Windermere Trust Advisors'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Windermere Trust Advisors'."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -4225,12 +4225,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Ferrisdale Wealth Group'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Ferrisdale Wealth Group'."
     },
     "sequence": {
       "short": "Committee kit (slow)",
@@ -4431,12 +4431,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Sparrowhawk Investment Advisors'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Sparrowhawk Investment Advisors'."
     },
     "sequence": {
       "short": "Committee kit (slow)",
@@ -4639,12 +4639,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Eastmarch Trust Company'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Eastmarch Trust Company'."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -4835,12 +4835,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Sable Ridge Investment Counsel'. Closest result was 'FIRST ALLIED SECURITIES, INC.', rejected."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Sable Ridge Investment Counsel'. Closest result was 'FIRST ALLIED SECURITIES, INC.', rejected."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -5030,12 +5030,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Glenmara Wealth'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Glenmara Wealth'."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -5236,12 +5236,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "Non-US firm; not SEC-registered as an adviser here."
       }
     },
     "sec_adv": {
       "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "detail": "Non-US firm; not SEC-registered as an adviser here."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -5431,12 +5431,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Cinderhill Investment Group'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Cinderhill Investment Group'."
     },
     "sequence": {
       "short": "Signal alerts",
@@ -5628,12 +5628,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Havenport Global Partners'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Havenport Global Partners'."
     },
     "sequence": {
       "short": "Committee kit (slow)",
@@ -5839,12 +5839,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Cairnwell Private Capital'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Cairnwell Private Capital'."
     },
     "sequence": {
       "short": "Nurture",
@@ -6037,12 +6037,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Baynard Holdings'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Baynard Holdings'."
     },
     "sequence": {
       "short": "Nurture",
@@ -6229,12 +6229,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Tessendale Ridge Capital'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Tessendale Ridge Capital'."
     },
     "sequence": {
       "short": "Nurture",
@@ -6419,12 +6419,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Ambrose Quaid Advisory'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Ambrose Quaid Advisory'."
     },
     "sequence": {
       "short": "Nurture",
@@ -6609,12 +6609,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Pinnacle Crest Capital'. Closest result was 'DYNAMIC', rejected."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Pinnacle Crest Capital'. Closest result was 'DYNAMIC', rejected."
     },
     "sequence": {
       "short": "Find contact",
@@ -6805,12 +6805,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Cloverdale Financial Partners'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Cloverdale Financial Partners'."
     },
     "sequence": {
       "short": "Nurture",
@@ -6997,12 +6997,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Quintrell Wealth Management'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Quintrell Wealth Management'."
     },
     "sequence": {
       "short": "Find contact",
@@ -7196,12 +7196,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Ostrander & Voss Advisors'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Ostrander & Voss Advisors'."
     },
     "sequence": {
       "short": "Nurture",
@@ -7393,12 +7393,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Fernwold Advisory'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Fernwold Advisory'."
     },
     "sequence": {
       "short": "Nurture",
@@ -7590,12 +7590,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Pemberton Vale Wealth'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Pemberton Vale Wealth'."
     },
     "sequence": {
       "short": "Nurture",
@@ -7787,12 +7787,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Vermillion & Sloane'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Vermillion & Sloane'."
     },
     "sequence": {
       "short": "Nurture",
@@ -7916,12 +7916,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Wrenfield Bancorp Wealth Management'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Wrenfield Bancorp Wealth Management'."
     },
     "sequence": {
       "short": "Disqualified",
@@ -8034,12 +8034,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Otterbein Asset Strategies'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Otterbein Asset Strategies'."
     },
     "sequence": {
       "short": "Disqualified",
@@ -8152,12 +8152,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Marlowe Point Capital Management'. Closest result was 'POINT RIDER CAPITAL', rejected."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Marlowe Point Capital Management'. Closest result was 'POINT RIDER CAPITAL', rejected."
     },
     "sequence": {
       "short": "Disqualified",
@@ -8270,12 +8270,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Beaumont Fielding Group'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Beaumont Fielding Group'."
     },
     "sequence": {
       "short": "Disqualified",
@@ -8388,12 +8388,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Brackenridge Alternative Partners'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Brackenridge Alternative Partners'."
     },
     "sequence": {
       "short": "Disqualified",
@@ -8506,12 +8506,12 @@
       "sec_registration": {
         "value": null,
         "source": "needs_lookup",
-        "note": "Offline run; IAPD not queried."
+        "note": "No active adviser named 'Bellhaven Capital Advisors'."
       }
     },
     "sec_adv": {
-      "status": "skipped",
-      "detail": "Offline run; IAPD not queried."
+      "status": "no_match",
+      "detail": "No active adviser named 'Bellhaven Capital Advisors'."
     },
     "sequence": {
       "short": "Disqualified",
