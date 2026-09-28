@@ -1,31 +1,85 @@
 # Equi demand engine
 
+Live app: https://YOUR-APP.streamlit.app
+
+Part 1 plan: see [PLAN.md](PLAN.md)
+
 <!-- KARTHIK: your 3-line intro goes here. -->
 _[Placeholder: 3-line intro]_
 
-The demand plan (Part 1) is in [PLAN.md](PLAN.md). This README covers setup, how it works, and the calls I made.
-
 ## Setup
 
-**Local**
+**You need**
+- Python 3.14 (the version this was tested on, 3.14.7). Download it from python.org.
+- git, to copy the repo. Download it from git-scm.com.
+- An Anthropic API key (optional: without one, the app runs from cached results in `data/`).
 
-```bash
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-echo "ANTHROPIC_API_KEY=sk-ant-..." > .env
-python build.py --drafts      # clean, score, stress test, enrich, and write A/B drafts
-streamlit run app.py
+**Run it.** Open Terminal (Mac) or PowerShell (Windows) and paste each command.
+
+1. `git clone https://github.com/kdev792/Equi_Assessment.git` then `cd Equi_Assessment`. This copies the project.
+2. Create a private Python environment and turn it on.
+   - Mac: `python3.14 -m venv .venv` then `source .venv/bin/activate`
+   - Windows: `py -3.14 -m venv .venv` then `.venv\Scripts\activate`
+3. `pip install -r requirements.txt`. This installs the tested package versions.
+4. Add your key (skip this to run without one). Mac: `cp .env.example .env`. Windows: `copy .env.example .env`. Then open `.env` in a text editor and replace `sk-ant-...` with your key.
+5. `streamlit run app.py`. This starts the app.
+6. Open http://localhost:8501 if the browser does not open by itself.
+
+**Optional**
+- Rebuild the data: `python build.py` cleans, scores, and stress-tests the list (`--offline` skips the SEC lookup). `--drafts` and `--signals` rewrite the drafts and the Aug 5 2024 notes; both need a key.
+- Rerun the AI answer check: `python -m pipeline.aeo` (about 4 minutes, needs a key).
+- Deploy to Streamlit Community Cloud: connect the GitHub repo, pick `app.py`, choose Python 3.14 under Advanced settings, and add `ANTHROPIC_API_KEY = "sk-ant-..."` under Secrets.
+
+**If something goes wrong**
+- *Wrong Python version:* `python --version` should say 3.14. On Windows, use `py -3.14` as in step 2; on Mac, `python3.14`.
+- *Windows says running scripts is disabled:* run `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` once, then repeat step 2.
+- *Key not found:* the sidebar says "No Anthropic key set". `.env` must sit in the project folder with the line `ANTHROPIC_API_KEY=sk-ant-...` (name, equals sign, key; no spaces or quotes). On Windows, check it did not save as `.env.txt`.
+- *Port already in use:* run `streamlit run app.py --server.port 8502` and open http://localhost:8502.
+- *Market data blocked:* if Yahoo Finance is unreachable, Market signals says so and replays use cached closes.
+
+## How the code is organized
+
+```
+app.py                  the Streamlit app
+build.py                runs the pipeline, writes data/
+requirements.txt        exact package versions
+.python-version         the tested Python version
+.env.example            template for .env (never commit the key)
+.gitignore              keeps .env and caches out of git
+.streamlit/config.toml  colors and fonts
+pipeline/
+  __init__.py           marks the folder as a package
+  clean.py              normalizes the CSV, merges duplicates, logs every change
+  score.py              gates, weights, caps, tiers, stress test
+  enrich.py             source tags and the SEC adviser lookup
+  sequences.py          the touches for each route
+  personalize.py        first-touch email variants, written with the Claude API
+  kit.py                client letter, talking points, and IC memo outline
+  signals.py            market triggers and the notes they fire
+  ads.py                market-day ad sets, character limits checked in code
+  aeo.py                what AI tells clients and advisors, and the action plan
+  pages.py              publish-ready equi.com pages with FAQ schema
+  serp.py               Search lab analysis
+  aircover.py           simulated air cover plan and holdout pairs
+  compliance.py         disclosure line and client-copy checks
+data/
+  sample-leads.csv      the input list
+  scored.json           scored, enriched firms
+  drafts.json, kits.json, signals.json, aeo.json, pages.json, serp_cache.json
+                        cached results, so the app works without a key
 ```
 
-`python build.py --offline` skips the SEC lookup. `--signals` caches the replay market data and rewrites the Aug 5 2024 notes and ad set. `python -m pipeline.kit` rewrites the demo kits, `python -m pipeline.aeo` reruns the tracker and action plan, and `python -m pipeline.pages "question"` drafts a page. The app runs without a key from `data/`; buttons that write new text say so.
-
-**Streamlit Cloud:** deploy `app.py` with Python 3.14 (Advanced settings; tested on 3.14.7, see `.python-version`), then add `ANTHROPIC_API_KEY = "sk-ant-..."` under Secrets. The app reads `.env` locally and `st.secrets` on Cloud.
+**Data flow**
+1. `sample-leads.csv` goes through `clean.py`: 50 rows become 45 firms.
+2. `score.py` scores every firm and stress-tests the weights.
+3. `enrich.py`, `sequences.py`, and `personalize.py` add source tags, routes, and drafts; the other modules cache kits, notes, and AI answers.
+4. `app.py` reads `data/` and re-scores live when the weights move.
 
 ## How it works
 
-**Part 1, demand engine.** Equi's edge is that it builds the advisor's client materials, so the materials are the outreach. Kit Studio writes a client letter under the prospect firm's name. Market signals watches SPY and VIX and, on a real drop, queues a client-ready note for every Tier A and B firm plus an ad set. Client demand tracks what AI tells wealthy clients and plans the pages and ads to change it. Search lab does it per question.
+**Part 1, demand engine.** Equi builds the advisor's client materials, so the materials are the outreach: a kit under the prospect firm's name, a note on market-drop days, and AI answers and ads that reach clients first.
 
-**Part 2, lead pipeline.** `clean.py` normalizes the CSV and dedupes it (50 rows become 45 firms, every change logged). `score.py` applies hard gates, six weighted criteria, caps, and a confidence range, then stress-tests the weights. `enrich.py` tags every field by source. `sequences.py` defines the touches for each route. `personalize.py` writes two first-touch variants per firm.
+**Part 2, lead pipeline.** Clean and dedupe the list, score every firm with a confidence range, stress-test the weights, tag every field by source, route each firm to a sequence, and write two first-touch drafts.
 
 **Tabs**
 - **Start here:** the thesis and live findings.
@@ -33,14 +87,14 @@ streamlit run app.py
 - **Market signals:** today's status, real-event replays, the alert feed.
 - **Client demand:** what AI tells clients and advisors, a three-lane AEO action plan with page drafts, and the simulated air cover plan.
 - **Search lab:** any client question: who owns it, what AI says, Equi's plan.
-- **Shortlist:** ranked firms with score range, stability, route, and a full detail view.
-- **Your call:** firms that need a human decision, with a recommendation and overrides.
-- **Drafts:** variants A and B side by side, rewrite with a note, approve, sequencer CSV.
+- **Shortlist:** ranked firms with score range, stability, route, and detail.
+- **Your call:** firms that need a human decision, with a recommendation.
+- **Drafts:** variants A and B, rewrite with a note, approve, sequencer CSV.
 - **Review queue:** everything awaiting approval, with simulated engagement.
 
 ## Decisions and tradeoffs
 
-**Weights.** Each weight traces to something Equi said. The wording below is my paraphrase of the brief, from `WHY_WEIGHT` in `score.py`.
+**Weights.** Each traces to something Equi said, paraphrased from the brief (`WHY_WEIGHT` in `score.py`).
 
 | Criterion | Weight | What Equi said (paraphrased) |
 |---|---|---|
@@ -51,17 +105,17 @@ streamlit run app.py
 | AUM | 10 | $1B to $30B, $5B+ bullseye, but type beats size, so size is a tiebreaker. |
 | Warmth | 10 | A warm path shortens the cycle but never makes a bad fit good. |
 
-**Stress test.** I re-scored the list under 500 weightings, each moving every weight roughly 5 to 8 points. Seven firms hold Tier A in 96%+ of them, and at 1,000 draws the same seven hold in 95%+. Equal weights give the same Tier A list as ours. So the top of the list comes from the firms, not my weights. Firms that flip go to **Your call** as decisions for Equi (11 today), apart from firms that need research first (6).
+**Stress test.** I re-scored the list under 500 weightings, each moving every weight roughly 5 to 8 points. Seven firms hold Tier A in 96%+ of them, and at 1,000 draws the same seven hold in 95%+. Equal weights give the same Tier A list as ours. Firms that flip go to **Your call** as decisions for Equi (11 today), apart from firms that need research first (6).
 
-**The liquid-alts gap.** Equi sells liquid, evergreen alternatives. A firm with private equity and real estate but no liquid sleeve speaks the language and has an obvious gap, so it scores highest. A firm already in hedge funds is a replacement sale. A firm in everything has built its own research desk.
+**The liquid-alts gap.** A firm with private equity and real estate but no liquid sleeve speaks the language and has an obvious gap for Equi, so it scores highest. A firm in hedge funds is a replacement sale; a firm in everything has its own research desk.
 
-**Caps.** LPL-affiliated firms max out at Tier C, because products generally need LPL platform approval first. Non-US firms max out at B with a -15 modifier until compliance clears cross-border eligibility. Firms under $1B max out at C: nurture until they grow into the band. Single-family offices are capped at C per Equi's guidance.
+**Caps.** LPL-affiliated firms max out at C (products need LPL platform approval). Non-US firms max out at B with -15 until compliance clears cross-border eligibility. Firms under $1B and single-family offices max out at C.
 
-**Strict SEC matching.** The public IAPD search is fuzzy and matches former names. "Harborstone" returned Viant Capital, an inactive broker-dealer once called Harborstone Capital. A wrong match feeds a wrong AUM into the score, so a match must be an active adviser with the same normalized name in the same state. The synthetic firms correctly return no match.
+**Strict SEC matching.** The public IAPD search is fuzzy: "Harborstone" returned Viant Capital, an inactive broker-dealer once called Harborstone Capital. A match must be an active adviser with the same normalized name in the same state. The synthetic firms correctly return no match.
 
 **Drafts and an approval queue, not live sending.** Every draft, kit, note, and ad passes a human. The model occasionally writes what compliance would stop ("structurally insulated from volatility"), so code checks catch known patterns, retry once, and flag the rest.
 
-**No Clay on synthetic data.** Enriching made-up firms returns nothing, or someone else's data. In production: SEC Form ADV data files for AUM (Item 5.F) and high-net-worth client counts and assets (Item 5.D, which gives real average client size), and Clay for contacts, emails, and job changes.
+**No Clay on synthetic data.** Enriching made-up firms returns nothing, or someone else's data. In production: SEC Form ADV data for AUM (Item 5.F) and high-net-worth client counts and assets (Item 5.D, real average client size), and Clay for contacts and job changes.
 
 **Session state and a cost guard.** Overrides, approvals, and the queue live in the browser session, with CSV exports; production would write them to BigQuery. Each session gets 25 Claude calls across all buttons, so the 42-call weekly AEO check runs from the command line.
 
@@ -90,7 +144,7 @@ streamlit run app.py
 ## What I would do with more time
 
 - Run the real enrichment path (Form ADV files, Clay) and re-score on real data.
-- Persist state to BigQuery and wire real engagement from tracked links into the queue.
+- Persist state to BigQuery and wire tracked-link engagement into the queue.
 - Rerun the AEO tracker weekly and track Equi's pages over time.
 - Move kit generation to structured output, like everything else.
 - Calibrate weights against real meeting outcomes.
