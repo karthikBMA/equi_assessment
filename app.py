@@ -26,6 +26,7 @@ from pipeline import signals as sig
 from pipeline import ads as ads_mod
 from pipeline import aeo, aircover
 from pipeline import pages as pages_mod
+from pipeline import serp
 from pipeline.compliance import DISCLOSURE
 from pipeline.clean import clean_leads
 from pipeline.score import (CRITERIA_LABELS, DEFAULT_WEIGHTS, WHY_WEIGHT, bubble_reason,
@@ -1050,7 +1051,7 @@ def engagement(item_id: str, kind: str) -> tuple[bool, bool | None]:
     """Simulated opens and forwards, stable per item. Drafts cannot be forwarded to clients."""
     h = int(hashlib.md5(item_id.encode()).hexdigest()[:8], 16) % 100
     opened = h < 62
-    forwarded = (h < 28) if kind not in {"draft", "ads"} else None
+    forwarded = (h < 28) if kind not in {"draft", "ads", "aeo"} else None
     return opened, forwarded
 
 
@@ -1067,7 +1068,7 @@ def queue_rows(by_firm: dict) -> list[dict]:
                      "title": f"First-touch email (variant {chosen or 'A or B'})", "added": "", "flags": []})
     for i, item in enumerate(queue()):
         pl = item["payload"]
-        flags = (pl.get("note") or pl.get("kit") or pl.get("ads") or {}).get("flags", [])
+        flags = (pl.get("note") or pl.get("kit") or pl.get("ads") or pl.get("serp") or {}).get("flags", [])
         rows.append({"id": f'{item["kind"]}|{item["firm"]}|{i}', "kind": item["kind"], "firm": item["firm"],
                      "status": item["status"], "title": item["title"], "added": item["added"], "flags": flags,
                      "ref": item})
@@ -1101,7 +1102,8 @@ def bulk(kind: str, frm: str, to: str, by_firm: dict):
             set_status(r, to)
 
 
-KIND_LABEL = {"draft": "Email draft", "kit": "Client kit", "signal": "Market note", "ads": "Ad set"}
+KIND_LABEL = {"draft": "Email draft", "kit": "Client kit", "signal": "Market note", "ads": "Ad set",
+              "aeo": "AEO brief"}
 
 with tab_queue:
     by_firm = {r["firm_name"]: r for r in records}
@@ -1160,6 +1162,10 @@ with tab_queue:
                 st.markdown(f'<div style="white-space:pre-wrap">{html.escape(kits_mod.letter_text(row["ref"]["payload"]["kit"]))}</div>',
                             unsafe_allow_html=True)
                 st.caption("Full kit with talking points is in Kit Studio.")
+            elif row["kind"] == "aeo":
+                r_ = row["ref"]["payload"]["serp"]
+                st.markdown(f'<div><b>{html.escape(r_["verdict"])}</b></div>', unsafe_allow_html=True)
+                render_own_it(r_["own_it"])
             elif row["kind"] == "ads":
                 render_ads(row["ref"]["payload"]["ads"])
             else:
@@ -1203,6 +1209,160 @@ def run_aeo():
             box.update(label="Done. Results saved to data/aeo.json.", state="complete")
         except Exception as e:
             box.update(label=f"Run failed: {type(e).__name__}", state="error")
+
+
+def serp_store() -> dict:
+    """Search analyses by normalized query: cached ones from data/serp_cache.json plus this session's."""
+    store = st.session_state.setdefault("serp", {})
+    for k, v in serp.load_cache().items():
+        store.setdefault(k, v)
+    return store
+
+
+def run_search(query: str):
+    key = serp.normalize(query)
+    store = serp_store()
+    if not key:
+        st.session_state["serp_msg"] = ("warning", "Type a question first.")
+        return
+    if key not in store:
+        if not HAS_KEY:
+            st.session_state["serp_msg"] = ("info", "This question is not cached yet. Searching a new question needs an "
+                                                    "Anthropic key; the two examples below work without one.")
+            return
+        with st.spinner("Searching the web and reading the top results. About a minute and a half."):
+            try:
+                result = serp.analyze_query(query.strip())
+            except serp.SerpError as e:
+                st.session_state["serp_msg"] = ("error", str(e))
+                return
+            except Exception as e:
+                st.session_state["serp_msg"] = ("error", f"Something went wrong ({type(e).__name__}). Try again.")
+                return
+        store[key] = result
+        try:
+            serp.save(result)
+        except OSError:
+            pass
+    history = st.session_state.setdefault("serp_history", [])
+    if key in history:
+        history.remove(key)
+    history.append(key)
+    st.session_state["serp_current"] = key
+
+
+def plan_extra() -> dict:
+    return st.session_state.setdefault("plan_extra", {"publish": [], "featured": [], "youtube": [], "added": []})
+
+
+def brief_text(own: dict) -> str:
+    return (f'Title: {own["title"]}. Angle: {own["angle"]} Outline: {"; ".join(own["outline"])}. '
+            f'Data or table: {own["data_needed"]} FAQ to include: {"; ".join(own["faq"])}')
+
+
+def add_to_plan(r: dict):
+    extra = plan_extra()
+    q, own = r["query"], r["own_it"]
+    extra["publish"].append({"target_question": q, "action": f'{own["title"]}. {own["angle"]}',
+                             "where": "/insights/" + pages_mod.slug(q), "why_cited": r["overall"]["gap"],
+                             "metric": "Cited in the weekly AI answer check within 6 weeks"})
+    extra["featured"] += [{"target_question": q, "action": f'{f["pitch"].capitalize()}: {f["angle"]}',
+                           "where": f["domain"], "why_cited": "Already ranks for this search.",
+                           "metric": "Feature or quote published within 8 weeks"} for f in r["featured"]]
+    extra["youtube"] += [{"target_question": q, "action": f'Cut "{y["clip_title"]}" from the {y["webinar_topic"]} '
+                                                          "webinar. Publish with a full transcript.",
+                          "where": "YouTube", "why_cited": "Answers this search in video, with a readable transcript.",
+                          "metric": "Clip surfaces in AI or YouTube answers within 8 weeks"} for y in r["youtube"]]
+    extra["added"].append(serp.normalize(q))
+    queue_add("aeo", "Search brief", f"AEO brief: {q}", {"serp": r})
+    st.session_state["serp_msg"] = ("success", "Added to the AEO action plan below and to the Review queue.")
+
+
+def render_own_it(own: dict):
+    st.markdown(f'<div><b>{html.escape(own["title"])}</b></div><div style="margin:4px 0">{html.escape(own["angle"])}</div>'
+                '<div class="muted" style="font-weight:600;margin-top:6px">Outline</div>'
+                + "".join(f"<div>· {html.escape(o)}</div>" for o in own["outline"])
+                + f'<div class="muted" style="font-weight:600;margin-top:6px">Data or table it needs</div>'
+                  f'<div>{html.escape(own["data_needed"])}</div>'
+                  '<div class="muted" style="font-weight:600;margin-top:6px">FAQ questions to include</div>'
+                + "".join(f"<div>· {html.escape(f)}</div>" for f in own["faq"]), unsafe_allow_html=True)
+
+
+def results_table(results: list[dict]):
+    yn = lambda v: "Yes" if v else "No"
+    rows = "".join(
+        f'<tr><td>{r["rank"]}</td><td><a href="{html.escape(r["url"])}" target="_blank">{html.escape(r["title"])}</a></td>'
+        f'<td>{html.escape(r["domain"])}</td><td>{html.escape(r.get("source_type") or "")}</td>'
+        f'<td>{yn(r.get("mentions_evergreen"))}</td><td>{yn(r.get("mentions_equi"))}</td>'
+        f'<td>{html.escape(r.get("summary") or "")}</td></tr>' for r in results)
+    heads = [("#", "3%"), ("Title", "22%"), ("Domain", "13%"), ("Type", "10%"), ("Evergreen", "7%"), ("Equi", "5%"),
+             ("Summary", "40%")]
+    st.markdown('<table class="tbl"><thead><tr>' + "".join(f'<th style="width:{w}">{h}</th>' for h, w in heads)
+                + f"</tr></thead><tbody>{rows}</tbody></table>", unsafe_allow_html=True)
+
+
+def render_serp(r: dict):
+    st.markdown(f'<div class="lede"><b>{html.escape(r["verdict"])}</b></div>', unsafe_allow_html=True)
+    st.caption(f'{serp.LABEL} Searched: {"; ".join(r["searched"])}. Run {r["run_date"]}.')
+    if r.get("flags"):
+        st.warning("Check this advice before acting:\n\n" + "\n".join(f"- {f}" for f in r["flags"]))
+
+    ai = r["ai_answer"]
+    st.markdown("**What AI tells a client**")
+    st.markdown(f'<div style="font-size:0.92rem;max-width:1100px">{html.escape(excerpt(ai["text"], 520))}</div>'
+                f'<div class="muted">{"Mentions evergreen" if ai["mentions_evergreen"] else "No mention of evergreen"}'
+                f' &nbsp;·&nbsp; {"Mentions Equi" if ai["mentions_equi"] else "No mention of Equi"}'
+                f' &nbsp;·&nbsp; Cited: {html.escape(", ".join(ai["cited_domains"]) or "none")}</div>',
+                unsafe_allow_html=True)
+
+    st.markdown(f'**Top {len(r["results"])} results**')
+    results_table(r["results"])
+    with st.expander("What each result gets wrong or leaves out"):
+        for x in r["results"]:
+            st.markdown(f'<div><b>{x["rank"]}. {html.escape(x["domain"])}</b>: {html.escape(x.get("gets_wrong") or "")}</div>',
+                        unsafe_allow_html=True)
+    o = r["overall"]
+    st.markdown(f'<div><b>Who owns it:</b> {html.escape(o["owner"])}</div>'
+                f'<div><b>What the top results share:</b> {html.escape(o["common"])}</div>'
+                f'<div><b>The gap Equi can fill:</b> {html.escape(o["gap"])}</div>'
+                f'<div><b>Difficulty:</b> {html.escape(r["difficulty"]["level"])}. {html.escape(r["difficulty"]["why"])}</div>',
+                unsafe_allow_html=True)
+
+    st.markdown("**How Equi shows up for this search**")
+    st.markdown('<div class="muted" style="font-weight:600">1. Own it: a page on equi.com</div>', unsafe_allow_html=True)
+    render_own_it(r["own_it"])
+    key = serp.normalize(r["query"])
+    b1, b2, _ = st.columns([1, 1, 3])
+    sl = pages_mod.slug(r["query"])
+    b1.button("Draft this page", key=f"serpdraft|{key}", disabled=not HAS_KEY or sl in page_store(), width="stretch",
+              help=("Already drafted, see below." if sl in page_store() else "About 30 seconds.") if HAS_KEY else NO_KEY_MSG,
+              on_click=draft_page, args=(r["query"], brief_text(r["own_it"])))
+    added = key in plan_extra()["added"]
+    b2.button("Added to action plan" if added else "Add to action plan", key=f"serpadd|{key}", disabled=added,
+              width="stretch", on_click=add_to_plan, args=(r,))
+    if sl in page_store():
+        pg = page_store()[sl]
+        page_html = pages_mod.render_html(pg)
+        st.caption(f'Draft ready: "{pg["title"]}". Direct answer, comparison table, {len(pg["faq"])} FAQs with FAQPage '
+                   "schema, byline placeholder, and the disclosure line.")
+        if pg.get("flags"):
+            st.warning("Check before publishing:\n\n" + "\n".join(f"- {f}" for f in pg["flags"]))
+        st.download_button("Download HTML", page_html, f"{sl}.html", "text/html", key=f"serpdl|{key}")
+        st.iframe("data:text/html;base64," + base64.b64encode(page_html.encode()).decode(), height=1200)
+
+    st.markdown('<div class="muted" style="font-weight:600;margin-top:10px">2. Get featured</div>', unsafe_allow_html=True)
+    if r["featured"]:
+        html_table([{"Site": f["domain"], "Pitch": f["pitch"], "Angle": f["angle"]} for f in r["featured"]],
+                   {"Site": "18%", "Pitch": "17%", "Angle": "65%"})
+    if r.get("featured_dropped"):
+        st.caption(f'Not pitched: {", ".join(r["featured_dropped"])}. Each was either not in these results, or a site '
+                   "we never pitch (Wikipedia, government).")
+    if len(r["featured"]) < 2:
+        st.caption("Few pitchable sites for this search: most results are fund sponsors, who compete with Equi. "
+                   "Owning it with the page above matters more here.")
+    st.markdown('<div class="muted" style="font-weight:600;margin-top:10px">3. YouTube</div>', unsafe_allow_html=True)
+    html_table([{"Clip title": y["clip_title"], "Cut from": y["webinar_topic"]} for y in r["youtube"]],
+               {"Clip title": "55%", "Cut from": "45%"})
 
 
 def page_store() -> dict:
@@ -1277,6 +1437,34 @@ with tab_air:
                 "hear today and exactly how Equi gets into those answers.</div>", unsafe_allow_html=True)
     st.markdown('<div class="muted">Compliance: everything client-facing is education that ends in "ask your '
                 'advisor", never a fund offer.</div>', unsafe_allow_html=True)
+
+    # ----- search any question -----
+    st.markdown("### Search any question")
+    store = serp_store()
+    c1, c2 = st.columns([5, 1], vertical_alignment="bottom")
+    q = c1.text_input("Type what a client might ask, e.g. what is an evergreen fund", key="serp_q")
+    if c2.button("Analyze", type="primary", width="stretch"):
+        run_search(q)
+    msg = st.session_state.pop("serp_msg", None)
+    if msg:
+        getattr(st, msg[0])(msg[1])
+    history = st.session_state.setdefault("serp_history", [])
+    examples = [k for k in store if k not in history]
+
+    def pick(widget_key):
+        chosen = st.session_state.get(widget_key)
+        if chosen:
+            st.session_state["serp_current"] = chosen
+            st.session_state[widget_key] = None   # a pill is a link back, not a sticky filter
+
+    for label, keys, wkey in (("This session", history[::-1], "serp_pills_hist"), ("Ready to view", examples, "serp_pills_ex")):
+        if keys:
+            st.pills(label, keys, format_func=lambda k: store[k]["query"], selection_mode="single",
+                     key=wkey, on_change=pick, args=(wkey,))
+    current = st.session_state.get("serp_current")
+    if current in store:
+        render_serp(store[current])
+    st.divider()
 
     # ----- what clients hear today -----
     st.markdown("### What clients hear today")
@@ -1356,7 +1544,8 @@ with tab_air:
             for h, t in zip(heads, ["Target question", "Action", "Where", "Why AI would cite it", "Metric", ""]):
                 h.markdown(f'<div class="muted" style="font-weight:600">{t}</div>', unsafe_allow_html=True)
             store = page_store()
-            for i, row in enumerate(plan["publish"]):
+            extra = plan_extra()
+            for i, row in enumerate(plan["publish"] + extra["publish"]):
                 c = st.columns([2.2, 3, 1.5, 3, 2, 1.3], gap="small")
                 for col, key in zip(c, ["target_question", "action", "where", "why_cited", "metric"]):
                     col.markdown(f'<div style="font-size:0.88rem">{html.escape(row[key])}</div>', unsafe_allow_html=True)
@@ -1391,11 +1580,11 @@ with tab_air:
             st.markdown("**Lane 2. Get featured where AI already looks**")
             st.caption("The sites AI cited above. Pitch publishers only; fund managers and advisory firms compete "
                        "with Equi.")
-            lane_table(plan["featured"])
+            lane_table(plan["featured"] + extra["featured"])
             st.markdown("**Lane 3. Cut YouTube clips**")
             st.caption("Short clips from existing webinars and long-form videos, titled with the client's question and "
                        "published with a full transcript, so AI can read and quote them.")
-            lane_table(plan["youtube"])
+            lane_table(plan["youtube"] + extra["youtube"])
 
     # ----- air cover -----
     st.divider()

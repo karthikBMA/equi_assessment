@@ -31,7 +31,7 @@ streamlit run app.py
 - **Start here:** the thesis and live findings.
 - **Kit Studio:** firm-branded letter, talking points, IC memo outline for committee firms.
 - **Market signals:** today's status, real-event replays, the alert feed.
-- **Client demand:** what AI tells clients, a three-lane AEO action plan with page drafts, and the simulated air cover plan.
+- **Client demand:** search any client question, see what AI tells clients, a three-lane AEO action plan with page drafts, and the simulated air cover plan.
 - **Shortlist:** ranked firms with score range, stability, route, and a full detail view.
 - **Your call:** firms that need a human decision, with a recommendation and overrides.
 - **Drafts:** variants A and B side by side, rewrite with a note, approve, sequencer CSV.
@@ -83,7 +83,7 @@ streamlit run app.py
 
 - **Co-host a prospect firm's client evening** on evergreen alternatives, then cut the recording into firm-branded clips.
 - **Answer the DDQ first.** Send research leads a completed due-diligence questionnaire with the first email.
-- **Custodian-conference follow-up within 48 hours,** with the kit already built for every firm met.
+- **Custodian-conference follow-up within 48 hours,** with a kit built for every firm met.
 - **Referral loop:** when a firm forwards a note to clients, ask which peers should see it.
 
 ## What I would do with more time
@@ -92,4 +92,4 @@ streamlit run app.py
 - Persist state to BigQuery and wire real engagement from tracked links into the queue.
 - Rerun the AEO tracker weekly, pool the citations, and track Equi's pages over time.
 - Move kit generation to structured output, like everything else.
-- Calibrate the weights against real meeting outcomes after a quarter.
+- Calibrate weights against real meeting outcomes.
